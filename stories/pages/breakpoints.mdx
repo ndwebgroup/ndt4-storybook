@@ -6,27 +6,30 @@ import { Meta } from "@storybook/blocks";
   <div className='sb-section-title'>
     # Responsive Breakpoints
 
-    The ND Web Theme has been developed to be mobile first, using media queries to create a few breakpoints for our layouts. Here are the primary breakpoints we use:
+    The ND Web Theme has been developed to be mobile first, using media queries to create breakpoints for our layouts. Here are the primary breakpoints we use:
   </div>
   <div className="sb-section">
     ```css
-      /* Extra small devices (portrait phones, less than 480px) */
+      /* Extra small - xs (< 480px) */
       /* No media query. This is default. */
 
-      /* Small devices (landscape phones, 480px and up) */
-      @media only screen and (min-width:30em) {
+      /* Small - sm (>= 480px) */
+      @media only screen and (width >= 30em) { ... }
 
-      /* Medium devices (tablets, 768px and up) */
-      @media only screen and (min-width:48em) { ... }
+      /* Medium - md (>= 768px) */
+      @media only screen and (width >= 48em) { ... }
 
-      /* Large devices (desktops, 960px and up) */
-      @media only screen and (min-width:60em) { ... }
+      /* Medium-Large - ml (>= 960px) */
+      @media only screen and (width >= 60em) { ... }
 
-    /* Large devices (tablets horizontal, 1280px and up) */
-      @media only screen and (min-width:80em) { ... }
+      /* Large - lg (>= 1280px) */
+      @media only screen and (width >= 80em) { ... }
 
-      /* Extra large devices (large desktops, 1600px and up) */
-      @media only screen and (min-width:100em) { ... }
+      /* Extra large - xl (>= 1440px) */
+      @media only screen and (width >= 90em) { ... }
+
+      /* Extra-extra-large - xxl (>= 1600px) */
+      @media only screen and (width >= 100em) { ... }
     ```
   </div>
 </div>
