@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundation/Responsive Breakpoints" />
+
+<div className="sb-container sb-unstyled">
+  <div className='sb-section-title'>
+    # Responsive Breakpoints
+
+    The ND Web Theme has been developed to be mobile first, using media queries to create a few breakpoints for our layouts. Here are the primary breakpoints we use:
+  </div>
+  <div className="sb-section">
+    ```css
+      /* Extra small devices (portrait phones, less than 480px) */
+      /* No media query. This is default. */
+
+      /* Small devices (landscape phones, 480px and up) */
+      @media only screen and (min-width:30em) {
+
+      /* Medium devices (tablets, 768px and up) */
+      @media only screen and (min-width:48em) { ... }
+
+      /* Large devices (desktops, 960px and up) */
+      @media only screen and (min-width:60em) { ... }
+
+    /* Large devices (tablets horizontal, 1280px and up) */
+      @media only screen and (min-width:80em) { ... }
+
+      /* Extra large devices (large desktops, 1600px and up) */
+      @media only screen and (min-width:100em) { ... }
+    ```
+  </div>
+</div>

@@ -1,0 +1,62 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundation/Typography" />
+
+<div className="sb-container sb-unstyled">
+  <div className='sb-section-title'>
+    # Typography
+
+    The Web Theme automatically loads the following fonts. Garamond Premier Pro and Galaxie Polaris are hosted on static.nd.edu.
+  </div>
+  <div className="sb-section">
+    ## Adobe Garamond Premier Pro
+
+    _Default heading style_
+
+    <div class="code-example">
+      <div class="preview preview--garamond">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      a b c d e f g h i j k l m n o p q r s t u v w x y z
+      1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) < > " ' “ ” ‘ ’
+      </div>
+    </div>
+
+    <dl class="list-grid">
+      <dt>Style</dt><dd>Subhead</dd>
+      <dt>Usage</dt><dd>Site title, page title, and banner headings</dd>
+      <dt>Link</dt>
+      <dd><a href="https://onmessage.nd.edu/university-branding/fonts/">https://onmessage.nd.edu/university-branding/fonts/</a></dd>
+    </dl>
+
+    ## Galaxie Polaris
+
+    _Alternate heading style and body copy_
+
+    <div class="code-example">
+      <div class="preview preview--gp">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      a b c d e f g h i j k l m n o p q r s t u v w x y z
+      1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) < > " ' “ ” ‘ ’
+      </div>
+    </div>
+
+    <dl class="list-grid">
+      <dt>Style</dt><dd>Book</dd>
+      <dt>Usage</dt><dd>Card titles, headlines on news & events snippets, and default copy</dd>
+      <dt>Link</dt>
+      <dd><a href="https://fonts.google.com/specimen/Sumana">https://fonts.google.com/specimen/Sumana</a></dd>
+    </dl>
+
+    ## CSS Custom Properties
+    The following CSS custom properties are used throughout the Web Theme to designate the appropriate font-stack:
+
+    ```css
+    /* Default */
+    --font-default: GP, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+
+    /* Headings */
+    --font-heading: GPC, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    ```
+
+  </div>
+</div>
