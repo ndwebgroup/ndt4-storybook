@@ -12,19 +12,23 @@ export default {
   },
   argTypes: {
     variant: {
+      name: 'Variant',
       description: 'The style variant of the alert',
       control: 'select',
       options: ['default', 'primary', 'secondary', 'success', 'danger', 'warning', 'info']
     },
     icon: {
+      name: 'Icon',
       description: 'Optional icon to display in the alert',
       control: 'text'
     },
     content: {
+      name: 'Text',
       description: 'The content of the alert. Use {link} as a placeholder for the link if hasLink is true.',
       control: 'text'
     },
     hasLink: {
+      name: 'Link',
       description: 'Whether to include an example link in the alert',
       control: 'boolean'
     }
@@ -32,7 +36,7 @@ export default {
 };
 
 // Basic content for examples
-const basicContent = 'This is a {link}. Give it a click if you like.';
+const basicContent = 'This is {link}. Give it a click if you like.';
 const noLinkContent = 'This is an alert message with no link.';
 
 export const Default = (args) => {

@@ -4,9 +4,22 @@ export default {
   title: 'Components/Button',
   tags: ['autodocs'],
   argTypes: {
-    state: { control: 'select', options: ['default', 'cta'] },
-    type: { control: 'select', options: ['primary', 'secondary', 'tertiary', 'neutral']},
-    moreIcon: { name: 'More Icon'},
+    label: {
+      name:'Button Label',
+    },
+    state: { 
+      name: 'Button State',
+      control: 'select', 
+      options: ['default', 'cta'] 
+    },
+    type: { 
+      name: 'Button Type',
+      control: 'select', 
+      options: ['primary', 'secondary', 'tertiary', 'neutral']
+    },
+    moreIcon: { 
+      name: 'Show More Icon'
+    },
   },
   args: {
     label: 'Button',
@@ -14,6 +27,16 @@ export default {
 };
 
 export const Default = (args) => {
+  return Button(args);
+};
+Default.storyName = 'Default Buttons';
+Default.args = {
+  state: 'default',
+  type: 'primary',
+  moreIcon: false,
+};
+
+export const Base = (args) => {
   const container = document.createElement('div');
   const types = ['primary', 'secondary', 'tertiary', 'neutral'];
 
@@ -26,8 +49,8 @@ export const Default = (args) => {
 
   return container;
 };
-Default.storyName = 'Default Buttons';
-Default.args = {
+Base.storyName = 'Base Buttons';
+Base.args = {
   state: 'default',
   type: 'primary',
   moreIcon: false,

@@ -12,6 +12,7 @@ export default {
   },
   argTypes: {
     items: {
+      name: 'Breadcrumb Items',
       description: 'Array of breadcrumb items. Each item should have a text property and, except for the last item, an href property.',
       control: 'object'
     }
@@ -22,7 +23,7 @@ export default {
 const exampleItems = [
   { text: 'Home', href: '/' },
   { text: 'Documentation', href: '/documentation/' },
-  { text: 'Buttons' }
+  { text: 'Page Title' }
 ];
 
 export const Default = (args) => {
