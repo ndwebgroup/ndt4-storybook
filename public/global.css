@@ -1,5 +1,9 @@
 .sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:2.4rem; }
 
+.sidebar-item:hover {
+  background-color: rgba(255,255,255,0.2) !important;
+  color: #fff;
+}
 .sidebar-item svg[type='component'] { display: none !important; }
 .sidebar-item svg { color:#ae9142; }
 
