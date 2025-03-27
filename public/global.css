@@ -1,8 +1,13 @@
 .sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:2.4rem; }
 
 .sidebar-item svg[type='component'] { display: none !important; }
+.sidebar-item svg { color:#ae9142; }
+
+#storybook-explorer-menu .sidebar-item a,
+#storybook-explorer-menu .sidebar-item button { color:#fff; }
 
 /* Interface */
+.sb-show-main { color-scheme:light; }
 .sb-section-title { border-bottom:1px solid var(--gray-extra-light); padding-bottom:1em; margin-bottom:3em; }
 
 .code-example { border:1px solid #eee; padding:2rem; }
