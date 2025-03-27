@@ -1,5 +1,5 @@
 import { createStoryElement } from '../utils';
-import Accordion from './Accordions.js';
+import Accordion from './Accordion.js';
 
 export default {
   title: 'Components/Accordion',
@@ -16,7 +16,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Accordion component that can be used to show/hide content'
+        component: 'The &lt;details&gt; element is a way to toggle the visibility of content. When closed, only the <summary> element is visible. When expanded, all content is visible. FAQ pages are one example where a list of &lt;details&gt; may be appropriate.'
       }
     }
   }
