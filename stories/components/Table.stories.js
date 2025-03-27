@@ -38,3 +38,22 @@ Default.args = {
   headers: exampleHeaders,
   rows: exampleRows
 };
+
+export const Minimal = (args) => {
+  return Table(args);
+};
+
+Minimal.storyName = 'Minimal Table';
+Minimal.args = {
+  headers: exampleHeaders,
+  rows: exampleRows,
+  className: 'table--minimal'
+};
+
+Minimal.parameters = {
+  docs: {
+    description: {
+      story: 'A minimal table with reduced styling. The `table--minimal` class removes most borders and background colors for a cleaner, more streamlined appearance.'
+    }
+  }
+};

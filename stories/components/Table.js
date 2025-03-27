@@ -2,10 +2,10 @@
  * Table component
  */
 export default function Table(args) {
-  const { headers = [], rows = [] } = args;
+  const { headers = [], rows = [], className = '' } = args;
 
   return `
-    <table class="ndt-table">
+    <table class="${className}">
       <thead>
         <tr>
           ${headers.map(header => `<th>${header}</th>`).join('\n          ')}

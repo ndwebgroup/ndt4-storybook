@@ -14,7 +14,7 @@ export default {
     type: {
       description: 'The type of list to display',
       control: 'select',
-      options: ['unordered', 'ordered', 'no-bullets', 'list-inline', 'description']
+      options: ['unordered', 'ordered', 'unstyled', 'inline', 'description']
     },
     items: {
       description: 'Array of list items. For description lists, these are the terms.',
@@ -63,6 +63,7 @@ Unordered.args = {
   items: exampleItems
 };
 
+Unordered.storyName = 'Unordered List';
 Unordered.parameters = {
   docs: {
     description: {
@@ -80,6 +81,7 @@ Ordered.args = {
   items: exampleItems
 };
 
+Ordered.storyName = 'Ordered List';
 Ordered.parameters = {
   docs: {
     description: {
@@ -92,6 +94,7 @@ export const Unstyled = (args) => {
   return List(args);
 };
 
+Unstyled.storyName = 'Unstyled List';
 Unstyled.args = {
   type: 'unstyled',
   items: exampleItems
@@ -100,7 +103,7 @@ Unstyled.args = {
 Unstyled.parameters = {
   docs: {
     description: {
-      story: 'An unstyled list uses the `<ul>` element but removes bullets and left padding for a cleaner appearance when styling is not needed.'
+      story: 'An unstyled list uses the `<ul class="list--unstyled">` element but removes bullets and left padding for a cleaner appearance when styling is not needed.'
     }
   }
 };
@@ -109,6 +112,7 @@ export const Inline = (args) => {
   return List(args);
 };
 
+Inline.storyName = 'Inline List';
 Inline.args = {
   type: 'inline',
   items: ['Home', 'About', 'Services', 'Contact']
@@ -117,7 +121,7 @@ Inline.args = {
 Inline.parameters = {
   docs: {
     description: {
-      story: 'An inline list displays list items horizontally rather than vertically. Useful for navigation menus, tags, etc.'
+      story: 'An inline list `<ul class="list--inline">` displays list items horizontally rather than vertically. Useful for groups of buttons, tags, etc.'
     }
   }
 };
@@ -126,6 +130,7 @@ export const Description = (args) => {
   return List(args);
 };
 
+Description.storyName = 'Description List';
 Description.args = {
   type: 'description',
   items: exampleTerms,
@@ -135,7 +140,27 @@ Description.args = {
 Description.parameters = {
   docs: {
     description: {
-      story: 'A description list (`<dl>`) consists of term-description pairs. Each term (`<dt>`) is followed by its description (`<dd>`). Useful for dictionaries, metadata, FAQ sections, etc.'
+      story: 'A description list (`<dl>`) consists of term-description pairs. Each term (`<dt>`) is followed by its description (`<dd>`). Common uses for this element are implementing a glossary or displaying meta data (a list of key-value pairs). FAQ pages are another use case.'
+    }
+  }
+};
+
+export const GridDescription = (args) => {
+  return List(args);
+};
+
+GridDescription.storyName = 'Description List (Grid)';
+GridDescription.args = {
+  type: 'description',
+  items: exampleTerms,
+  descriptions: exampleDescriptions,
+  className: 'list--grid'
+};
+
+GridDescription.parameters = {
+  docs: {
+    description: {
+      story: 'A grid-style description list uses the `list--grid` class to display terms and descriptions in a responsive grid layout. This provides a more compact and structured appearance for term-description pairs, especially useful for displaying metadata or specifications.'
     }
   }
 };
