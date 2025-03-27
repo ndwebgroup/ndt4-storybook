@@ -11,6 +11,11 @@ const preview = {
       },
     },
   },
+  sidebar: {
+    order: {
+      default: ['Components', ['*', 'Other']], // Sort Components alphabetically
+    },
+  },
 };
 
 export default preview;
