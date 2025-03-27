@@ -25,6 +25,4 @@ addons.setConfig({
     inputBorder: '#10162F',
     inputTextColor: '#10162F',
   }),
-  // Set the initial path that Storybook opens to
-  initialPath: '/docs/getting-started--docs',
 });
