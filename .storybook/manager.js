@@ -7,7 +7,7 @@ addons.setConfig({
     base: 'light',
     brandTitle: 'Notre Dame Design System',
     brandUrl: 'https://webtheme.nd.edu',
-    brandImage: '/logo-nd.png',
+    brandImage: '/logo.svg',
     brandTarget: '_self',
 
     //UI

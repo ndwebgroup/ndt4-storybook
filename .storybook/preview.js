@@ -1,6 +1,7 @@
 /** @type { import('@storybook/html').Preview } */
 
 import { themes } from '@storybook/theming';
+import { Unstyled } from "@storybook/blocks";
 import '../public/global.css';
 
 const preview = {
@@ -18,7 +19,7 @@ const preview = {
     },
   },
   darkMode: {
-    dark: { ...themes.dark, appBg: '#081629' },
+    dark: { ...themes.dark, appBg: '#0c2340', barBg: '#0c2340', },
     light: { ...themes.normal, appBg: '#fff' }
   }
 };
