@@ -12,6 +12,9 @@ const preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+      toc: true, // 👈 Enables the table of contents
+    },
   },
   sidebar: {
     order: {
@@ -23,5 +26,8 @@ const preview = {
     light: { ...themes.normal, appBg: '#fff' }
   }
 };
+
+const body = document.body;
+body.classList.add("sb-unstyled");
 
 export default preview;
