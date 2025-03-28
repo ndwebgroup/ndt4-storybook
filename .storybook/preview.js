@@ -1,5 +1,6 @@
 /** @type { import('@storybook/html').Preview } */
 
+import { themes } from '@storybook/theming';
 import '../public/global.css';
 
 const preview = {
@@ -16,6 +17,10 @@ const preview = {
       default: ['Components', ['*', 'Other']], // Sort Components alphabetically
     },
   },
+  darkMode: {
+    dark: { ...themes.dark, appBg: '#081629' },
+    light: { ...themes.normal, appBg: '#fff' }
+  }
 };
 
 export default preview;

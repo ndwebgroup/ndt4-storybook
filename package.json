@@ -20,6 +20,7 @@
     "@storybook/html": "^8.6.10",
     "@storybook/html-webpack5": "^8.6.10",
     "@storybook/test": "^8.6.10",
-    "storybook": "^8.6.10"
+    "storybook": "^8.6.10",
+    "storybook-dark-mode": "^4.0.2"
   }
 }

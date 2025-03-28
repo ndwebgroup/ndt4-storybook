@@ -13,6 +13,7 @@ const config = {
       }
     },
     "@chromatic-com/storybook",
+    'storybook-dark-mode',
     "@storybook/addon-interactions",
     "@storybook/addon-docs" // Add this line
   ],
