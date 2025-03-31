@@ -50,7 +50,7 @@ export const Large = (args) => {
   return ButtonList(args);
 };
 
-Large.storyName = 'Long Navigation Path';
+Large.storyName = 'Large Button List';
 Large.args = {
   items: exampleItems,
   size: 'large',

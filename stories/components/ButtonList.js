@@ -2,9 +2,11 @@
  * Button List component
  * @param {('default'|'large')} [props.size='default'] - Size of the button list text
  */
-export default function ButtonList(args,props) {
+
+export default function ButtonList(args, props) {
 
   const { items = [] } = args;
+
   const listClass = `no-bullets btn--list btn--list`;
 
   return `
