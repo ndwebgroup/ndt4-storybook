@@ -1,7 +1,6 @@
 /** @type { import('@storybook/html').Preview } */
 
 import { themes } from '@storybook/theming';
-import { Unstyled } from "@storybook/blocks";
 import '../public/global.css';
 
 const preview = {
@@ -13,7 +12,10 @@ const preview = {
       },
     },
     docs: {
-      toc: true, // 👈 Enables the table of contents
+      toc: {
+        headingSelector: 'h2, h3',
+      }
+
     },
   },
   sidebar: {
