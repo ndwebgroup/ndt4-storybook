@@ -22,7 +22,7 @@ export default function Card(props) {
   if (image) {
     container.innerHTML = `
       <blockqoute class="${classes}">
-      <Avatar size={sm} />
+      <p>INSERT AVATAR/XS HERE</p>
       <p>${text}</p>
       </blockquote>
     `;
