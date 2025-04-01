@@ -20,16 +20,17 @@ export default function Card(props) {
   const classes = [`blockquote blockquote--${layout}`];
 
   if (image) {
+    const avatarElement = Avatar({ size: 'sm' });
     container.innerHTML = `
-      <blockqoute class="${classes}">
-      <p>INSERT AVATAR/XS HERE</p>
-      <p>${text}</p>
+      <blockquote class="${classes}">
+        ${avatarElement}
+        <p>${text}</p>
       </blockquote>
     `;
   } else {
     container.innerHTML = `
       <blockquote class="${classes}">
-          <p>${text}</p>
+        <p>${text}</p>
       </blockquote>
     `;
   }
