@@ -22,6 +22,7 @@ export default {
   },
   args: {
     size: 'default',
+    transparent: true,
     summaryOne: 'Summary Number One',
     detailOne: 'Details for Summary Number One. Euismod donec id elit non mi porta gravida at eget metus. Malesuada porta etiam porta sem malesuada magna mollis euismod.',
     summaryTwo: 'Summary Number Two',
@@ -45,11 +46,11 @@ Default.args = {
   size: 'default',
 };
 
-export const Featured = (args) => {
+export const Large = (args) => {
   const mergedArgs = { ...defaultArgs, ...args };
   return Accordion(mergedArgs);
 };
-Featured.storyName = 'Featured Accordion';
-Featured.args = {
+Large.storyName = 'Large Accordion';
+Large.args = {
   size: 'large',
 };

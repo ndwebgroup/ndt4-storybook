@@ -1,16 +1,13 @@
 /**
  * Button List component
- * @param {('default'|'large')} [props.size='default'] - Size of the button list text
  */
 
-export default function ButtonList(args, props) {
+export default function ButtonList(args) {
 
-  const { items = [] } = args;
-
-  const listClass = `no-bullets btn--list btn--list`;
+  const { items = [], className = '' } = args;
 
   return `
-    <ul class="${listClass}">
+    <ul class="no-bullets btn--list ${className}">
       ${items.map((item) => {
         return `<li><a class="btn" href="${item.href}">${item.text}</a></li>`;
       }).join('\n      ')}

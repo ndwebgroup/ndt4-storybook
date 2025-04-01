@@ -11,7 +11,6 @@ export default {
     }
   },
   argTypes: {
-    size: { name:'Size', control: 'select', options: ['default', 'large'] },
     items: {
       name: 'Button List Items',
       description: 'Array of list items. Each item should have a text property and an href property.',
@@ -19,7 +18,6 @@ export default {
     },
   },
   args: {
-    size: 'default',
   },
 };
 
@@ -35,7 +33,6 @@ export const Default = (args) => {
 };
 Default.args = {
   items: exampleItems,
-  size: 'default',
 };
 
 Default.parameters = {
@@ -53,13 +50,13 @@ export const Large = (args) => {
 Large.storyName = 'Large Button List';
 Large.args = {
   items: exampleItems,
-  size: 'large',
+  className: 'btn--list-large'
 };
 
 Large.parameters = {
   docs: {
     description: {
-      story: 'Description'
+      story: 'Use a large button list for featured content'
     }
   }
 };

@@ -1,6 +1,7 @@
 /**
  * Creates an accordion component
  * @param {Object} props - Component properties
+ * @param {boolean} props.transparent - Whether to show the accordion background
  * @param {('default'|'large')} [props.size='default'] - Size of the accordion text
  * @param {string} props.summaryOne - The summary of the accordion 1
  * @param {string} props.detailOne - The details of the accordion 1
@@ -12,9 +13,9 @@
  */
 export default function Accordion(props) {
   const container = document.createElement('div');
-  const { size = 'default', summaryOne, detailOne, summaryTwo, detailTwo, summaryThree, detailThree } = props;
+  const { size = 'default', transparent, summaryOne, detailOne, summaryTwo, detailTwo, summaryThree, detailThree } = props;
 
-  const accordionClass = `accordion accordion--${size}`;
+  const accordionClass = `accordion accordion--${size} accordion--${transparent}`;
 
   container.innerHTML = `
     <details class="${accordionClass}">

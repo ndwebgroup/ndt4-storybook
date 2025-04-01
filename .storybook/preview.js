@@ -11,6 +11,9 @@ const preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      disable:true,
+    },
     docs: {
       toc: {
         headingSelector: 'h2, h3',

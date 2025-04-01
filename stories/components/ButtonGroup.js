@@ -8,7 +8,7 @@ export default function ButtonGroup(args) {
   return `
     <ul class="no-bullets btn--group">
       ${items.map((item) => {
-        return `<a class="btn" href="${item.href}">${item.text}</a>`;
+        return `<li><a class="btn" href="${item.href}">${item.text}</a></li>`;
       }).join('\n      ')}
     </ul>
   `;
