@@ -23,8 +23,8 @@ export default function Card(props) {
     const avatarElement = Avatar({ size: 'sm' });
     container.innerHTML = `
       <blockquote class="${classes}">
-        ${avatarElement}
         <p>${text}</p>
+        ${avatarElement}
       </blockquote>
     `;
   } else {

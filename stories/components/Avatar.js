@@ -11,6 +11,5 @@ export default function Avatar(args) {
   const sizeClass = `avatar--${size}`;
 
   return `
-    <img src="${imageSrc}" class="avatar ${sizeClass}">
-  `;
+    <figure class="avatar ${sizeClass}"><img alt="" src="${imageSrc}"></figure>`;
 }
