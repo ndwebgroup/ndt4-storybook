@@ -1,7 +1,7 @@
-import Navigation from './Navigation.js';
+import Pagination from './Pagination.js';
 
 export default {
-  title: 'Components/Navigation',
+  title: 'Components/Pagination',
   tags: ['autodocs'],
   argTypes: {
     currentPage: {
@@ -40,11 +40,11 @@ export default {
 };
 
 export const Default = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 
 export const CurrentPageInMiddle = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 CurrentPageInMiddle.args = {
   currentPage: 5,
@@ -52,7 +52,7 @@ CurrentPageInMiddle.args = {
 };
 
 export const LastPage = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 LastPage.args = {
   currentPage: 38,
@@ -60,7 +60,7 @@ LastPage.args = {
 };
 
 export const SinglePage = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 SinglePage.args = {
   currentPage: 1,
@@ -68,7 +68,7 @@ SinglePage.args = {
 };
 
 export const FewPages = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 FewPages.args = {
   currentPage: 2,
@@ -77,7 +77,7 @@ FewPages.args = {
 };
 
 export const NoEllipsis = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 NoEllipsis.args = {
   currentPage: 10,
@@ -86,7 +86,7 @@ NoEllipsis.args = {
 };
 
 export const LargerDisplayRange = (args) => {
-  return Navigation(args);
+  return Pagination(args);
 };
 LargerDisplayRange.args = {
   currentPage: 10,

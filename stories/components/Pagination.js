@@ -1,14 +1,14 @@
 /**
- * Creates a navigation component for pagination
+ * Creates a pagination component
  * @param {Object} props - Component properties
  * @param {number} props.currentPage - The current page number
  * @param {number} props.totalPages - The total number of pages
  * @param {string} props.baseUrl - The base URL for pagination links (defaults to "#")
  * @param {boolean} props.showEllipsis - Whether to show ellipsis for large page ranges
  * @param {number} props.displayRange - Number of page links to display around current page
- * @returns {HTMLElement} - The navigation element
+ * @returns {HTMLElement} - The pagination element
  */
-export default function Navigation(props) {
+export default function Pagination(props) {
   const {
     currentPage = 1,
     totalPages = 10,
