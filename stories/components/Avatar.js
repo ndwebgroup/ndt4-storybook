@@ -1,15 +1,18 @@
 /**
  * Avatar component
+ * @param {string} props.helper_class - The label of the button
  */
+
 export default function Avatar(args) {
   const {
     size = 'md',
-    type = 'image'
+    type = 'image',
+    helper_class = '',
   } = args;
 
   const imageSrc = type !== 'image' ? '/images/placeholder-person.svg' : `/images/placeholder-profile-1-500x500.jpg`;
-  const sizeClass = `avatar--${size}`;
+  const classes = ['avatar', `avatar--${size}`, `${helper_class}`];
 
   return `
-    <figure class="avatar ${sizeClass}"><img alt="" src="${imageSrc}"></figure>`;
+    <figure class="${classes.join(' ')}"><img alt="" src="${imageSrc}"></figure>`;
 }
