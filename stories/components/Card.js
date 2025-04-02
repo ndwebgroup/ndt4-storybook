@@ -5,8 +5,7 @@
  * @param {boolean} props.image - Whether to show the card image
  * @param {string} props.summary - The summary of the card
  * @param {string} props.link - The link of the card
- * @param {(''|'horizontal'|'stacked')} [props.override=''] - The layout of the card
- * @param {('primary'|'secondary'|'tertiary'|'neutral')} [props.backgroundColor='primary'] - The background color of the card
+ * @param {('default'|'horizontal'|'stacked' | 'compact')} [props.layout='default'] - The layout of the card
  * @returns {HTMLElement} - The card element
  */
 export default function Card(props) {
@@ -15,13 +14,12 @@ export default function Card(props) {
     image = true,
     summary,
     link,
-    override = '',
-    backgroundColor = 'primary'
+    layout = 'default',
   } = props;
 
   const container = document.createElement('div');
   container.className = 'card-container';
-  const classes = ['card', `card--${backgroundColor}`, `card--${override}`];
+  const classes = ['card', `card--${layout}`];
 
   if (image) {
     container.innerHTML = `

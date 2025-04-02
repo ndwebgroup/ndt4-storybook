@@ -8,6 +8,7 @@ export default {
     placeholder: { name:'Placeholder Image',},
     name: { name:'Person Name',},
     title: { name:'Person Title',},
+    layout: { name:'Layout Override', control: 'select', options: ['','horizontal','stacked']},
   },
   args: {
     placeholder: false,
@@ -23,9 +24,23 @@ export const Primary = (args) => {
 Primary.args = {
 };
 
-export const Secondary = (args) => {
+export const Horizontal = (args) => {
   return PeopleCard(args);
 };
-Secondary.args = {
-  placeholder:true,
+Horizontal.args = {
+  layout:'horizontal',
+};
+
+export const Stacked = (args) => {
+  return PeopleCard(args);
+};
+Stacked.args = {
+  layout:'stacked',
+};
+
+export const Compact = (args) => {
+  return PeopleCard(args);
+};
+Compact.args = {
+  layout:'compact',
 };

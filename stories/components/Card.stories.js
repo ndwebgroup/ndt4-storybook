@@ -8,15 +8,14 @@ export default {
     summary: { name:'Card Summary',},
     image: { name:'Card Image',},
     title: { name:'Card Title',},
-    backgroundColor: { name:'Card Background', control: 'select', options: ['primary', 'secondary', 'tertiary', 'neutral']},
-    override: { name:'Layout Override', control: 'select', options: ['','horizontal','stacked']}
+    layout: { name:'Layout Override', control: 'select', options: ['default','horizontal','stacked', 'compact']}
   },
   args: {
     image: true,
     title: 'Card Title',
     summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
     link: '#',
-    override:'',
+    layout:'',
   }
 };
 
@@ -27,16 +26,23 @@ Primary.args = {
   backgroundColor: 'primary',
 };
 
+export const NoImage = (args) => {
+  return Card(args);
+};
+NoImage.args = {
+  image: false,
+};
+
 export const Horizontal = (args) => {
   return Card(args);
 };
 Horizontal.args = {
-  override:'horizontal'
+  layout:'horizontal'
 };
 
 export const Stacked = (args) => {
   return Card(args);
 };
 Stacked.args = {
-  override:'stacked'
+  layout:'stacked'
 };
