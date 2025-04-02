@@ -23,7 +23,7 @@ export default {
 
 // Example stats items
 const exampleItems = [
-  { value: '100%', label: 'Stat description lorem ipsum', icon: 'icon-check' },
+  { value: '100%', label: 'Stat description lorem ipsum', icon: 'icon-bluesky' },
   { value: '42', label: 'Stat description lorem ipsum', icon: 'icon-calendar' },
   { value: '7/10', label: 'Stat description lorem ipsum', icon: 'icon-envelope-o' },
 ];
