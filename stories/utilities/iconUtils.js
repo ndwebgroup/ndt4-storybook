@@ -31,13 +31,20 @@ export function getIcon(iconName, className = '', title = '', size = '') {
 export function getAvailableIcons() {
   // Return all icon IDs found in the icons-nd-base.svg file
   return [
+    //Interface
+    'icon-search',
     'icon-hamburger',
+    'icon-resize',
+    'icon-refresh',
+    'icon-sort-down',
+    'icon-sort-up',
+    'icon-plus',
+    'icon-minus',
+    'icon-check',
     'icon-box-arrow-up',
-    'icon-arrow-right',
     'icon-calendar',
     'icon-calendar-add',
     'icon-map-pin',
-    'icon-search',
     'icon-envelope-o',
     'icon-user',
     'icon-download',
@@ -48,6 +55,8 @@ export function getAvailableIcons() {
     'icon-close',
     'icon-lock',
     'icon-play',
+    'icon-feed',
+    //Brands
     'icon-bluesky',
     'icon-linkedin',
     'icon-twitter-x',
@@ -56,9 +65,14 @@ export function getAvailableIcons() {
     'icon-vimeo',
     'icon-youtube',
     'icon-instagram',
-    'icon-feed',
+    //Arrows
+    'icon-arrow-left',
+    'icon-arrow-right',
+    'icon-arrow-up',
+    'icon-arrow-down',
     'icon-angle-left',
     'icon-angle-right',
+    //Alerts
     'icon-exclamation',
     'icon-success',
     'icon-info',
