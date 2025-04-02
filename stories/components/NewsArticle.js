@@ -26,10 +26,10 @@ export default function NewsArticle(props) {
 
   const container = document.createElement('article');
   const layoutClasses = layout === 'horizontal' ? 'card--horizontal' : '';
-  container.className = `article snippet card ${layoutClasses}`;
+  container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
 
-  let articleHTML = '';
+  let articleHTML = `<div class="card ${layoutClasses}">`;
 
   if (showImage) {
     articleHTML += `
@@ -42,15 +42,16 @@ export default function NewsArticle(props) {
   }
 
   articleHTML += `
-    <div class="card-body">
-      <p class="card-label">${label}</p>
-      <${headingTag} class="article-title card-title" property="headline">
-        <a class="card-link" href="${link}">${title}</a>
-      </${headingTag}>
-      <div class="article-meta">
-        <link property="publisher" resource="#siteorg">
-        <div property="author" typeof="Person"><meta property="name" content="${author}"></div>
-        <p class="meta-item publish-info"><time property="datePublished" datetime="${new Date(publishDate).toISOString()}">${publishDate}</time></p>
+      <div class="card-body">
+        <p class="card-label">${label}</p>
+        <${headingTag} class="article-title card-title" property="headline">
+          <a class="card-link" href="${link}">${title}</a>
+        </${headingTag}>
+        <div class="article-meta">
+          <link property="publisher" resource="#siteorg">
+          <div property="author" typeof="Person"><meta property="name" content="${author}"></div>
+          <p class="meta-item publish-info"><time property="datePublished" datetime="${new Date(publishDate).toISOString()}">${publishDate}</time></p>
+        </div>
       </div>
     </div>
   `;
