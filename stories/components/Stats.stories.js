@@ -23,16 +23,16 @@ export default {
 
 // Example stats items
 const exampleItems = [
-  { value: '100%', label: 'Stat description lorem ipsum', icon: 'icon-bluesky' },
-  { value: '42', label: 'Stat description lorem ipsum', icon: 'icon-calendar' },
-  { value: '7/10', label: 'Stat description lorem ipsum', icon: 'icon-envelope-o' },
+  { value: '96%', label: 'graduation rate (top 5 among research universities)', icon: 'icon-bluesky' },
+  { value: 'TOP', label: 'producer of Fullbright Program students for 10 consecutive years', icon: 'icon-calendar' },
+  { value: '9:1', label: 'student to faculty ratio', icon: 'icon-envelope-o' },
 ];
 
 // Example stats without icons
 const exampleItemsNoIcons = [
-  { value: '100%', label: 'Stat description lorem ipsum' },
-  { value: '42', label: 'Stat description lorem ipsum' },
-  { value: '7/10', label: 'Stat description lorem ipsum' },
+  { value: '500+', label: 'Student Clubs and Groups' },
+  { value: '28', label: 'Campus Eateries' },
+  { value: '10%', label: 'Acceptance Rate' },
 ];
 
 export const Default = (args) => {
