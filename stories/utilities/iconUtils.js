@@ -64,6 +64,7 @@ export function getAvailableIcons() {
     'icon-google',
     'icon-vimeo',
     'icon-youtube',
+    'icon-snapchat',
     'icon-instagram',
     //Arrows
     'icon-arrow-left',
