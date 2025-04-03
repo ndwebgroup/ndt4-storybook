@@ -18,10 +18,10 @@ export default {
     },
   },
   args: {
+    // Default args for all stories
   },
 };
 
-// Example breadcrumb items
 const exampleItems = [
   { text: 'Button 1', href: '#' },
   { text: 'Button 2', href: '#' },

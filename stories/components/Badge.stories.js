@@ -10,6 +10,7 @@ export default {
     link: { name:'Person Link'}
   },
   args: {
+    // Default args for all stories
     placeholder: false,
     name: 'John Doe',
     title: 'Person title',
@@ -28,5 +29,5 @@ export const Placeholder = (args) => {
   return Badge(args);
 };
 Placeholder.args = {
-  layout:'horizontal',
+  placeholder:true,
 };

@@ -21,6 +21,7 @@ export default {
     detailThree: { name: 'Detail Three'},
   },
   args: {
+    // Default args for all stories
     variant: 'default',
     transparent: true,
     summaryOne: 'Summary Number One',
@@ -32,13 +33,8 @@ export default {
   },
 };
 
-// Default args for all stories
-const defaultArgs = {
-  
-};
-
 export const Default = (args) => {
-  const mergedArgs = { ...defaultArgs, ...args };
+  const mergedArgs = { ...args };
   return Accordion(mergedArgs);
 };
 Default.storyName = 'Default Accordion';
@@ -46,7 +42,7 @@ Default.args = {
 };
 
 export const Highlighted = (args) => {
-  const mergedArgs = { ...defaultArgs, ...args };
+  const mergedArgs = { ...args };
   return Accordion(mergedArgs);
 };
 Highlighted.storyName = 'Highlighted Accordion';
@@ -55,7 +51,7 @@ Highlighted.args = {
 };
 
 export const Large = (args) => {
-  const mergedArgs = { ...defaultArgs, ...args };
+  const mergedArgs = { ...args };
   return Accordion(mergedArgs);
 };
 Large.storyName = 'Large Accordion';

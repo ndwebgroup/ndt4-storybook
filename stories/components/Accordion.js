@@ -1,5 +1,5 @@
 /**
- * Creates an accordion component
+ * Accordion component
  * @param {Object} props - Component properties
  * @param {boolean} props.transparent - Whether to show the accordion background
  * @param {('default'|'large'|'highlight')} [props.variant='default'] - Variant of the accordion

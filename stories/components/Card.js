@@ -1,5 +1,5 @@
 /**
- * Creates a card component
+ * Card component
  * @param {Object} props - Component properties
  * @param {string} props.title - The title of the card
  * @param {boolean} props.image - Whether to show the card image

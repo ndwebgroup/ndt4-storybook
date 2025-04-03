@@ -1,5 +1,5 @@
 /**
- * Creates a button component
+ * Button component
  * @param {Object} props - Component properties
  * @param {string} props.label - The label of the button
  * @param {('primary'|'secondary'|'tertiary'|'neutral')} [props.type='primary'] - Type of button

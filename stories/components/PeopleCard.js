@@ -1,5 +1,5 @@
 /**
- * Creates a card component
+ * People card component
  * @param {Object} props - Component properties
  * @param {string} props.name - The full name of the person
  * @param {string} props.title - The title of the person

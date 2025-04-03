@@ -22,6 +22,7 @@ export default {
     },
   },
   args: {
+    // Default args for all stories
     label: 'Button',
   }
 };

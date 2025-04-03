@@ -1,5 +1,5 @@
 /**
- * Creates a pagination component
+ * Pagination component
  * @param {Object} props - Component properties
  * @param {number} props.currentPage - The current page number
  * @param {number} props.totalPages - The total number of pages

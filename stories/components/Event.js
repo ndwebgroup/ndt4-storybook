@@ -1,6 +1,6 @@
 // filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/Event.js
 /**
- * Creates an event component
+ * Event component
  * @param {Object} props - Component properties
  * @param {string} props.title - The title of the event
  * @param {string} props.startDate - The start date/time of the event (ISO string)
