@@ -95,7 +95,7 @@ export default function Event(props) {
         </div>
     `;
   } else {
-    eventHTML += `<meta property="description" content="${excerpt}">`;
+    eventHTML += `      <meta property="description" content="${excerpt}">`;
   }
 
   if (showCalendars && calendars.length > 0) {

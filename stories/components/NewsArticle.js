@@ -29,7 +29,7 @@ export default function NewsArticle(props) {
   container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
 
-  let articleHTML = `<div class="card ${layoutClasses}">`;
+  let articleHTML = `\n  <div class="card ${layoutClasses}">`;
 
   if (showImage) {
     articleHTML += `
