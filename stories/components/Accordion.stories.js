@@ -12,7 +12,7 @@ export default {
     }
   },
   argTypes: {
-    size: { name:'Size', control: 'select', options: ['default', 'large'] },
+    variant: { name:'Variant', control: 'select', options: ['default', 'large', 'highlight'] },
     summaryOne: { name: 'Summary One'},
     summaryTwo: { name: 'Summary Two'},
     summaryThree: { name: 'Summary Three'},
@@ -21,7 +21,7 @@ export default {
     detailThree: { name: 'Detail Three'},
   },
   args: {
-    size: 'default',
+    variant: 'default',
     transparent: true,
     summaryOne: 'Summary Number One',
     detailOne: 'Details for Summary Number One. Euismod donec id elit non mi porta gravida at eget metus. Malesuada porta etiam porta sem malesuada magna mollis euismod.',
@@ -43,7 +43,15 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Accordion';
 Default.args = {
-  size: 'default',
+};
+
+export const Highlighted = (args) => {
+  const mergedArgs = { ...defaultArgs, ...args };
+  return Accordion(mergedArgs);
+};
+Highlighted.storyName = 'Highlighted Accordion';
+Highlighted.args = {
+  variant: 'highlight',
 };
 
 export const Large = (args) => {
@@ -52,5 +60,5 @@ export const Large = (args) => {
 };
 Large.storyName = 'Large Accordion';
 Large.args = {
-  size: 'large',
+  variant: 'large',
 };
