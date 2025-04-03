@@ -1,0 +1,35 @@
+import { createStoryElement } from '../utils';
+import Checkbox from './Checkbox.js';
+
+export default {
+  title: 'Components/Form/Checkbox',
+  tags: ['autodocs'],
+  argTypes: {
+    note: { name: 'Help Text'},
+    label: { name: 'Label Text'},
+    items: {
+      name: 'Checkbox Group Items',
+      description: 'Array of checkbox inputs. Each item should have a text property.',
+      control: 'object'
+    },
+  },
+  args: {
+    // Default args for all stories
+    label:'',
+    note: '',
+  },
+};
+
+const exampleItems = [
+  { text: 'Checkbox Input 1' },
+  { text: 'Checkbox Input 2' },
+  { text: 'Checkbox Input 3' },
+];
+
+export const Default = (args) => {
+  return Checkbox(args);
+};
+Default.storyName = 'Default Checkbox Group';
+Default.args = {
+  items: exampleItems,
+};

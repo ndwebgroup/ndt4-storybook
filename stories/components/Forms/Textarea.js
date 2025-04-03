@@ -1,16 +1,16 @@
 /**
- * Input component
+ * Textarea component
  * @param {Object} props - Component properties
  * @param {boolean} props.disabled - Whether the field is disabled
  * @param {string} props.note - Whether the field has a note 
  * @param {string} props.label - Label for field
  * @param {string} props.placeholder - The placeholder text of the field
- * @param {('date'|'email'|'number'|'password'|'text')} [props.type='text'] - Variant of the accordion
+ * @param {('3'|'4'|'5'|'6')} [props.rows='3'] - Variant of the accordion
  * @returns {HTMLElement} - The field element
  */
 export default function Input(props) {
   const container = document.createElement('div');
-  const { note, label, disabled=false, placeholder, type, } = props;
+  const { note, label, disabled=false, placeholder, rows, } = props;
   let fieldHTML = '';
 
   container.className = 'form-field';
@@ -22,7 +22,7 @@ export default function Input(props) {
   }
   
   fieldHTML += `
-  <input type="${type}" placeholder='${placeholder}'
+  <textarea rows="${rows}" placeholder='${placeholder}'
   `
   if (disabled) {
     fieldHTML += `
@@ -31,7 +31,7 @@ export default function Input(props) {
   }
 
   fieldHTML += `
-  >
+  ></textarea>
   `
 
   if (note) {

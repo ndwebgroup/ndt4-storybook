@@ -1,16 +1,13 @@
 /**
- * Input component
+ * Checkbox component
  * @param {Object} props - Component properties
- * @param {boolean} props.disabled - Whether the field is disabled
  * @param {string} props.note - Whether the field has a note 
  * @param {string} props.label - Label for field
- * @param {string} props.placeholder - The placeholder text of the field
- * @param {('date'|'email'|'number'|'password'|'text')} [props.type='text'] - Variant of the accordion
  * @returns {HTMLElement} - The field element
  */
-export default function Input(props) {
+export default function Checkbox(props) {
   const container = document.createElement('div');
-  const { note, label, disabled=false, placeholder, type, } = props;
+  const { note, label, items=[] } = props;
   let fieldHTML = '';
 
   container.className = 'form-field';
@@ -22,16 +19,11 @@ export default function Input(props) {
   }
   
   fieldHTML += `
-  <input type="${type}" placeholder='${placeholder}'
-  `
-  if (disabled) {
-    fieldHTML += `
-    disabled
-  `
-  }
-
-  fieldHTML += `
-  >
+    <ul class="no-bullets checkbox-list">
+    ${items.map((item) => {
+      return `<li><input id="${item.text.toLowerCase().replace(/\s/g, '')}" type="checkbox" name="checkbox-group"><label for="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</label></li>`;
+    }).join('\n      ')}
+    </ul>
   `
 
   if (note) {
