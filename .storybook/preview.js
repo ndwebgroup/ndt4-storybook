@@ -88,7 +88,7 @@ const loadIcons = () => {
   }
 };
 document.addEventListener('DOMContentLoaded', function() {
-  // loadIcons();
+  loadIcons();
 });
 
 const body = document.body;
