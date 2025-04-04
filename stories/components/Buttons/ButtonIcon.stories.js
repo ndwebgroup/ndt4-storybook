@@ -24,9 +24,9 @@ export default {
     // Default args for all stories
     state: 'default',
     type: 'primary',
-    icon: 'arrow-up',
-    label: 'Back to top',
-    align: 'left'
+    icon: 'plus',
+    align: 'left',
+    label:'',
   }
 };
 
@@ -37,10 +37,30 @@ Default.storyName = 'Left Aligned Icon Button';
 Default.args = {
 };
 
-export const RightAlign = (args) => {
+export const Right = (args) => {
   return ButtonIcon(args);
 };
-RightAlign.storyName = 'Right Aligned Icon Button';
-RightAlign.args = {
+Right.storyName = 'Right Aligned Icon Button';
+Right.args = {
   align:'right',
+  icon:'arrow-up',
+};
+
+export const LeftReveal = (args) => {
+  return ButtonIcon(args);
+};
+LeftReveal.storyName = 'Left Icon Button With Reveal';
+LeftReveal.args = {
+  icon:'arrow-up',
+  label:'Back to top',
+};
+
+export const RightReveal = (args) => {
+  return ButtonIcon(args);
+};
+RightReveal.storyName = 'Right Icon Button With Reveal';
+RightReveal.args = {
+  align:'right',
+  icon:'arrow-up',
+  label:'Bact to top',
 };

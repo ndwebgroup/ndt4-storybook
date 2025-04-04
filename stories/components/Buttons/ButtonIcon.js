@@ -26,8 +26,12 @@ export default function Button(props) {
 
   button.innerHTML = `
     <span class="icon" data-icon="${icon}"></span>
-    <span class="btn-reveal">${label}</span>
   `
+  if (label) {
+    button.innerHTML += `
+      <span class="btn-reveal">${label}</span>
+    `
+  }
 
   return button;
 }
