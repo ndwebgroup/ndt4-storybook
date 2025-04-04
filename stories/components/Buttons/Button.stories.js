@@ -1,7 +1,7 @@
 import Button from './Button.js';
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Buttons/Button',
   tags: ['autodocs'],
   argTypes: {
     label: {
