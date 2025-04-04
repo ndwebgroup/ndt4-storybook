@@ -1,5 +1,5 @@
 import { createStoryElement } from '../utils';
-import FormCombinations from './Form.js';
+import FormCombinations from './index';
 
 export default {
   title: 'Components/Form',
