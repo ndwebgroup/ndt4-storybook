@@ -59,15 +59,18 @@ export default function PeopleCard(props) {
 
   // Create the dialog element if needed
   const dialogElement = useDialog
-    ? `<dialog class="dialog section-dark">
-        <form method="dialog" class="dialog-close">
-          <button type="submit" title="Close">×</button>
-        </form>
+    ? `<dialog class="dialog dialog--person">
+        <div class="dialog-header">
+          <p class="dialog-heading"></p>
+          <form method="dialog" class="dialog-close">
+            <button type="submit" title="Close">×</button>
+          </form>
+        </div>
         <div class="dialog-content">
           <div class="dialog-image"><img class="image-circle" height="600" width="600" loading="lazy" src="${imageSrc}" alt="${name}"></div>
           <div class="dialog-body">
-            <p class="dialog-heading h2">${name}</p>
-            <p class="dialog-title">${title}</p>
+            <p class="h2">${name}</p>
+            <p class="person-title">${title}</p>
             <p>
               ${email ? `<a href="mailto:${email}">${email}</a><br>` : ''}
               ${website ? `<a href="${website}" aria-label="Visit the website for ${name}">Website</a><br>` : ''}

@@ -72,14 +72,3 @@ WithDialog.args = {
   mobile: '+1 555-987-6543',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu erat quis urna fringilla ultrices. Duis eleifend leo id purus commodo, vitae aliquet nisi tincidunt. In tincidunt purus vel aliquet lobortis. Morbi feugiat tortor nec justo varius, non congue ante congue.',
 };
-
-export const HorizontalWithDialog = (args) => {
-  return PeopleCard(args);
-};
-HorizontalWithDialog.args = {
-  layout: 'horizontal',
-  useDialog: true,
-  email: 'johndoe@example.com',
-  phone: '+1 555-123-4567',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu erat quis urna fringilla ultrices.',
-};

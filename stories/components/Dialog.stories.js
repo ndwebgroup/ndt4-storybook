@@ -100,7 +100,8 @@ export const Notification = (args) => {
 Notification.args = {
   title: 'Notification',
   content: '<p>Your changes have been saved successfully.</p><p>You can continue editing or return to the dashboard.</p>',
-  closeButtonText: 'Dismiss'
+  closeButtonText: 'Dismiss',
+  dialogSize: 'dialog--narrow'
 };
 
 Notification.parameters = {
@@ -119,12 +120,13 @@ export const Alert = (args) => {
 
 Alert.args = {
   title: 'Attention Required',
-  content: `<p class="text-danger">Are you sure you want to delete this item? This action cannot be undone.</p>
-    <div class="">
-      <button class="btn btn--cta">Delete</button>
-      <button class="btn btn--neutral">Cancel</button>
-    </div>`,
-  closeButtonText: 'Close'
+  content: `<p class="text-danger">Are you sure you want to delete this item? This action cannot be undone.</p>`,
+  footer:  `
+  <button class="btn btn--cta">Delete</button>
+  <button class="btn btn--neutral">Cancel</button>
+  `,
+  closeButtonText: 'Close',
+  dialogSize: 'dialog--narrow'
 };
 
 Alert.parameters = {
@@ -148,10 +150,11 @@ LongContent.args = {
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
-  <div class="">
-    <button class="btn btn--cta">Accept</button>
-    <button class="btn btn--neutral">Decline</button>
-  </div>`,
+  `,
+  footer: `
+  <button class="btn btn--cta">Accept</button>
+  <button class="btn btn--neutral">Decline</button>
+  `,
   closeButtonText: 'Close'
 };
 
@@ -164,3 +167,80 @@ LongContent.parameters = {
 };
 
 LongContent.decorators = [dialogDecorator];
+
+export const withImage = (args) => {
+  return Dialog(args);
+};
+
+withImage.storyName = 'With Image';
+withImage.args = {
+  title: 'Visit Notre Dame Campus',
+  content: `<p class="h3">The Main Building</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
+  <a class="btn" href="#">Main Building</a>
+  `,
+  closeButtonText: 'Close',
+  image:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'
+};
+
+withImage.parameters = {
+  docs: {
+    description: {
+      story: 'Dialog with image.'
+    }
+  }
+};
+
+withImage.decorators = [dialogDecorator];
+
+export const withLargeImage = (args) => {
+  return Dialog(args);
+};
+
+withLargeImage.storyName = 'With Large Image';
+withLargeImage.args = {
+  title: 'Visit Notre Dame Campus',
+  content: `<p class="h3">The Main Building</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
+  <a class="btn" href="#">Main Building</a>
+  `,
+  closeButtonText: 'Close',
+  image:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>',
+  imageSize:'image--large'
+};
+
+withLargeImage.parameters = {
+  docs: {
+    description: {
+      story: 'Dialog with large image.'
+    }
+  }
+};
+
+withLargeImage.decorators = [dialogDecorator];
+
+export const withSmallImage = (args) => {
+  return Dialog(args);
+};
+
+withSmallImage.storyName = 'With Small Image';
+withSmallImage.args = {
+  title: 'Visit Notre Dame Campus',
+  content: `<p class="h3">The Main Building</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
+  <a class="btn" href="#">Main Building</a>
+  `,
+  closeButtonText: 'Close',
+  image:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>',
+  imageSize:'image--small'
+};
+
+withSmallImage.parameters = {
+  docs: {
+    description: {
+      story: 'Dialog with small image.'
+    }
+  }
+};
+
+withSmallImage.decorators = [dialogDecorator];
