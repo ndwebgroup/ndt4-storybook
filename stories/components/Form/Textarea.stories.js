@@ -13,7 +13,8 @@ export default {
   },
   args: {
     // Default args for all stories
-    label:'',
+    id: 'default-textarea',
+    label:'Default Textarea',
     placeholder: '',
     note: '',
     rows:'3',
@@ -26,6 +27,20 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Textarea';
 Default.args = {
+  label:'Default Textarea',
+  placeholder: 'Enter text here...'
+};
+
+// Story for Textarea with Help Text
+export const HelpText = (args) => {
+  return Textarea(args);
+};
+HelpText.storyName = 'Textarea with Help Text';
+HelpText.args = {
+  id: 'help-text-textarea',
+  label:'Textarea with Help Text',
+  note: 'This is some help text.',
+  placeholder: 'Enter text here...'
 };
 
 export const Disabled = (args) => {
@@ -33,6 +48,7 @@ export const Disabled = (args) => {
 };
 Disabled.storyName = 'Disabled Textarea';
 Disabled.args = {
+  id: 'disabled-textarea',
   label:'Disabled Textarea',
   disabled:true,
 };
