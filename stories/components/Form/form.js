@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/Forms/FormCombinations.js
 import { createStoryElement } from '../utils';
 import Input from './Input.js';
 import Checkbox from './Checkbox.js';

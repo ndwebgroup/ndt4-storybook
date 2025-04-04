@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/MediaMentionList.stories.js
 import MediaMentionList from './MediaMentionList';
 
 export default {
@@ -58,17 +57,17 @@ const sampleMediaMentions = [
     },
     people: [
       {
-        first_name: 'Maria',
-        last_name: 'Rodriguez',
+        first_name: 'Joe',
+        last_name: 'Leprechaun',
         department: 'College of Engineering',
-        url: '#professor-rodriguez',
+        url: '#professor-leprechaun',
         image: '/public/images/placeholder-profile-1-300x300.jpg'
       },
       {
-        first_name: 'James',
-        last_name: 'Wilson',
+        first_name: 'Jonathan',
+        last_name: 'Arp',
         department: 'Department of Chemistry and Biochemistry',
-        url: '#professor-wilson',
+        url: '#professor-arp',
         image: '/public/images/placeholder-profile-1-300x300.jpg'
       }
     ]
@@ -88,10 +87,10 @@ const sampleMediaMentions = [
     },
     people: [
       {
-        first_name: 'Robert',
-        last_name: 'Chen',
+        first_name: 'Stephanie',
+        last_name: 'Tatay-Myers',
         department: 'Department of Economics',
-        url: '#professor-chen',
+        url: '#professor-steph',
         image: '/public/images/placeholder-profile-1-300x300.jpg'
       }
     ]
@@ -100,7 +99,7 @@ const sampleMediaMentions = [
     title: 'Notre Dame professor discusses impact of AI on education in national forum',
     public_url: 'https://example.com/notre-dame-ai-education',
     html_id: 'mention-125',
-    content: '<p>Professor Sarah Johnson from Notre Dame\'s College of Education participated in a national forum on the future of education, highlighting how artificial intelligence is transforming teaching methods and student learning experiences.</p>',
+    content: '<p>Professor Zachariah Allen from Notre Dame\'s College of Education participated in a national forum on the future of education, highlighting how artificial intelligence is transforming teaching methods and student learning experiences.</p>',
     publication_date: '2025-03-28',
     publication: {
       name: 'British Broadcasting Corporation',
@@ -111,10 +110,10 @@ const sampleMediaMentions = [
     },
     people: [
       {
-        first_name: 'Sarah',
-        last_name: 'Johnson',
-        department: 'College of Education',
-        url: '#professor-johnson',
+        first_name: 'Zachariah',
+        last_name: 'Allen',
+        department: 'Notre Dame Research',
+        url: '#professor-allen',
         image: '/public/images/placeholder-profile-1-300x300.jpg'
       }
     ]

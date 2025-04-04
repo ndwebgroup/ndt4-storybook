@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/MediaMention.stories.js
 import MediaMention from './MediaMention';
 
 export default {
@@ -31,7 +30,7 @@ const sampleMediaMention = {
   public_url: 'https://example.com/notre-dame-energy-research',
   html_id: 'mention-123',
   content: '<p>Researchers at the University of Notre Dame have developed a new method for storing renewable energy that could make solar and wind power more reliable and cost-effective.</p>',
-  publication_date: '2025-03-15',
+  publication_date: '2025-01-13',
   publication: {
     name: 'National Public Radio',
     slug: 'npr',
@@ -41,17 +40,17 @@ const sampleMediaMention = {
   },
   people: [
     {
-      first_name: 'Maria',
-      last_name: 'Rodriguez',
-      department: 'College of Engineering',
-      url: '#professor-rodriguez',
+      first_name: 'Aaron',
+      last_name: 'Greene',
+      department: 'College of Arts and Letters',
+      url: '#aaron-greene',
       image: '/public/images/placeholder-profile-1-300x300.jpg'
     },
     {
-      first_name: 'James',
-      last_name: 'Wilson',
-      department: 'Department of Chemistry and Biochemistry',
-      url: '#professor-wilson',
+      first_name: 'Erik',
+      last_name: 'Runyon',
+      department: 'Computer Science and Engineering',
+      url: '#erik-runyon',
       image: '/public/images/placeholder-profile-1-300x300.jpg'
     }
   ]

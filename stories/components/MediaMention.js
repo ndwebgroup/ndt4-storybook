@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/MediaMention.js
 import Avatar from './Avatar';
 
 /**

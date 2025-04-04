@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/MediaMentionList.js
 import MediaMention from './MediaMention';
 import Pagination from './Pagination';
 

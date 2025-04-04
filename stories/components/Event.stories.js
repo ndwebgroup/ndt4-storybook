@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/Event.stories.js
 import Event from './Event.js';
 
 export default {

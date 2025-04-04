@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/NewsArticle.stories.js
 import NewsArticle from './NewsArticle.js';
 
 export default {

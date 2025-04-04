@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/NewsArticle.js
 /**
  * Creates a news article component
  * @param {Object} props - Component properties

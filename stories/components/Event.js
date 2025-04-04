@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/Event.js
 /**
  * Event component
  * @param {Object} props - Component properties

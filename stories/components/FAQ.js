@@ -1,4 +1,3 @@
-// filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/FAQ.js
 /**
  * FAQ component
  * @param {Object} props - Component properties
