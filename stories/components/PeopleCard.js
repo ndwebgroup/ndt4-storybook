@@ -21,7 +21,7 @@ export default function PeopleCard(props) {
   const container = document.createElement('div');
   container.className = 'card-container';
   const classes = ['card', 'card--person', `card--${layout}` ];
-  
+
   const avatarImage = Avatar({ size: 'lg', type:'image', helper_class:'card-image' });
   const avatarPlaceholder = Avatar({ size:'lg', type:'placeholder', helper_class:'card-image' });
 
@@ -30,9 +30,9 @@ export default function PeopleCard(props) {
     <div class="${ classes.join(' ') }">
       ${avatarPlaceholder}
       <div class="card-body">
-          <h2 class="card-title preson-name"><a class="card-link" href="#">${name}</a></h2>
-          <p class="person-title">${title}</p>
-          <p class="card-summary">${summary}</p>
+        <h2 class="card-title preson-name"><a class="card-link" href="#">${name}</a></h2>
+        <p class="person-title">${title}</p>
+        <p class="card-summary">${summary}</p>
       </div>
     </div>
     `;
@@ -41,9 +41,9 @@ export default function PeopleCard(props) {
     <div class="${ classes.join(' ') }">
       ${avatarImage}
       <div class="card-body">
-          <h2 class="card-title person-name"><a class="card-link" href="#">${name}</a></h2>
-          <p class="person-title">${title}</p>
-          <p class="card-summary">${summary}</p>
+        <h2 class="card-title person-name"><a class="card-link" href="#">${name}</a></h2>
+        <p class="person-title">${title}</p>
+        <p class="card-summary">${summary}</p>
       </div>
     </div>
     `;
