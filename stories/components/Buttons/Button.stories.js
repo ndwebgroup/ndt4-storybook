@@ -96,3 +96,23 @@ More.args = {
   type: 'primary',
   moreIcon: true,
 };
+
+export const MoreCTA = (args) => {
+  const container = document.createElement('div');
+  const types = ['primary', 'secondary', 'tertiary', 'neutral'];
+
+  types.forEach(type => {
+    const buttonProps = { ...args, type };
+    const button = Button(buttonProps);
+    container.appendChild(button);
+    container.appendChild(document.createTextNode(' ')); // Add space between buttons
+  });
+
+  return container;
+};
+MoreCTA.storyName = 'CTA More Buttons';
+MoreCTA.args = {
+  state: 'cta',
+  type: 'primary',
+  moreIcon: true,
+};
