@@ -16,6 +16,7 @@ container.innerHTML = `
 ${items.map((item) => {
   return `
   <li class="timeline-item">
+      <figure class="timeline-image">${item.image}</figure>
       <div class="timeline-body">
         <p class="timeline-title">${item.title}</p>
         <p class="timeline-date">${item.date}</p>
