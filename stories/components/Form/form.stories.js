@@ -1,6 +1,6 @@
 // filepath: /Users/erunyon/Sites/ndt4-storybook/stories/components/Forms/index.stories.js
 import { createStoryElement } from '../utils';
-import FormCombinations from './form.js';
+import FormCombinations from './Form.js';
 
 export default {
   title: 'Components/Form',
