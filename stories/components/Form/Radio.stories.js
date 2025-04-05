@@ -21,9 +21,9 @@ export default {
 };
 
 const exampleItems = [
-  { text: 'Radio Input 1' },
-  { text: 'Radio Input 2' },
-  { text: 'Radio Input 3' },
+  { text: 'Radio Input 1', modifier:'' },
+  { text: 'Radio Input 2 (Selected)', modifier:'checked' },
+  { text: 'Radio Input 3 (Disabled)', modifier:'disabled' },
 ];
 
 export const Default = (args) => {

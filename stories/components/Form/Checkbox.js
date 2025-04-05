@@ -22,9 +22,9 @@ export default function Checkbox(props) {
 
   fieldHTML += `
     <ul class="no-bullets checkbox-list">
-    ${items.map((item) => {
-      const itemId = item.id || `${fieldId}`;
-      return `<li><input id="${itemId}" type="checkbox" name="checkbox-group"><label for="${itemId}">${item.text}</label></li>`;
+    ${items.map((item, index) => {
+      const itemId = `checkbox-${index}` || `${fieldId}`;
+      return `<li><input id="${itemId}" type="checkbox" ${item.modifier} name="checkbox-group"><label for="${itemId}">${item.text}</label></li>`;
     }).join('\n      ')}
     </ul>
   `;

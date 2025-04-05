@@ -21,9 +21,9 @@ export default {
 };
 
 const exampleItems = [
-  { text: 'Checkbox Input 1' },
-  { text: 'Checkbox Input 2' },
-  { text: 'Checkbox Input 3' },
+  { text: 'Checkbox Input 1 (Default)', modifier:'' },
+  { text: 'Checkbox Input 2 (Disabled)', modifier: 'disabled' },
+  { text: 'Checkbox Input 3 (Checked)', modifier: 'checked' },
 ];
 
 export const Default = (args) => {

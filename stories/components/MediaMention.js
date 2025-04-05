@@ -62,7 +62,7 @@ export default function MediaMention(props) {
       // Use Avatar component instead of direct image HTML
       const avatarHTML = person.image
         ? Avatar({
-            size: 'sm',
+            size: 'xs',
             type: 'image',
             helper_class: 'person-avatar'
           })

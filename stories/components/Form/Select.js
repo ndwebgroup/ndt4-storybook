@@ -22,7 +22,7 @@ export default function Select(props) {
   fieldHTML += `
     <select name="${id}" id="${id}">
     ${items.map((item) => {
-      return `<option value="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</option>`;
+      return `<option ${item.modifier} value="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</option>`;
     }).join('\n      ')}
     </select>
   `

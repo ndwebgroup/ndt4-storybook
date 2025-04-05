@@ -22,8 +22,9 @@ export default function Radio(props) {
 
   fieldHTML += `
     <ul class="no-bullets radio-list" id="${fieldId}">
-    ${items.map((item) => {
-      return `  <li><input id="${item.text.toLowerCase().replace(/\s/g, '')}" type="radio" name="radio-group"><label for="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</label></li>`;
+    ${items.map((item, index) => {
+      const itemId = `radio-${index}`;
+      return `  <li><input id="${itemId}" type="radio" ${item.modifier} name="radio-group"><label for="${itemId}">${item.text}</label></li>`;
     }).join('\n      ')}
     </ul>
   `;

@@ -80,7 +80,8 @@ export const Default = (args) => {
 Default.args = {
   title: 'Dialog Title',
   content: 'This is the default dialog content. Dialogs can contain any type of information that requires user attention.',
-  closeButtonText: 'Close'
+  closeButtonText: 'Close',
+  footer: '<p>This is a default dialog footer. Use this space for supporting text or action buttons</p>'
 };
 
 Default.parameters = {
@@ -121,7 +122,7 @@ export const Alert = (args) => {
 Alert.args = {
   title: 'Attention Required',
   content: `<p class="text-danger">Are you sure you want to delete this item? This action cannot be undone.</p>`,
-  footer:  `
+  footer: `
   <button class="btn btn--cta">Delete</button>
   <button class="btn btn--neutral">Cancel</button>
   `,
