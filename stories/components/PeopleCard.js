@@ -69,7 +69,7 @@ export default function PeopleCard(props) {
         <div class="dialog-content">
           <div class="dialog-image"><img class="image-circle" height="600" width="600" loading="lazy" src="${imageSrc}" alt="${name}"></div>
           <div class="dialog-body">
-            <p class="h2">${name}</p>
+            <p class="person-name">${name}</p>
             <p class="person-title">${title}</p>
             <p>
               ${email ? `<a href="mailto:${email}">${email}</a><br>` : ''}

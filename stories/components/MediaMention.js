@@ -12,6 +12,7 @@ import Avatar from './Avatar';
  */
 export default function MediaMention(props) {
   const container = document.createElement('div');
+  container.className = 'card-container';
   const {
     item,
     headingTag = 'h2',
@@ -93,7 +94,7 @@ export default function MediaMention(props) {
 
   // Put it all together
   container.innerHTML = `
-    <div class="card media-mention ${item.publication ? item.publication.slug || '' : ''}">
+    <div class="card card--media-mention ${item.publication ? item.publication.slug || '' : ''}">
       <div class="card-body">
         ${publicationHTML}
         <div class="card-content">

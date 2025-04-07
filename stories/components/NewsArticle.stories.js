@@ -1,7 +1,7 @@
 import NewsArticle from './NewsArticle.js';
 
 export default {
-  title: 'Components/NewsArticle',
+  title: 'Components/News Article',
   tags: ['autodocs'],
   argTypes: {
     title: { name: 'Article Title' },

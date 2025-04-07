@@ -14,7 +14,6 @@ export default {
     placeholder: false,
     name: 'John Doe',
     title: 'Person title',
-    summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
     link:'#',
   }
 };

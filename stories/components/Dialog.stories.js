@@ -81,7 +81,7 @@ Default.args = {
   title: 'Dialog Title',
   content: 'This is the default dialog content. Dialogs can contain any type of information that requires user attention.',
   closeButtonText: 'Close',
-  footer: '<p>This is a default dialog footer. Use this space for supporting text or action buttons</p>'
+  footer: 'This is a default dialog footer. Use this space for supporting text or action buttons'
 };
 
 Default.parameters = {
