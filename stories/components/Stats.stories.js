@@ -11,6 +11,7 @@ export default {
     }
   },
   argTypes: {
+    size: { name:'Stat size', control:'select', options:['default','lg']},
     items: {
       name: 'Stats Items',
       description: 'Array of stats. Each item should have a value property, a label property, and an optional icon property.',
@@ -18,6 +19,7 @@ export default {
     },
   },
   args: {
+    size:'default',
   },
 };
 
@@ -40,6 +42,14 @@ export const Default = (args) => {
 };
 Default.args = {
   items: exampleItemsNoIcons,
+};
+
+export const Large = (args) => {
+  return Stats(args);
+};
+Large.args = {
+  items: exampleItemsNoIcons,
+  size:'lg'
 };
 
 export const WithIcons = (args) => {

@@ -11,7 +11,7 @@ export default {
     title: { name:'Card Title',},
   },
   args: {
-    layout:'',
+    layout:'default',
     image: true,
     title: 'Card Title',
     summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',

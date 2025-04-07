@@ -31,11 +31,6 @@ export default {
       control: 'text',
       description: 'Brief description of the event'
     },
-    showReadMore: {
-      name: 'Show Read More',
-      control: 'boolean',
-      description: 'Toggle to show or hide the Read More button'
-    },
     showCalendars: {
       name: 'Show Calendars',
       control: 'boolean',
@@ -66,12 +61,12 @@ export default {
     location: 'DeBartolo Hall, Room 101',
     showExcerpt: false,
     excerpt: 'Join us for an interactive workshop exploring innovative teaching methods and strategies for engaging students in the classroom. Faculty from all disciplines are welcome to attend.',
-    showReadMore: false,
     showCalendars: false,
     calendars: ['Academic Calendar', 'Faculty Events'],
     link: '#',
     headingTag: 'h2',
-    repeatDate: false
+    repeatDate: false,
+    variant:'',
   }
 };
 
@@ -86,14 +81,6 @@ WithExcerpt.args = {
   showExcerpt: true
 };
 
-export const WithReadMore = (args) => {
-  return Event(args);
-};
-WithReadMore.args = {
-  showExcerpt: true,
-  showReadMore: true
-};
-
 export const WithCalendars = (args) => {
   return Event(args);
 };
@@ -106,7 +93,6 @@ export const AllOptions = (args) => {
 };
 AllOptions.args = {
   showExcerpt: true,
-  showReadMore: true,
   showCalendars: true
 };
 

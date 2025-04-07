@@ -3,7 +3,7 @@
  * @param {Object} props - Component properties
  * @param {string} props.name - The full name of the person
  * @param {string} props.title - The title of the person
- * * @param {string} props.link - The link of the person
+ * @param {string} props.link - The link of the person
  * @param {boolean} props.placeholder - Whether to show the person image
  * @returns {HTMLElement} - The card element
  */
