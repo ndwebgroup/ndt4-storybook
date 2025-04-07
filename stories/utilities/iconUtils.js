@@ -16,12 +16,9 @@ export function getIcon(iconName, className = '', title = '', size = '') {
   const sizeClass = size ? ` icon--${size}` : '';
   const classAttr = className ? ` class="icon${sizeClass} ${className}"` : ` class="icon${sizeClass}"`;
 
-  return `
-    <svg${classAttr} aria-hidden="${!title}" role="${title ? 'img' : 'presentation'}" focusable="false">
-      ${titleTag}
-      <use href="#${iconId}"></use>
-    </svg>
-  `;
+  return `<svg${classAttr} aria-hidden="${!title}" role="${title ? 'img' : 'presentation'}" focusable="false">
+      ${titleTag}<use href="#${iconId}"></use>
+    </svg>`;
 }
 
 /**

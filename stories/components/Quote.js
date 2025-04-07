@@ -9,7 +9,7 @@
 
 import Avatar from './Avatar.js';
 
-export default function Card(props) {
+export default function Quote(props) {
   const {
     image = true,
     text,
