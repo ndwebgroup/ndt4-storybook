@@ -35,6 +35,8 @@ export default {
       control: { type: 'select' },
       options: ['left', 'right', 'stacked'],
     },
+    buttons: { name: 'Single Button', control: 'object' },
+    buttonList: { name: 'Button List', control: 'object' },
   },
   args: {
     // Default args for all stories
@@ -49,7 +51,7 @@ export default {
 
 const exampleButtons = [
   { label:'Button One', type:'primary', state:'default', moreIcon:false, },
-  { label:'Button Two', type:'primary', state:'default', moreIcon:false, },
+  { label:'Button Two', type:'secondary', state:'default', moreIcon:false, },
 ];
 
 export const Left = (args) => {
@@ -58,4 +60,35 @@ export const Left = (args) => {
 };
 Left.storyName = 'Default Banner';
 Left.args = {
+};
+
+export const WithSingleButton = (args) => {
+  const mergedArgs = { ...args };
+  return BannerDefault(mergedArgs);
+};
+WithSingleButton.storyName = 'Banner with Single CTA';
+WithSingleButton.args = {
+  buttons: { label: 'Learn More', type: 'primary', state: 'default', moreIcon: false }
+};
+
+export const WithButtonList = (args) => {
+  const mergedArgs = { ...args };
+  return BannerDefault(mergedArgs);
+};
+WithButtonList.storyName = 'Banner with Multiple CTAs';
+WithButtonList.args = {
+  buttonList: exampleButtons
+};
+
+export const VideoMedia = (args) => {
+  const mergedArgs = { ...args };
+  return BannerDefault(mergedArgs);
+};
+VideoMedia.storyName = 'Banner with Video';
+VideoMedia.args = {
+  multimedia: 'video',
+  mediaAlignment: 'left',
+  title: 'Video Banner Title',
+  summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
+  buttons: { label: 'Watch Full Video', type: 'primary', state: 'default', moreIcon: false }
 };

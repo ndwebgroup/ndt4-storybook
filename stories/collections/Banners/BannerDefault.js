@@ -16,10 +16,10 @@ import Video from '/stories/components/Videos';
 
 export default function Banner(props) {
   const container = document.createElement('div');
-  const { multimedia, mediaAlignment, headingTag, label, title, titleSize, summary, buttons } = props;
+  const { multimedia, mediaAlignment, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
   container.className = `banner grid grid-md-2`
-  
+
   let mediaHTML = ''
 
   switch(multimedia) {
@@ -29,12 +29,13 @@ export default function Banner(props) {
       break;
     case 'video':
       container.className += ` banner--${multimedia} banner--media-${mediaAlignment}`
-      const videoElement = Video({ style:'placeholder', videoId:'p_vC10eq474', playStyle:'default' });
-      mediaHTML = `<div class="banner-media banner-video">${videoElement}</div>`
+      // Create an empty placeholder for the video that we'll fill later
+      mediaHTML = `<div class="banner-media banner-video"></div>`;
       break;
     default:
       mediaHTML = ``;
   }
+  // Create banner body content first without buttons
   container.innerHTML = `
   ${mediaHTML}
   <div class="banner-body">
@@ -43,5 +44,36 @@ export default function Banner(props) {
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `
+
+  // Add the video element if multimedia type is video
+  if (multimedia === 'video') {
+    const videoContainer = container.querySelector('.banner-media.banner-video');
+    const videoElement = Video({ style:'placeholder', videoId:'p_vC10eq474', playStyle:'default' });
+    videoContainer.appendChild(videoElement);
+  }
+
+  // Get the banner body element to append buttons properly
+  const bannerBody = container.querySelector('.banner-body');
+
+  // Handle single button
+  if (buttons) {
+    const buttonContainer = document.createElement('p');
+    buttonContainer.appendChild(Button(buttons));
+    bannerBody.appendChild(buttonContainer);
+  }
+
+  // Handle button list
+  if (buttonList && buttonList.length) {
+    const buttonListContainer = document.createElement('ul');
+    buttonListContainer.className = 'list--unstyled btn--group';
+
+    buttonList.forEach(btn => {
+      const buttonItem = document.createElement('li');
+      buttonItem.appendChild(Button(btn));
+      buttonListContainer.appendChild(buttonItem);
+    });
+
+    bannerBody.appendChild(buttonListContainer);
+  }
   return container;
 }
