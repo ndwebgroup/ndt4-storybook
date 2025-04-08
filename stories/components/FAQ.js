@@ -20,10 +20,10 @@ export default function FAQ(props) {
   let anchorList = '';
   if (showAnchors && faqItems.length > 0) {
     const anchors = faqItems.map(item => {
-      return `<li><a href="#${item.id}">${item.question}</a></li>`;
+      return `\n      <li><a href="#${item.id}">${item.question}</a></li>`;
     }).join('');
 
-    anchorList = `<ol class="faq-anchors" id="${id}">${anchors}</ol>`;
+    anchorList = `<ol class="faq-anchors" id="${id}">${anchors}\n    </ol>`;
   }
 
   // Create FAQ items

@@ -43,36 +43,30 @@ For accessibility reasons, use actual heading elements (h1-h6) for page structur
 // Group 1: All headings using the actual heading tags
 export const AllHeadings = {
   render: () => {
-    const container = document.createElement('div');
-
     const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map(level => {
       return Headings({
         level,
         text: `This is a ${level} heading`,
         useClass: false
       });
-    }).join('');
+    }).join('\n');
 
-    container.innerHTML = headings;
-    return container;
+    return headings;
   },
 };
 
 // Group 2: All headings using paragraph with heading classes
 export const HeadingClasses = {
   render: () => {
-    const container = document.createElement('div');
-
     const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map(level => {
       return Headings({
         level,
         text: `This is a paragraph with class ".${level}"`,
         useClass: true
       });
-    }).join('');
+    }).join('\n');
 
-    container.innerHTML = headings;
-    return container;
+    return headings;
   },
 };
 

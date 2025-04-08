@@ -1,7 +1,7 @@
-import PrimaryNavigation from './PrimaryNavigation.js';
+import NavigationPrimary from './NavigationPrimary.js';
 
 export default {
-  title: 'Components/Primary Navigation',
+  title: 'Components/Navigation (Primary)',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -31,7 +31,7 @@ const exampleItems = [
 ];
 
 export const Default = (args) => {
-  return PrimaryNavigation(args);
+  return NavigationPrimary(args);
 };
 
 Default.args = {

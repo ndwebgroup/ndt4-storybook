@@ -1,7 +1,7 @@
-import SidebarNavigation from './SidebarNavigation.js';
+import NavigationSidebar from './NavigationSidebar.js';
 
 export default {
-  title: 'Components/Sidebar Navigation',
+  title: 'Components/Navigation (Sidebar)',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -32,7 +32,7 @@ const exampleItems = [
 ];
 
 export const Default = (args) => {
-  return SidebarNavigation(args);
+  return NavigationSidebar(args);
 };
 
 Default.args = {

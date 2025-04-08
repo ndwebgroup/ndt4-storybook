@@ -1,13 +1,13 @@
 /**
  * Primary Navigation component
  */
-export default function PrimaryNavigation(args) {
+export default function NavigationPrimary(args) {
   const { items = [] } = args;
 
   return `
 <nav id="nav-top" class="nav-top" aria-label="Primary">
   <div id="primary">
-    <ul>  
+    <ul>
       ${items.map((item, index) => {
           const isLast = index === items.length - 1;
           return `<li><a href="${item.href}">${item.text}</a></li>`;

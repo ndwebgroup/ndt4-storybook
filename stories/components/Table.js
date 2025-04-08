@@ -12,11 +12,9 @@ export default function Table(args) {
         </tr>
       </thead>
       <tbody>
-        ${rows.map(row => `
-          <tr>
-            ${row.map(cell => `<td>${cell}</td>`).join('\n            ')}
-          </tr>
-        `).join('\n        ')}
+        ${rows.map(row => `<tr>
+          ${row.map(cell => `<td>${cell}</td>`).join('\n          ')}
+        </tr>`).join('\n        ')}
       </tbody>
     </table>
   `;
