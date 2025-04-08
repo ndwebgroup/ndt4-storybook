@@ -7,26 +7,24 @@ export default {
     label: {
       name:'Reveal Text',
     },
-    state: { 
-      name: 'Button State',
-      control: 'select', 
-      options: ['default', 'cta'] 
+    cta: { 
+      name: 'Call to Action',
     },
     type: { 
       name: 'Button Type',
       control: 'select', 
       options: ['primary', 'secondary', 'tertiary', 'neutral']
     },
-    icon: { name: 'Show More Icon' },
-    align: { name:'Button Alignment', control:'select', options:['left','right'] }
+    icon: { name: 'Icon', description:'Use Icons component for list of options' },
+    align: { name:'Button Placement', control:'select', options:['left','right'] }
   },
   args: {
     // Default args for all stories
-    state: 'default',
     type: 'primary',
     icon: 'plus',
-    align: 'left',
     label:'',
+    cta: false,
+    align: 'left',
   }
 };
 

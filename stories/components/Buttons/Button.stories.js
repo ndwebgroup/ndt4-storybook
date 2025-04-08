@@ -7,23 +7,25 @@ export default {
     label: {
       name:'Button Label',
     },
-    state: { 
-      name: 'Button State',
-      control: 'select', 
-      options: ['default', 'cta'] 
+    href: {
+      name:'Button Link',
     },
     type: { 
       name: 'Button Type',
       control: 'select', 
       options: ['primary', 'secondary', 'tertiary', 'neutral']
     },
+    cta: { 
+      name: 'Call to Action', 
+    },
     moreIcon: { 
-      name: 'Show More Icon'
+      name: 'More Icon'
     },
   },
   args: {
     // Default args for all stories
     label: 'Button',
+    href:'#',
   }
 };
 
@@ -32,8 +34,8 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Buttons';
 Default.args = {
-  state: 'default',
   type: 'primary',
+  cta: false,
   moreIcon: false,
 };
 
@@ -45,14 +47,14 @@ export const Base = (args) => {
     const buttonProps = { ...args, type };
     const button = Button(buttonProps);
     container.appendChild(button);
-    container.appendChild(document.createTextNode(' ')); // Add space between buttons
+    container.appendChild(document.createTextNode('\n  ')); // Add space between buttons
   });
 
   return container;
 };
 Base.storyName = 'Base Buttons';
 Base.args = {
-  state: 'default',
+  cta: false,
   type: 'primary',
   moreIcon: false,
 };
@@ -65,14 +67,14 @@ export const CTA = (args) => {
     const buttonProps = { ...args, type };
     const button = Button(buttonProps);
     container.appendChild(button);
-    container.appendChild(document.createTextNode(' ')); // Add space between buttons
+    container.appendChild(document.createTextNode('\n  ')); // Add space between buttons
   });
 
   return container;
 };
 CTA.storyName = 'CTA Buttons';
 CTA.args = {
-  state: 'cta',
+  cta: true,
   type: 'primary',
   moreIcon: false,
 };
@@ -85,14 +87,14 @@ export const More = (args) => {
     const buttonProps = { ...args, type };
     const button = Button(buttonProps);
     container.appendChild(button);
-    container.appendChild(document.createTextNode(' ')); // Add space between buttons
+    container.appendChild(document.createTextNode('\n  ')); // Add space between buttons
   });
 
   return container;
 };
 More.storyName = 'More Buttons';
 More.args = {
-  state: 'default',
+  cta: false,
   type: 'primary',
   moreIcon: true,
 };
@@ -105,14 +107,14 @@ export const MoreCTA = (args) => {
     const buttonProps = { ...args, type };
     const button = Button(buttonProps);
     container.appendChild(button);
-    container.appendChild(document.createTextNode(' ')); // Add space between buttons
+    container.appendChild(document.createTextNode('\n  ')); // Add space between buttons
   });
 
   return container;
 };
 MoreCTA.storyName = 'CTA More Buttons';
 MoreCTA.args = {
-  state: 'cta',
+  cta: true,
   type: 'primary',
   moreIcon: true,
 };

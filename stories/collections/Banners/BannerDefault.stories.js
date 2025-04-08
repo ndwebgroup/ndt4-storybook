@@ -25,7 +25,7 @@ export default {
       options: ['h2', 'h3', 'h4'],
       description: 'The heading tag to use for the title'
     },
-    multimedia: {
+    media: {
       name: 'Media Type',
       control: { type: 'select' },
       options: ['image', 'video', 'none'],
@@ -44,22 +44,41 @@ export default {
     headingTag:'h2',
     title:'Banner Title',
     summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
-    multimedia:'image',
+    media:'image',
     mediaAlignment:'left',
   },
 };
 
 const exampleButtons = [
-  { label:'Button One', type:'primary', state:'default', moreIcon:false, },
-  { label:'Button Two', type:'secondary', state:'default', moreIcon:false, },
+  { label:'Button One', type:'primary', cta:true, moreIcon:true, },
+  { label:'Button Two', type:'primary', cta:false, moreIcon:false, },
 ];
 
-export const Left = (args) => {
+export const Default = (args) => {
   const mergedArgs = { ...args };
   return BannerDefault(mergedArgs);
 };
-Left.storyName = 'Default Banner';
-Left.args = {
+Default.storyName = 'Default Banner';
+Default.args = {
+};
+
+export const Right = (args) => {
+  const mergedArgs = { ...args };
+  return BannerDefault(mergedArgs);
+};
+Right.storyName = 'Banner with Right Image';
+Right.args = {
+  mediaAlignment:'right',
+};
+
+export const Stacked = (args) => {
+  const mergedArgs = { ...args };
+  return BannerDefault(mergedArgs);
+};
+Stacked.storyName = 'Banner with Stacked Video';
+Stacked.args = {
+  media:'video',
+  mediaAlignment:'stacked',
 };
 
 export const WithSingleButton = (args) => {
@@ -86,7 +105,7 @@ export const VideoMedia = (args) => {
 };
 VideoMedia.storyName = 'Banner with Video';
 VideoMedia.args = {
-  multimedia: 'video',
+  media: 'video',
   mediaAlignment: 'left',
   title: 'Video Banner Title',
   summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
