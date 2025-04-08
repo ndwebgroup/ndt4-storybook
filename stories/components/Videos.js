@@ -9,8 +9,8 @@
 export default function SidebarNavigation(args) {
   const { style, videoId, playText, playStyle } = args;
   const container = document.createElement('p')
-  container.className = `video video--${style}`
-  
+  container.className = `video--${style}`
+
   switch(style) {
     case 'embed':
       container.innerHTML = `
@@ -19,12 +19,12 @@ export default function SidebarNavigation(args) {
       break;
     case 'placeholder':
       container.innerHTML = `
-        <a class="play play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}"><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video"></a>
+        <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}"><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video"></a>
       `;
       break;
     case 'lightbox':
       container.innerHTML = `
-        <a class="play play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}"><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video"></a>
+        <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}"><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video"></a>
       `;
       break;
     default:
@@ -32,6 +32,6 @@ export default function SidebarNavigation(args) {
         <iframe width="1280" height="720" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
       `;
   }
-  
+
   return container;
 }

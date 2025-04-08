@@ -18,7 +18,7 @@ export default {
   },
   args: {
     //Default args for stories
-    style:'embed',
+    style: 'embed',
     videoId: 'p_vC10eq474',
     playStyle: 'default',
     playText: '',
@@ -30,7 +30,7 @@ export const Embed = (args) => {
 };
 
 Embed.args = {
-  style:'embed'
+  style: 'embed'
 };
 
 export const Placeholder = (args) => {
@@ -38,12 +38,12 @@ export const Placeholder = (args) => {
 };
 
 Placeholder.args = {
-  style:'placeholder'
+  style: 'placeholder'
 };
 export const Lightbox = (args) => {
   return Videos(args);
 };
 
 Lightbox.args = {
-  style:'lightbox'
+  style: 'lightbox'
 };

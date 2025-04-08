@@ -34,6 +34,19 @@ const withSvgSprite = (Story) => {
   return Story();
 };
 
+// Load NDT4 JavaScript at the end of body
+const withNDT4Script = (Story) => {
+  // Only inject the script if it hasn't been injected already
+  if (!document.getElementById('ndt4-script')) {
+    const script = document.createElement('script');
+    script.id = 'ndt4-script';
+    script.src = 'https://ndt4.conductor.nd.edu/javascripts/ndt.js';
+    document.body.appendChild(script);
+  }
+
+  return Story();
+};
+
 const preview = {
   parameters: {
     controls: {
@@ -61,7 +74,7 @@ const preview = {
     dark: { ...themes.dark, appBg: '#0c2340', barBg: '#0c2340', },
     light: { ...themes.normal, appBg: '#fff' }
   },
-  decorators: [withSvgSprite],
+  decorators: [withSvgSprite, withNDT4Script],
 };
 
 /*!
