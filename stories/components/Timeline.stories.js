@@ -7,7 +7,7 @@ export default {
   argTypes: {
     layout: { name: 'Timeline Layout', control:'select', options:['left','right','center']},
     items: {
-      title: 'Radio Group Items',
+      title: 'Timeline Items',
       description: 'Array of timeline items. Each item should have a title, date, and description property.',
       control: 'object'
     },

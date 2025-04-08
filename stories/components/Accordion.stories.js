@@ -1,5 +1,4 @@
-import { createStoryElement } from '../utils';
-import Accordion from './Accordion.js';
+import Accordion from './Accordion';
 
 export default {
   title: 'Components/Accordion',
@@ -13,25 +12,23 @@ export default {
   },
   argTypes: {
     variant: { name:'Variant', control: 'select', options: ['default', 'large', 'highlight'] },
-    summaryOne: { name: 'Summary One'},
-    summaryTwo: { name: 'Summary Two'},
-    summaryThree: { name: 'Summary Three'},
-    detailOne: { name: 'Detail One'},
-    detailTwo: { name: 'Detail Two'},
-    detailThree: { name: 'Detail Three'},
+    items: {
+      title: 'List Items',
+      description: 'Array of detail/summary items. Each item should have a summary and detail property.',
+      control: 'object'
+    }, 
   },
   args: {
     // Default args for all stories
     variant: 'default',
-    transparent: true,
-    summaryOne: 'Summary Number One',
-    detailOne: 'Details for Summary Number One. Euismod donec id elit non mi porta gravida at eget metus. Malesuada porta etiam porta sem malesuada magna mollis euismod.',
-    summaryTwo: 'Summary Number Two',
-    detailTwo: 'Details for Summary Number One. Euismod donec id elit non mi porta gravida at eget metus. Malesuada porta etiam porta sem malesuada magna mollis euismod.',
-    summaryThree: 'Summary Number Three',
-    detailThree: 'Details for Summary Number One. Euismod donec id elit non mi porta gravida at eget metus. Malesuada porta etiam porta sem malesuada magna mollis euismod.',
   },
 };
+
+const exampleItems = [
+  { summary:'Summary One', detail:'Litora volutpat a ad fermentum scelerisque parturient egestas vestibulum a malesuada ut turpis vestibulum ullamcorper vehicula torquent viverra.' },
+  { summary:'Summary Two', detail:'Litora volutpat a ad fermentum scelerisque parturient egestas vestibulum a malesuada ut turpis vestibulum ullamcorper vehicula torquent viverra.' },
+  { summary:'Summary Three', detail:'Litora volutpat a ad fermentum scelerisque parturient egestas vestibulum a malesuada ut turpis vestibulum ullamcorper vehicula torquent viverra.' },
+];
 
 export const Default = (args) => {
   const mergedArgs = { ...args };
@@ -39,6 +36,7 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Accordion';
 Default.args = {
+  items: exampleItems,
 };
 
 export const Highlighted = (args) => {
@@ -48,6 +46,7 @@ export const Highlighted = (args) => {
 Highlighted.storyName = 'Highlighted Accordion';
 Highlighted.args = {
   variant: 'highlight',
+  items: exampleItems,
 };
 
 export const Large = (args) => {
@@ -57,4 +56,5 @@ export const Large = (args) => {
 Large.storyName = 'Large Accordion';
 Large.args = {
   variant: 'large',
+  items: exampleItems,
 };

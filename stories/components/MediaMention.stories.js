@@ -114,7 +114,7 @@ export const WithoutPeople = {
 
 // Media mention with h3 heading
 export const WithH3Heading = {
-  storyName: 'With H3 Heading',
+  name: 'With H3 Heading',
   args: {
     item: sampleMediaMention,
     headingTag: 'h3',

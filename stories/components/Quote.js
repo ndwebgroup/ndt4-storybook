@@ -7,7 +7,7 @@
  * @returns {HTMLElement} - The blockquote element
  */
 
-import Avatar from './Avatar.js';
+import Avatar from './Avatar';
 
 export default function Quote(props) {
   const {

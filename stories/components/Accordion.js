@@ -1,36 +1,24 @@
 /**
  * Accordion component
  * @param {Object} props - Component properties
- * @param {boolean} props.transparent - Whether to show the accordion background
  * @param {('default'|'large'|'highlight')} [props.variant='default'] - Variant of the accordion
- * @param {string} props.summaryOne - The summary of the accordion 1
- * @param {string} props.detailOne - The details of the accordion 1
- * @param {string} props.summaryTwo - The summary of the accordion 2
- * @param {string} props.detailTwo - The details of the accordion 2
- * @param {string} props.summaryThree - The summary of the accordion 3
- * @param {string} props.detailThree - The details of the accordion 3
  * @returns {HTMLElement} - The accordion element
  */
 export default function Accordion(props) {
   const container = document.createElement('div');
-  const { variant = 'default', transparent, summaryOne, detailOne, summaryTwo, detailTwo, summaryThree, detailThree } = props;
+  container.className = 'accordion-list'
+  const { variant = 'default', items  } = props;
 
-  const accordionClass = `accordion accordion--${variant} accordion--${transparent}`;
+  const accordionClass = `accordion accordion--${variant}`;
 
   container.innerHTML = `
-    <details class="${accordionClass}">
-      <summary>${summaryOne}</summary>
-      ${detailOne}
-    </details>
-    <details class="${accordionClass}">
-      <summary>${summaryTwo}</summary>
-      ${detailTwo}
-    </details>
-    <details class="${accordionClass}">
-      <summary>${summaryThree}</summary>
-      ${detailThree}
-    </details>
-  `;
+  ${items.map((item) => {
+    return `<details class="${accordionClass}">
+    <summary>${item.summary}</summary>
+    <p>${item.detail}</p>
+  </details>`;
+  }).join('\n  ')}
+`;
 
   return container;
 }
