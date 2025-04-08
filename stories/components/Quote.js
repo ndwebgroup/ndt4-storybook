@@ -2,7 +2,7 @@
  * Quote component
  * @param {Object} props - Component properties
  * @param {boolean} props.image - Whether to show the avatar
- * * @param {string} props.text - The text of the blockquote
+ * @param {string} props.text - The text of the blockquote
  * @param {('primary'|'centered'|'left')} [props.layout='centered'] - The layout of the blockquote
  * @returns {HTMLElement} - The blockquote element
  */

@@ -1,5 +1,5 @@
 /**
- * Badge component
+ * Byline component
  * @param {Object} props - Component properties
  * @param {string} props.name - The full name of the person
  * @param {string} props.title - The title of the person
@@ -9,7 +9,7 @@
  */
 import Avatar from './Avatar.js';
 
-export default function Badge(props) {
+export default function Byline(props) {
   const {
     name,
     title,
@@ -18,24 +18,24 @@ export default function Badge(props) {
   } = props;
 
   const container = document.createElement('div');
-  container.className = 'avatar--badge';
+  container.className = 'byline';
 
-  const avatarImage = Avatar({ size: 'xs', type:'image', helper_class:'avatar--badge-image' });
-  const avatarPlaceholder = Avatar({ size:'xs', type:'placeholder', helper_class:'avatar--badge-image' });
+  const avatarImage = Avatar({ size: 'xs', type:'image', helper_class:'byline-image' });
+  const avatarPlaceholder = Avatar({ size:'xs', type:'placeholder', helper_class:'byline-image' });
 
   if (placeholder) {
     container.innerHTML = `
       ${avatarPlaceholder}
-      <div class="avatar--badge-body">
-        <p class="avatar--badge-title"><a class="avatar--badge-link" href="${link}">${name}</a></p>
+      <div class="byline-body">
+        <p class="byline-title"><a class="byline-link" href="${link}">${name}</a></p>
         <p class="person-title">${title}</p>
       </div>
     `;
   } else {
     container.innerHTML = `
       ${avatarImage}
-      <div class="avatar--badge-body">
-        <p class="avatar--badge-title"><a class="avatar--badge-link" href="${link}">${name}</a></p>
+      <div class="byline-body">
+        <p class="byline-title"><a class="byline-link" href="${link}">${name}</a></p>
         <p class="person-title">${title}</p>
       </div>
     `;

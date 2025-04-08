@@ -1,7 +1,7 @@
-import Badge from './Badge.js';
+import Byline from './Byline';
 
 export default {
-  title: 'Components/Badge',
+  title: 'Components/Byline',
   tags: ['autodocs'],
   argTypes: {
     placeholder: { name:'Placeholder Image',},
@@ -19,13 +19,13 @@ export default {
 };
 
 export const Primary = (args) => {
-  return Badge(args);
+  return Byline(args);
 };
 Primary.args = {
 };
 
 export const Placeholder = (args) => {
-  return Badge(args);
+  return Byline(args);
 };
 Placeholder.args = {
   placeholder:true,
