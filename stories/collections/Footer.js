@@ -153,7 +153,7 @@ export default function Footer(props) {
     <footer id="footer" class="site-footer">
       ${navFooterHTML}
 
-      <div class="footer-site" typeof="Organization" resource="#siteorg">
+      <div class="footer-org" typeof="Organization" resource="#siteorg">
         <meta property="parentOrganization" resource="#parentorg" content="University of Notre Dame">
 
         ${breadcrumbsHTML}
