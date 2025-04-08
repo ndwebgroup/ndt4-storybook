@@ -14,23 +14,27 @@ export default function SidebarNavigation(args) {
   switch(style) {
     case 'embed':
       container.innerHTML = `
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-      `;
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+`;
       break;
     case 'placeholder':
       container.innerHTML = `
-        <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}"><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video"></a>
-      `;
+  <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
+    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video">
+  </a>
+`;
       break;
     case 'lightbox':
       container.innerHTML = `
-        <a class="play play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}"><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video"></a>
-      `;
+  <a class="play play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
+    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video">
+  </a>
+`;
       break;
     default:
       container.innerHTML = `
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-      `;
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+ `;
   }
 
   return container;

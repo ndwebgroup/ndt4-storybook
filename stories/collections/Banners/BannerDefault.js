@@ -25,7 +25,7 @@ export default function Banner(props) {
   switch(media) {
     case 'image':
       container.className += ` banner--media-${mediaAlignment}`
-      mediaHTML = `<figure class="banner-media banner-image"><img src="/images/placeholder-campus-4-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
+      mediaHTML = `<figure class="banner-media banner-image"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
       break;
     case 'video':
       container.className += ` banner--media-${mediaAlignment}`

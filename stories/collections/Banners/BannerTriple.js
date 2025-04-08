@@ -19,9 +19,9 @@ export default function BannerTriple(props) {
 
   let mediaHTML = `
   <div class="banner-media banner-media--3">
-    <figure class="banner-image"><img src="/images/placeholder-campus-4-1600x900.jpg" width="1600" height="900" alt=""></figure>
-    <figure class="banner-image"><img src="/images/placeholder-campus-4-1600x900.jpg" width="1600" height="900" alt=""></figure>
-    <figure class="banner-image"><img src="/images/placeholder-campus-4-1600x900.jpg" width="1600" height="900" alt=""></figure>
+    <figure class="banner-image"><img src="/images/placeholder-campus-1-800x1400.jpg" width="800" height="1400" alt=""></figure>
+    <figure class="banner-image"><img src="/images/placeholder-campus-2-800x1400.jpg" width="800" height="1400" alt=""></figure>
+    <figure class="banner-image"><img src="/images/placeholder-campus-3-800x1400.jpg" width="800" height="1400" alt=""></figure>
   </div>
   `
 

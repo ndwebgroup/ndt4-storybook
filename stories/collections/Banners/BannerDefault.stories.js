@@ -109,5 +109,5 @@ VideoMedia.args = {
   mediaAlignment: 'left',
   title: 'Video Banner Title',
   summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
-  buttons: { label: 'Watch Full Video', type: 'primary', state: 'default', moreIcon: false }
+  buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false }
 };
