@@ -1,6 +1,6 @@
 import { addons } from '@storybook/manager-api';
 import { create } from '@storybook/theming/create';
-import '../public/global.css';
+import '../public/css/global.css';
 
 addons.setConfig({
   theme: create({
