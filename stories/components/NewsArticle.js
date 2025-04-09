@@ -14,6 +14,7 @@
 export default function NewsArticle(props) {
   const {
     title,
+    excerpt,
     showImage = true,
     layout = 'vertical',
     label = 'Card Label',
@@ -51,6 +52,7 @@ export default function NewsArticle(props) {
           <div property="author" typeof="Person"><meta property="name" content="${author}"></div>
           <p class="meta-item publish-info"><time property="datePublished" datetime="${new Date(publishDate).toISOString()}">${publishDate}</time></p>
         </div>
+        ${excerpt ? `<div class="card-summary">${excerpt}</div>` : ''}
       </div>
     </div>
   `;

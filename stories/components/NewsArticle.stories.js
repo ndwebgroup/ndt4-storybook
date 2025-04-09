@@ -5,6 +5,7 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     title: { name: 'Article Title' },
+    excerpt: { name: 'Article Excerpt' },
     showImage: {
       name: 'Show Image',
       control: 'boolean',
@@ -28,6 +29,7 @@ export default {
   },
   args: {
     title: 'Notre Dame Research Discovers New Method to Address Climate Change',
+    excerpt: '',
     showImage: true,
     layout: 'vertical',
     label: 'Research',
@@ -69,4 +71,11 @@ export const WithDifferentHeading = (args) => {
 };
 WithDifferentHeading.args = {
   headingTag: 'h3'
+};
+
+export const WithExcerpt = (args) => {
+  return NewsArticle(args);
+};
+WithExcerpt.args = {
+  excerpt:'The power of ND-LEEF lies in its ability to mimic real-world conditions while allowing researchers to manipulate variables, much like in a lab setting.'
 };

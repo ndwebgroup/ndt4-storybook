@@ -34,7 +34,7 @@ export default {
   }
 };
 
-// Example breadcrumb items
+// Example navigation items
 const exampleItems = [
   { text: 'Mission & Commitment', href: '#' },
   { text: 'Leadership', href: '#' },

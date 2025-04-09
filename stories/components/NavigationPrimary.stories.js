@@ -13,21 +13,21 @@ export default {
   argTypes: {
     items: {
       name: 'Navigation Items',
-      description: 'Array of nav items. Each item should have a text property and an href property.',
+      description: 'Array of nav items. Each item should have a label property and a url property.',
       control: 'object'
     }
   }
 };
 
-// Example breadcrumb items
-const exampleItems = [
-  { text: 'Academics', href: '#' },
-  { text: 'Admissions', href: '#' },
-  { text: 'Research', href: '#' },
-  { text: 'Global', href: '#' },
-  { text: 'Faith', href: '#' },
-  { text: 'Community', href: '#' },
-  { text: 'About', href: '#' },
+// Example navigation items
+const exampleNav = [
+  { label: 'Academics', url: '#' },
+  { label: 'Admissions', url: '#' },
+  { label: 'Research', url: '#' },
+  { label: 'Global', url: '#' },
+  { label: 'Faith', url: '#' },
+  { label: 'Community', url: '#' },
+  { label: 'About', url: '#' },
 ];
 
 export const Default = (args) => {
@@ -35,5 +35,5 @@ export const Default = (args) => {
 };
 
 Default.args = {
-  items: exampleItems
+  items: exampleNav
 };
