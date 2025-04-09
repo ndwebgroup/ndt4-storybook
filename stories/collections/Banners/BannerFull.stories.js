@@ -1,12 +1,12 @@
-import BannerTriple from './BannerTriple';
+import BannerFull from './BannerFull';
 
 export default {
-  title: 'Collections/Banner/Banner(Three Image)',
+  title: 'Collections/Banner/Banner (Fullbleed)',
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: 'Banner Description'
+        component: 'Fullbleed Banner Description'
       }
     }
   },
@@ -25,15 +25,23 @@ export default {
       options: ['h2', 'h3', 'h4'],
       description: 'The heading tag to use for the title'
     },
+    textAlignment: {
+      name: 'Text Placement',
+      control: { type: 'select' },
+      options: ['left', 'right', 'center'],
+    },
     buttons: { name: 'Single Button', control: 'object' },
     buttonList: { name: 'Button List', control: 'object' },
   },
   args: {
     // Default args for all stories
     label:'',
-    headingTag:'h2',
     title:'Banner Title',
+    titleSize:'default',
+    headingTag:'h2',
     summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
+    textAlignment:'left',
+
   },
 };
 
@@ -44,26 +52,9 @@ const exampleButtons = [
 
 export const Default = (args) => {
   const mergedArgs = { ...args };
-  return BannerTriple(mergedArgs);
+  return BannerFull(mergedArgs);
 };
 Default.storyName = 'Default Banner';
 Default.args = {
-};
-
-export const Right = (args) => {
-  const mergedArgs = { ...args };
-  return BannerTriple(mergedArgs);
-};
-Right.storyName = 'Reversed Three Image Banner';
-Right.args = {
-  mediaAlignment:'right',
-};
-
-export const Stacked = (args) => {
-  const mergedArgs = { ...args };
-  return BannerTriple(mergedArgs);
-};
-Stacked.storyName = 'Stacked Three Image Banner';
-Stacked.args = {
-  mediaAlignment:'stacked',
+  buttonList: exampleButtons
 };

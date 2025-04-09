@@ -1,7 +1,7 @@
 import BannerDefault from './BannerDefault';
 
 export default {
-  title: 'Collections/Banner/Banner(Default)',
+  title: 'Collections/Banner/Banner (Default)',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -42,8 +42,8 @@ export default {
     // Default args for all stories
     label:'',
     headingTag:'h2',
-    title:'Banner Title',
-    summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
+    title:'What’s Your Passion?',
+    summary:'Explore the undergraduate, graduate, and certification programs available at Notre Dame. Lorem ipsum dolor sit amet consectetur adipiscing elit ut vel, iaculis sagittis elementum.',
     media:'image',
     mediaAlignment:'left',
   },
@@ -60,6 +60,7 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Banner';
 Default.args = {
+  buttons: { label: 'Explore all programs', type: 'primary', cta:false, moreIcon: true }
 };
 
 export const Right = (args) => {
@@ -87,7 +88,7 @@ export const WithSingleButton = (args) => {
 };
 WithSingleButton.storyName = 'Banner with Single CTA';
 WithSingleButton.args = {
-  buttons: { label: 'Learn More', type: 'primary', state: 'default', moreIcon: false }
+  buttons: { label: 'Learn More', type: 'primary', cta:false, moreIcon: false }
 };
 
 export const WithButtonList = (args) => {

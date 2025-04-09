@@ -1,5 +1,5 @@
 /**
- * BannerTriple component
+ * BannerThree component
  * @param {Object} props - Component properties
  * @param {string} props.label - The label of the banner
  * @param {string} [props.headingTag='h2'] - The heading tag to use for the title
@@ -11,14 +11,14 @@
 
 import Button from '/stories/components/Buttons/Button.js';
 
-export default function BannerTriple(props) {
+export default function BannerThree(props) {
   const container = document.createElement('div');
   const { mediaAlignment, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section section--banner grid grid-md-2 banner--media-${mediaAlignment}`
+  container.className = `section section--banner grid grid-md-2 media--${mediaAlignment}`
 
   let mediaHTML = `
-  <div class="banner-media banner-media--3">
+  <div class="banner-media media--3">
     <figure class="banner-image"><img src="/images/placeholder-campus-1-800x1400.jpg" width="800" height="1400" alt=""></figure>
     <figure class="banner-image"><img src="/images/placeholder-campus-2-800x1400.jpg" width="800" height="1400" alt=""></figure>
     <figure class="banner-image"><img src="/images/placeholder-campus-3-800x1400.jpg" width="800" height="1400" alt=""></figure>
