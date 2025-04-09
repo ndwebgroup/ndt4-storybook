@@ -20,7 +20,6 @@
  * @param {string} [props.siteYoutube=''] - YouTube URL
  * @param {string} [props.siteLinkedin=''] - LinkedIn URL
  * @param {number} [props.currentYear=new Date().getFullYear()] - Current year for copyright
- * @param {boolean} [props.useWrapper=false] - Whether to wrap the footer in a wrapper div
  * @returns {string} - The footer HTML
  */
 export default function Footer(props) {
@@ -57,9 +56,6 @@ export default function Footer(props) {
 
     // Current year is used for copyright
     currentYear = new Date().getFullYear(),
-
-    // Wrapper option
-    useWrapper = false,
   } = props;
 
   const hasParentLinks = footerParent && footerParentLink;
@@ -251,11 +247,6 @@ export default function Footer(props) {
       </div>
     </footer>
   `;
-
-  // If useWrapper is true, wrap the footer in a div with class "wrapper"
-  if (useWrapper) {
-    return `<div class="wrapper">${footerHTML}</div>`;
-  }
 
   // Otherwise, return the footer HTML directly
   return footerHTML;

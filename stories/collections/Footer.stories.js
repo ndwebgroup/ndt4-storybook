@@ -1,11 +1,50 @@
 import Footer from './Footer.js';
 
+// Add styles to document head
+const addFooterStyles = () => {
+  if (!document.getElementById('footer-styles')) {
+    const style = document.createElement('style');
+    style.id = 'footer-styles';
+    style.textContent = `
+      .wrapper {
+        min-height: revert;
+        grid-template-rows: auto;
+      }
+      .site-footer {
+        grid-row: 1/-1;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+};
+
 export default {
   title: 'Collections/Footer',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      source: {
+        // This will be the code shown in the docs
+        transform: (code) => {
+          // Remove the wrapper div from the code view
+          return code.replace(/<div class="wrapper">(.*?)<\/div>/gs, '$1');
+        }
+      }
+    },
+    viewport: {
+      defaultViewport: 'responsive'
+    }
   },
+  decorators: [
+    (Story) => {
+      // Add styles to document head
+      addFooterStyles();
+      // This will only affect the preview
+      const result = Story();
+      return `<div class="wrapper">${result}</div>`;
+    }
+  ],
   argTypes: {
     // Nav footer props
     showNavFooter: {
@@ -111,13 +150,6 @@ export default {
       control: 'number',
       description: 'Current year for copyright notice',
     },
-
-    // Wrapper prop
-    useWrapper: {
-      name: 'Use Wrapper',
-      control: 'boolean',
-      description: 'Wrap the footer in a div with class "wrapper"',
-    },
   },
   args: {
     // Default values for the component
@@ -129,7 +161,6 @@ export default {
     ],
     siteName: 'Department of Example',
     currentYear: 2025,
-    useWrapper: true,
   }
 };
 
