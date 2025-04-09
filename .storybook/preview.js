@@ -1,5 +1,3 @@
-/** @type { import('@storybook/html').Preview } */
-
 import { themes } from '@storybook/theming';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import '../public/css/global.css';

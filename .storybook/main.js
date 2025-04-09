@@ -1,25 +1,22 @@
 /** @type { import('@storybook/html-webpack5').StorybookConfig } */
-const config = {
-  "stories": [
-    "../stories/**/*.mdx",
-    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
-  ],
-
-  "addons": [
-    "@storybook/addon-webpack5-compiler-swc",
-    "@chromatic-com/storybook",
-    "@storybook/addon-essentials",
-    'storybook-dark-mode',
-    "@storybook/addon-interactions",
-  ],
-
+export default {
   "framework": {
     "name": "@storybook/html-webpack5",
     "options": {}
   },
+  "stories": [
+    "../stories/**/*.mdx",
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  ],
+  "addons": [
+    "@storybook/addon-webpack5-compiler-swc",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    "storybook-dark-mode",
+    "@chromatic-com/storybook",
+  ],
   staticDirs: ['../public'],
   docs: {
     autodocs: true
   }
 };
-export default config;
