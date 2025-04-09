@@ -1,7 +1,7 @@
-import Event from './Event.js';
+import EventCard from './EventCard';
 
 export default {
-  title: 'Components/Event',
+  title: 'Components/Cards/Card (Event)',
   tags: ['autodocs'],
   argTypes: {
     title: { name: 'Event Title' },
@@ -71,25 +71,25 @@ export default {
 };
 
 export const Default = (args) => {
-  return Event(args);
+  return EventCard(args);
 };
 
 export const WithExcerpt = (args) => {
-  return Event(args);
+  return EventCard(args);
 };
 WithExcerpt.args = {
   showExcerpt: true
 };
 
 export const WithCalendars = (args) => {
-  return Event(args);
+  return EventCard(args);
 };
 WithCalendars.args = {
   showCalendars: true
 };
 
 export const AllOptions = (args) => {
-  return Event(args);
+  return EventCard(args);
 };
 AllOptions.args = {
   showExcerpt: true,
@@ -97,7 +97,7 @@ AllOptions.args = {
 };
 
 export const AllDayEvent = (args) => {
-  return Event(args);
+  return EventCard(args);
 };
 AllDayEvent.args = {
   allDay: true,
@@ -105,7 +105,7 @@ AllDayEvent.args = {
 };
 
 export const RepeatedDateEvent = (args) => {
-  return Event(args);
+  return EventCard(args);
 };
 RepeatedDateEvent.args = {
   repeatDate: true,

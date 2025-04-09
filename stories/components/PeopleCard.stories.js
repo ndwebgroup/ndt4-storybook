@@ -1,7 +1,7 @@
 import PeopleCard from './PeopleCard.js';
 
 export default {
-  title: 'Components/People Card',
+  title: 'Components/Cards/Card (People)',
   tags: ['autodocs'],
   argTypes: {
     summary: { name:'Card Summary',},

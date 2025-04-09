@@ -1,7 +1,7 @@
 import Card from './Card.js';
 
 export default {
-  title: 'Components/Card',
+  title: 'Components/Cards/Card (Default)',
   tags: ['autodocs'],
   argTypes: {
     layout: { name:'Card Layout', control: 'select', options: ['default','horizontal','stacked', 'compact']},
