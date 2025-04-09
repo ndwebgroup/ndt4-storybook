@@ -4,23 +4,22 @@ const config = {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
+
   "addons": [
     "@storybook/addon-webpack5-compiler-swc",
-    {
-      "name": "@storybook/addon-essentials",
-      "options": {
-        "docs": false
-      }
-    },
     "@chromatic-com/storybook",
+    "@storybook/addon-essentials",
     'storybook-dark-mode',
     "@storybook/addon-interactions",
-    "@storybook/addon-docs" // Add this line
   ],
+
   "framework": {
     "name": "@storybook/html-webpack5",
     "options": {}
   },
-  staticDirs: ['../public']
+  staticDirs: ['../public'],
+  docs: {
+    autodocs: true
+  }
 };
 export default config;

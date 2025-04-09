@@ -2,7 +2,7 @@
  * Stats component
  * @param {('default'|'lg')} [props.size='default'] - The size of the stat number
  */
-import { getIcon } from '../utilities/iconUtils.js';
+import { getIcon } from '../utils/iconUtils.js';
 
 export default function Stats(args) {
   const { items = [], size } = args;

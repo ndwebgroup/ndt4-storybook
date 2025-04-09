@@ -1,4 +1,4 @@
-import { createStoryElement } from '../utils';
+import { createStoryElement } from '../../utils';
 import Textarea from './Textarea.js';
 
 export default {

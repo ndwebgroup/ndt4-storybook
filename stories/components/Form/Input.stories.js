@@ -1,4 +1,4 @@
-import { createStoryElement } from '../utils';
+import { createStoryElement } from '../../utils';
 import Input from './Input.js';
 
 export default {

@@ -1,6 +1,7 @@
 /** @type { import('@storybook/html').Preview } */
 
 import { themes } from '@storybook/theming';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import '../public/css/global.css';
 
 const withSvgSprite = (Story) => {
@@ -47,8 +48,12 @@ const withNDT4Script = (Story) => {
   return Story();
 };
 
-const preview = {
+export default {
   parameters: {
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
+      defaultViewport: 'responsive',
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -56,13 +61,12 @@ const preview = {
       },
     },
     backgrounds: {
-      disable:true,
+      disable: true,
     },
     docs: {
       toc: {
         headingSelector: 'h2, h3',
       }
-
     },
   },
   sidebar: {
@@ -106,5 +110,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const body = document.body;
 body.classList.add("sb-unstyled");
-
-export default preview;

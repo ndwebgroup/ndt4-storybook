@@ -1,5 +1,5 @@
 import Icons from './Icons.js';
-import { getAvailableIcons } from '../utilities/iconUtils.js';
+import { getAvailableIcons } from '../utils/iconUtils.js';
 
 export default {
   title: 'Components/Icons',

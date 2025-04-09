@@ -22,7 +22,6 @@ export default {
   title: 'Collections/Footer',
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen',
     docs: {
       source: {
         // This will be the code shown in the docs
@@ -31,9 +30,6 @@ export default {
           return code.replace(/<div class="wrapper">(.*?)<\/div>/gs, '$1');
         }
       }
-    },
-    viewport: {
-      defaultViewport: 'responsive'
     }
   },
   decorators: [
