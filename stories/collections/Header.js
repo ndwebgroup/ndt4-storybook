@@ -3,6 +3,7 @@
  * @param {Object} props - Component properties
  * @param {Array} [props.navHeaderLinks=[]] - Links for the navigation
  * @param {string} [props.siteName=''] - Name of the site
+ * @param {boolean} [props.showNavigation=true] - Whether to show the navigation
  * @returns {string} - The header HTML
  */
 
@@ -12,6 +13,7 @@ export default function Header(props) {
   const {
     // Site organization props
     siteName = '',
+    showNavigation = true,
   } = props;
 
   // Build nav header links HTML if needed
@@ -27,25 +29,25 @@ export default function Header(props) {
 
   const navElement = NavigationPrimary({ items:navHeaderLinks });
 
-
-  // Need help with the following:
-  // - Adding toggle to show/hide navigation for DIY sites
-  // - Adding toggle for mega-menu icon (I can start on menu-menu build)
+  // TODO:
   // - Tieing navHeaderLinks control to imported NavigationPrimary component
+  // - Adding toggle for mega-menu icon (I can start on menu-menu build)
 
   // Create the header HTML
   const headerHTML = `
     <header id="header" class="site-header">
     <p class="mark-header"><a href="https://www.nd.edu/">University of Notre Dame</a></p>
-    
+
     <div class="site-title-group has-parent">
       <h1 id="site-title" class="site-title "><a href="/" accesskey="1" title="Homepage shortcut key = 1">${siteName}</a></h1>
     </div>
 
+    ${showNavigation ? `
     <!-- Header Search/Nav  -->
     <div class="nav-header">
-      ${navElement }
+      ${navElement}
     </div>
+    ` : ''}
 
     <!-- Mobile Navbar -->
     <div class="nav-mobile-util">

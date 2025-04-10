@@ -20,6 +20,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Header',
+  component: Header,
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -55,6 +56,11 @@ export default {
       control: 'text',
       description: 'Name of the site',
     },
+    showNavigation: {
+      control: 'boolean',
+      description: 'Whether to show the navigation',
+      defaultValue: true
+    }
   },
   args: {
     // Default values for the component
@@ -71,10 +77,18 @@ export default {
   }
 };
 
-// Basic footer example
-export const Basic = (args) => {
+const Template = (args) => {
   return Header(args);
 };
-Basic.args = {
-  // Basic example uses the default args
+
+export const Default = Template.bind({});
+Default.args = {
+  siteName: 'Notre Dame',
+  showNavigation: true
+};
+
+export const WithoutNavigation = Template.bind({});
+WithoutNavigation.args = {
+  siteName: 'Notre Dame',
+  showNavigation: false
 };
