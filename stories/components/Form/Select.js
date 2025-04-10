@@ -11,27 +11,17 @@ export default function Select(props) {
   const { note, label, items=[] } = props;
   // Generate a random ID if one isn't provided
   const id = props.id || `select-${Math.random().toString(36).substring(2, 10)}`;
-  let fieldHTML = '';
-
   container.className = 'form-field';
 
-  if (label) {
-    fieldHTML += `<label for="${id}">${label}</label>`
-  }
-
-  fieldHTML += `
-    <select name="${id}" id="${id}">
+  container.innerHTML = `
+    ${label ? `<label for="${id}">${label}</label>` : ''}
+    <select class="field" name="${id}" id="${id}">
     ${items.map((item) => {
-      return `<option ${item.modifier} value="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</option>`;
+      return `<option ${item.modifier ? item.modifier : ''} value="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</option>`;
     }).join('\n      ')}
     </select>
+    ${note ? `<p class="form-field-note">${note}</p>` : ''}
   `
-
-  if (note) {
-    fieldHTML += `<p class="form-field-note">${note}</p>`
-  }
-
-  container.innerHTML = fieldHTML;
 
   return container;
 }

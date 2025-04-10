@@ -5,8 +5,8 @@ export default {
   title: 'Components/Form/Radio',
   tags: ['autodocs'],
   argTypes: {
-    note: { name: 'Help Text'},
-    label: { name: 'Label Text'},
+    note: { name: 'Note'},
+    label: { name: 'Label'},
     items: {
       name: 'Radio Group Items',
       description: 'Array of radio inputs. Each item should have a text property.',
@@ -16,6 +16,7 @@ export default {
   args: {
     // Default args for all stories
     label:'',
+    items:[],
     note: '',
   },
 };
@@ -32,4 +33,16 @@ export const Default = (args) => {
 Default.storyName = 'Default Radio Group';
 Default.args = {
   items: exampleItems,
+};
+
+export const withLabel = (args) => {
+  return Radio(args);
+};
+withLabel.args = {
+  label:'Choose at option',
+  items: [
+    { text: 'Radio Input 1'},
+    { text: 'Radio Input 2' },
+    { text: 'Radio Input 3' }
+  ]
 };

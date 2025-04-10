@@ -14,31 +14,13 @@ export default function Input(props) {
   const { note, label, disabled=false, placeholder="", type="text" } = props;
   // Generate a random ID if one isn't provided
   const id = props.id || `input-${Math.random().toString(36).substring(2, 10)}`;
-  let fieldHTML = '';
-
+  
   container.className = 'form-field';
-
-  if (label) {
-    fieldHTML += `
-      <label for="${id}">${label}</label>
-    `
-  }
-
-  fieldHTML += `
-    <input id="${id}" type="${type}" placeholder='${placeholder}'
+  container.innerHTML = `
+    ${label ? `<label for="${id}">${label}</label>` : ''}
+    <input class="field" id="${id}" type="${type}" placeholder='${placeholder}' ${disabled ? 'disabled' : ''} >
+    ${note ? `<p class="form-field-note">${note}</p>` : ''}
   `
-
-  if (disabled) {
-    fieldHTML += `disabled`
-  }
-
-  fieldHTML += `>`
-
-  if (note) {
-    fieldHTML += `<p class="form-field-note">${note}</p>`
-  }
-
-  container.innerHTML = fieldHTML;
 
   return container;
 }

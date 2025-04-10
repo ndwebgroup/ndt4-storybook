@@ -14,29 +14,13 @@ export default function Textarea(props) {
   const { note, label, disabled=false, placeholder="", rows="3" } = props;
   // Generate a random ID if one isn't provided
   const id = props.id || `textarea-${Math.random().toString(36).substring(2, 10)}`;
-  let fieldHTML = '';
-
   container.className = 'form-field';
 
-  if (label) {
-    fieldHTML += `<label for="${id}">${label}</label>`
-  }
-
-  fieldHTML += `
-    <textarea id="${id}" rows="${rows}" placeholder='${placeholder}'
+  container.innerHTML = `
+    ${label ? `<label for="${id}">${label}</label>` : ''}
+    <textarea id="${id}" rows="${rows}" placeholder='${placeholder}' ${disabled ? 'disabled' : ''} ></textarea>
+    ${note ? `<p class="form-field-note">${note}</p>` : ''}  
   `
-
-  if (disabled) {
-    fieldHTML += `disabled`
-  }
-
-  fieldHTML += `></textarea>`
-
-  if (note) {
-    fieldHTML += `<p class="form-field-note">${note}</p>`
-  }
-
-  container.innerHTML = fieldHTML;
 
   return container;
 }

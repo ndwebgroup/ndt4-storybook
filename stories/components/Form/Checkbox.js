@@ -12,28 +12,18 @@ export default function Checkbox(props) {
   const { note, label, items=[], id } = props;
   // Generate a random ID if one isn't provided
   const fieldId = id || `checkbox-${Math.random().toString(36).substring(2, 10)}`;
-  let fieldHTML = '';
-
   container.className = 'form-field';
 
-  if (label) {
-    fieldHTML += `<label for="${fieldId}">${label}</label>`;
-  }
-
-  fieldHTML += `
-    <ul class="no-bullets checkbox-list">
+  container.innerHTML = `
+    ${label ? `<label for="${fieldId}">${label}</label>` : ''}
+    <ul class="no-bullets field checkbox-list">
     ${items.map((item, index) => {
       const itemId = `checkbox-${index}` || `${fieldId}`;
-      return `<li><input id="${itemId}" type="checkbox" ${item.modifier} name="checkbox-group"><label for="${itemId}">${item.text}</label></li>`;
+      return `<li><input id="${itemId}" type="checkbox" ${item.modifier ? item.modifier : ''} name="checkbox-group"><label for="${itemId}">${item.text}</label></li>`;
     }).join('\n      ')}
     </ul>
+    ${note ? `<p class="form-field-note">${note}</p>` : ''}
   `;
-
-  if (note) {
-    fieldHTML += `<p class="form-field-note">${note}</p>`;
-  }
-
-  container.innerHTML = fieldHTML;
 
   return container;
 }

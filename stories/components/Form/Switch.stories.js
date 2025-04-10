@@ -5,8 +5,8 @@ export default {
   tags: ['autodocs'],
   component: Switch,
   argTypes: {
-    note: { name: 'Help Text'},
-    label: { name: 'Label Text'},
+    note: { name: 'Note'},
+    label: { name: 'Label'},
     icon: { name: 'Icon'}
   },
   args: {

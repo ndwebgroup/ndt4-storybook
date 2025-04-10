@@ -7,8 +7,8 @@ export default {
   argTypes: {
     type: { name: 'Input Type', control:'select', options: ['date', 'email', 'number', 'password', 'text']},
     placeholder: { name: 'Placeholder Text'},
-    note: { name: 'Help Text'},
-    label: { name: 'Label Text'},
+    note: { name: 'Note'},
+    label: { name: 'Label'},
     disabled: { name: 'Disabled'},
   },
   args: {

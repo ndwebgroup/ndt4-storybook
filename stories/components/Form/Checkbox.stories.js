@@ -5,8 +5,8 @@ export default {
   title: 'Components/Form/Checkbox',
   tags: ['autodocs'],
   argTypes: {
-    note: { name: 'Help Text'},
-    label: { name: 'Label Text'},
+    note: { name: 'Note'},
+    label: { name: 'Label'},
     items: {
       name: 'Checkbox Group Items',
       description: 'Array of checkbox inputs. Each item should have a text property.',
@@ -16,6 +16,7 @@ export default {
   args: {
     // Default args for all stories
     label:'',
+    items:[],
     note: '',
   },
 };
