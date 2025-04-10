@@ -26,7 +26,7 @@ export default function SidebarNavigation(args) {
       break;
     case 'lightbox':
       container.innerHTML = `
-  <a class="play play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
+  <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
     <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video">
   </a>
 `;
