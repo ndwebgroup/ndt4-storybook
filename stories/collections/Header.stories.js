@@ -1,4 +1,5 @@
 import Header from './Header.js';
+import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -46,8 +47,23 @@ export default {
     // Nav footer props
     navHeaderLinks: {
       name: 'Navigation Header Links',
-      control: 'object',
-      description: 'Links for main header navigation',
+      control: {
+        type: 'array',
+        of: {
+          type: 'object',
+          properties: {
+            label: {
+              name: 'Label',
+              type: 'string'
+            },
+            url: {
+              name: 'URL',
+              type: 'string'
+            }
+          }
+        }
+      },
+      description: 'Links for main header navigation (defaults to NavigationPrimary defaults if not provided)',
     },
 
     // Site organization props
@@ -64,15 +80,6 @@ export default {
   },
   args: {
     // Default values for the component
-    navHeaderLinks: [
-      { label: 'Academics', url: '#' },
-      { label: 'Admissions', url: '#' },
-      { label: 'Research', url: '#' },
-      { label: 'Global', url: '#' },
-      { label: 'Faith', url: '#' },
-      { label: 'Community', url: '#' },
-      { label: 'About', url: '#' },
-    ],
     siteName: 'Department of Example',
   }
 };
@@ -84,7 +91,8 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   siteName: 'Notre Dame',
-  showNavigation: true
+  showNavigation: true,
+  navHeaderLinks: defaultNavigationItems
 };
 
 export const WithoutNavigation = Template.bind({});

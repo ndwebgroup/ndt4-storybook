@@ -1,4 +1,4 @@
-import NavigationPrimary from './NavigationPrimary.js';
+import NavigationPrimary, { defaultNavigationItems } from './NavigationPrimary.js';
 
 export default {
   title: 'Components/Navigation (Primary)',
@@ -6,34 +6,38 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Primary Navigation description'
+        component: 'The Primary Navigation component provides a simple and accessible way to create a navigation menu. It is designed to be used as part of the header or main navigation of a website.'
       }
     }
   },
   argTypes: {
     items: {
       name: 'Navigation Items',
-      description: 'Array of nav items. Each item should have a label property and a url property.',
-      control: 'object'
+      description: 'Array of nav items. Each item should have label and url properties.',
+      control: {
+        type: 'array',
+        of: {
+          type: 'object',
+          properties: {
+            label: {
+              name: 'Label',
+              type: 'string'
+            },
+            url: {
+              name: 'URL',
+              type: 'string'
+            }
+          }
+        }
+      }
     }
   }
 };
-
-// Example navigation items
-const exampleNav = [
-  { label: 'Academics', url: '#' },
-  { label: 'Admissions', url: '#' },
-  { label: 'Research', url: '#' },
-  { label: 'Global', url: '#' },
-  { label: 'Faith', url: '#' },
-  { label: 'Community', url: '#' },
-  { label: 'About', url: '#' },
-];
 
 export const Default = (args) => {
   return NavigationPrimary(args);
 };
 
 Default.args = {
-  items: exampleNav
+  items: defaultNavigationItems
 };

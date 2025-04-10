@@ -1,37 +1,28 @@
 /**
  * Header component
  * @param {Object} props - Component properties
- * @param {Array} [props.navHeaderLinks=[]] - Links for the navigation
+ * @param {Array} [props.navHeaderLinks] - Optional custom links for the navigation (each with label and url properties)
  * @param {string} [props.siteName=''] - Name of the site
  * @param {boolean} [props.showNavigation=true] - Whether to show the navigation
  * @returns {string} - The header HTML
  */
 
-import NavigationPrimary from '/stories/components/NavigationPrimary';
+// TODO:
+// - Adding toggle for mega-menu icon (I can start on menu-menu build)
+
+import NavigationPrimary, { defaultNavigationItems } from '/stories/components/NavigationPrimary';
 
 export default function Header(props) {
   const {
-    // Site organization props
     siteName = '',
     showNavigation = true,
+    navHeaderLinks,
   } = props;
 
-  // Build nav header links HTML if needed
-  const navHeaderLinks = [
-    { label: 'Academics', url: '#' },
-    { label: 'Admissions', url: '#' },
-    { label: 'Research', url: '#' },
-    { label: 'Global', url: '#' },
-    { label: 'Faith', url: '#' },
-    { label: 'Community', url: '#' },
-    { label: 'About', url: '#' },
-  ];
-
-  const navElement = NavigationPrimary({ items:navHeaderLinks });
-
-  // TODO:
-  // - Tieing navHeaderLinks control to imported NavigationPrimary component
-  // - Adding toggle for mega-menu icon (I can start on menu-menu build)
+  // Only pass navHeaderLinks to NavigationPrimary if it's provided, otherwise let NavigationPrimary use its defaults
+  const navElement = NavigationPrimary({
+    ...(navHeaderLinks && { items: navHeaderLinks })
+  });
 
   // Create the header HTML
   const headerHTML = `
