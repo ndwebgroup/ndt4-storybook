@@ -41,6 +41,73 @@ export default {
   }
 };
 
+// Basic Search form
+export const BasicSearch = (args) => {
+  return FormCombinations(args);
+};
+BasicSearch.storyName = 'Basic Search Form';
+BasicSearch.args = {
+  title: 'Search',
+  inputFields: [
+    { label: 'Search', type: 'search', placeholder: 'Search Site Name' }
+  ],
+  showSubmit: true,
+  submitText: 'Search'
+};
+BasicSearch.parameters = {
+  docs: {
+    description: {
+      story: 'A basic search form with a text input.'
+    }
+  }
+};
+
+// Structure Data filter form
+export const FilterSearch = (args) => {
+  return FormCombinations(args);
+};
+FilterSearch.storyName = 'Filter Search Form';
+FilterSearch.args = {
+  title: 'Filter Search Form',
+  inputFields: [
+    { label: 'Search', type: 'search', placeholder: 'Search Name, Title, or Keywords' }
+  ],
+  selects: [
+    {
+      label: 'Research Areas',
+      items: [
+        { text: 'Biochemistry' },
+        { text: 'Inorganic Chemistry' },
+        { text: 'Organic Chemistry' },
+        { text: 'Physical/Analytical Chemistry' }
+      ]
+    }
+  ],
+  checkboxGroups: [
+    {
+      label: 'Research Specialties',
+      items: [
+        { text: 'Energy' },
+        { text: 'Life Processes' },
+        { text: 'Materials' },
+        { text: 'Measurement' },
+        { text: 'Medicine' },
+        { text: 'Synthesis' },
+        { text: 'Theory' }
+      ]
+    }
+  ],
+  showSubmit: true,
+  submitText: 'Search'
+};
+FilterSearch.parameters = {
+  docs: {
+    description: {
+      story: 'A search form for structured data.'
+    }
+  }
+};
+
 // Sample form configurations for different use cases
 export const ContactForm = (args) => {
   return FormCombinations(args);
