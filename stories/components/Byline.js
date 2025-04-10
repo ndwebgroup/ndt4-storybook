@@ -4,7 +4,7 @@
  * @param {string} props.name - The full name of the person
  * @param {string} props.title - The title of the person
  * @param {string} props.link - The link of the person
- * @param {boolean} props.placeholder - Whether to show the person image
+ * @param {string} props.image - How to show the person image
  * @returns {HTMLElement} - The card element
  */
 import Avatar from './Avatar.js';
@@ -14,32 +14,27 @@ export default function Byline(props) {
     name,
     title,
     link,
-    placeholder = false,
+    image,
   } = props;
 
   const container = document.createElement('div');
   container.className = 'byline';
+  let avatarHTML = ''
+  const titleHTML = `${link ? `<a class="byline-link" href="${link}">${name}</a>` : `${name}`}`;
 
-  const avatarImage = Avatar({ size: 'xs', type:'image', helper_class:'byline-image' });
-  const avatarPlaceholder = Avatar({ size:'xs', type:'placeholder', helper_class:'byline-image' });
-
-  if (placeholder) {
-    container.innerHTML = `
-      ${avatarPlaceholder}
-      <div class="byline-body">
-        <p class="byline-title"><a class="byline-link" href="${link}">${name}</a></p>
-        <p class="person-title">${title}</p>
-      </div>
-    `;
-  } else {
-    container.innerHTML = `
-      ${avatarImage}
-      <div class="byline-body">
-        <p class="byline-title"><a class="byline-link" href="${link}">${name}</a></p>
-        <p class="person-title">${title}</p>
-      </div>
-    `;
+  if (image == 'image') {
+    avatarHTML = Avatar({ size: 'xs', type:'image', helper_class:'byline-image' });
+  } else if ( image == 'placeholder'){
+    avatarHTML = Avatar({ size:'xs', type:'placeholder', helper_class:'byline-image' });
   }
+
+  container.innerHTML = `
+  ${avatarHTML}
+  <div class="byline-body">
+    <p class="byline-title person-name">${titleHTML}</p>
+    <p class="person-title">${title}</p>
+  </div>
+`;
 
   return container;
 }

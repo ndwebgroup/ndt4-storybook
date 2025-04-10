@@ -5,12 +5,14 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     text: { name:'Quote Text',},
-    image: { name:'Show Avatar',},
+    cite: { name:'Show Cite',},
+    image: { name:'Show Image',},
     layout: { name:'Quote Layout', control: 'select', options: ['centered', 'left']},
   },
   args: {
+    cite:true,
     image: true,
-    text: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
+    text: '"Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at."',
     layout: 'left'
   }
 };

@@ -4,29 +4,36 @@ export default {
   title: 'Components/Byline',
   tags: ['autodocs'],
   argTypes: {
-    placeholder: { name:'Placeholder Image',},
+    image: { name:'Image', control:'select', options:['image', 'placeholder', 'none']},
     name: { name:'Person Name',},
     title: { name:'Person Title',},
     link: { name:'Person Link'}
   },
   args: {
     // Default args for all stories
-    placeholder: false,
+    image: 'image',
     name: 'John Doe',
     title: 'Person title',
     link:'#',
   }
 };
 
-export const Primary = (args) => {
+export const Default = (args) => {
   return Byline(args);
 };
-Primary.args = {
+Default.args = {
 };
 
-export const Placeholder = (args) => {
+export const withPlaceholder = (args) => {
   return Byline(args);
 };
-Placeholder.args = {
-  placeholder:true,
+withPlaceholder.args = {
+  image:'placeholder',
+};
+
+export const withoutImage = (args) => {
+  return Byline(args);
+};
+withoutImage.args = {
+  image:'none',
 };
