@@ -94,7 +94,7 @@ export const Secondary = (args) => {
 
 Secondary.args = {
   variant: 'secondary',
-  icon: 'bell',
+  icon: 'info',
   content: basicContent,
   hasLink: true
 };
@@ -127,7 +127,7 @@ export const Warning = (args) => {
 
 Warning.args = {
   variant: 'warning',
-  icon: 'warning',
+  icon: 'prohibited',
   content: basicContent,
   hasLink: true
 };
