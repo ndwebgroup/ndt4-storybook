@@ -1,35 +1,35 @@
-import Alert from './Alert.js';
+import Notice from './Notice.js';
 
 export default {
-  title: 'Components/Alert',
+  title: 'Components/Notice',
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: 'Alerts provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.'
+        component: 'Notices provide contextual feedback messages for typical user actions with the handful of available and flexible notice messages.'
       }
     }
   },
   argTypes: {
     variant: {
       name: 'Variant',
-      description: 'The style variant of the alert',
+      description: 'The style variant of the notice',
       control: 'select',
       options: ['default', 'primary', 'secondary', 'success', 'danger', 'warning', 'info']
     },
     icon: {
       name: 'Icon',
-      description: 'Optional icon to display in the alert',
+      description: 'Optional icon to display in the notice',
       control: 'text'
     },
     content: {
       name: 'Text',
-      description: 'The content of the alert. Use {link} as a placeholder for the link if hasLink is true.',
+      description: 'The content of the notice. Use {link} as a placeholder for the link if hasLink is true.',
       control: 'text'
     },
     hasLink: {
       name: 'Link',
-      description: 'Whether to include an example link in the alert',
+      description: 'Whether to include an example link in the notice',
       control: 'boolean'
     }
   }
@@ -37,10 +37,10 @@ export default {
 
 // Basic content for examples
 const basicContent = 'This is {link}. Give it a click if you like.';
-const noLinkContent = 'This is an alert message with no link.';
+const noLinkContent = 'This is a notice message with no link.';
 
 export const Default = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Default.args = {
@@ -52,13 +52,13 @@ Default.args = {
 Default.parameters = {
   docs: {
     description: {
-      story: 'Default alert style without an icon.'
+      story: 'Default notice style without an icon.'
     }
   }
 };
 
 export const DefaultWithIcon = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 DefaultWithIcon.storyName = 'Default with Icon';
@@ -72,13 +72,13 @@ DefaultWithIcon.args = {
 DefaultWithIcon.parameters = {
   docs: {
     description: {
-      story: 'Default alert with an icon.'
+      story: 'Default notice style with an icon.'
     }
   }
 };
 
 export const Primary = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Primary.args = {
@@ -89,7 +89,7 @@ Primary.args = {
 };
 
 export const Secondary = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Secondary.args = {
@@ -100,7 +100,7 @@ Secondary.args = {
 };
 
 export const Success = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Success.args = {
@@ -111,7 +111,7 @@ Success.args = {
 };
 
 export const Danger = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Danger.args = {
@@ -122,7 +122,7 @@ Danger.args = {
 };
 
 export const Warning = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Warning.args = {
@@ -133,7 +133,7 @@ Warning.args = {
 };
 
 export const Info = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 Info.args = {
@@ -144,7 +144,7 @@ Info.args = {
 };
 
 export const NoIcon = (args) => {
-  return Alert(args);
+  return Notice(args);
 };
 
 NoIcon.storyName = 'Without Icon';
@@ -157,7 +157,7 @@ NoIcon.args = {
 NoIcon.parameters = {
   docs: {
     description: {
-      story: 'Alert without an icon, demonstrating that icons are optional.'
+      story: 'Notice without an icon, demonstrating that icons are optional.'
     }
   }
 };
