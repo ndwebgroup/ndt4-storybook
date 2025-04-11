@@ -30,11 +30,9 @@ export function getAvailableIcons() {
   return [
     //Interface
     'icon-search',
+    'icon-search-menu',
     'icon-hamburger',
-    'icon-resize',
     'icon-refresh',
-    'icon-sort-down',
-    'icon-sort-up',
     'icon-plus',
     'icon-minus',
     'icon-check',

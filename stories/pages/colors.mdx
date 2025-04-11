@@ -31,20 +31,20 @@ import { Meta } from "@storybook/blocks";
 
     ## Supporting Color
 
-    <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
+     <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
+      <li><span className="swatch swatch--sky-blue-dark"></span> <strong>Sky Blue, Dark</strong><br/>#c1cddd</li>
       <li><span className="swatch swatch--sky-blue"></span> <strong>Sky Blue</strong><br/>#e1e8f2</li>
       <li><span className="swatch swatch--sky-blue-light"></span> <strong>Sky Blue, Light</strong><br/>#edf2f9</li>
-      <li><span className="swatch swatch--sky-blue-dark"></span> <strong>Sky Blue, Dark</strong><br/>#c1cddd</li>
-      <li><span className="swatch swatch--warm-white"></span> <strong>Warm White</strong><br/>#f8f4ec</li>
       <li><span className="swatch swatch--warm-white-dark"></span> <strong>Warm White, Dark</strong><br/>#efe9d9</li>
+      <li><span className="swatch swatch--warm-white"></span> <strong>Warm White</strong><br/>#f8f4ec</li>
     </ul>
 
     <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
-      <li><span className="swatch swatch--gray"></span> <strong>Gray</strong><br/>#555</li>
       <li><span className="swatch swatch--gray-dark"></span> <strong>Gray, Dark</strong><br/>#333</li>
-      <li><span className="swatch swatch--gray-light"></span> <strong>Gray, Light</strong><br/>#d2d2d2</li>
-      <li><span className="swatch swatch--gray-extra-light"></span> <strong>Gray, Extra Light</strong><br/>#e2e2e2</li>
-      <li><span className="swatch swatch--gray-extra-extra-light"></span> <strong>Gray, Extra Extra Light</strong><br/>#f2f2f2</li>
+      <li><span className="swatch swatch--gray"></span> <strong>Gray</strong><br/>#555</li>
+      <li><span className="swatch swatch--gray-light"></span> <strong>Gray, Light</strong><br/>#d8dce0</li>
+      <li><span className="swatch swatch--gray-extra-light"></span> <strong>Gray, Extra Light</strong><br/>#e9ebee</li>
+      <li><span className="swatch swatch--gray-extra-extra-light"></span> <strong>Gray, Extra Extra Light</strong><br/>#f1f2f4</li>
     </ul>
 
     ## CSS Variables
@@ -101,6 +101,11 @@ import { Meta } from "@storybook/blocks";
           <td data-th="Hex" className="hex"><span>#8c7535</span></td>
         </tr>
         <tr>
+          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green-dark"></span> <span>Brand Green Dark</span></td>
+          <td data-th="Variable" className="variable"><span>var(--brand-green-dark)</span></td>
+          <td data-th="Hex" className="hex"><span>#103d23</span></td>
+        </tr>
+        <tr>
           <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green"></span> <span>Brand Green</span></td>
           <td data-th="Variable" className="variable"><span>var(--brand-green)</span></td>
           <td data-th="Hex" className="hex"><span>#0a843d</span></td>
@@ -111,9 +116,9 @@ import { Meta } from "@storybook/blocks";
           <td data-th="Hex" className="hex"><span>#35b36a</span></td>
         </tr>
         <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green-dark"></span> <span>Brand Green Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-green-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#103d23</span></td>
+          <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue-dark"></span> <span>Sky Blue Dark</span></td>
+          <td data-th="Variable" className="variable"><span>var(--sky-blue-dark)</span></td>
+          <td data-th="Hex" className="hex"><span>#c1cddd</span></td>
         </tr>
         <tr>
           <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue"></span> <span>Sky Blue</span></td>
@@ -126,19 +131,14 @@ import { Meta } from "@storybook/blocks";
           <td data-th="Hex" className="hex"><span>#edf2f9</span></td>
         </tr>
         <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue-dark"></span> <span>Sky Blue Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--sky-blue-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#c1cddd</span></td>
+          <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white-dark"></span> <span>Warm White Dark</span></td>
+          <td data-th="Variable" className="variable"><span>var(--warm-white-dark)</span></td>
+          <td data-th="Hex" className="hex"><span>#efe9d9</span></td>
         </tr>
         <tr>
           <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white"></span> <span>Warm White</span></td>
           <td data-th="Variable" className="variable"><span>var(--warm-white)</span></td>
           <td data-th="Hex" className="hex"><span>#f8f4ec</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white-dark"></span> <span>Warm White Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--warm-white-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#efe9d9</span></td>
         </tr>
         <tr>
           <td data-th="Color" className="color"><span className="swatch--small swatch--gray-dark"></span> <span>Gray Dark</span></td>
