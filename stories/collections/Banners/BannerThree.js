@@ -15,10 +15,10 @@ export default function BannerThree(props) {
   const container = document.createElement('div');
   const { mediaAlignment, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section section--banner grid grid-md-2 media--${mediaAlignment}`
+  container.className = `section section--banner grid grid-md-2 banner--${mediaAlignment}`
 
   let mediaHTML = `
-  <div class="banner-media media--3">
+  <div class="banner-primary media--3">
     <figure class="banner-image"><img src="/images/placeholder-campus-1-800x1400.jpg" width="800" height="1400" alt=""></figure>
     <figure class="banner-image"><img src="/images/placeholder-campus-2-800x1400.jpg" width="800" height="1400" alt=""></figure>
     <figure class="banner-image"><img src="/images/placeholder-campus-3-800x1400.jpg" width="800" height="1400" alt=""></figure>
@@ -28,7 +28,7 @@ export default function BannerThree(props) {
   // Create banner body content first without buttons
   container.innerHTML = `
   ${mediaHTML}
-  <div class="banner-body">
+  <div class="banner-secondary">
     ${label ? `<p class="banner-label">${label}</p>` : ''}
     <${headingTag} class="banner-title banner-title--${titleSize}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
@@ -36,7 +36,7 @@ export default function BannerThree(props) {
 `
 
   // Get the banner body element to append buttons properly
-  const bannerBody = container.querySelector('.banner-body');
+  const bannerBody = container.querySelector('.banner-secondary');
 
   // Handle single button
   if (buttons) {

@@ -33,7 +33,7 @@ export default {
     mediaAlignment: {
       name: 'Media Placement',
       control: { type: 'select' },
-      options: ['left', 'right', 'stacked'],
+      options: ['default', 'reversed', 'stacked'],
     },
     buttons: { name: 'Single Button', control: 'object' },
     buttonList: { name: 'Button List', control: 'object' },
@@ -45,7 +45,7 @@ export default {
     title:'What’s Your Passion?',
     summary:'Explore the undergraduate, graduate, and certification programs available at Notre Dame. Lorem ipsum dolor sit amet consectetur adipiscing elit ut vel, iaculis sagittis elementum.',
     media:'image',
-    mediaAlignment:'left',
+    mediaAlignment:'default',
   },
 };
 
@@ -69,7 +69,7 @@ export const Right = (args) => {
 };
 Right.storyName = 'Banner with Right Image';
 Right.args = {
-  mediaAlignment:'right',
+  mediaAlignment:'reversed',
 };
 
 export const Stacked = (args) => {
@@ -107,7 +107,7 @@ export const VideoMedia = (args) => {
 VideoMedia.storyName = 'Banner with Video';
 VideoMedia.args = {
   media: 'video',
-  mediaAlignment: 'left',
+  mediaAlignment: 'default',
   title: 'Video Banner Title',
   summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
   buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false }

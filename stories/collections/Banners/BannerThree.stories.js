@@ -56,7 +56,7 @@ export const Right = (args) => {
 };
 Right.storyName = 'Reversed Three Image Banner';
 Right.args = {
-  mediaAlignment:'right',
+  mediaAlignment:'reversed',
 };
 
 export const Stacked = (args) => {

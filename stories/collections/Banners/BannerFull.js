@@ -16,11 +16,11 @@ export default function Banner(props) {
   const container = document.createElement('div');
   const { textAlignment, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section section--banner media--full dark grid grid-md-2`
+  container.className = `section section--banner banner--full dark grid grid-md-2`
 
   // Create banner body content first without buttons
   container.innerHTML = `
-  <div class="banner-body banner-body--${textAlignment}">
+  <div class="banner-secondary banner-secondary--${textAlignment}">
     ${label ? `<p class="banner-label">${label}</p>` : ''}
     <${headingTag} class="banner-title banner-title--${titleSize}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
@@ -30,7 +30,7 @@ export default function Banner(props) {
   </div>
 `
   // Get the banner body element to append buttons properly
-  const bannerBody = container.querySelector('.banner-body');
+  const bannerBody = container.querySelector('.banner-secondary');
 
   // Handle single button
   if (buttons) {
