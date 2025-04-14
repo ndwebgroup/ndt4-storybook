@@ -9,7 +9,6 @@ export default function Icons(args) {
   return `
   <div class="icon-showcase">
   ${icons.map(iconId => {
-  const iconName = iconId.replace('icon-', '');
   return `<div class="icon-item">
     ${getIcon(iconId, '', '', size)}
     ${showNames ? `<span class="icon-name">${iconId}</span>` : ''}

@@ -30,8 +30,8 @@ export function getAvailableIcons() {
   return [
     //Interface
     'icon-search',
+    'icon-menu',
     'icon-search-menu',
-    'icon-hamburger',
     'icon-refresh',
     'icon-plus',
     'icon-minus',
