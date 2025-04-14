@@ -6,13 +6,15 @@ export default {
   argTypes: {
     layout: { name:'Card Layout', control: 'select', options: ['default','horizontal','stacked', 'compact']},
     link: { name:'Card Link',},
+    label: { name:'Card Label',},
     summary: { name:'Card Summary',},
-    image: { name:'Card Image',},
+    showImage: { name:'Card Image',},
     title: { name:'Card Title',},
   },
   args: {
     layout:'default',
-    image: true,
+    showImage: true,
+    label: '',
     title: 'Card Title',
     summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
     link: '#',
@@ -29,7 +31,7 @@ export const NoImage = (args) => {
   return Card(args);
 };
 NoImage.args = {
-  image: false,
+  showImage: false,
 };
 
 export const Horizontal = (args) => {

@@ -25,7 +25,7 @@ export default function Banner(props) {
     <${headingTag} class="banner-title banner-title--${titleSize}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
     <style>
-      .section--banner.media--full { background-image:url('/images/placeholder-campus-3-1600x900.jpg'); }
+      .section--banner.banner--full { background-image:url('/images/placeholder-campus-3-1600x900.jpg'); }
     </style>
   </div>
 `

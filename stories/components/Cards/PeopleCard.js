@@ -15,7 +15,7 @@
  * @param {string} props.content - Biographical content for the person
  * @returns {HTMLElement} - The card element
  */
-import Avatar from './Avatar.js';
+import Avatar from '../Avatar.js';
 
 export default function PeopleCard(props) {
   const {
