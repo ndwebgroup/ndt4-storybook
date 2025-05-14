@@ -12,6 +12,7 @@ export default {
     "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-designs",
     "storybook-dark-mode",
     "@chromatic-com/storybook",
   ],
