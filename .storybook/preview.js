@@ -108,3 +108,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const body = document.body;
 body.classList.add("sb-unstyled");
+body.removeAttribute("data-theme");
