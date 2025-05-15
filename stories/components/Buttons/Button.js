@@ -5,7 +5,7 @@
  * @param {string} props.href - The url of the button
  * @param {('primary'|'secondary'|'tertiary'|'neutral')} [props.type='primary'] - Type of button
  * @param {boolean} [props.cta=false] - State of the button
- * @param {boolean} [props.moreIcon=false] - Whether to show the more icon
+ * @param {boolean} [props.more=false] - Whether to show the more icon
  * @returns {HTMLElement} - The button element
  */
 export default function Button(props) {
@@ -14,7 +14,7 @@ export default function Button(props) {
     href,
     type = 'primary',
     cta = false,
-    moreIcon = false
+    more = false
   } = props;
 
   const button = document.createElement('a');
@@ -22,9 +22,9 @@ export default function Button(props) {
   button.setAttribute('type', 'button');
   
   const classes = ['btn', `${cta ? 'btn--cta' : ''}`, `btn--${type}`];
-  if (moreIcon) {
+  if (more) {
     // Add more icon if needed
-    classes.push('btn--more')
+    classes.push('btn--more');
   }
   button.className = classes.join(' ');
 

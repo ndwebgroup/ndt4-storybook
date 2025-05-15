@@ -1,6 +1,8 @@
 .dark { color-scheme:dark; }
 .light { color-scheme:light; }
 
+[data-theme="light"], [data-theme="dark"] { color-scheme:inherit; }
+
 /* Manager overrides */
 .sb-bar { background-color:light-dark(#fff,#081629) !important; border-bottom:1px solid light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); }
 .container.sidebar-container { background-color:light-dark(#fff,#0c2340); }

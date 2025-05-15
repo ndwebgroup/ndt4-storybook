@@ -36,33 +36,40 @@ export default function ButtonsOverview() {
 
   // Add button examples
   const buttonTypes = ['primary', 'secondary', 'tertiary', 'neutral'];
-  const buttonStates = ['default', 'cta'];
+  const buttonStates = ['default', 'more', 'cta'];
 
   const buttonExamples = buttonSection.querySelector('.button-examples');
   buttonTypes.forEach(type => {
+    const buttonTypeHeader = document.createElement('h4');
+    const buttonDivider = document.createElement('hr');
+    buttonTypeHeader.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)} Buttons`;
+    
+    buttonExamples.appendChild(buttonDivider).className = 'mb-4';
+    buttonExamples.appendChild(buttonTypeHeader);
+    
     buttonStates.forEach(state => {
-      const buttonWrapper = document.createElement('div');
+      const buttonWrapper = document.createElement('li');
       buttonWrapper.className = 'button-example';
       buttonWrapper.style.display = 'inline-block';
       buttonWrapper.style.margin = '10px';
 
       const buttonLabel = document.createElement('p');
+      buttonLabel.className = 'label';
       buttonLabel.textContent = `${type} (${state})`;
       buttonWrapper.appendChild(buttonLabel);
 
       const button = Button({
         label: `${type.charAt(0).toUpperCase() + type.slice(1)} Button`,
         type,
-        state
+        ...(state === 'cta' ? { cta: true } : state === 'more' ? { more: true } : {}),
       });
       buttonWrapper.appendChild(button);
-
       buttonExamples.appendChild(buttonWrapper);
     });
   });
 
   container.appendChild(buttonSection);
-
+  container.appendChild(document.createElement('hr')).className = 'mb-4';
   // Button Group Section
   const buttonGroupSection = document.createElement('section');
   buttonGroupSection.className = 'button-section';

@@ -18,7 +18,7 @@ export default {
     cta: { 
       name: 'Call to Action', 
     },
-    moreIcon: { 
+    more: { 
       name: 'More Icon'
     },
   },
@@ -36,9 +36,10 @@ Default.storyName = 'Default Buttons';
 Default.args = {
   type: 'primary',
   cta: false,
-  moreIcon: false,
+  more: false,
 };
 
+// Default Buttons
 export const Base = (args) => {
   const container = document.createElement('div');
   const types = ['primary', 'secondary', 'tertiary', 'neutral'];
@@ -56,9 +57,10 @@ Base.storyName = 'Base Buttons';
 Base.args = {
   cta: false,
   type: 'primary',
-  moreIcon: false,
+  more: false,
 };
 
+// Buttons with CTA
 export const CTA = (args) => {
   const container = document.createElement('div');
   const types = ['primary', 'secondary', 'tertiary', 'neutral'];
@@ -76,9 +78,10 @@ CTA.storyName = 'CTA Buttons';
 CTA.args = {
   cta: true,
   type: 'primary',
-  moreIcon: false,
+  more: false,
 };
 
+// Buttons with More Icon
 export const More = (args) => {
   const container = document.createElement('div');
   const types = ['primary', 'secondary', 'tertiary', 'neutral'];
@@ -96,9 +99,10 @@ More.storyName = 'More Buttons';
 More.args = {
   cta: false,
   type: 'primary',
-  moreIcon: true,
+  more: true,
 };
 
+// Buttons with More Icon and CTA
 export const MoreCTA = (args) => {
   const container = document.createElement('div');
   const types = ['primary', 'secondary', 'tertiary', 'neutral'];
@@ -116,5 +120,5 @@ MoreCTA.storyName = 'CTA More Buttons';
 MoreCTA.args = {
   cta: true,
   type: 'primary',
-  moreIcon: true,
+  more: true,
 };
