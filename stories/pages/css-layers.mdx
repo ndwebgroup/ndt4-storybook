@@ -1,0 +1,25 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundation/CSS Layers" />
+
+# CSS Cascade Layers
+
+NDT4 uses **CSS Cascade Layers** to organize and control the order in which styles are applied. Cascade layers provide a structured way to manage specificity and override rules in large or complex projects.
+
+## Overview of Cascade Layers
+
+Cascade layers allow you to group CSS rules into named layers, which are then applied in a specific order. This helps prevent unintended overrides and makes it easier to maintain your styles.
+
+Learn more about the concept on the [MDN Cascade Layers Guide](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
+
+## Layer Syntax
+
+For information regarding the syntax of CSS layers, see the [MDN @layer documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer).
+
+The predefined layers in NDT4 are:
+
+```css
+@layer base, theme, utilities, site;
+```
+
+NDT4 does not include any styles in the `site` layer. This layer is reserved for custom styles that are specific to your site. You can add your own styles to this layer by using the `@layer` rule in your CSS files.
