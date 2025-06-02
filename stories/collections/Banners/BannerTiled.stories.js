@@ -56,12 +56,12 @@ const exampleButtons = [
 ];
 
 // Two Image Tiled Banner Stories
-export const DefaultTwo = (args) => {
+export const Default = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-DefaultTwo.storyName = 'Default Two Image Tiled Banner';
-DefaultTwo.args = {
+Default.storyName = 'Default Two Image Tiled Banner';
+Default.args = {
   imageCount:2,
 };
 
@@ -82,6 +82,7 @@ export const DefaultThree = (args) => {
 };
 DefaultThree.storyName = 'Default Three Image Tiled Banner';
 DefaultThree.args = {
+  imageCount:3,
 };
 
 export const ReversedThree = (args) => {
@@ -91,6 +92,7 @@ export const ReversedThree = (args) => {
 ReversedThree.storyName = 'Reversed Three Image Tiled Banner';
 ReversedThree.args = {
   order:'reversed',
+  imageCount:3,
 };
 
 // Four Image Tiled Banner Stories
