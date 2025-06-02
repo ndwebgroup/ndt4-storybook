@@ -2,7 +2,7 @@
  * Banner component
  * @param {Object} props - Component properties
  * @param {('image'|'video'|'none')} [props.media='image'] - Image placement for the banner
- * @param {('default'|'reversed'|'stacked')} [props.mediaAlignment='default'] - Image placement for the banner
+ * @param {('default'|'reversed')} [props.order='default'] - Image placement for the banner
  * @param {string} props.label - The label of the banner
  * @param {string} [props.headingTag='h2'] - The heading tag to use for the title
  * @param {string} props.title - The title of the banner
@@ -16,21 +16,21 @@ import Video from '/stories/components/Videos';
 
 export default function Banner(props) {
   const container = document.createElement('div');
-  const { media, mediaAlignment, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
+  const { media, order, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section section--banner grid grid-md-2`
+  container.className = `section align-center grid grid-md-2`
 
   let mediaHTML = ''
 
   switch(media) {
     case 'image':
-      container.className += ` banner--${mediaAlignment}`
-      mediaHTML = `<figure class="banner-primary banner-image"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
+      container.className += `${order == `default` ? `` : ` section--${order}`}`
+      mediaHTML = `<figure class="section-primary banner-image"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
       break;
     case 'video':
-      container.className += ` banner--${mediaAlignment}`
+      container.className += ` section--${order}`
       // Create an empty placeholder for the video that we'll fill later
-      mediaHTML = `<div class="banner-primary banner-video"></div>`;
+      mediaHTML = `<div class="section-primary section-video"></div>`;
       break;
     default:
       mediaHTML = ``;
@@ -38,22 +38,29 @@ export default function Banner(props) {
   // Create banner secondary content first without buttons
   container.innerHTML = `
   ${mediaHTML}
-  <div class="banner-secondary">
-    ${label ? `<p class="banner-label">${label}</p>` : ''}
-    <${headingTag} class="banner-title banner-title--${titleSize}">${title}</${headingTag}>
+  <div class="section-secondary">
+    <${headingTag} class="section-title section-title--${titleSize}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `
 
   // Add the video element if media type is video
   if (media === 'video') {
-    const videoContainer = container.querySelector('.banner-primary.banner-video');
+    const videoContainer = container.querySelector('.section-primary.section-video');
     const videoElement = Video({ style:'placeholder', videoId:'p_vC10eq474', playStyle:'default' });
     videoContainer.appendChild(videoElement);
   }
 
   // Get the banner body element to append buttons properly
-  const bannerBody = container.querySelector('.banner-secondary');
+  const bannerBody = container.querySelector('.section-secondary');
+
+  // Handle label
+  if (label) {
+    const labelElement = document.createElement('p');
+    labelElement.className = 'section-label';
+    labelElement.textContent = label;
+    bannerBody.prepend(labelElement);
+  }
 
   // Handle single button
   if (buttons) {

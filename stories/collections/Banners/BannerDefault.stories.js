@@ -30,10 +30,10 @@ export default {
       control: { type: 'select' },
       options: ['image', 'video', 'none'],
     },
-    mediaAlignment: {
-      name: 'Media Placement',
+    order: {
+      name: 'Content Order',
       control: { type: 'select' },
-      options: ['default', 'reversed', 'stacked'],
+      options: ['default', 'reversed'],
     },
     buttons: { name: 'Single Button', control: 'object' },
     buttonList: { name: 'Button List', control: 'object' },
@@ -42,10 +42,11 @@ export default {
     // Default args for all stories
     label:'',
     headingTag:'h2',
-    title:'What’s Your Passion?',
-    summary:'Explore the undergraduate, graduate, and certification programs available at Notre Dame. Lorem ipsum dolor sit amet consectetur adipiscing elit ut vel, iaculis sagittis elementum.',
+    title:'Banner Title',
+    titleSize:'default',
+    summary:'Risus parturient ullamcorper luctus tempor nisl lacus nec sociis cras a vestibulum cras parturient sociosqu augue senectus parturient laoreet euismod.',
     media:'image',
-    mediaAlignment:'default',
+    order:'default',
   },
 };
 
@@ -69,17 +70,7 @@ export const Right = (args) => {
 };
 Right.storyName = 'Banner with Right Image';
 Right.args = {
-  mediaAlignment:'reversed',
-};
-
-export const Stacked = (args) => {
-  const mergedArgs = { ...args };
-  return BannerDefault(mergedArgs);
-};
-Stacked.storyName = 'Banner with Stacked Video';
-Stacked.args = {
-  media:'video',
-  mediaAlignment:'stacked',
+  order:'reversed',
 };
 
 export const WithSingleButton = (args) => {
@@ -107,7 +98,7 @@ export const VideoMedia = (args) => {
 VideoMedia.storyName = 'Banner with Video';
 VideoMedia.args = {
   media: 'video',
-  mediaAlignment: 'default',
+  order: 'default',
   title: 'Video Banner Title',
   summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
   buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false }
