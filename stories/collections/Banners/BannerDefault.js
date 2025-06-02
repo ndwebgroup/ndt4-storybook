@@ -28,7 +28,7 @@ export default function Banner(props) {
       mediaHTML = `<figure class="section-primary banner-image"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
       break;
     case 'video':
-      container.className += ` section--${order}`
+      container.className += `${order == `default` ? `` : ` section--${order}`}`
       // Create an empty placeholder for the video that we'll fill later
       mediaHTML = `<div class="section-primary section-video"></div>`;
       break;
