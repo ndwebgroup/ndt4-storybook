@@ -182,32 +182,43 @@ export default function Footer(props) {
         </a>
 
         <div class="footer-parent-links">
-          <nav class="social" aria-label="Notre Dame social media navigation" vocab="">
+          <nav class="footer--links" aria-label="Notre Dame network navigation">
             <ul>
               <li><a href="https://search.nd.edu/" aria-label="Search Notre Dame">Search</a></li>
-              <li><a href="https://mobile.nd.edu/" aria-label="Notre Dame Mobile App">Mobile App</a></li>
               <li><a href="https://news.nd.edu/" aria-label="Notre Dame News">News</a></li>
               <li><a href="https://events.nd.edu/" aria-label="Notre Dame Events">Events</a></li>
               <li><a href="https://www.nd.edu/visit/" aria-label="Visit Notre Dame">Visit</a></li>
+              <li><a href="https://mobile.nd.edu/" aria-label="Notre Dame Mobile App">Mobile App</a></li>
               <li><a href="https://www.nd.edu/about/accessibility/" aria-label="Notre Dame Accessibility Information">Accessibility</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-social" aria-label="Notre Dame social media navigation" vocab="">
+            <ul>
+              <li><a class="soc-facebook" href="https://www.facebook.com/notredame/" rel="noopener" aria-label="Notre Dame on Facebook"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-facebook"></use></svg> Facebook</a></li>
+              <li><a class="soc-twitter" href="https://twitter.com/NotreDame/" rel="noopener" aria-label="Notre Dame on X/Twitter"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-twitter-x"></use></svg> X/Twitter</a></li>
+              <li><a class="soc-instagram" href="https://www.instagram.com/notredame/" rel="noopener" aria-label="Notre Dame on Instagram"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg> Instagram</a></li>
+              <li><a class="soc-youtube" href="https://www.youtube.com/user/NDdotEDU" rel="noopener" aria-label="Notre Dame on YouTube"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-youtube"></use></svg> YouTube</a></li>
+              <li><a class="soc-linkedin" href="https://www.linkedin.com/school/university-of-notre-dame/" rel="noopener" aria-label="Notre Dame on Linkedin"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a></li>
             </ul>
           </nav>
         </div>
       </div><!-- .footer-nd -->
 
       <div class="footer-global">
-        <div class="footer-global--utils"></div>
-        <nav class="footer-global--links" aria-label="Notre Dame network navigation">
-          <ul>
-            <li><a href="https://search.nd.edu/" aria-label="Search Notre Dame">Search</a></li>
-            <li><a href="https://news.nd.edu/" aria-label="Notre Dame News">News</a></li>
-            <li><a href="https://events.nd.edu/" aria-label="Notre Dame Events">Events</a></li>
-            <li><a href="https://www.nd.edu/visit/" aria-label="Visit Notre Dame">Visit</a></li>
-            <li><a href="https://mobile.nd.edu/" aria-label="Notre Dame Mobile App">Mobile App</a></li>
-            <li><a href="https://www.nd.edu/about/accessibility/" aria-label="Notre Dame Accessibility Information">Accessibility</a></li>
+        <div class="footer-global--utils">
+          <ul class="list--inline justify-center m-0">
+            <li class="light-dark footer--utils-lightdark">
+              <label>
+                <span class="switch">
+                  <input type="checkbox" name="light-dark" class="light-dark-toggle">
+                  <span class="slider"><svg class="icon" data-icon="mode" aria-hidden="true" focusable="false"><use xlink:href="#icon-mode"></use></svg></span>
+                </span>
+                <span>Light/Dark</span>
+              </label>
+            </li>
           </ul>
-        </nav>
-        <p id="copyright" class="footer-global-copyright copyright url fn org">
+        </div>
+        <p id="copyright" class="footer-global--copyright copyright url fn org">
           <a href="/copyright/"> &copy; ${currentYear}</a>
           <a href="/" class="url fn org">University of Notre Dame</a>
         </p>
