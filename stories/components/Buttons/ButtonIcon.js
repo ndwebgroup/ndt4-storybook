@@ -21,16 +21,12 @@ export default function Button(props) {
   button.href = '#';
   button.setAttribute('type', 'button');
 
-  const classes = ['btn', 'btn--icon', `${cta ? 'btn--cta' : ''}`, `btn--${type}`, `btn--${align}`];
-  button.className = classes.join(' ');
+  const classes = ['btn', ' btn--icon', ` btn--${align}`, `${cta ? ' btn--cta' : ''}`, `${type == 'primary' ? '' : ` btn--${type}`}`];
+  button.className = classes.join('');
 
-  button.innerHTML = `
-    <span class="icon" data-icon="${icon}"></span>
-  `
+  button.innerHTML = `<span class="icon" data-icon="${icon}"></span>`
   if (label) {
-    button.innerHTML += `
-      <span class="btn-reveal">${label}</span>
-    `
+    button.innerHTML += `<span class="btn-reveal">${label}</span>`
   }
 
   return button;

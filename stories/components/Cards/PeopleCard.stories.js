@@ -8,7 +8,7 @@ export default {
     placeholder: { name:'Placeholder Image',},
     name: { name:'Person Name',},
     title: { name:'Person Title',},
-    layout: { name:'Layout Override', control: 'select', options: ['','horizontal','stacked','compact']},
+    layout: { name:'Layout', control: 'select', options: ['default','horizontal','stacked','compact']},
     useDialog: { name:'Use Dialog', control: 'boolean' },
     email: { name:'Email Address' },
     website: { name:'Website URL' },
@@ -19,6 +19,7 @@ export default {
     content: { name:'Biographical Content' },
   },
   args: {
+    layout: 'default',
     placeholder: false,
     name: 'John Doe',
     title: 'Person title',

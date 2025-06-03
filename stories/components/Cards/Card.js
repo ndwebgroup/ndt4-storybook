@@ -22,11 +22,11 @@ export default function Card(props) {
 
   const container = document.createElement('div');
   container.className = 'card-container';
-  const classes = ['card', `card--${layout}`];
+  const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`];
 
   if (showImage) {
   container.innerHTML = `
-  <div class="${ classes.join(' ') }">
+  <div class="${ classes.join('') }">
     ${image ? `<figure class="card-image"><img src="${image}" width="600" height="400" alt=""></figure>` : '<figure class="card-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'}
     <div class="card-body">
       ${label ? `<p class="card-label">${label}</p>` : ''}

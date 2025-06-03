@@ -3,7 +3,6 @@
  * @param {Object} props - Component properties
  * @param {string} props.title - The title of the news article
  * @param {boolean} props.showImage - Whether to show the article image
- * @param {string} props.layout - The layout of the article (vertical or horizontal)
  * @param {string} props.label - The label of the article
  * @param {string} props.link - The link to the full article
  * @param {string} props.author - The author of the article
@@ -16,7 +15,6 @@ export default function NewsArticle(props) {
     title,
     excerpt,
     showImage = true,
-    layout = 'vertical',
     label = 'Card Label',
     link = '#',
     author = 'Author Name',
@@ -25,11 +23,10 @@ export default function NewsArticle(props) {
   } = props;
 
   const container = document.createElement('article');
-  const layoutClasses = layout === 'horizontal' ? 'card--horizontal' : '';
   container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
 
-  let articleHTML = `\n  <div class="card ${layoutClasses}">`;
+  let articleHTML = `\n  <div class="card">`;
 
   if (showImage) {
     articleHTML += `

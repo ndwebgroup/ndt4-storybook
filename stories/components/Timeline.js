@@ -10,7 +10,7 @@ export default function Timeline(props) {
   const { items=[], layout } = props;
 
   const container = document.createElement('ul');
-  container.className = `timeline timeline--${layout}`;
+  container.className = `timeline${layout === `left` ? `` : ` timeline-${layout}`}`;
 
 container.innerHTML = `
   ${items.map((item) => {

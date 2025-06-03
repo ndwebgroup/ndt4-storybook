@@ -9,7 +9,7 @@ export default function Accordion(props) {
   container.className = 'accordion-list'
   const { variant = 'default', items  } = props;
 
-  const accordionClass = `accordion accordion--${variant}`;
+  const accordionClass = `accordion${variant == `default` ? `` : ` accordion--${variant}`}`;
 
   container.innerHTML = `
   ${items.map((item) => {

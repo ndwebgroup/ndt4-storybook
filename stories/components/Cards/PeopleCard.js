@@ -36,7 +36,7 @@ export default function PeopleCard(props) {
 
   const container = document.createElement('div');
   container.className = 'card-container';
-  let classes = ['card', 'card--person', `card--${layout}`];
+  let classes = ['card', ' card--person', `${layout === 'default' ? '' : ` card--${layout}`}`];
 
   if (useDialog) {
     classes.push('dialog-item');
@@ -87,7 +87,7 @@ export default function PeopleCard(props) {
 
   if (placeholder) {
     container.innerHTML = `
-    <div class="${classes.join(' ')}">
+    <div class="${classes.join('')}">
       ${avatarPlaceholder}
       <div class="card-body">
         ${titleElement}
@@ -100,7 +100,7 @@ export default function PeopleCard(props) {
     `;
   } else {
     container.innerHTML = `
-    <div class="${classes.join(' ')}">
+    <div class="${classes.join('')}">
       ${avatarImage}
       <div class="card-body">
         ${titleElement}

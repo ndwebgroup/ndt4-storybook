@@ -8,13 +8,13 @@ export default function Tabs(args) {
   container.innerHTML = `
   <nav class="nav-tabs nav-tabs--${tabVariant}">
     <ul id="nav-tabs" class="tab-list" role="tablist" aria-label="Tabs" aria-orientation="horizontal">
-    ${items.map((item, index) => {
-      if (index === 0) {
-        return `<li role="presentation"><a href="#tab-${index}" class="tab active" aria-selected="true">${item.title}</a></li>`
-      } else {
-        return `<li role="presentation"><a href="#tab-${index}" class="tab" aria-selected="false">${item.title}</a></li>`
-      }
-    }).join('\n      ')}
+      ${items.map((item, index) => {
+        if (index === 0) {
+          return `<li role="presentation"><a href="#tab-${index}" class="tab active" aria-selected="true">${item.title}</a></li>`
+        } else {
+          return `<li role="presentation"><a href="#tab-${index}" class="tab" aria-selected="false">${item.title}</a></li>`
+        }
+      }).join('\n      ')}
     </ul>
   </nav>
   <div class="tab-panels" aria-labelledby="nav-tabs">

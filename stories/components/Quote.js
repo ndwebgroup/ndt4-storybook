@@ -15,11 +15,11 @@ export default function Quote(props) {
     cite = true,
     image = true,
     text,
-    layout = 'primary'
+    layout = 'left'
   } = props;
 
   const container = document.createElement('div');
-  const classes = [`blockquote blockquote--${layout}`];
+  const classes = [`blockquote${layout === `left` ? `` : ` blockquote--${layout}`}`];
 
   container.innerHTML = `
     <blockquote class="${classes}">

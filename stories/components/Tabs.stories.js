@@ -4,34 +4,35 @@ const tabsDecorator = (story) => {
   const tabsElement = story();
 
   // Create a wrapper div to hold both the tabs and the script
-  const wrapper = document.createElement('div');
-
+  const wrapper = document.createElement('section');
+  wrapper.className = 'tabs-wrapper';
   // Append the tabs element to the wrapper
   wrapper.appendChild(tabsElement);
 
   // Create and append the script element
   const scriptElement = document.createElement('script');
   scriptElement.textContent = `
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabSets = document.querySelectorAll('.nav-tabs');
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabSets = document.querySelectorAll('.nav-tabs');
 
-      tabSets.forEach(wrapper => {
-        const tabs = wrapper.querySelectorAll('.tab');
-        const panels = wrapper.parentElement.querySelectorAll('.tab-panel');
+    tabSets.forEach(wrapper => {
+      const tabs = wrapper.querySelectorAll('.tab');
+      const panels = wrapper.parentElement.querySelectorAll('.tab-panel');
 
-        tabs.forEach((tab, index) => {
-          tab.addEventListener('click', (e) => {
-            e.preventDefault();
-            tabs.forEach(t => t.classList.remove('active'));
-            panels.forEach(p => p.hidden = true);
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          tabs.forEach(t => t.classList.remove('active'));
+          panels.forEach(p => p.hidden = true);
 
-            tab.classList.add('active');
-            panels[index].hidden = false;
-          });
+          tab.classList.add('active');
+          panels[index].hidden = false;
         });
       });
     });
-  `;
+  });
+`;
+  wrapper.appendChild(document.createTextNode('\n'));
   wrapper.appendChild(scriptElement);
 
   return wrapper;
@@ -44,6 +45,13 @@ export default {
     docs: {
       description: {
         component: 'Tabs description'
+      },
+      source: {
+        // This will be the code shown in the docs
+        transform: (code) => {
+          // Remove the tabs-wrapper div from the code view
+          return code.replace(/<section class="tabs-wrapper">(.*?)<\/section>/gs, '$1');
+        }
       }
     }
   },
@@ -53,7 +61,7 @@ export default {
       description: 'Array of tabs. Each item should have a title property, a content property, and an optional modifier property.',
       control: 'object',
     },
-    tabVariant: { name:"Tab Variant", control:'select', options:['default','lg'] }
+    tabSize: { name:"Tab Variant", control:'select', options:['default','lg'] }
   },
   args: {
   // Default args for stories
@@ -73,7 +81,7 @@ export const Default = (args) => {
   return Tabs(args);
 };
 Default.args = {
-  tabVariant: 'default',
+  tabSize: 'default',
   items: exampleItems,
 };
 
@@ -81,6 +89,6 @@ export const Large = (args) => {
   return Tabs(args);
 };
 Large.args = {
-  tabVariant: 'lg',
+  tabSize: 'lg',
   items: exampleItems,
 };

@@ -11,12 +11,6 @@ export default {
       control: 'boolean',
       description: 'Toggle to show or hide the article image'
     },
-    layout: {
-      name: 'Layout',
-      control: 'select',
-      options: ['vertical', 'horizontal'],
-      description: 'Choose between vertical and horizontal layout'
-    },
     label: { name: 'Card Label' },
     link: { name: 'Article Link' },
     author: { name: 'Author Name' },
@@ -31,7 +25,6 @@ export default {
     title: 'Notre Dame Research Discovers New Method to Address Climate Change',
     excerpt: '',
     showImage: true,
-    layout: 'vertical',
     label: 'Research',
     link: '#',
     author: 'Jane Smith',
@@ -44,25 +37,10 @@ export const Default = (args) => {
   return NewsArticle(args);
 };
 
-export const HorizontalLayout = (args) => {
-  return NewsArticle(args);
-};
-HorizontalLayout.args = {
-  layout: 'horizontal'
-};
-
 export const WithoutImage = (args) => {
   return NewsArticle(args);
 };
 WithoutImage.args = {
-  showImage: false
-};
-
-export const HorizontalWithoutImage = (args) => {
-  return NewsArticle(args);
-};
-HorizontalWithoutImage.args = {
-  layout: 'horizontal',
   showImage: false
 };
 

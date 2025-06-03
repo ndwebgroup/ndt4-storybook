@@ -21,12 +21,12 @@ export default function Button(props) {
   button.href = `${href ? href : '#' }`;
   button.setAttribute('type', 'button');
   
-  const classes = ['btn', `${cta ? 'btn--cta' : ''}`, `btn--${type}`];
+  const classes = ['btn',`${cta ? ' btn--cta' : ''}`,`${type == `primary` ? `` : ` btn--${type}`}`];
   if (more) {
     // Add more icon if needed
     classes.push('btn--more');
   }
-  button.className = classes.join(' ');
+  button.className = classes.join('');
 
   button.textContent = label;
 
