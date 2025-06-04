@@ -13,7 +13,7 @@ export default {
   argTypes: {
     variant: { name:'Variant', control: 'select', options: ['default', 'large', 'highlight'] },
     items: {
-      title: 'List Items',
+      name: 'List Items',
       description: 'Array of detail/summary items. Each item should have a summary and detail property.',
       control: 'object'
     }, 

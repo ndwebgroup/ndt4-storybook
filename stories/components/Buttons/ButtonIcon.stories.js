@@ -60,5 +60,5 @@ RightReveal.storyName = 'Right Icon Button With Reveal';
 RightReveal.args = {
   align:'right',
   icon:'arrow-up',
-  label:'Bact to top',
+  label:'Back to top',
 };
