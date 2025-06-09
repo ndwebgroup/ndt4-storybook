@@ -51,6 +51,12 @@ export default {
       name: 'Repeat Date',
       control: 'boolean',
       description: 'Whether this date is repeated (for grouping events by date)'
+    },
+    variant: {
+      name: 'Card Variant',
+      control: 'select',
+      options: ['default', 'compact'],
+      description: 'Variant of the card style'
     }
   },
   args: {
@@ -66,12 +72,19 @@ export default {
     link: '#',
     headingTag: 'h2',
     repeatDate: false,
-    variant:'',
+    variant:'default',
   }
 };
 
 export const Default = (args) => {
   return EventCard(args);
+};
+
+export const Compact = (args) => {
+  return EventCard(args);
+};
+Compact.args = {
+  variant:'compact',
 };
 
 export const WithExcerpt = (args) => {

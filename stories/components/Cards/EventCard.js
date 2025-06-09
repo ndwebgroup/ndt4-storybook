@@ -66,7 +66,7 @@ export default function Event(props) {
                     endDateObj.toTimeString().substring(0, 5) + '-05:00';
 
   let eventHTML = `
-  <div class="card card--event ${variant}">
+  <div class="card card--event${variant === `default` ? `` : ` card--event-${variant}`}">
     <div aria-hidden="true" class="meta-item event-date${repeatDate ? ' event-date-repeat' : ''}">
       <span class="event-month">${month}</span>
       <span class="event-day">${day}</span>

@@ -6,7 +6,7 @@ export default function Tabs(args) {
   const container = document.createElement('div');
   container.className = 'tabs-container'
   container.innerHTML = `
-  <nav class="nav-tabs nav-tabs--${tabVariant}">
+  <nav class="nav-tabs" aria-label="Tabs Navigation" role="tablist">
     <ul id="nav-tabs" class="tab-list" role="tablist" aria-label="Tabs" aria-orientation="horizontal">
       ${items.map((item, index) => {
         if (index === 0) {
