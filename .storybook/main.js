@@ -1,7 +1,6 @@
-/** @type { import('@storybook/html-webpack5').StorybookConfig } */
 export default {
   "framework": {
-    "name": "@storybook/html-webpack5",
+    "name": "@storybook/html-vite",
     "options": {}
   },
   "stories": [
@@ -9,7 +8,6 @@ export default {
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": [
-    "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
