@@ -27,7 +27,7 @@ export default {
 const exampleItems = [
   { value: '96%', label: 'graduation rate (top 5 among research universities)', icon: 'icon-bluesky' },
   { value: 'TOP', label: 'producer of Fullbright Program students for 10 consecutive years', icon: 'icon-calendar' },
-  { value: '9:1', label: 'student to faculty ratio', icon: 'icon-envelope-o' },
+  { value: '9:1', label: 'student to faculty ratio', icon: 'icon-envelope' },
 ];
 
 // Example stats without icons

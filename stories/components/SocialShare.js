@@ -87,7 +87,7 @@ export default function SocialShare(props) {
       <li class="share-email share-custom">
         <a title="Share on Email" class="btn" href="mailto:?subject=${encodedTitle}&body=${encodedUrl}" aria-label="Share on Email">
           <svg class="icon" data-icon="envelope-o">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-envelope-o"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-envelope"></use>
           </svg>
         </a>
       </li>
