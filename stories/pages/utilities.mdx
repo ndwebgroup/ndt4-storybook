@@ -1,0 +1,154 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundation/Utilities" />
+
+<div className="sb-container sb-unstyled">
+<div className="sb-section">
+
+## CSS Utility Classes
+
+This page documents the available utility classes for layout, spacing, visibility, backgrounds, and more.
+
+---
+
+### Visibility
+
+| Class                | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| `.hidden`            | Completely hides the element (`display: none`).                             |
+| `.invisible`         | Makes the element invisible but it still takes up space (`visibility: hidden`). |
+| `.visually-hidden`   | Hides visually but accessible to screen readers.                            |
+| `.visually-hidden-md`, `.visually-hidden-ml`, `.visually-hidden-lg`, `.visually-hidden-xl`, `.visually-hidden-xxl` | Responsive visually hidden classes for different breakpoints. |
+| `.filter-group:not(:has(li.filter-record:not(.hidden)))` | Hides filter group if no visible filter records. |
+| `.wrap-link`         | Forces long links to wrap and break as needed.                              |
+
+---
+
+### Grid Gaps
+
+| Class           | Description                        |
+|-----------------|------------------------------------|
+| `.grid-gap-xs`  | Extra small grid gap               |
+| `.grid-gap-sm`  | Small grid gap                     |
+| `.grid-gap-md`  | Medium (default) grid gap          |
+| `.grid-gap-lg`  | Large grid gap                     |
+| `.grid-gap-xl`  | Extra large grid gap               |
+| `.grid.no-gap`  | Removes all grid gaps              |
+
+---
+
+### Column Widths
+
+Responsive column utility classes for grid layouts.
+
+| Class         | Description                                 |
+|---------------|---------------------------------------------|
+| `.col--c`     | Container column                            |
+| `.col--md`    | Medium container column                     |
+| `.col--lg`    | Large container column                      |
+| `.col--xl`    | Extra large container column                |
+| `.col--sm`    | Small container column (responsive)         |
+| `.col--screen`| Full screen width column (responsive)       |
+
+---
+
+### Margin and Padding
+
+Margin (`m-`) and padding (`p-`) utilities, including block (`mb-`, `pb-`) and inline (`mi-`, `pi-`) variants.
+
+| Class Example | Description                |
+|---------------|---------------------------|
+| `.m-0`        | No margin                  |
+| `.m-1`        | 0.5rem margin              |
+| `.m-2`        | 1rem margin                |
+| `.m-auto`     | Auto margin                |
+| `.mi-gutter`  | Inline margin using gutter |
+| `.p-0`        | No padding                 |
+| `.p-1`        | 0.5rem padding             |
+| `.pb-5`       | 4rem block padding         |
+
+---
+
+### Text Alignment & Wrapping
+
+| Class           | Description                |
+|-----------------|---------------------------|
+| `.text-start`   | Align text to start       |
+| `.text-center`  | Center text               |
+| `.text-end`     | Align text to end         |
+| `.text-pretty`  | Pretty text wrapping      |
+| `.text-balance` | Balanced text wrapping    |
+
+---
+
+### Display
+
+| Class             | Description                |
+|-------------------|---------------------------|
+| `.d-inline`       | `display: inline`          |
+| `.d-block`        | `display: block`           |
+| `.d-grid`         | `display: grid`            |
+| `.d-flex`         | `display: flex`            |
+| `.d-none`         | `display: none`            |
+| `.position-fixed` | `position: fixed`          |
+| `.position-sticky`| `position: sticky`         |
+
+---
+
+### Flexbox Utilities
+
+| Class                | Description                |
+|----------------------|---------------------------|
+| `.flex-row`          | Flex direction row        |
+| `.flex-column`       | Flex direction column     |
+| `.flex-wrap`         | Enable flex wrapping      |
+| `.flex-nowrap`       | No flex wrapping          |
+| `.flex-grow-1`       | Allow flex grow           |
+| `.flex-shrink-0`     | Prevent flex shrink       |
+
+---
+
+### Alignment
+
+| Class                  | Description                |
+|------------------------|---------------------------|
+| `.justify-center`      | Center content horizontally|
+| `.align-center`        | Center items vertically    |
+| `.align-self-end`      | Align self to end          |
+| `.align-content-between`| Space between lines       |
+
+---
+
+### Object Fit
+
+| Class                   | Description                |
+|-------------------------|---------------------------|
+| `.object-fit-contain`   | `object-fit: contain`      |
+| `.object-fit-cover`     | `object-fit: cover`        |
+| `.object-fit-fill`      | `object-fit: fill`         |
+| `.object-fit-scale`     | `object-fit: scale-down`   |
+| `.object-fit-none`      | `object-fit: none`         |
+
+---
+
+### Backgrounds
+
+| Class                   | Description                |
+|-------------------------|---------------------------|
+| `.bg--dark`             | Brand blue background, dark color scheme |
+| `.bg--light`            | White background, light color scheme     |
+| `.bg--brand-blue`       | Brand blue background                    |
+| `.bg--warm-white`       | Warm white background                    |
+| `.bg--gradient`         | Gradient background (various directions) |
+| `.bg--full-bleed`       | Full-bleed background effect             |
+| `.bg--transparent`      | Transparent overlay background           |
+
+---
+
+#### Notes
+
+- Responsive classes (e.g., `.visually-hidden-md`, `.col--sm`) apply at specific breakpoints.
+- All color and spacing variables (e.g., `--brand-blue`, `--gutter-width`) are defined as part of the base theme.
+
+</div>
+</div>
