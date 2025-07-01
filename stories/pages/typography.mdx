@@ -2,63 +2,59 @@ import { Meta } from "@storybook/blocks";
 
 <Meta title="Foundation/Typography" />
 
-<div className="sb-container sb-unstyled">
-  <div className='sb-section-title'>
-    # Typography
+# Typography
 
-    The Web Theme automatically loads the following fonts. Garamond Premier Pro and Galaxie Polaris are hosted on static.nd.edu. We recommend you use the fonts hosted on static.nd.edu as they're optimized for performance and are hosted on Amazon Cloudfront.
-  </div>
-  <div className="sb-section">
-    ## Adobe Garamond Premier Pro
+The Web Theme automatically loads the following fonts. Garamond Premier Pro and Galaxie Polaris are hosted on static.nd.edu. We recommend you use the fonts hosted on static.nd.edu as they're optimized for performance and are hosted on Amazon Cloudfront.
 
-    _Ornamental heading style_
+## Adobe Garamond Premier Pro
 
-    <div className="code-example">
-      <div className="preview preview--garamond">
-      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-      a b c d e f g h i j k l m n o p q r s t u v w x y z
-      1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) < > " ' “ ” ‘ ’
-      </div>
-    </div>
-    <br/>
-    <dl className="list-grid">
-      <dt>Style</dt><dd>Subhead</dd>
-      <dt>Usage</dt><dd>Page title and section titles, and blockquotes</dd>
-      <dt>Link</dt>
-      <dd><a href="https://onmessage.nd.edu/university-branding/fonts/">https://onmessage.nd.edu/university-branding/fonts/</a></dd>
-    </dl>
+_Ornamental heading style_
 
-    <br/>
-    
-    ## Galaxie Polaris
-
-    _Default heading style and body copy_
-
-    <div className="code-example">
-      <div className="preview preview--gp">
-      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-      a b c d e f g h i j k l m n o p q r s t u v w x y z
-      1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) < > " ' “ ” ‘ ’
-      </div>
-    </div>
-    <br/>
-    <dl className="list-grid">
-      <dt>Style</dt><dd>Book</dd>
-      <dt>Usage</dt><dd>Site title, card titles, headlines on news & events snippets, and default copy</dd>
-      <dt>Link</dt>
-      <dd><a href="https://onmessage.nd.edu/university-branding/fonts/">https://onmessage.nd.edu/university-branding/fonts/</a></dd>
-    </dl>
-    <br/>
-    ## CSS Custom Properties
-    The following CSS custom properties are used throughout the Web Theme to designate the appropriate font-stack:
-
-    ```css
-    /* Default */
-    --font-default: GP, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-
-    /* Headings */
-    --font-heading: Garamond-Pro, "Adobe Garamond", Garamond, Georgia, "Times New Roman", Times, serif;
-    ```
-
+<div className="code-example">
+  <div className="preview preview--garamond">
+  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+  a b c d e f g h i j k l m n o p q r s t u v w x y z
+  1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) < > " ' “ ” ‘ ’
   </div>
 </div>
+
+<dl className="list-grid">
+  <dt>Style</dt><dd>Subhead</dd>
+  <dt>Usage</dt><dd>Page title and section titles, and blockquotes</dd>
+  <dt>Link</dt>
+  <dd><a href="https://onmessage.nd.edu/university-branding/fonts/">https://onmessage.nd.edu/university-branding/fonts/</a></dd>
+</dl>
+
+---
+
+## Galaxie Polaris
+
+_Default heading style and body copy_
+
+<div className="code-example">
+  <div className="preview preview--gp">
+  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+  a b c d e f g h i j k l m n o p q r s t u v w x y z
+  1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) < > " ' “ ” ‘ ’
+  </div>
+</div>
+
+<dl className="list-grid">
+  <dt>Style</dt><dd>Book</dd>
+  <dt>Usage</dt><dd>Site title, card titles, headlines on news & events snippets, and default copy</dd>
+  <dt>Link</dt>
+  <dd><a href="https://onmessage.nd.edu/university-branding/fonts/">https://onmessage.nd.edu/university-branding/fonts/</a></dd>
+</dl>
+
+---
+
+## CSS Custom Properties
+The following CSS custom properties are used throughout the Web Theme to designate the appropriate font-stack:
+
+```css
+/* Default */
+--font-default: GP, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+
+/* Headings */
+--font-heading: Garamond-Pro, "Adobe Garamond", Garamond, Georgia, "Times New Roman", Times, serif;
+```

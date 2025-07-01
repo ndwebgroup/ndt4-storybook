@@ -2,177 +2,171 @@ import { Meta } from "@storybook/blocks";
 
 <Meta title="Foundation/Colors" />
 
-<div className="sb-container sb-unstyled">
-  <div className='sb-section-title'>
-    # Colors
+# Colors
 
-  </div>
+## Usage
 
-  <div className="sb-section">
-    ## Base Palette
+- The Notre Dame Brand color palette should be the primary colors of the site. Any additional secondary and tertiary colors should account for no more than 25% of complete color usage on any given page.
+- Brand Blue and Dark Gray are the only colors designated for headings when used within body copy. White may be used when the heading is displayed over a dark background. A softer Dark Gray is used for body copy.
+- Color contrast of text must meet WCAG 2.0 level AA. This is a contrast level of 4.5:1 for normal text and 3:1 for large text, where large text is defined as 24px and larger, or 18.66px and larger when text is bold. ([Contrast Checker tool](https://webaim.org/resources/contrastchecker/))
 
-    <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-4">
-      <li><span className="swatch swatch--brand-blue"></span> <strong>Brand Blue</strong><br/>#0c2340</li>
-      <li><span className="swatch swatch--brand-blue-light"></span> <strong>Brand Blue, Light</strong><br/>#143865</li>
-      <li><span className="swatch swatch--brand-blue-bright"></span> <strong>Brand Blue, Bright</strong><br/>#1c4f8f</li>
-      <li><span className="swatch swatch--brand-blue-dark"></span> <strong>Brand Blue, Dark</strong><br/>#081629</li>
-    </ul>
-    <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-4">
-      <li><span className="swatch swatch--brand-gold"></span> <strong>Brand Gold</strong><br/>#ae9142</li>
-      <li><span className="swatch swatch--brand-gold-light"></span> <strong>Brand Gold, Light</strong><br/>#d39f10</li>
-      <li><span className="swatch swatch--brand-gold-bright"></span> <strong>Brand Gold, Bright</strong><br/>#C99770</li>
-      <li><span className="swatch swatch--brand-gold-dark"></span> <strong>Brand Gold, Dark</strong><br/>#8c7535</li>
-    </ul>
-    <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-4">
-      <li><span className="swatch swatch--brand-green"></span> <strong>Brand Green</strong><br/>#0A843D</li>
-      <li><span className="swatch swatch--brand-green-bright"></span> <strong>Brand Green, Bright</strong><br/>#35b36a</li>
-      <li><span className="swatch swatch--brand-green-dark"></span> <strong>Brand Green, Dark</strong><br/>#103d23</li>
-    </ul>
+## Base Palette
 
-    ## Supporting Color
+<ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-4">
+  <li><span className="swatch swatch--brand-blue"></span> <strong>Brand Blue</strong><br/>#0c2340</li>
+  <li><span className="swatch swatch--brand-blue-light"></span> <strong>Brand Blue, Light</strong><br/>#143865</li>
+  <li><span className="swatch swatch--brand-blue-bright"></span> <strong>Brand Blue, Bright</strong><br/>#1c4f8f</li>
+  <li><span className="swatch swatch--brand-blue-dark"></span> <strong>Brand Blue, Dark</strong><br/>#081629</li>
+</ul>
 
-     <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
-      <li><span className="swatch swatch--sky-blue-dark"></span> <strong>Sky Blue, Dark</strong><br/>#c1cddd</li>
-      <li><span className="swatch swatch--sky-blue"></span> <strong>Sky Blue</strong><br/>#e1e8f2</li>
-      <li><span className="swatch swatch--sky-blue-light"></span> <strong>Sky Blue, Light</strong><br/>#edf2f9</li>
-      <li><span className="swatch swatch--warm-white-dark"></span> <strong>Warm White, Dark</strong><br/>#efe9d9</li>
-      <li><span className="swatch swatch--warm-white"></span> <strong>Warm White</strong><br/>#f8f4ec</li>
-    </ul>
+<ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-4">
+  <li><span className="swatch swatch--brand-gold"></span> <strong>Brand Gold</strong><br/>#ae9142</li>
+  <li><span className="swatch swatch--brand-gold-light"></span> <strong>Brand Gold, Light</strong><br/>#d39f10</li>
+  <li><span className="swatch swatch--brand-gold-bright"></span> <strong>Brand Gold, Bright</strong><br/>#C99770</li>
+  <li><span className="swatch swatch--brand-gold-dark"></span> <strong>Brand Gold, Dark</strong><br/>#8c7535</li>
+</ul>
 
-    <ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
-      <li><span className="swatch swatch--gray-dark"></span> <strong>Gray, Dark</strong><br/>#333</li>
-      <li><span className="swatch swatch--gray"></span> <strong>Gray</strong><br/>#555</li>
-      <li><span className="swatch swatch--gray-light"></span> <strong>Gray, Light</strong><br/>#d8dce0</li>
-      <li><span className="swatch swatch--gray-extra-light"></span> <strong>Gray, Extra Light</strong><br/>#e9ebee</li>
-      <li><span className="swatch swatch--gray-extra-extra-light"></span> <strong>Gray, Extra Extra Light</strong><br/>#f1f2f4</li>
-    </ul>
+<ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-4">
+  <li><span className="swatch swatch--brand-green"></span> <strong>Brand Green</strong><br/>#0A843D</li>
+  <li><span className="swatch swatch--brand-green-bright"></span> <strong>Brand Green, Bright</strong><br/>#35b36a</li>
+  <li><span className="swatch swatch--brand-green-dark"></span> <strong>Brand Green, Dark</strong><br/>#103d23</li>
+</ul>
 
-    ## CSS Variables
+## Supporting Color
 
-    The following CSS custom properties are used throughout the Web Theme:
+<ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
+  <li><span className="swatch swatch--sky-blue-dark"></span> <strong>Sky Blue, Dark</strong><br/>#c1cddd</li>
+  <li><span className="swatch swatch--sky-blue"></span> <strong>Sky Blue</strong><br/>#e1e8f2</li>
+  <li><span className="swatch swatch--sky-blue-light"></span> <strong>Sky Blue, Light</strong><br/>#edf2f9</li>
+  <li><span className="swatch swatch--warm-white-dark"></span> <strong>Warm White, Dark</strong><br/>#efe9d9</li>
+  <li><span className="swatch swatch--warm-white"></span> <strong>Warm White</strong><br/>#f8f4ec</li>
+</ul>
 
-    <table className="color-table table--minimal">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Variable</th>
-          <th>Hex Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue"></span> <span>Brand Blue</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-blue)</span></td>
-          <td data-th="Hex" className="hex"><span>#000000</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue-light"></span> <span>Brand Blue Light</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-blue-light)</span></td>
-          <td data-th="Hex" className="hex"><span>#143865</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue-bright"></span> <span>Brand Blue Bright</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-blue-bright)</span></td>
-          <td data-th="Hex" className="hex"><span>#1c4f8f</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue-dark"></span> <span>Brand Blue Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-blue-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#081629</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold"></span> <span>Brand Gold</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-gold)</span></td>
-          <td data-th="Hex" className="hex"><span>#ae9142</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold-light"></span> <span>Brand Gold Light</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-gold-light)</span></td>
-          <td data-th="Hex" className="hex"><span>#caad5d</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold-bright"></span> <span>Brand Gold Bright</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-gold-bright)</span></td>
-          <td data-th="Hex" className="hex"><span>#d39f10</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold-dark"></span> <span>Brand Gold Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-gold-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#8c7535</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green-dark"></span> <span>Brand Green Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-green-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#103d23</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green"></span> <span>Brand Green</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-green)</span></td>
-          <td data-th="Hex" className="hex"><span>#0a843d</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green-bright"></span> <span>Brand Green Bright</span></td>
-          <td data-th="Variable" className="variable"><span>var(--brand-green-bright)</span></td>
-          <td data-th="Hex" className="hex"><span>#35b36a</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue-dark"></span> <span>Sky Blue Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--sky-blue-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#c1cddd</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue"></span> <span>Sky Blue</span></td>
-          <td data-th="Variable" className="variable"><span>var(--sky-blue)</span></td>
-          <td data-th="Hex" className="hex"><span>#e1e8f2</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue-light"></span> <span>Sky Blue Light</span></td>
-          <td data-th="Variable" className="variable"><span>var(--sky-blue-light)</span></td>
-          <td data-th="Hex" className="hex"><span>#edf2f9</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white-dark"></span> <span>Warm White Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--warm-white-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#efe9d9</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white"></span> <span>Warm White</span></td>
-          <td data-th="Variable" className="variable"><span>var(--warm-white)</span></td>
-          <td data-th="Hex" className="hex"><span>#f8f4ec</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--gray-dark"></span> <span>Gray Dark</span></td>
-          <td data-th="Variable" className="variable"><span>var(--gray-dark)</span></td>
-          <td data-th="Hex" className="hex"><span>#333333</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--gray"></span> <span>Gray</span></td>
-          <td data-th="Variable" className="variable"><span>var(--gray)</span></td>
-          <td data-th="Hex" className="hex"><span>#555555</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--gray-light"></span> <span>Gray Light</span></td>
-          <td data-th="Variable" className="variable"><span>var(--gray-light)</span></td>
-          <td data-th="Hex" className="hex"><span>#d2d2d2</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--gray-extra-light"></span> <span>Gray Extra Light</span></td>
-          <td data-th="Variable" className="variable"><span>var(--gray-extra-light)</span></td>
-          <td data-th="Hex" className="hex"><span>#e2e2e2</span></td>
-        </tr>
-        <tr>
-          <td data-th="Color" className="color"><span className="swatch--small swatch--gray-extra-extra-light"></span> <span>Gray Extra Extra Light</span></td>
-          <td data-th="Variable" className="variable"><span>var(--gray-extra-extra-light)</span></td>
-          <td data-th="Hex" className="hex"><span>#f2f2f2</span></td>
-        </tr>
+<ul className="swatch-list grid grid--narrow grid-sm-2 grid-md-3 grid-lg-5">
+  <li><span className="swatch swatch--gray-dark"></span> <strong>Gray, Dark</strong><br/>#333</li>
+  <li><span className="swatch swatch--gray"></span> <strong>Gray</strong><br/>#555</li>
+  <li><span className="swatch swatch--gray-light"></span> <strong>Gray, Light</strong><br/>#d8dce0</li>
+  <li><span className="swatch swatch--gray-extra-light"></span> <strong>Gray, Extra Light</strong><br/>#e9ebee</li>
+  <li><span className="swatch swatch--gray-extra-extra-light"></span> <strong>Gray, Extra Extra Light</strong><br/>#f1f2f4</li>
+</ul>
 
-      </tbody>
-    </table>
+## CSS Variables
 
-    ## Usage
+The following CSS custom properties are used throughout the Web Theme:
 
-    - The Notre Dame Brand color palette should be the primary colors of the site. Any additional secondary and tertiary colors should account for no more than 25% of complete color usage on any given page.
-    - Brand Blue and Dark Gray are the only colors designated for headings when used within body copy. White may be used when the heading is displayed over a dark background. A softer Dark Gray is used for body copy.
-    - Color contrast of text must meet WCAG 2.0 level AA. This is a contrast level of 4.5:1 for normal text and 3:1 for large text, where large text is defined as 24px and larger, or 18.66px and larger when text is bold. ([Contrast Checker tool](https://webaim.org/resources/contrastchecker/))
-  </div>
-</div>
+<table className="color-table table--minimal">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Variable</th>
+      <th>Hex Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue"></span> <span>Brand Blue</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-blue)</span></td>
+      <td data-th="Hex" className="hex"><span>#000000</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue-light"></span> <span>Brand Blue Light</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-blue-light)</span></td>
+      <td data-th="Hex" className="hex"><span>#143865</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue-bright"></span> <span>Brand Blue Bright</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-blue-bright)</span></td>
+      <td data-th="Hex" className="hex"><span>#1c4f8f</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-blue-dark"></span> <span>Brand Blue Dark</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-blue-dark)</span></td>
+      <td data-th="Hex" className="hex"><span>#081629</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold"></span> <span>Brand Gold</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-gold)</span></td>
+      <td data-th="Hex" className="hex"><span>#ae9142</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold-light"></span> <span>Brand Gold Light</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-gold-light)</span></td>
+      <td data-th="Hex" className="hex"><span>#caad5d</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold-bright"></span> <span>Brand Gold Bright</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-gold-bright)</span></td>
+      <td data-th="Hex" className="hex"><span>#d39f10</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-gold-dark"></span> <span>Brand Gold Dark</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-gold-dark)</span></td>
+      <td data-th="Hex" className="hex"><span>#8c7535</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green-dark"></span> <span>Brand Green Dark</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-green-dark)</span></td>
+      <td data-th="Hex" className="hex"><span>#103d23</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green"></span> <span>Brand Green</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-green)</span></td>
+      <td data-th="Hex" className="hex"><span>#0a843d</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--brand-green-bright"></span> <span>Brand Green Bright</span></td>
+      <td data-th="Variable" className="variable"><span>var(--brand-green-bright)</span></td>
+      <td data-th="Hex" className="hex"><span>#35b36a</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue-dark"></span> <span>Sky Blue Dark</span></td>
+      <td data-th="Variable" className="variable"><span>var(--sky-blue-dark)</span></td>
+      <td data-th="Hex" className="hex"><span>#c1cddd</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue"></span> <span>Sky Blue</span></td>
+      <td data-th="Variable" className="variable"><span>var(--sky-blue)</span></td>
+      <td data-th="Hex" className="hex"><span>#e1e8f2</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--sky-blue-light"></span> <span>Sky Blue Light</span></td>
+      <td data-th="Variable" className="variable"><span>var(--sky-blue-light)</span></td>
+      <td data-th="Hex" className="hex"><span>#edf2f9</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white-dark"></span> <span>Warm White Dark</span></td>
+      <td data-th="Variable" className="variable"><span>var(--warm-white-dark)</span></td>
+      <td data-th="Hex" className="hex"><span>#efe9d9</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--warm-white"></span> <span>Warm White</span></td>
+      <td data-th="Variable" className="variable"><span>var(--warm-white)</span></td>
+      <td data-th="Hex" className="hex"><span>#f8f4ec</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--gray-dark"></span> <span>Gray Dark</span></td>
+      <td data-th="Variable" className="variable"><span>var(--gray-dark)</span></td>
+      <td data-th="Hex" className="hex"><span>#333333</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--gray"></span> <span>Gray</span></td>
+      <td data-th="Variable" className="variable"><span>var(--gray)</span></td>
+      <td data-th="Hex" className="hex"><span>#555555</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--gray-light"></span> <span>Gray Light</span></td>
+      <td data-th="Variable" className="variable"><span>var(--gray-light)</span></td>
+      <td data-th="Hex" className="hex"><span>#d2d2d2</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--gray-extra-light"></span> <span>Gray Extra Light</span></td>
+      <td data-th="Variable" className="variable"><span>var(--gray-extra-light)</span></td>
+      <td data-th="Hex" className="hex"><span>#e2e2e2</span></td>
+    </tr>
+    <tr>
+      <td data-th="Color" className="color"><span className="swatch--small swatch--gray-extra-extra-light"></span> <span>Gray Extra Extra Light</span></td>
+      <td data-th="Variable" className="variable"><span>var(--gray-extra-extra-light)</span></td>
+      <td data-th="Hex" className="hex"><span>#f2f2f2</span></td>
+    </tr>
+  </tbody>
+</table>

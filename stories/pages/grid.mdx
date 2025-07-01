@@ -2,124 +2,110 @@ import { Meta } from "@storybook/blocks";
 
 <Meta title="Foundation/Grid" />
 
-<div className="sb-container sb-unstyled">
-  <div className="sb-section">
-    # Grid
+# Grid
 
-    ## How It Works
+## How It Works
 
-    The grid system works by using the `.grid` class plus a `.grid-*-*` modifier class to define the breakpoints and column counts for the grid. Each child element then fills in the next spot. For instance, if you want to have a three-column grid for small device and above:
+The grid system works by using the `.grid` class plus a `.grid-*-*` modifier class to define the breakpoints and column counts for the grid. Each child element then fills in the next spot. For instance, if you want to have a three-column grid for small device and above:
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-sm-3">
-          <div>1. One of three columns</div>
-          <div>2. One of three columns</div>
-          <div>3. One of three columns</div>
-        </div>
-      </div>
-    </div>
-
-    ```html
-    <div class="grid grid-sm-3">
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-sm-3">
       <div>1. One of three columns</div>
       <div>2. One of three columns</div>
       <div>3. One of three columns</div>
     </div>
-    ```
+  </div>
+</div>
 
-    The code gives three equal-width columns on small, medium, medium-large, large, extra-large, and extra-extra-large devices. The same pattern can be used for one- through six-column grids on any of the preset breakpoints. Want a four-column grid on large screens?
+```html
+<div class="grid grid-sm-3">
+  <div>1. One of three columns</div>
+  <div>2. One of three columns</div>
+  <div>3. One of three columns</div>
+</div>
+```
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-lg-4">
-          <div>1. One of four columns</div>
-          <div>2. One of four columns</div>
-          <div>3. One of four columns</div>
-          <div>4. One of four columns</div>
-        </div>
-      </div>
-    </div>
+The code gives three equal-width columns on small, medium, medium-large, large, extra-large, and extra-extra-large devices. The same pattern can be used for one- through six-column grids on any of the preset breakpoints. Want a four-column grid on large screens?
 
-    ```html
-    <div class="grid grid-lg-4">
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-lg-4">
       <div>1. One of four columns</div>
       <div>2. One of four columns</div>
       <div>3. One of four columns</div>
       <div>4. One of four columns</div>
     </div>
-    ```
+  </div>
+</div>
 
-    ## Breakpoints
+```html
+<div class="grid grid-lg-4">
+  <div>1. One of four columns</div>
+  <div>2. One of four columns</div>
+  <div>3. One of four columns</div>
+  <div>4. One of four columns</div>
+</div>
+```
 
-    To make the grid responsive, there are five grid breakpoints: all breakpoints (extra small), small, medium, large, and extra large.  Grid breakpoints are based on min-width media queries, so they will apply to the specified breakpoint and all those above it.
+## Breakpoints
 
-    <div className="tablewrap">
-      <table>
-        <thead>
-          <tr>
-            <th>&nbsp;</th>
-            <th>Extra Small</th>
-            <th>Small</th>
-            <th>Medium</th>
-            <th>Medium Large</th>
-            <th>Large</th>
-            <th>Extra Large</th>
-            <th>Extra-Extra Large</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Max Screen width</td>
-            <td>None</td>
-            <td>480px</td>
-            <td>768px</td>
-            <td>960px</td>
-            <td>1280px</td>
-            <td>1440px</td>
-            <td>1600px</td>
-          </tr>
-          <tr>
-            <td>Modifier class</td>
-            <td>`.grid-xs-*`</td>
-            <td>`.grid-sm-*`</td>
-            <td>`.grid-md-*`</td>
-            <td>`.grid-ml-*`</td>
-            <td>`.grid-lg-*`</td>
-            <td>`.grid-xl-*`</td>
-            <td>`.grid-xxl-*`</td>
-          </tr>
-          <tr>
-            <td>Number of cols</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+To make the grid responsive, there are five grid breakpoints: all breakpoints (extra small), small, medium, large, and extra large.  Grid breakpoints are based on min-width media queries, so they will apply to the specified breakpoint and all those above it.
 
-    Multiple modifier classes can be added to a single grid, allowing you to adjust the number of columns at a specific breakpoint.
+<div className="tablewrap">
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Extra Small</th>
+        <th>Small</th>
+        <th>Medium</th>
+        <th>Medium Large</th>
+        <th>Large</th>
+        <th>Extra Large</th>
+        <th>Extra-Extra Large</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Max Screen width</td>
+        <td>None</td>
+        <td>480px</td>
+        <td>768px</td>
+        <td>960px</td>
+        <td>1280px</td>
+        <td>1440px</td>
+        <td>1600px</td>
+      </tr>
+      <tr>
+        <td>Modifier class</td>
+        <td>`.grid-xs-*`</td>
+        <td>`.grid-sm-*`</td>
+        <td>`.grid-md-*`</td>
+        <td>`.grid-ml-*`</td>
+        <td>`.grid-lg-*`</td>
+        <td>`.grid-xl-*`</td>
+        <td>`.grid-xxl-*`</td>
+      </tr>
+      <tr>
+        <td>Number of cols</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-sm-2 grid-md-3 grid-xl-6">
-          <div>First Item</div>
-          <div>Second Item</div>
-          <div>Third Item</div>
-          <div>Fourth Item</div>
-          <div>Fifth Item</div>
-          <div>Sixth Item</div>
-        </div>
-      </div>
-    </div>
+Multiple modifier classes can be added to a single grid, allowing you to adjust the number of columns at a specific breakpoint.
 
-    ```html
-    <div class="grid grid-sm-2 grid-md-3 grid-xl-6">
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-sm-2 grid-md-3 grid-xl-6">
       <div>First Item</div>
       <div>Second Item</div>
       <div>Third Item</div>
@@ -127,200 +113,210 @@ import { Meta } from "@storybook/blocks";
       <div>Fifth Item</div>
       <div>Sixth Item</div>
     </div>
-    ```
+  </div>
+</div>
 
-    ## Spanning Columns
+```html
+<div class="grid grid-sm-2 grid-md-3 grid-xl-6">
+  <div>First Item</div>
+  <div>Second Item</div>
+  <div>Third Item</div>
+  <div>Fourth Item</div>
+  <div>Fifth Item</div>
+  <div>Sixth Item</div>
+</div>
+```
 
-    To make a grid element span multiple columns, you can use the `.span-*-*` class.
+## Spanning Columns
 
-    <div className="tablewrap">
-      <table>
-        <thead>
-          <tr>
-            <th>&nbsp;</th>
-            <th>Extra Small</th>
-            <th>Small</th>
-            <th>Medium</th>
-            <th>Medium Large</th>
-            <th>Large</th>
-            <th>Extra Large</th>
-            <th>Extra-Extra Large</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Max Screen width</td>
-            <td>None</td>
-            <td>480px</td>
-            <td>768px</td>
-            <td>960px</td>
-            <td>1280px</td>
-            <td>1440px</td>
-            <td>1600px</td>
-          </tr>
-          <tr>
-            <td>Modifier class</td>
-            <td>`.grid-xs-*`</td>
-            <td>`.grid-sm-*`</td>
-            <td>`.grid-md-*`</td>
-            <td>`.grid-ml-*`</td>
-            <td>`.grid-lg-*`</td>
-            <td>`.grid-xl-*`</td>
-            <td>`.grid-xxl-*`</td>
-          </tr>
-          <tr>
-            <td>Number of cols</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-            <td>1-6</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+To make a grid element span multiple columns, you can use the `.span-*-*` class.
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-md-3">
-          <div className="span-md-2">First Item</div>
-          <div>Second Item</div>
-          <div className="span-md-3">Third Item</div>
-          <div>Fourth Item</div>
-          <div className="span-md-2">Fifth Item</div>
-          <div className="span-md-3">Sixth Item</div>
-        </div>
-      </div>
-    </div>
+<div className="tablewrap">
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Extra Small</th>
+        <th>Small</th>
+        <th>Medium</th>
+        <th>Medium Large</th>
+        <th>Large</th>
+        <th>Extra Large</th>
+        <th>Extra-Extra Large</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Max Screen width</td>
+        <td>None</td>
+        <td>480px</td>
+        <td>768px</td>
+        <td>960px</td>
+        <td>1280px</td>
+        <td>1440px</td>
+        <td>1600px</td>
+      </tr>
+      <tr>
+        <td>Modifier class</td>
+        <td>`.grid-xs-*`</td>
+        <td>`.grid-sm-*`</td>
+        <td>`.grid-md-*`</td>
+        <td>`.grid-ml-*`</td>
+        <td>`.grid-lg-*`</td>
+        <td>`.grid-xl-*`</td>
+        <td>`.grid-xxl-*`</td>
+      </tr>
+      <tr>
+        <td>Number of cols</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+        <td>1-6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    ```html
-    <div class="grid grid-md-3">
-      <div class="span-md-2">First Item</div>
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-3">
+      <div className="span-md-2">First Item</div>
       <div>Second Item</div>
-      <div class="span-md-3">Third Item</div>
+      <div className="span-md-3">Third Item</div>
       <div>Fourth Item</div>
-      <div class="span-md-2">Fifth Item</div>
-      <div class="span-md-3">Sixth Item</div>
+      <div className="span-md-2">Fifth Item</div>
+      <div className="span-md-3">Sixth Item</div>
     </div>
-    ```
+  </div>
+</div>
 
-    The `.full` class can also be used to span from the first column to the last column of a grid.
+```html
+<div class="grid grid-md-3">
+  <div class="span-md-2">First Item</div>
+  <div>Second Item</div>
+  <div class="span-md-3">Third Item</div>
+  <div>Fourth Item</div>
+  <div class="span-md-2">Fifth Item</div>
+  <div class="span-md-3">Sixth Item</div>
+</div>
+```
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-md-3">
-          <div className="span-full">Full Width</div>
-        </div>
-      </div>
+The `.full` class can also be used to span from the first column to the last column of a grid.
+
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-3">
+      <div className="span-full">Full Width</div>
     </div>
+  </div>
+</div>
 
-    ```html
-    <div class="grid grid-md-3">
-      <div class="span-full">Full Width</div>
+```html
+<div class="grid grid-md-3">
+  <div class="span-full">Full Width</div>
+</div>
+```
+
+## Ordering Items
+
+To change the order of a grid element at a certain breakpoint, you can use the `.order-*-*` class.
+
+<div className="tablewrap">
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Extra Small</th>
+        <th>Small</th>
+        <th>Medium</th>
+        <th>Medium Large</th>
+        <th>Large</th>
+        <th>Extra Large</th>
+        <th>Extra-Extra Large</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Modifier class</td>
+        <td>`.grid-xs-*`</td>
+        <td>`.grid-sm-*`</td>
+        <td>`.grid-md-*`</td>
+        <td>`.grid-ml-*`</td>
+        <td>`.grid-lg-*`</td>
+        <td>`.grid-xl-*`</td>
+        <td>`.grid-xxl-*`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-3">
+    <div className="order-md-2 order-lg-3">Small 1 / Medium 2 / Large 3</div>
+      <div className="order-md-3 order-lg-1">Small 2 / Medium 3 / Large 1</div>
+      <div className="order-md-1 order-lg-2">Small 3 / Medium 1 / Large 2</div>
     </div>
-    ```
+  </div>
+</div>
 
-    ## Ordering Items
+```html
+<div class="grid grid-md-3">
+  <div class="order-md-2 order-lg-3">Medium 2 / Large 3</div>
+  <div class="order-md-3 order-lg-1">Medium 3 / Large 1</div>
+  <div class="order-md-1 order-lg-2">Medium 1 / Large 2</div>
+</div>
+```
 
-    To change the order of a grid element at a certain breakpoint, you can use the `.order-*-*` class.
+## Grid Gap
 
-    <div className="tablewrap">
-      <table>
-        <thead>
-          <tr>
-            <th>&nbsp;</th>
-            <th>Extra Small</th>
-            <th>Small</th>
-            <th>Medium</th>
-            <th>Medium Large</th>
-            <th>Large</th>
-            <th>Extra Large</th>
-            <th>Extra-Extra Large</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Modifier class</td>
-            <td>`.grid-xs-*`</td>
-            <td>`.grid-sm-*`</td>
-            <td>`.grid-md-*`</td>
-            <td>`.grid-ml-*`</td>
-            <td>`.grid-lg-*`</td>
-            <td>`.grid-xl-*`</td>
-            <td>`.grid-xxl-*`</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+### Overriding the Default
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-md-3">
-        <div className="order-md-2 order-lg-3">Small 1 / Medium 2 / Large 3</div>
-          <div className="order-md-3 order-lg-1">Small 2 / Medium 3 / Large 1</div>
-          <div className="order-md-1 order-lg-2">Small 3 / Medium 1 / Large 2</div>
-        </div>
-      </div>
-    </div>
+By default, the grid has a gap between columns and rows of 2rem. This value is stored in the `--grid-gap` CSS variable, and can be overridden as needed.
 
-    ```html
-    <div class="grid grid-md-3">
-      <div class="order-md-2 order-lg-3">Medium 2 / Large 3</div>
-      <div class="order-md-3 order-lg-1">Medium 3 / Large 1</div>
-      <div class="order-md-1 order-lg-2">Medium 1 / Large 2</div>
-    </div>
-    ```
-
-    ## Grid Gap
-
-    ### Overriding the Default
-
-    By default, the grid has a gap between columns and rows of 2rem. This value is stored in the `--grid-gap` CSS variable, and can be overridden as needed.
-
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-md-2 my-custom-grid">
-          <div>Item 1</div>
-          <div>Item 2</div>
-          <div>Item 3</div>
-          <div>Item 4</div>
-        </div>
-      </div>
-    </div>
-
-    ```html
-    <div class="grid grid-md-2 my-custom-grid">
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-2 my-custom-grid">
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
       <div>Item 4</div>
     </div>
-    ```
+  </div>
+</div>
 
-    ### No Gap
+```html
+<div class="grid grid-md-2 my-custom-grid">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+</div>
+```
 
-    In the cases where you want a grid with no gap in between the cells, you can use the `.no-gap` class.
+### No Gap
 
-    <div className="code-example code-example--grid">
-      <div className="preview">
-        <div className="grid grid-md-2 no-gap">
-          <div>Item 1</div>
-          <div>Item 2</div>
-          <div>Item 3</div>
-          <div>Item 4</div>
-        </div>
-      </div>
-    </div>
+In the cases where you want a grid with no gap in between the cells, you can use the `.no-gap` class.
 
-    ```html
-    <div class="grid grid-md-2 no-gap">
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-2 no-gap">
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
       <div>Item 4</div>
     </div>
-    ```
+  </div>
 </div>
+
+```html
+<div class="grid grid-md-2 no-gap">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
 </div>
+```
