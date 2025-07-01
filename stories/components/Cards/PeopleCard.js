@@ -87,7 +87,7 @@ export default function PeopleCard(props) {
 
   if (placeholder) {
     container.innerHTML = `
-    <div class="${classes.join('')}">
+    <div class="${classes.join(' ')}">
       ${avatarPlaceholder}
       <div class="card-body">
         ${titleElement}
@@ -100,7 +100,7 @@ export default function PeopleCard(props) {
     `;
   } else {
     container.innerHTML = `
-    <div class="${classes.join('')}">
+    <div class="${classes.join(' ')}">
       ${avatarImage}
       <div class="card-body">
         ${titleElement}

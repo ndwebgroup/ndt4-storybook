@@ -1,7 +1,7 @@
 import Accordion from './Accordion';
 
 export default {
-  title: 'Components/Accordion',
+  title: 'Components/Accordion (Details-Summary)',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -16,7 +16,7 @@ export default {
       name: 'List Items',
       description: 'Array of detail/summary items. Each item should have a summary and detail property.',
       control: 'object'
-    }, 
+    },
   },
   args: {
     // Default args for all stories

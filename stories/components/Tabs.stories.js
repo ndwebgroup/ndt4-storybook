@@ -89,6 +89,6 @@ export const Large = (args) => {
   return Tabs(args);
 };
 Large.args = {
-  tabSize: 'lg',
+  tabVariant: 'lg',
   items: exampleItems,
 };
