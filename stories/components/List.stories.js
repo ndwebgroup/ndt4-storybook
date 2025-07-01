@@ -164,3 +164,28 @@ GridDescription.parameters = {
     }
   }
 };
+
+// HTML Details/Summary Example
+export const DetailsSummary = () => `
+  <details>
+    <summary>More Information</summary>
+    <ul>
+      <li>This is a native HTML <code>&lt;details&gt;</code> element.</li>
+      <li>Click the summary to expand or collapse the content.</li>
+      <li>Useful for progressive disclosure.</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Another Item with Details</summary>
+    <p>Aut minima architecto reiciendis cupiditate est aut nobis explicabo alias excepturi doloremque enim quia hic sit. Esse tempore rerum natus consequuntur facere deleniti eum odit enim dolorem fugit illo molestiae dolores illum.</p>
+  </details>
+`;
+
+DetailsSummary.storyName = 'Details/Summary';
+DetailsSummary.parameters = {
+  docs: {
+    description: {
+      story: 'The native HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements provide a built-in way to show and hide content. They are accessible and require no JavaScript for basic functionality.'
+    }
+  }
+};
