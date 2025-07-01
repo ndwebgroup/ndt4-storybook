@@ -1,5 +1,5 @@
-import { themes } from '@storybook/theming';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { themes } from 'storybook/theming';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import '../public/css/global.css';
 
 const withSvgSprite = (Story) => {
@@ -67,16 +67,20 @@ export default {
       }
     },
   },
+
   sidebar: {
     order: {
       default: ['Components', ['*', 'Other']], // Sort Components alphabetically
     },
   },
+
   darkMode: {
     dark: { ...themes.dark, appBg: '#0c2340', barBg: '#0c2340', },
     light: { ...themes.normal, appBg: '#fff' }
   },
+
   decorators: [withSvgSprite, withNDT4Script],
+  tags: ['autodocs']
 };
 
 /*!
