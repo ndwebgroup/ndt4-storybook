@@ -16,21 +16,23 @@ export default function Banner(props) {
   const container = document.createElement('div');
   const { textAlignment, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section section--banner banner--full dark grid grid-md-2`
+  container.className = `page-secondary full-width`
 
   // Create banner body content first without buttons
   container.innerHTML = `
-  <div class="banner-secondary banner-secondary--${textAlignment}">
-    ${label ? `<p class="banner-label">${label}</p>` : ''}
-    <${headingTag} class="banner-title banner-title--${titleSize}">${title}</${headingTag}>
-    ${summary ? `<p>${summary}</p>` : ''}
-    <style>
-      .section--banner.banner--full { background-image:url('/images/placeholder-campus-3-1600x900.jpg'); }
-    </style>
+  <div class="section grid grid-md-2 bg--dark section-secondary--${textAlignment}">
+    <div class="section-primary">
+      ${label ? `<p class="section-label">${label}</p>` : ''}
+      <${headingTag} class="section-title banner-title--${titleSize}">${title}</${headingTag}>
+      ${summary ? `<p>${summary}</p>` : ''}
+    </div>
+    <figure class="section-media section-media--bg bg--gradient bg--brand-blue-dark">>
+      <img src="/images/placeholder-campus-3-1600x900.jpg" alt="" width="1600" height="900">
+    </figure>
   </div>
 `
   // Get the banner body element to append buttons properly
-  const bannerBody = container.querySelector('.banner-secondary');
+  const bannerBody = container.querySelector('.section-primary');
 
   // Handle single button
   if (buttons) {

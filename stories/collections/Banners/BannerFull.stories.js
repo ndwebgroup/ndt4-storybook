@@ -41,7 +41,6 @@ export default {
     headingTag:'h2',
     summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
     textAlignment:'left',
-
   },
 };
 
