@@ -18,20 +18,15 @@ export default function Quote(props) {
     layout = 'left'
   } = props;
 
-  const container = document.createElement('div');
-  const classes = [`blockquote${layout === `left` ? `` : ` blockquote--${layout}`}`];
+  const container = document.createElement('blockquote');
+  container.classList.add('blockquote', `blockquote--${layout}`);
 
   container.innerHTML = `
-    <blockquote class="${classes}">
       <p>${text}</p>
-    </blockquote>
   `;
 
-  // Get the quote container to append byline properly
-  const quoteBody = container.querySelector('.blockquote');
-
   if (cite) {
-    quoteBody.appendChild(Byline({ name:`John Doe`, title:`Person Title`, image:`${image ? 'image' : 'none'}` }));
+    container.appendChild(Byline({ name:`Rev. Robert A. Dowd, C.S.C.`, title:`President of the University of Notre Dame`, image:`${image ? 'image' : 'none'}` }));
   }
 
   return container;

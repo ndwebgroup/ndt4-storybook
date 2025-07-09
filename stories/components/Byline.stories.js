@@ -12,8 +12,8 @@ export default {
   args: {
     // Default args for all stories
     image: 'image',
-    name: 'John Doe',
-    title: 'Person title',
+    name: 'Rev. Robert A. Dowd, C.S.C.',
+    title: 'President of the University of Notre Dame',
     link:'#',
   }
 };

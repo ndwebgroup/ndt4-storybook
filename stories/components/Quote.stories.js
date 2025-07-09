@@ -7,7 +7,7 @@ export default {
     text: { name:'Quote Text',},
     cite: { name:'Show Cite',},
     image: { name:'Show Image',},
-    layout: { name:'Quote Layout', control: 'select', options: ['centered', 'left']},
+    layout: { name:'Quote Layout', control: 'select', options: ['left', 'centered', 'reversed'] },
   },
   parameters: {
     design: {
@@ -20,7 +20,7 @@ export default {
   args: {
     cite:true,
     image: true,
-    text: '"Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at."',
+    text: '"As a premier Catholic research university, our research and learning drive insights, innovation, and impact for good around the world."',
     layout: 'left'
   }
 };
@@ -36,4 +36,11 @@ export const Centered = (args) => {
 };
 Centered.args = {
   layout: 'centered',
+};
+
+export const Reversed = (args) => {
+  return Quote(args);
+};
+Reversed.args = {
+  layout: 'reversed',
 };

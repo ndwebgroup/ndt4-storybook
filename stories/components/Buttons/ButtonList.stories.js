@@ -50,7 +50,7 @@ export const Large = (args) => {
 Large.storyName = 'Large Button List';
 Large.args = {
   items: exampleItems,
-  className: 'btn--list-large'
+  className: 'btn--list-lg'
 };
 
 Large.parameters = {

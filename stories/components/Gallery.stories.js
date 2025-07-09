@@ -29,6 +29,11 @@ export default {
       description: 'Unique identifier for the gallery',
       control: 'text'
     },
+    classes: {
+      name: 'Additional Classes',
+      description: 'Additional CSS classes to apply to the gallery container',
+      control: 'text'
+    },
     images: {
       name: 'Gallery Images',
       description: 'Array of image objects with thumbnail, fullsize, alt, and caption properties',
@@ -76,5 +81,14 @@ export const TwelveImages = (args) => {
     ...args,
     id: "12",
     images: createGalleryImages(12)
+  });
+};
+
+export const GalleryTiled = (args) => {
+  return Gallery({
+    ...args,
+    id: "15",
+    classes: 'gallery--tiled',
+    images: createGalleryImages(15)
   });
 };

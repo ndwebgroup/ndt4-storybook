@@ -1,7 +1,7 @@
 /**
  * Accordion component
  * @param {Object} props - Component properties
- * @param {('default'|'large'|'highlight')} [props.variant='default'] - Variant of the accordion
+ * @param {('default'|'lg'|'highlight')} [props.variant='default'] - Variant of the accordion
  * @returns {HTMLElement} - The accordion element
  */
 export default function Accordion(props) {

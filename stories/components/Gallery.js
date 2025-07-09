@@ -6,11 +6,11 @@
  * @returns {string} - The gallery HTML
  */
 export default function Gallery(props) {
-  const { id, images } = props;
+  const { id, classes, images } = props;
   const count = images.length;
 
   return `
-    <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${count}">
+    <ul id="gallery-${id}" class="gallery-lb gallery-${id} ${classes}" data-count="${count}">
       ${images.map((image, index) => `
         <li>
           <a href="${image.fullsize}" title="${image.caption || ''}" data-title="${image.caption || ''}">
