@@ -1,6 +1,6 @@
 /**
  * List component
- * Supports multiple list types: unordered, ordered, unstyled, inline, and description lists
+ * Supports multiple list types: unordered, ordered, unstyled, stepped, inline, and description lists
  */
 export default function List(args) {
   const {
@@ -34,6 +34,14 @@ export default function List(args) {
         <ul class="list--unstyled ${className}">
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ul>
+      `;
+      break;
+
+    case 'stepped':
+      listHtml = `
+        <ol class="ol--stepped ${className}">
+          ${items.map(item => `<li>${item}</li>`).join('\n          ')}
+        </ol>
       `;
       break;
 

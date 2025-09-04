@@ -6,7 +6,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'List component for displaying various types of lists: unordered, ordered, unstyled, inline, and description lists.'
+        component: 'List component for displaying various types of lists: unordered, ordered, unstyled, stepped, inline, and description lists.'
       }
     }
   },
@@ -14,7 +14,7 @@ export default {
     type: {
       description: 'The type of list to display',
       control: 'select',
-      options: ['unordered', 'ordered', 'unstyled', 'inline', 'description']
+      options: ['unordered', 'ordered', 'unstyled', 'stepped', 'inline', 'description']
     },
     items: {
       description: 'Array of list items. For description lists, these are the terms.',
@@ -108,6 +108,24 @@ Unstyled.parameters = {
   }
 };
 
+export const Stepped = (args) => {
+  return List(args);
+};
+
+Stepped.storyName = 'Stepped List';
+Stepped.args = {
+  type: 'stepped',
+  items: ['<strong>Step 1</strong><p>Quisque ante adipiscing vestibulum.</p>', '<strong>Step 2</strong><p>Quisque ante adipiscing vestibulum.</p>', '<strong>Step 3</strong><p>Quisque ante adipiscing vestibulum.</p>', '<strong>Step 4</strong><p>Quisque ante adipiscing vestibulum.</p>']
+};
+
+Stepped.parameters = {
+  docs: {
+    description: {
+      story: 'A stepped list `<ul class="ol--stepped">` is used when a styled sequence of items matters. Useful for process steps, instructions, etc.'
+    }
+  }
+};
+
 export const Inline = (args) => {
   return List(args);
 };
@@ -115,7 +133,7 @@ export const Inline = (args) => {
 Inline.storyName = 'Inline List';
 Inline.args = {
   type: 'inline',
-  items: ['Home', 'About', 'Services', 'Contact']
+  items: ['<Home>', 'About', 'Services', 'Contact']
 };
 
 Inline.parameters = {

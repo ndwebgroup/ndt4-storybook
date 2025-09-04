@@ -88,7 +88,7 @@ export default function Event(props) {
   eventHTML += `
       <div class="article-meta">
         <p class="meta-item event-time" title="${startDateFormatted}, ${startTimeFormatted} - ${endTimeFormatted}">
-          <time property="startDate" datetime="${startDateISO}"><span class="icon" data-icon="clock-o">Time:</span>
+          <time property="startDate" datetime="${startDateISO}"><span class="icon" data-icon="clock">Time:</span>
           <span class="date-string">${startDateFormatted}</span>${allDay ? ', All Day' : ` at ${startTimeFormatted}`}</time> ${!allDay ? ' - ' : ''}
           <time property="endDate" datetime="${endDateISO}">${!allDay ? endTimeFormatted : ''}</time>
         </p>
