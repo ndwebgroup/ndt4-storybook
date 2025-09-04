@@ -23,14 +23,12 @@ export default function Banner(props) {
   let mediaHTML = ''
 
   switch(media) {
-    case 'image':
-      container.className += `${order == `default` ? `` : ` section--${order}`}`
-      mediaHTML = `<figure class="section-primary banner-image"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
+    case 'image':`}`
+      mediaHTML = `<figure class="section-media${order == `default` ? `` : ` order-md-2`}"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
       break;
     case 'video':
-      container.className += `${order == `default` ? `` : ` section--${order}`}`
       // Create an empty placeholder for the video that we'll fill later
-      mediaHTML = `<div class="section-primary section-video"></div>`;
+      mediaHTML = `<div class="section-media${order == `default` ? `` : ` order-md-2`}"></div>`;
       break;
     default:
       mediaHTML = ``;
@@ -38,21 +36,21 @@ export default function Banner(props) {
   // Create banner secondary content first without buttons
   container.innerHTML = `
   ${mediaHTML}
-  <div class="section-secondary">
-    <${headingTag} class="section-title section-title--${titleSize}">${title}</${headingTag}>
+  <div class="section-content">
+    <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `
 
   // Add the video element if media type is video
   if (media === 'video') {
-    const videoContainer = container.querySelector('.section-primary.section-video');
+    const videoContainer = container.querySelector('.section-media');
     const videoElement = Video({ style:'placeholder', videoId:'p_vC10eq474', playStyle:'default' });
     videoContainer.appendChild(videoElement);
   }
 
   // Get the banner body element to append buttons properly
-  const bannerBody = container.querySelector('.section-secondary');
+  const bannerBody = container.querySelector('.section-content');
 
   // Handle label
   if (label) {

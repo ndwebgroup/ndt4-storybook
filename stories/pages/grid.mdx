@@ -277,9 +277,34 @@ To change the order of a grid element at a certain breakpoint, you can use the `
 
 By default, the grid has a gap between columns and rows of 2rem. This value is stored in the `--grid-gap` CSS variable, and can be overridden as needed.
 
+<div className="tablewrap">
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Extra Small</th>
+        <th>Small</th>
+        <th>Medium</th>
+        <th>Large</th>
+        <th>Extra Large</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Modifier class</td>
+        <td>`.grid-gap-xs`</td>
+        <td>`.grid-gap-sm`</td>
+        <td>`.grid-gap-md`</td>
+        <td>`.grid-gap-lg`</td>
+        <td>`.grid-gap-xl`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <div className="code-example code-example--grid">
   <div className="preview">
-    <div className="grid grid-md-2 my-custom-grid">
+    <div className="grid grid-md-2 grid-gap-xs">
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -289,7 +314,7 @@ By default, the grid has a gap between columns and rows of 2rem. This value is s
 </div>
 
 ```html
-<div class="grid grid-md-2 my-custom-grid">
+<div class="grid grid-md-2 grid-gap-xs">
   <div>Item 1</div>
   <div>Item 2</div>
   <div>Item 3</div>

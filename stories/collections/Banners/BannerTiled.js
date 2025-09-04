@@ -16,21 +16,21 @@ export default function BannerMulti(props) {
   const container = document.createElement('div');
   const { order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section grid grid-md-2 align-center${order == `default` ? `` : ` section--${order}`}`
+  container.className = `section grid grid-md-2 align-center`;
 
   // Limit imageCount to a maximum of 4 and ensure it's at least 1
   const count = Math.max(2, Math.min(parseInt(imageCount, 10) || 3, 4));
-  let mediaHTML = `<figure class="section-secondary section-media section-media--tiled">
+  let mediaHTML = `<figure class="section-media section-media--tiled${order == `default` ? `` : ` order-md-2 section-media--tiled-${order}`}">
     ${Array.from({ length: count }).map(() => `<img src="/images/placeholder-campus-3-800x1400.jpg" width="800" height="1400" alt="Modern university campus with tall glass buildings surrounded by green lawns and trees under a clear sky, conveying a welcoming and vibrant academic atmosphere">`).join('')}
   </figure>`
 
   // Create banner body content first without buttons
   container.innerHTML = `
-  <div class="section-primary">
+  ${mediaHTML}
+  <div class="section-content">
     <${headingTag} class="section-title section-title--${titleSize}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
-  ${mediaHTML}
 `
 
   // Get the banner body element to append buttons properly

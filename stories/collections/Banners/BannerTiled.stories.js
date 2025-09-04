@@ -46,6 +46,7 @@ export default {
     headingTag:'h2',
     title:'Banner Title',
     imageCount:'2',
+    order:'default',
     summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
   },
 };
