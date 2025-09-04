@@ -92,3 +92,12 @@ export const GalleryTiled = (args) => {
     images: createGalleryImages(15)
   });
 };
+
+export const GallerySlider = (args) => {
+  return Gallery({
+    ...args,
+    id: "15",
+    classes: 'gallery--slider',
+    images: createGalleryImages(21)
+  });
+};

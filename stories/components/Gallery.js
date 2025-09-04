@@ -10,21 +10,23 @@ export default function Gallery(props) {
   const count = images.length;
 
   return `
-    <ul id="gallery-${id}" class="gallery-lb gallery-${id} ${classes}" data-count="${count}">
-      ${images.map((image, index) => `
-        <li>
-          <a href="${image.fullsize}" title="${image.caption || ''}" data-title="${image.caption || ''}">
-            <img
-              src="${image.thumbnail}"
-              alt="${image.alt || `Gallery image ${index + 1}`}"
-              width="400"
-              height="400"
-              loading="lazy"
-            />
-          </a>
-        </li>
-      `).join('')}
-    </ul>
+    <div class="gallery-wrapper ${classes}">
+      <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${count}">
+        ${images.map((image, index) => `
+          <li>
+            <a href="${image.fullsize}" title="${image.caption || ''}" data-title="${image.caption || ''}">
+              <img
+                src="${image.thumbnail}"
+                alt="${image.alt || `Gallery image ${index + 1}`}"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        `).join('')}
+      </ul>
+    </div>
     <script>
     document.addEventListener("DOMContentLoaded", function(){var lightbox = new Lightbox({showCaptions: true,elements: document.querySelector(".gallery-${id}").querySelectorAll("a")});});
     </script>
