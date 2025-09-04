@@ -1,6 +1,6 @@
 import { themes } from 'storybook/theming';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
-import '../public/css/global.css';
+import '../css/global.css';
 
 const withSvgSprite = (Story) => {
   // Only inject the sprite if it hasn't been injected already
