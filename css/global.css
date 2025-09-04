@@ -9,6 +9,10 @@
 .container.sidebar-container { background-color:light-dark(#fff,#0c2340); }
 #sb-preview-toolbar { background-color:light-dark(#f2f2f2,#0c2340); }
 
+/* Sidebar overrides */
+.sidebar-header a { padding:0; margin:0; }
+.dark .sidebar-header a { background:url('logo-inverted.svg') 0 0 / contain no-repeat; }
+.dark .sidebar-header a img { opacity:0; }
 #storybook-explorer-menu .sidebar-item a,
 #storybook-explorer-menu .sidebar-item button { color:light-dark(#333,#fff); }
 
