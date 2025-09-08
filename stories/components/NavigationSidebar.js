@@ -25,7 +25,7 @@ export default function NavigationSidebar(args) {
       const isFirst = index === 0;
       const isLast = index === items.length - 1;
       const hasChildren = item.children && item.children.length > 0;
-      const isActive = activeItem === item.text || (item.active === true);
+      const isActive = activeItem === item.label || (item.active === true);
       const isCurrent = item.current === true;
 
       // Build CSS classes
@@ -50,7 +50,7 @@ export default function NavigationSidebar(args) {
 
       // Build the list item
       return `<li class="${classes.join(' ')}"${item.id ? ` id="${item.id}"` : ''}>
-        <a href="${item.href}"${anchorClasses.length ? ` class="${anchorClasses.join(' ')}"` : ''}${isCurrent ? ' aria-current="page"' : ''}>${item.text}</a>
+        <a href="${item.href}"${anchorClasses.length ? ` class="${anchorClasses.join(' ')}"` : ''}${isCurrent ? ' aria-current="page"' : ''}>${item.label}</a>
         ${childrenHTML}
       </li>`;
     }).join('\n      ');

@@ -15,7 +15,7 @@ export default function Hero(props) {
     showFeaturedImage = true,
   } = props;
 
-  // Create the header HTML
+  // Create the hero HTML
   const heroHTML = `
     <div class="page-header ${heroLayout ? `page-header--${heroLayout}` : ''} ${heroLayout !== `inset` ? `bg--dark` : ``}">
       ${showFeaturedImage ? `<figure class="page-image ${heroLayout !== `inset` ? `bg--dark bg--gradient` : ``}" aria-hidden="true"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>` : ''}

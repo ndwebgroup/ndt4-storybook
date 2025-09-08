@@ -10,7 +10,7 @@
  * @param {string} props.headingTag - The heading tag to use (h1, h2, h3, etc.)
  * @returns {HTMLElement} - The news article element
  */
-export default function NewsArticle(props) {
+export default function NewsCard(props) {
   const {
     title,
     excerpt,

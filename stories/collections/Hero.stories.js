@@ -38,7 +38,7 @@ export default {
       addHeaderStyles();
       // This will only affect the preview
       const result = Story();
-      return `<div class="wrapper">${Header({ siteName:`NotreDame`, navHeaderLinks: defaultNavigationItems, showNavButton:false })}<main id="content" class="site-content">${result}</main></div>`;
+      return `<div class="wrapper">${Header({ siteName:`NotreDame`, navHeaderLinks: defaultNavigationItems, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}</main></div>`;
     }
   ],
   argTypes: {

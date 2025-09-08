@@ -21,7 +21,7 @@ export default function Header(props) {
     siteTagline = '',
     showNavigation = true,
     showNavButton = true,
-    markRight = true,
+    markRight = false,
     navHeaderLinks,
   } = props;
 

@@ -36,45 +36,45 @@ export default {
 
 // Example navigation items
 const exampleItems = [
-  { text: 'Mission & Commitment', href: '#' },
-  { text: 'Leadership', href: '#' },
-  { text: 'Campus', href: '#' },
-  { text: 'Visit', href: '#' },
-  { text: 'History', href: '#' },
-  { text: 'Endowment', href: '#' },
-  { text: 'Recent News', href: '#' },
-  { text: 'Contact Notre Dame', href: '#' },
+  { label: 'Mission & Commitment', href: '#' },
+  { label: 'Leadership', href: '#' },
+  { label: 'Campus', href: '#' },
+  { label: 'Visit', href: '#' },
+  { label: 'History', href: '#' },
+  { label: 'Endowment', href: '#' },
+  { label: 'Recent News', href: '#' },
+  { label: 'Contact Notre Dame', href: '#' },
 ];
 
 // Example multi-level navigation items
 const multiLevelItems = [
-  { text: 'Home', href: '/' },
-  { text: 'News', href: '/news/', children: [] },
-  { text: 'Events', href: '/events/', children: [] },
+  { label: 'Home', href: '/' },
+  { label: 'News', href: '/news/', children: [] },
+  { label: 'Events', href: '/events/', children: [] },
   {
-    text: 'Web',
+    label: 'Web',
     href: '/web/',
     active: true,
     current: true,
     children: [
-      { text: 'Design System', href: '/web/design-system/', children: [] },
-      { text: 'URL Shortener', href: '/web/url-shortener/' },
+      { label: 'Design System', href: '/web/design-system/', children: [] },
+      { label: 'URL Shortener', href: '/web/url-shortener/' },
       {
-        text: 'Websites',
+        label: 'Websites',
         href: '/web/websites/',
         active: true,
         current: true,
         children: [
-          { text: 'Custom', href: '/web/websites/custom/' },
-          { text: 'DIY', href: '/web/websites/diy/' },
-          { text: 'WordPress', href: '/web/websites/wordpress/' },
+          { label: 'Custom', href: '/web/websites/custom/' },
+          { label: 'DIY', href: '/web/websites/diy/' },
+          { label: 'WordPress', href: '/web/websites/wordpress/' },
         ]
       },
-      { text: 'Subdomains', href: '/web/subdomains/' },
+      { label: 'Subdomains', href: '/web/subdomains/' },
     ]
   },
-  { text: 'Forms', href: '/forms/', children: [] },
-  { text: 'Contact Us', href: '/contact-us/', children: [] },
+  { label: 'Forms', href: '/forms/', children: [] },
+  { label: 'Contact Us', href: '/contact-us/', children: [] },
 ];
 
 export const Default = (args) => {

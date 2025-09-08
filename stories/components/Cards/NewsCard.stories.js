@@ -1,4 +1,4 @@
-import NewsArticle from './NewsArticle.js';
+import NewsCard from './NewsCard.js';
 
 export default {
   title: 'Components/Cards/Card (News Article)',
@@ -34,25 +34,25 @@ export default {
 };
 
 export const Default = (args) => {
-  return NewsArticle(args);
+  return NewsCard(args);
 };
 
 export const WithoutImage = (args) => {
-  return NewsArticle(args);
+  return NewsCard(args);
 };
 WithoutImage.args = {
   showImage: false
 };
 
 export const WithDifferentHeading = (args) => {
-  return NewsArticle(args);
+  return NewsCard(args);
 };
 WithDifferentHeading.args = {
   headingTag: 'h3'
 };
 
 export const WithExcerpt = (args) => {
-  return NewsArticle(args);
+  return NewsCard(args);
 };
 WithExcerpt.args = {
   excerpt:'The power of ND-LEEF lies in its ability to mimic real-world conditions while allowing researchers to manipulate variables, much like in a lab setting.'
