@@ -6,6 +6,7 @@
  * @param {string} [props.siteTagline=''] - Tagline of the site
  * @param {boolean} [props.showNavigation=true] - Whether to show the navigation
  * @param {boolean} [props.showNavButton=true] - Whether to show the navigation button
+ * @param {boolean} [props.markRight=true] - Whether to align the mark to the right
  * @returns {string} - The header HTML
  */
 
@@ -20,6 +21,7 @@ export default function Header(props) {
     siteTagline = '',
     showNavigation = true,
     showNavButton = true,
+    markRight = true,
     navHeaderLinks,
   } = props;
 
@@ -35,7 +37,7 @@ export default function Header(props) {
       <svg width="512" height="86" aria-hidden="true" alt="University of Notre Dame"><use xlink:href="#mobile-mark"></use></svg>
       <span class="visually-hidden">University of Notre Dame</span>
     </a>
-    <div class="header-group">
+    <div class="header-group${markRight ? ' header-group--logo' : ''}">
       <div class="header-title">
         <svg class="header-mark" width="250" height="60" aria-hidden="true" alt="University of Notre Dame"><use xlink:href="#academic-mark"></use></svg>
         <div class="header-title-name">

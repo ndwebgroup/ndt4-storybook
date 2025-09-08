@@ -86,6 +86,11 @@ export default {
       control: 'boolean',
       description: 'Whether to show the navigation button',
       defaultValue: true
+    },
+    markRight: {
+      control: 'boolean',
+      description: 'Whether to align the mark to the right',
+      defaultValue: true
     }
   },
   args: {
@@ -93,6 +98,7 @@ export default {
     siteName: 'Department of Example',
     siteTagline: '',
     showNavButton: false,
+    markRight: false,
   }
 };
 
@@ -119,6 +125,14 @@ WithNavigationButton.args = {
   siteName: 'Notre Dame',
   showNavigation: true,
   showNavButton: true
+};
+
+export const MarkOnRight = Template.bind({});
+MarkOnRight.args = {
+  siteName: 'Notre Dame',
+  siteTagline: 'The University of Example',
+  showNavigation: true,
+  markRight: true
 };
 
 export const WithoutNavigation = Template.bind({});
