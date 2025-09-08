@@ -72,15 +72,27 @@ export default {
       control: 'text',
       description: 'Name of the site',
     },
+    siteTagline: {
+      name: 'Site Tagline',
+      control: 'text',
+      description: 'Tagline of the site',
+    },
     showNavigation: {
       control: 'boolean',
       description: 'Whether to show the navigation',
+      defaultValue: true
+    },
+    showNavButton: {
+      control: 'boolean',
+      description: 'Whether to show the navigation button',
       defaultValue: true
     }
   },
   args: {
     // Default values for the component
     siteName: 'Department of Example',
+    siteTagline: '',
+    showNavButton: false,
   }
 };
 
@@ -93,6 +105,20 @@ Default.args = {
   siteName: 'Notre Dame',
   showNavigation: true,
   navHeaderLinks: defaultNavigationItems
+};
+
+export const WithTagline = Template.bind({});
+WithTagline.args = {
+  siteName: 'Notre Dame',
+  siteTagline: 'The University of Example',
+  showNavigation: true
+};
+
+export const WithNavigationButton = Template.bind({});
+WithNavigationButton.args = {
+  siteName: 'Notre Dame',
+  showNavigation: true,
+  showNavButton: true
 };
 
 export const WithoutNavigation = Template.bind({});
