@@ -48,7 +48,7 @@ export default function NewsListing(props) {
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${Footer({ siteName:`Department Title` })}
+    ${Footer({ siteName:siteTitle })}
 `;
   return container.innerHTML;
 }

@@ -26,22 +26,7 @@ export default function Home(props) {
   } = props;
   
   const container = document.createElement('div');
-  const sampleNews = NewsCard({
-    title: 'Sample News Article Title',
-    excerpt: '',
-    showImage: true,
-    label: '',
-    link: '#',
-  });
-  const sampleEvent = EventCard({
-    title: 'Sample Event Title',
-    date: '2024-05-01T10:00',
-    time: '10:00 AM - 12:00 PM',
-    location: '',
-    excerpt: 'Join us for an exciting event where we will discuss important topics and network with professionals in the field.',
-    link: '#',
-    variant:'compact',
-  });
+  
   container.innerHTML = `
   ${Header({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
@@ -50,27 +35,27 @@ export default function Home(props) {
         ${pageContent}
         <section class="section section--home-news">
           <h2 class="section-title">Latest News</h2>
-          <div class="grid grid-lg-3">
-            ${sampleNews.outerHTML}
-            ${sampleNews.outerHTML}
-            ${sampleNews.outerHTML}
-          </div>
+          <ul class="grid grid-lg-3">
+            <li>${NewsCard({ label:``, title:'New Research Initiative Launched', showImage:true, link:'#', publishDate:`September 9, 2025` }).outerHTML}</li>
+            <li>${NewsCard({ label:``, title:'Department Receives Major Grant', showImage:true, link:'#', publishDate:`August 22, 2025` }).outerHTML}</li>
+            <li>${NewsCard({ label:``, title:'Upcoming Events in the Community', showImage:true, link:'#', publishDate:`August 15, 2025` }).outerHTML}</li>
+          </ul>
         </section>
 
         <section class="section section--home-events">
           <h2 class="section-title">Upcoming Events</h2>
-          <div class="grid grid-lg-3">
-            ${sampleEvent.outerHTML}
-            ${sampleEvent.outerHTML}
-            ${sampleEvent.outerHTML}
-          </div>
+          <ul class="grid grid-lg-3">
+            <li>${EventCard({ title: 'Big Party at the Art Museum', startDate: '2025-09-22T10:00', endDate: '2025-09-22T12:00', location: 'Raclin Murphy Art Museum', link: '#', variant:`compact`}).outerHTML}</li>
+            <li>${EventCard({ title: 'Community Meeting', startDate: '2025-10-15T18:00', endDate: '2025-10-15T20:00', location: 'Bond Hall', link: '#', variant:`compact`}).outerHTML}</li>
+            <li>${EventCard({ title: 'Charity Run', startDate: '2025-11-05T08:00', endDate: '2025-11-05T11:00', location: 'Joyce Center - Gate 2', link: '#', variant:`compact`}).outerHTML}</li>
+          </ul>
         </section>
       </div>
       <div class="page-sidebar">
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${Footer({ siteName:`Department Title` })}
+    ${Footer({ siteName:siteTitle })}
 `;
   return container.innerHTML;
 }
