@@ -12,24 +12,22 @@ export default function Dialog(args) {
     content = 'Dialog content goes here.',
     closeButtonText = 'Close',
     footer = '',
-    image = '',
-    dialogSize = '',
-    imageSize = ''
+    media = '',
+    dialogModifier = '',
+    contentModifier = ''
   } = args;
 
   return `
-    <dialog class="dialog ${dialogSize}">
+    <dialog class="dialog${dialogModifier ? ` ${dialogModifier}` : ''}">
       <div class="dialog-header">
         <form method="dialog" class="dialog-close">
           <button type="submit" title="${closeButtonText}">×</button>
         </form>
-        <p class="dialog-heading h4">${title}</p>
+        ${title ? `<p class="dialog-heading h4">${title}</p>` : ''}
       </div>
-      <div class="dialog-content ${imageSize}">
-        ${image}
-        <div class="dialog-body">
-          <div class="dialog-text">${content}</div>
-        </div>
+      <div class="dialog-content ${contentModifier}">
+        ${media}
+        ${content ? `<div class="dialog-body">${content}</div>` : ''}
       </div>
       <div class="dialog-footer">${footer}</div>
     </dialog>

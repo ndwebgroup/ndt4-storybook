@@ -21,11 +21,6 @@ export default {
       description: 'The content text of the dialog',
       control: 'text'
     },
-    closeButtonText: {
-      name: 'Close Button Text',
-      description: 'Text for the close button title attribute',
-      control: 'text'
-    }
   }
 };
 
@@ -79,7 +74,7 @@ export const Default = (args) => {
 
 Default.args = {
   title: 'Dialog Title',
-  content: 'This is the default dialog content. Dialogs can contain any type of information that requires user attention.',
+  content: '<p>This is the default dialog content. Dialogs can contain any type of information that requires user attention.</p>',
   closeButtonText: 'Close',
   footer: 'This is a default dialog footer. Use this space for supporting text or action buttons'
 };
@@ -102,7 +97,7 @@ Notification.args = {
   title: 'Notification',
   content: '<p>Your changes have been saved successfully.</p><p>You can continue editing or return to the dashboard.</p>',
   closeButtonText: 'Dismiss',
-  dialogSize: 'dialog--narrow'
+  dialogModifier: 'dialog--narrow'
 };
 
 Notification.parameters = {
@@ -127,7 +122,7 @@ Alert.args = {
   <button class="btn btn--neutral">Cancel</button>
   `,
   closeButtonText: 'Close',
-  dialogSize: 'dialog--narrow'
+  dialogModifier: 'dialog--narrow'
 };
 
 Alert.parameters = {
@@ -147,15 +142,14 @@ export const LongContent = (args) => {
 LongContent.storyName = 'With Long Content';
 LongContent.args = {
   title: 'Terms and Conditions',
+  contentModifier: 'grid grid-ml-2',
+  media:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>',
   content: `<p>This is an example of a dialog with longer content. Scroll should be enabled when content exceeds the available space.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
   `,
-  footer: `
-  <button class="btn btn--cta">Accept</button>
-  <button class="btn btn--neutral">Decline</button>
-  `,
+  footer: ``,
   closeButtonText: 'Close'
 };
 
@@ -175,13 +169,11 @@ export const withImage = (args) => {
 
 withImage.storyName = 'With Image';
 withImage.args = {
-  title: 'Visit Notre Dame Campus',
-  content: `<p class="h3">The Main Building</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
-  <a class="btn" href="#">Main Building</a>
-  `,
+  title: '',
+  content: '<p>This is a caption for the image.</p>',
   closeButtonText: 'Close',
-  image:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'
+  dialogModifier: 'dialog--image',
+  media:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-2000x1333.jpg" width="2000" height="1333" alt=""></figure>',
 };
 
 withImage.parameters = {
@@ -194,54 +186,25 @@ withImage.parameters = {
 
 withImage.decorators = [dialogDecorator];
 
-export const withLargeImage = (args) => {
+export const withVideo = (args) => {
   return Dialog(args);
 };
 
-withLargeImage.storyName = 'With Large Image';
-withLargeImage.args = {
-  title: 'Visit Notre Dame Campus',
-  content: `<p class="h3">The Main Building</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
-  <a class="btn" href="#">Main Building</a>
-  `,
+withVideo.storyName = 'With Large Video';
+withVideo.args = {
+  title: '',
+  content: '<p>This is a caption for the video.</p>',
   closeButtonText: 'Close',
-  image:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>',
-  imageSize:'image--large'
+  dialogModifier: 'dialog--video',
+  media:'<iframe width="1280" height="720" src="https://www.youtube.com/embed/p_vC10eq474" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>',
 };
 
-withLargeImage.parameters = {
+withVideo.parameters = {
   docs: {
     description: {
-      story: 'Dialog with large image.'
+      story: 'Dialog with video.'
     }
   }
 };
 
-withLargeImage.decorators = [dialogDecorator];
-
-export const withSmallImage = (args) => {
-  return Dialog(args);
-};
-
-withSmallImage.storyName = 'With Small Image';
-withSmallImage.args = {
-  title: 'Visit Notre Dame Campus',
-  content: `<p class="h3">The Main Building</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
-  <a class="btn" href="#">Main Building</a>
-  `,
-  closeButtonText: 'Close',
-  image:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>',
-  imageSize:'image--small'
-};
-
-withSmallImage.parameters = {
-  docs: {
-    description: {
-      story: 'Dialog with small image.'
-    }
-  }
-};
-
-withSmallImage.decorators = [dialogDecorator];
+withVideo.decorators = [dialogDecorator];
