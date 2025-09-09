@@ -12,7 +12,8 @@ export default function Headings(props) {
     level = 'h1',
     text = 'Heading',
     className = '',
-    useClass = false
+    useClass = false,
+    useAttribute = false
   } = props;
 
   // Validate level
@@ -29,6 +30,9 @@ export default function Headings(props) {
   const element = document.createElement(headingLevel);
   if (className) {
     element.className = className;
+  }
+  if (useAttribute) {
+    element.setAttribute('data-length', `${text.length}`);
   }
   element.textContent = text;
 

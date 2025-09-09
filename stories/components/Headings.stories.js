@@ -137,3 +137,14 @@ export const HeadingWithAdditionalClass = {
     useClass: false,
   },
 };
+
+// Example with length attribute
+export const Heading1WithLengthAttribute = {
+  args: {
+    level: 'h1',
+    text: 'Heading 1 with length attribute',
+    className: 'page-title',
+    useClass: false,
+    useAttribute: true
+  },
+};
