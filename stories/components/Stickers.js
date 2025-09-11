@@ -7,12 +7,12 @@ export default function Stickers(args) {
   const { stickers = [], showNames = true, size = 'md' } = args;
 
   return `
-  <div class="icon-showcase">
+  <div class="sticker-showcase">
   ${stickers.map(stickerId => {
   const stickerName = stickerId.replace('sticker-', '');
-  return `<div class="icon-item">
+  return `<div class="sticker-item">
     ${getSticker(stickerId, '', '', size)}
-    ${showNames ? `<span class="icon-name">${stickerId}</span>` : ''}
+    ${showNames ? `<span class="sticker-name">${stickerId}</span>` : ''}
   </div>`;
   }).join('\n  ')}
 </div>

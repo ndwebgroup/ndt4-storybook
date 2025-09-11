@@ -89,3 +89,10 @@
 }
 .icon-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ddd; border-radius:3px; width:120px; min-height:120px; text-align:center; }
 .icon-name { font-size:0.8rem; line-height:1.2em; color:#666; max-width:100%; }
+
+
+.sticker-showcase { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:1rem;
+  .sticker { margin-bottom:0.5rem; }
+}
+.sticker-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ddd; border-radius:3px; width:120px; min-height:120px; text-align:center; }
+.sticker-name { font-size:0.8rem; line-height:1.2em; color:#666; max-width:100%; }
