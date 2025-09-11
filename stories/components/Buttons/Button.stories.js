@@ -32,7 +32,7 @@ export default {
 export const Default = (args) => {
   return Button(args);
 };
-Default.storyName = 'Default Buttons';
+Default.storyName = 'Single Button';
 Default.args = {
   type: 'primary',
   cta: false,
@@ -40,7 +40,7 @@ Default.args = {
 };
 
 // Default Buttons
-export const Base = (args) => {
+export const DefaultButtons = (args) => {
   const container = document.createElement('div');
   const types = ['primary', 'secondary', 'tertiary', 'neutral'];
 
@@ -53,8 +53,8 @@ export const Base = (args) => {
 
   return container;
 };
-Base.storyName = 'Base Buttons';
-Base.args = {
+DefaultButtons.storyName = 'Default Buttons';
+DefaultButtons.args = {
   cta: false,
   type: 'primary',
   more: false,
