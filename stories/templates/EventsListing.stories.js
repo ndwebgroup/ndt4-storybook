@@ -19,12 +19,16 @@ export default {
       description: 'Title of the site',
       control: 'text'
     },
+    navTop: {
+      name: 'Navigation Top',
+      description: 'Whether to show the top navigation',
+      control: 'boolean'
+    },
   },
   args: {
    siteTitle: 'Department of Example',
     pageContent: `<p>This is an example of a news listing page. It features a selection of recent news articles displayed in a list format. Each article includes a title, image, and link to read more.</p>`,
     navTop: false,
-    heroLayout: 'inset',
   },
   decorators: [
     (Story) => {

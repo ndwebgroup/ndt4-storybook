@@ -22,6 +22,7 @@ export default {
   component: Hero,
   tags: ['autodocs'],
   parameters: {
+    layout: 'fullscreen',
     docs: {
       source: {
         // This will be the code shown in the docs
@@ -38,7 +39,7 @@ export default {
       addHeaderStyles();
       // This will only affect the preview
       const result = Story();
-      return `<div class="wrapper">${Header({ siteName:`NotreDame`, navHeaderLinks: defaultNavigationItems, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}</main></div>`;
+      return `<div class="wrapper" id="wrapper">${Header({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}</main></div>`;
     }
   ],
   argTypes: {
@@ -67,7 +68,8 @@ export default {
   },
   args: {
     // Default values for the component
-    pageTitle: 'Department of Example',
+    siteTitle: 'Department of Example',
+    pageTitle: 'Do more than dream about the future. <em>Fight</em> for it.',
     pageLede: '',
     showFeaturedImage: true,
     heroLayout: 'inset',
