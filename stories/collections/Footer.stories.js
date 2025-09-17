@@ -158,6 +158,21 @@ export default {
     ],
     siteName: 'Department of Example',
     currentYear: 2025,
+    footerParent: '',
+    footerParentLink: '',
+    footerGrandparent: '',
+    footerGrandparentLink: '',
+    footerParent2: '',
+    footerParent2Link: '',
+    siteAddress: '',
+    sitePhone: '',
+    siteFax: '',
+    siteEmail: '',
+    siteFacebook: '',
+    siteTwitter: '',
+    siteInstagram: '',
+    siteYoutube: '',
+    siteLinkedin: '',
   }
 };
 

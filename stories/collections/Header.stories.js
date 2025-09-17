@@ -79,16 +79,19 @@ export default {
       description: 'Tagline of the site',
     },
     showNavigation: {
+      name: 'Show Navigation',
       control: 'boolean',
       description: 'Whether to show the navigation',
       defaultValue: true
     },
     showNavButton: {
+      name: 'Show Navigation Button',
       control: 'boolean',
       description: 'Whether to show the navigation button',
       defaultValue: true
     },
     markRight: {
+      name: 'Mark on Right',
       control: 'boolean',
       description: 'Whether to align the mark to the right',
       defaultValue: true
