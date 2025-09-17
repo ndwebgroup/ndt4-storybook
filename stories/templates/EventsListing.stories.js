@@ -29,11 +29,7 @@ export default {
   decorators: [
     (Story) => {
       const result = Story();
-      return `<body class="nav-top--false">
-    <div class="wrapper" id="wrapper">
-      ${result}
-    </div>
-  </body>`;
+      return `${result}`;
     }
   ],
 

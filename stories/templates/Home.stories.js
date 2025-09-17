@@ -47,9 +47,7 @@ export default {
   decorators: [
     (Story) => {
       const result = Story();
-      return `<body class="nav-top--false">
-      ${result}
-  </body>`;
+      return `${result}`;
     }
   ],
 

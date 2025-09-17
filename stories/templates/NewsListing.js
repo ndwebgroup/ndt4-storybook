@@ -24,6 +24,10 @@ export default function NewsListing(props) {
   } = props;
   
   const container = document.createElement('div');
+  const navStateClass = navTop ? 'nav-top--true page--full-width' : 'nav-top--false';
+  container.className = `wrapper ${navStateClass}`;
+  container.id = 'wrapper';
+
   container.innerHTML = `
   ${Header({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
@@ -50,5 +54,5 @@ export default function NewsListing(props) {
     </main>
     ${Footer({ siteName:siteTitle })}
 `;
-  return container.innerHTML;
+  return container.outerHTML;
 }
