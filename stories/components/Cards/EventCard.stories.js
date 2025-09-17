@@ -5,6 +5,7 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     title: { name: 'Event Title' },
+    featuredImage: { name: 'Featured Image', control: 'boolean' },
     startDate: {
       name: 'Start Date',
       control: 'date',
@@ -61,6 +62,7 @@ export default {
   },
   args: {
     title: 'Faculty Workshop on Innovative Teaching Methods',
+    featuredImage: false,
     startDate: new Date('April 15, 2025 10:00:00').toISOString(),
     endDate: new Date('April 15, 2025 12:00:00').toISOString(),
     allDay: false,

@@ -2,6 +2,7 @@
  * Event component
  * @param {Object} props - Component properties
  * @param {string} props.title - The title of the event
+ * @param {boolean} props.featuredImage - Whether the event has a featured image 
  * @param {string} props.startDate - The start date/time of the event (ISO string)
  * @param {string} props.endDate - The end date/time of the event (ISO string)
  * @param {boolean} props.allDay - Whether the event is all day
@@ -18,6 +19,7 @@
 export default function Event(props) {
   const {
     title,
+    featuredImage = false,
     startDate = new Date().toISOString(),
     endDate = new Date(new Date().getTime() + 60 * 60 * 1000).toISOString(),
     allDay = false,
@@ -71,6 +73,11 @@ export default function Event(props) {
       <span class="event-month">${month}</span>
       <span class="event-day">${day}</span>
     </div>
+    ${featuredImage ? `
+    <figure class="card-image">
+      <img src="/images/placeholder-campus-1-600x400.jpg" alt="${title}" property="image">
+    </figure>
+    ` : ''}
     <div class="card-body">
       <${headingTag} class="article-title card-title" property="name"><a href="${link}" class="card-link">${title}</a></${headingTag}>
   `;
