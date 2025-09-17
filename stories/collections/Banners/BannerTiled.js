@@ -4,9 +4,10 @@
  * @param {string} props.label - The label of the banner
  * @param {string} [props.headingTag='h2'] - The heading tag to use for the title
  * @param {string} props.title - The title of the banner
- * @param {string} props.titleSize - The title size of the banner
+ * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} [props.imageCount='3'] - The amount of images in the banner
  * @param {string} props.summary - The summary of the banner
+ * @param {('sm'|'md'|'lg'|'xl'|'screen')} props.bannerWidth - The width of the banner
  * @returns {HTMLElement} - The banner element
  */
 
@@ -14,9 +15,9 @@ import Button from '/stories/components/Buttons/Button.js';
 
 export default function BannerMulti(props) {
   const container = document.createElement('div');
-  const { order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
+  const { bannerWidth, order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section grid grid-md-2 align-center`;
+  container.className = `section grid grid-md-2 align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }`;
 
   // Limit imageCount to a maximum of 4 and ensure it's at least 1
   const count = Math.max(2, Math.min(parseInt(imageCount, 10) || 3, 4));
@@ -28,7 +29,7 @@ export default function BannerMulti(props) {
   container.innerHTML = `
   ${mediaHTML}
   <div class="section-content">
-    <${headingTag} class="section-title section-title--${titleSize}">${title}</${headingTag}>
+    <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `
@@ -64,5 +65,5 @@ export default function BannerMulti(props) {
 
     bannerBody.appendChild(buttonListContainer);
   }
-  return container;
+  return container.outerHTML;
 }
