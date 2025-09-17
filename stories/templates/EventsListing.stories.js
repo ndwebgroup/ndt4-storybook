@@ -1,9 +1,13 @@
+import { ParameterName } from 'storybook-addon-designs/esm/addon.js';
 import EventsListing from './EventsListing.js';
 
 export default {
   title: 'Templates/Events Listing',
   component: EventsListing,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen'
+  },
   argTypes: {
     pageContent: {
       name: 'Page Content',

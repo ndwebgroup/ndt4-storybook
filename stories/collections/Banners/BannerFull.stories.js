@@ -4,6 +4,7 @@ export default {
   title: 'Collections/Banner/Banner (Fullbleed)',
   tags: ['autodocs'],
   parameters: {
+    layout: 'fullscreen',
     docs: {
       description: {
         component: 'Fullbleed Banner Description'

@@ -24,6 +24,7 @@ export default {
   component: Header,
   tags: ['autodocs'],
   parameters: {
+    layout: 'fullscreen',
     docs: {
       source: {
         // This will be the code shown in the docs
@@ -108,28 +109,24 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  siteName: 'Notre Dame',
   showNavigation: true,
   navHeaderLinks: defaultNavigationItems
 };
 
 export const WithTagline = Template.bind({});
 WithTagline.args = {
-  siteName: 'Notre Dame',
   siteTagline: 'The University of Example',
   showNavigation: true
 };
 
 export const WithNavigationButton = Template.bind({});
 WithNavigationButton.args = {
-  siteName: 'Notre Dame',
   showNavigation: true,
   showNavButton: true
 };
 
 export const MarkOnRight = Template.bind({});
 MarkOnRight.args = {
-  siteName: 'Notre Dame',
   siteTagline: 'The University of Example',
   showNavigation: true,
   markRight: true
@@ -137,6 +134,5 @@ MarkOnRight.args = {
 
 export const WithoutNavigation = Template.bind({});
 WithoutNavigation.args = {
-  siteName: 'Notre Dame',
   showNavigation: false
 };

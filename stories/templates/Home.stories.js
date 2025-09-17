@@ -4,6 +4,9 @@ export default {
   title: 'Templates/Home',
   component: Home,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen'
+  },
   argTypes: {
     pageContent: {
       name: 'Page Content',
@@ -37,9 +40,7 @@ export default {
    pageTitle: 'Exploring the Future',
    pageContent: `<h2>Welcome to the Department of Example</h2>
     <p>This is a sample home page for the Department of Example. Use the controls to customize the content.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Explore our programs, faculty, and research initiatives to learn more about what we offer.</p>
-    <p>Contact us for more information or to schedule a visit.</p>`,
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`,
     navTop: false,
     heroLayout: 'inset',
   },
@@ -47,9 +48,7 @@ export default {
     (Story) => {
       const result = Story();
       return `<body class="nav-top--false">
-    <div class="wrapper" id="wrapper">
       ${result}
-    </div>
   </body>`;
     }
   ],

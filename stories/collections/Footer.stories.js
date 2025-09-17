@@ -22,6 +22,7 @@ export default {
   title: 'Collections/Footer',
   tags: ['autodocs'],
   parameters: {
+    layout: 'fullscreen',
     docs: {
       source: {
         // This will be the code shown in the docs

@@ -4,6 +4,7 @@ export default {
   title: 'Collections/Banner/Banner (Default)',
   tags: ['autodocs'],
   parameters: {
+    layout: 'fullscreen',
     docs: {
       description: {
         component: 'Banner Description'

@@ -4,6 +4,9 @@ export default {
   title: 'Templates/News Listing',
   component: NewsListing,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen'
+  },
   argTypes: {
     pageContent: {
       name: 'Page Content',
