@@ -3,10 +3,11 @@
  * @param {Object} props - Component properties
  * @param {('image'|'video'|'none')} [props.media='image'] - Image placement for the banner
  * @param {('default'|'reversed')} [props.order='default'] - Image placement for the banner
+ * @param {('sm'|'md'|'lg'|'xl'|'screen')} props.bannerWidth - The width of the banner
  * @param {string} props.label - The label of the banner
  * @param {string} [props.headingTag='h2'] - The heading tag to use for the title
  * @param {string} props.title - The title of the banner
- * @param {string} props.titleSize - The title size of the banner
+ * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} props.summary - The summary of the banner
  * @returns {HTMLElement} - The banner element
  */
@@ -16,9 +17,9 @@ import Video from '/stories/components/Videos';
 
 export default function Banner(props) {
   const container = document.createElement('div');
-  const { media, order, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
+  const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
 
-  container.className = `section align-center grid grid-md-2`
+  container.className = `section align-center${media !== 'none' ? ' grid grid-md-2' : ''}${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }`;
 
   let mediaHTML = ''
 
@@ -80,5 +81,5 @@ export default function Banner(props) {
 
     bannerBody.appendChild(buttonListContainer);
   }
-  return container;
+  return container.outerHTML;
 }

@@ -1,23 +1,51 @@
 import BannerDefault from './BannerDefault';
 
+// Add styles to document head
+const addHeaderStyles = () => {
+  if (!document.getElementById('header-styles')) {
+    const style = document.createElement('style');
+    style.id = 'header-styles';
+    style.textContent = `
+      .wrapper {
+        min-height: revert;
+        grid-template-rows: auto;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+};
+
 export default {
   title: 'Collections/Banner/Banner (Default)',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
     docs: {
-      description: {
-        component: 'Banner Description'
+      source: {
+        // This will be the code shown in the docs
+        transform: (code) => {
+          // Remove the wrapper div from the code view
+          return code.replace(/<div class="wrapper"><div class="page-secondary full-width">(.*?)<\/div><\/div>/gs, '$1');
+        }
       }
     }
   },
+  decorators: [
+    (Story) => {
+      // Add styles to document head
+      addHeaderStyles();
+      // This will only affect the preview
+      const result = Story();
+      return `<div class="wrapper"><div class="page-secondary full-width">${result}</div></div>`;
+    }
+  ],
   argTypes: {
     label: { name:'Label' },
     title: { name:'Title' },
     titleSize: {
       name:'Title Size',
       control: { type: 'select' },
-      options: ['default', 'sm', 'lg']
+      options: ['default', 'sm', 'md', 'lg', 'xl'],
     },
     summary: { name:'Summary' },
     headingTag: {
@@ -30,6 +58,11 @@ export default {
       name: 'Media Type',
       control: { type: 'select' },
       options: ['image', 'video', 'none'],
+    },
+    bannerWidth: {
+      name: 'Banner Width',
+      control: { type: 'select' },
+      options: ['default', 'sm', 'md', 'lg', 'xl', 'screen'],
     },
     order: {
       name: 'Content Order',
@@ -48,6 +81,7 @@ export default {
     summary:'Risus parturient ullamcorper luctus tempor nisl lacus nec sociis cras a vestibulum cras parturient sociosqu augue senectus parturient laoreet euismod.',
     media:'image',
     order:'default',
+    bannerWidth:'default',
   },
 };
 
