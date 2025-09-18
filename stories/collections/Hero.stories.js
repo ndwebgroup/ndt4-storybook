@@ -18,7 +18,7 @@ const addHeaderStyles = () => {
 
 
 export default {
-  title: 'Collections/Hero',
+  title: 'Collections/Page Header',
   component: Hero,
   tags: ['autodocs'],
   parameters: {
@@ -48,6 +48,12 @@ export default {
       control: 'text',
       description: 'Title of the page',
     },
+    pageTitleSize: {
+      name: 'Page Title Size',
+      control: { type: 'select' },
+      options: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+      description: 'Size of the page title',
+    },
     pageLede: {
       name: 'Page Lede',
       control: 'text',
@@ -68,8 +74,8 @@ export default {
   },
   args: {
     // Default values for the component
-    siteTitle: 'Department of Example',
     pageTitle: 'Do more than dream about the future. <em>Fight</em> for it.',
+    pageTitleSize: 'sm',
     pageLede: '',
     showFeaturedImage: true,
     heroLayout: 'inset',

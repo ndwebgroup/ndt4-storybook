@@ -20,7 +20,7 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Header',
+  title: 'Collections/Site Header',
   component: Header,
   tags: ['autodocs'],
   parameters: {

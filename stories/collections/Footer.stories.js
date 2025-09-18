@@ -19,7 +19,7 @@ const addFooterStyles = () => {
 };
 
 export default {
-  title: 'Collections/Footer',
+  title: 'Collections/Site Footer',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
