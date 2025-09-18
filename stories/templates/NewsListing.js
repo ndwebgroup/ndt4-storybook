@@ -31,7 +31,7 @@ export default function NewsListing(props) {
   container.innerHTML = `
   ${Header({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${Hero({ pageTitle:`Latest News`, pageLede:``, heroLayout:`default`, showFeaturedImage:false })}
+      ${Hero({ pageTitle:`Latest News`, pageTitleSize:`default`, pageLede:``, heroLayout:`default`, showFeaturedImage:false })}
       <div class="page-primary">
         ${pageContent}
         <ol class="list--news no-bullets">
