@@ -18,11 +18,12 @@ export default function Card(props) {
     summary,
     link,
     layout = 'default',
+    backgroundColor,
   } = props;
 
   const container = document.createElement('div');
   container.className = 'card-container';
-  const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`];
+  const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`,`${backgroundColor !== 'none' ? ` bg--${backgroundColor}` : ''}`];
 
   if (showImage) {
   container.innerHTML = `

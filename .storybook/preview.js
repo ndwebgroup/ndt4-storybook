@@ -66,7 +66,7 @@ const withNDT4Script = (Story) => {
   if (!document.getElementById('ndt4-script')) {
     const script = document.createElement('script');
     script.id = 'ndt4-script';
-    script.src = 'https://ndt4.conductor.nd.edu/javascripts/ndt.js';
+    script.src = '../js/global.js';
     document.body.appendChild(script);
   }
 
@@ -98,11 +98,13 @@ export default {
         order: ['Foundation', 'Components', 'Collections', 'Templates', '*'],
       },
     },
-  },
-
-  darkMode: {
-    dark: { ...themes.dark, appBg: '#0c2340', barBg: '#0c2340', },
-    light: { ...themes.normal, appBg: '#fff' }
+    darkMode: {
+      darkClass: ['dark', 'mode--dark'],
+      lightClass: ['light', 'mode--light'],
+      dark: { ...themes.dark, brandImage:'/logo-inverted.svg', appBg: '#0c2340', barBg: '#0c2340', },
+      light: { ...themes.normal, brandImage:'/logo.svg', appBg: '#fff' },
+      stylePreview: true,
+    },
   },
 
   decorators: [withSvgSprite, withNDT4Script],
@@ -138,4 +140,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const body = document.body;
 body.classList.add("sb-unstyled");
-body.removeAttribute("data-theme");

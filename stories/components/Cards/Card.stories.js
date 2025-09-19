@@ -10,6 +10,7 @@ export default {
     summary: { name:'Card Summary',},
     showImage: { name:'Card Image',},
     title: { name:'Card Title',},
+    backgroundColor: { name: 'Background Color', control: 'select', options: ['none', 'sky-blue-light', 'gray-extra-extra-light', 'warm-white', 'brand-blue', 'light', 'dark'] },
   },
   args: {
     layout:'default',
@@ -18,6 +19,7 @@ export default {
     title: 'Card Title',
     summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
     link: '#',
+    backgroundColor: 'none',
   }
 };
 
@@ -46,4 +48,11 @@ export const Stacked = (args) => {
 };
 Stacked.args = {
   layout:'stacked'
+};
+
+export const BackgroundColor = (args) => {
+  return Card(args);
+};
+BackgroundColor.args = {
+  backgroundColor: 'sky-blue-light',
 };
