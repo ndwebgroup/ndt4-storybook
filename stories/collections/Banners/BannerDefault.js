@@ -9,6 +9,7 @@
  * @param {string} props.title - The title of the banner
  * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} props.summary - The summary of the banner
+ * @param {string} props.backgroundColor - The background color of the banner
  * @returns {HTMLElement} - The banner element
  */
 
@@ -17,9 +18,9 @@ import Video from '/stories/components/Videos';
 
 export default function Banner(props) {
   const container = document.createElement('div');
-  const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList } = props;
+  const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor } = props;
 
-  container.className = `section align-center${media !== 'none' ? ' grid grid-md-2' : ''}${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }`;
+  container.className = `section align-center${media !== 'none' ? ' grid grid-md-2' : ''}${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
 
   let mediaHTML = ''
 
@@ -46,7 +47,8 @@ export default function Banner(props) {
   // Add the video element if media type is video
   if (media === 'video') {
     const videoContainer = container.querySelector('.section-media');
-    const videoElement = Video({ style:'placeholder', videoId:'p_vC10eq474', playStyle:'default' });
+    const videoElement = Video({ style:'placeholder', videoId:'p_vC10eq474', playStyle:'default', playText:'' });
+    videoElement.className += ' mb-0'; // Add margin-block 0 to the video element
     videoContainer.appendChild(videoElement);
   }
 

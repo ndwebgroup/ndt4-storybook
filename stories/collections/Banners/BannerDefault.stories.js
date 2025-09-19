@@ -1,3 +1,4 @@
+import { background } from 'storybook/internal/theming';
 import BannerDefault from './BannerDefault';
 
 // Add styles to document head
@@ -9,6 +10,12 @@ const addHeaderStyles = () => {
       .wrapper {
         min-height: revert;
         grid-template-rows: auto;
+      }
+      .page-secondary {
+        margin-block:0;
+      }
+      .section {
+        margin-block:clamp(2rem, 3.5vw, 5rem); 
       }
     `;
     document.head.appendChild(style);
@@ -71,6 +78,12 @@ export default {
     },
     buttons: { name: 'Single Button', control: 'object' },
     buttonList: { name: 'Button List', control: 'object' },
+    backgroundColor: {
+      name: 'Background Color',
+      control: { type: 'select' },
+      options: ['none', 'brand-blue', 'brand-blue-dark', 'sky-blue-light', 'warm-white'],
+      description: 'The background color of the banner'
+    },
   },
   args: {
     // Default args for all stories
@@ -82,6 +95,7 @@ export default {
     media:'image',
     order:'default',
     bannerWidth:'default',
+    backgroundColor:'none',
   },
 };
 
@@ -137,4 +151,17 @@ VideoMedia.args = {
   title: 'Video Banner Title',
   summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
   buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false }
+};
+
+export const BackgroundColor = (args) => {
+  const mergedArgs = { ...args };
+  return BannerDefault(mergedArgs);
+};
+BackgroundColor.storyName = 'Banner with Background Color';
+BackgroundColor.args = {
+  order: 'default',
+  title: 'Video Banner Title',
+  summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
+  buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false },
+  backgroundColor: 'brand-blue',
 };

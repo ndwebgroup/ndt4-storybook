@@ -9,7 +9,7 @@
 export default function SidebarNavigation(args) {
   const { style, videoId, playText, playStyle } = args;
   const container = document.createElement('p')
-  container.className = `video--${style}`
+  container.className = `video--${style}`;
 
   switch(style) {
     case 'embed':
