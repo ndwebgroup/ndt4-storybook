@@ -34,7 +34,6 @@ export default {
 export const Embed = (args) => {
   return Videos(args);
 };
-
 Embed.args = {
   style: 'embed'
 };
@@ -42,14 +41,21 @@ Embed.args = {
 export const Placeholder = (args) => {
   return Videos(args);
 };
-
 Placeholder.args = {
   style: 'placeholder'
 };
+
+export const PlaceholderWithLabel = (args) => {
+  return Videos(args);
+};
+PlaceholderWithLabel.args = {
+  style: 'placeholder',
+  playText: 'Welcome to the Notre Dame family'
+};
+
 export const Lightbox = (args) => {
   return Videos(args);
 };
-
 Lightbox.args = {
   style: 'lightbox'
 };

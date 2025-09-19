@@ -20,14 +20,16 @@ export default function SidebarNavigation(args) {
     case 'placeholder':
       container.innerHTML = `
   <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
-    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video">
+    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" alt="A YouTube Video">
+    ${playText}
   </a>
 `;
       break;
     case 'lightbox':
       container.innerHTML = `
   <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
-    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" data-label="${playText}" alt="A YouTube Video">
+    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg"  alt="A YouTube Video">
+    ${playText}
   </a>
 `;
       break;
