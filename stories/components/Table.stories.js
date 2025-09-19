@@ -4,6 +4,12 @@ export default {
   title: 'Components/Table',
   tags: ['autodocs'],
   parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3327-23262",
+    },
     docs: {
       description: {
         component: 'This is a standard table. Tables are intended to be used with tabular data. Tables can be difficult to read on narrow screens (mobile devices), and we encourage users to avoid them when other formatting options are a possibility.'

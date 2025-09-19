@@ -4,6 +4,19 @@ import Timeline from './Timeline.js';
 export default {
   title: 'Components/Timeline',
   tags: ['autodocs'],
+  parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3330-23803",
+    },
+    docs: {
+      description: {
+        component: 'Timelines are used to display a series of events in chronological order. They can be aligned to the left, right, or center, and can include images for each event.'
+      }
+    }
+  },
   argTypes: {
     layout: { name: 'Timeline Layout', control:'select', options:['left','right','center']},
     items: {

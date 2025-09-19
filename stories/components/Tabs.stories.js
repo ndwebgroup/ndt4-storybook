@@ -42,6 +42,12 @@ export default {
   title: 'Components/Tabs',
   tags: ['autodocs'],
   parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3327-23619",
+    },
     docs: {
       description: {
         component: 'Tabs description'

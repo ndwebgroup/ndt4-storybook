@@ -4,9 +4,15 @@ export default {
   title: 'Components/Videos',
   tags: ['autodocs'],
   parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3352-24148",
+    },
     docs: {
       description: {
-        component: 'Videos description'
+        component: 'The Videos component allows for embedding YouTube videos in three styles: embed, placeholder, and lightbox.'
       }
     }
   },

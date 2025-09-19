@@ -3,6 +3,19 @@ import Byline from './Byline';
 export default {
   title: 'Components/Byline',
   tags: ['autodocs'],
+  parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3299-1983",
+    },
+    docs: {
+      description: {
+        component: `The Byline component is used to display an author's information, including their image, name, title, and an optional link to their profile or related content.`
+      }
+    }
+  },
   argTypes: {
     image: { name:'Image', control:'select', options:['image', 'placeholder', 'none']},
     name: { name:'Person Name',},

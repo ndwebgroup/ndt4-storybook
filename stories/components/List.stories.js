@@ -4,6 +4,12 @@ export default {
   title: 'Components/List',
   tags: ['autodocs'],
   parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=969-2441",
+    },
     docs: {
       description: {
         component: 'List component for displaying various types of lists: unordered, ordered, unstyled, stepped, inline, and description lists.'

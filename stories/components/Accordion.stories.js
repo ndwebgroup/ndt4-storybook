@@ -4,9 +4,15 @@ export default {
   title: 'Components/Accordion (Details-Summary)',
   tags: ['autodocs'],
   parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3217-3286",
+    },
     docs: {
       description: {
-        component: 'The &lt;details&gt; element is a way to toggle the visibility of content. When closed, only the <summary> element is visible. When expanded, all content is visible. FAQ pages are one example where a list of &lt;details&gt; may be appropriate.'
+        component: 'The `<details>` element is a way to toggle the visibility of content. When closed, only the <summary> element is visible. When expanded, all content is visible. FAQ pages are one example where a list of `<details>` may be appropriate.'
       }
     }
   },

@@ -3,6 +3,19 @@ import FAQ from './FAQ';
 export default {
   title: 'Components/FAQ',
   tags: ['autodocs'],
+  parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3279-3479",
+    },
+    docs: {
+      description: {
+        component: 'The FAQ component displays a list of frequently asked questions with answers, along with optional features like an anchor list and "Back to top" links.'
+      }
+    },
+  },
   argTypes: {
     showAnchors: {
       control: 'boolean',

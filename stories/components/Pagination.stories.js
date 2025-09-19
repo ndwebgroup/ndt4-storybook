@@ -3,6 +3,14 @@ import Pagination from './Pagination.js';
 export default {
   title: 'Components/Pagination',
   tags: ['autodocs'],
+  parameters: {
+    design: {
+      name: "Figma Assets",
+      allowFullscreen: true,
+      type: "figma",
+      url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3327-22975",
+    },
+  },
   argTypes: {
     currentPage: {
       name: 'Current Page',
