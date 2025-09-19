@@ -21,6 +21,7 @@
 #storybook-explorer-tree .sidebar-item[data-selected="true"] { background-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); }
 #storybook-explorer-tree .sidebar-item:hover { color:light-dark(#333,#fff); background-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.1)); }
 #storybook-explorer-tree .sidebar-item svg { color:#ae9142; }
+#storybook-explorer-tree .sidebar-item[data-nodetype="document"] svg { color:light-dark(#0c2340,#ccc); }
 
 #sidebar-bottom-wrapper { --sb-sidebar-bottom-card-box-shadow:none; }
 
@@ -61,6 +62,8 @@
 .toc-wrapper .toc-list .toc-list-item > a.is-active-link { color:light-dark(var(--brand-blue-bright), var(--brand-gold-bright)); }
 
 /* Colors */
+.swatch-list li { font-size:0.9rem; margin-block-end:1rem;}
+.swatch-list li dt { font-size:0.9rem; }
 .swatch { aspect-ratio:2/1; display:block; width:100%; margin-bottom:0.5rem; border-radius:var(--base-radius); border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); }
 .swatch--small { display:inline-block; height:1rem; width:1rem; vertical-align:middle; margin-bottom:5px; margin-right:0.25rem; border-radius:2px; border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); }
 .swatch--brand-blue { background-color:var(--brand-blue); }
@@ -84,6 +87,13 @@
 .swatch--gray-light { background-color:var(--gray-light); }
 .swatch--gray-extra-light { background-color:var(--gray-extra-light); }
 .swatch--gray-extra-extra-light { background-color:var(--gray-extra-extra-light); }
+
+/* Thumbs */
+.thumb-list { margin-block-end:3rem; }
+.thumb-list li { font-size:0.9rem; }
+.thumb-list li a { text-decoration:none; color:light-dark(var(--brand-blue),var(--gray-extra-extra-light)); }
+.thumb { background-color:light-dark(var(--sky-blue-light),var(--brand-blue)); aspect-ratio:2/1; display:block; width:100%; margin-bottom:0.5rem; border-radius:var(--border-radius); border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); object-fit:cover; transition:background-color var(--anim-duration-fast) var(--anim-ease); }
+.thumb-list li a:hover .thumb { background-color:light-dark(var(--sky-blue),var(--brand-blue-light));}
 
 /* Icons */
 .icon-showcase { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:1rem;

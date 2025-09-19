@@ -93,11 +93,10 @@ export default {
         headingSelector: 'h2, h3',
       }
     },
-  },
-
-  sidebar: {
-    order: {
-      default: ['Components', ['*', 'Other']], // Sort Components alphabetically
+    options: {
+      storySort: {
+        order: ['Foundation', 'Components', 'Collections', 'Templates', '*'],
+      },
     },
   },
 
