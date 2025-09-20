@@ -100,8 +100,8 @@ export default {
 };
 
 const exampleButtons = [
-  { label:'Button One', type:'primary', cta:true, moreIcon:true, },
-  { label:'Button Two', type:'primary', cta:false, moreIcon:false, },
+  { label:'Button One', type:'primary', cta:true, more:true, },
+  { label:'Button Two', type:'primary', cta:false, more:false, },
 ];
 
 export const Default = (args) => {
@@ -110,7 +110,7 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Banner';
 Default.args = {
-  buttons: { label: 'Explore all programs', type: 'primary', cta:false, moreIcon: true }
+  buttons: { label: 'Explore all programs', type: 'primary', cta:false, more: true }
 };
 
 export const Right = (args) => {
@@ -128,7 +128,7 @@ export const WithSingleButton = (args) => {
 };
 WithSingleButton.storyName = 'Banner with Single CTA';
 WithSingleButton.args = {
-  buttons: { label: 'Learn More', type: 'primary', cta:false, moreIcon: false }
+  buttons: { label: 'Learn More', type: 'primary', cta:false, more: false }
 };
 
 export const WithButtonList = (args) => {
@@ -147,10 +147,9 @@ export const VideoMedia = (args) => {
 VideoMedia.storyName = 'Banner with Video';
 VideoMedia.args = {
   media: 'video',
-  order: 'default',
   title: 'Video Banner Title',
   summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
-  buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false }
+  buttons: { label: 'Watch Full Video', type: 'primary', cta:false, more: false }
 };
 
 export const BackgroundColor = (args) => {
@@ -159,9 +158,6 @@ export const BackgroundColor = (args) => {
 };
 BackgroundColor.storyName = 'Banner with Background Color';
 BackgroundColor.args = {
-  order: 'default',
-  title: 'Video Banner Title',
-  summary: 'This banner displays video content instead of an image. The video is positioned on the left side of the banner by default.',
-  buttons: { label: 'Watch Full Video', type: 'primary', cta:false, moreIcon: false },
+  buttons: { label: 'Learn More', type: 'primary', cta:false, more: false },
   backgroundColor: 'brand-blue',
 };

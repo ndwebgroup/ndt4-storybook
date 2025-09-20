@@ -87,8 +87,8 @@ export default {
 };
 
 const exampleButtons = [
-  { label:'Button One', type:'primary', cta:true, moreIcon:true, },
-  { label:'Button Two', type:'primary', cta:false, moreIcon:false, },
+  { label:'Button One', type:'primary', cta:true, more:true, },
+  { label:'Button Two', type:'primary', cta:false, more:false, },
 ];
 
 // Two Image Tiled Banner Stories
