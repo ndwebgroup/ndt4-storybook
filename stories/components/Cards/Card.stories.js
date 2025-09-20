@@ -3,6 +3,13 @@ import Card from './Card.js';
 export default {
   title: 'Components/Cards/Card (Default)',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Cards are a flexible content container that can include images, text, and links. They are used to group related information in a visually appealing way. Cards can be displayed in various layouts such as default, horizontal, stacked, and compact.'
+      }
+    },
+  },
   argTypes: {
     layout: { name:'Card Layout', control: 'select', options: ['default','horizontal','stacked', 'compact']},
     link: { name:'Card Link',},

@@ -8,8 +8,6 @@ export default {
     docs: {
       description: {
         component: `
-# Heading Elements (h1-h6)
-
 Headings create clear hierarchical structure for page content. They help with both readability and accessibility.
 
 ## Heading Classes

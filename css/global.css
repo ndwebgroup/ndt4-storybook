@@ -26,7 +26,7 @@
 .sb-show-main .sbdocs-wrapper { padding-inline:5vw; }
 .sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); box-shadow:light-dark(rgba(0, 0, 0, 0.05),rgba(28,79,143,0.2)) 0px 1px 8px 0px; }
 .sbdocs.sbdocs-content { max-width:none; }
-.sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:2.4rem; color:light-dark(var(--brand-blue),white) }
+.sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:clamp(2.5rem,3.5vw + 1rem,3.5rem); color:light-dark(var(--brand-blue),white) }
 .sb-section-title { border-bottom:1px solid light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding-bottom:1em; margin-bottom:3em; }
 .sbdocs-wrapper .sbdocs-a { color:light-dark(var(--link-blue), var(--brand-gold-light)); }
 .sbdocs-wrapper .sbdocs-a:hover, .sbdocs-wrapper .sbdocs-a:focus { color:light-dark(var(--brand-blue-bright), var(--brand-gold-bright)); }

@@ -4,6 +4,13 @@ import FormCombinations from './index';
 export default {
   title: 'Components/Form',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: ''
+      }
+    },
+  },
   argTypes: {
     title: { name: 'Form Title' },
     inputFields: {
