@@ -1,3 +1,4 @@
+import { background } from 'storybook/internal/theming';
 import BannerTiled from './BannerTiled';
 
 // Add styles to document head
@@ -10,6 +11,12 @@ const addHeaderStyles = () => {
         min-height: revert;
         grid-template-rows: auto;
       }
+      .page-secondary {
+        margin-block:0; 
+      }
+      .section {
+        margin-block:clamp(2rem, 3.5vw, 5rem); 
+      }  
     `;
     document.head.appendChild(style);
   }
@@ -25,7 +32,7 @@ export default {
         // This will be the code shown in the docs
         transform: (code) => {
           // Remove the wrapper div from the code view
-          return code.replace(/<div class="wrapper"><div class="page-secondary full-width">(.*?)<\/div><\/div>/gs, '$1');
+          return code.replace(/<div id="wrapper" class="wrapper"><div class="page-secondary full-width">(.*?)<\/div><\/div>/gs, '$1');
         }
       }
     }
@@ -71,6 +78,12 @@ export default {
       options: ['2', '3', '4'],
       description: 'The number of images to display in the banner'
     },
+    backgroundColor: {
+      name: 'Background Color',
+      control: { type: 'select' },
+      options: ['none', 'brand-blue', 'brand-blue-dark', 'brand-blue-light', 'sky-blue-light', 'dark', 'light'],
+      description: 'The background color of the banner'
+    },
     buttons: { name: 'Single Button', control: 'object' },
     buttonList: { name: 'Button List', control: 'object' },
   },
@@ -83,6 +96,7 @@ export default {
     bannerWidth:'default',
     order:'default',
     summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
+    backgroundColor:'none',
   },
 };
 
@@ -121,6 +135,16 @@ DefaultThree.args = {
   imageCount:3,
 };
 
+export const DefaultThreeOffset = (args) => {
+  const mergedArgs = { ...args };
+  return BannerTiled(mergedArgs);
+};
+DefaultThreeOffset.storyName = 'Default Three Image Tiled Offset Banner';
+DefaultThreeOffset.args = {
+  imageCount:3,
+  imageModifiers: 'offset-start',
+};
+
 export const ReversedThree = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
@@ -129,6 +153,17 @@ ReversedThree.storyName = 'Reversed Three Image Tiled Banner';
 ReversedThree.args = {
   order:'reversed',
   imageCount:3,
+};
+
+export const ReversedThreeOffset = (args) => {
+  const mergedArgs = { ...args };
+  return BannerTiled(mergedArgs);
+};
+ReversedThreeOffset.storyName = 'Reversed Three Image Tiled Offset Banner';
+ReversedThreeOffset.args = {
+  order:'reversed',
+  imageCount:3,
+  imageModifiers: 'offset-end',
 };
 
 // Four Image Tiled Banner Stories
