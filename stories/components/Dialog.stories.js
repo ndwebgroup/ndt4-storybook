@@ -214,3 +214,36 @@ withVideo.parameters = {
 };
 
 withVideo.decorators = [dialogDecorator];
+
+export const withPerson = (args) => {
+  return Dialog(args);
+};
+
+withPerson.storyName = 'With Person';
+withPerson.args = {
+  title: '',
+  closeButtonText: 'Close',
+  dialogModifier: 'dialog--person',
+  media:'<figure class="dialog-image"><img class="image-circle" src="/images/placeholder-profile-1-500x500.jpg" width="600" height="400" alt=""></figure>',
+  content: `<h2>John Doe</h2>
+        <p class="person-title">Person title</p>
+        <p>
+          <a href="mailto:johndoe@example.com">johndoe@example.com</a><br>
+          <a href="https://example.com" aria-label="Visit the website for John Doe">Website</a><br>
+          P: 555-123-4567<br>
+          M: 555-987-6543<br>
+        </p>
+        <p class="dialog-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu erat quis urna fringilla ultrices. Duis eleifend leo id purus commodo, vitae aliquet nisi tincidunt. In tincidunt purus vel aliquet lobortis. Morbi feugiat tortor nec justo varius, non congue ante congue.</p>
+  `,
+  footer: ``,
+};
+
+withPerson.parameters = {
+  docs: {
+    description: {
+      story: 'Dialog with person data.'
+    }
+  }
+};
+
+withPerson.decorators = [dialogDecorator];
