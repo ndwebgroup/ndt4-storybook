@@ -22,7 +22,7 @@
  * @param {number} [props.currentYear=new Date().getFullYear()] - Current year for copyright
  * @returns {string} - The footer HTML
  */
-export default function Footer(props) {
+export default function SiteFooter(props) {
   const {
     // Nav footer props (optional)
     showNavFooter = false,

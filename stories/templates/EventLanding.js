@@ -12,12 +12,12 @@
  * @returns {string} - The HTML
  */
 
-import Header from '../collections/Header.js';
+import SiteHeader from '../collections/SiteHeader.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import Breadcrumb from '../components/Breadcrumb.js';
 import SocialShare from '../components/SocialShare.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
-import Footer from '../collections/Footer.js';
+import SiteFooter from '../collections/SiteFooter.js';
 
 export default function EventLanding(props) {
   const {
@@ -68,7 +68,7 @@ export default function EventLanding(props) {
 
 
   container.innerHTML = `
-  ${Header({ siteName:'Department of Example', showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:'Department of Example', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
       <div class="page-header"></div>
       <div class="page-primary">
@@ -131,7 +131,7 @@ export default function EventLanding(props) {
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${Footer({ siteName:'Department of Example' })}
+    ${SiteFooter({ siteName:'Department of Example' })}
 `;
   return container.outerHTML;
 }

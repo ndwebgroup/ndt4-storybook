@@ -1,4 +1,4 @@
-import Footer from './Footer.js';
+import SiteFooter from './SiteFooter.js';
 
 // Add styles to document head
 const addFooterStyles = () => {
@@ -178,7 +178,7 @@ export default {
 
 // Basic footer example
 export const Basic = (args) => {
-  return Footer(args);
+  return SiteFooter(args);
 };
 Basic.args = {
   // Basic example uses the default args
@@ -186,7 +186,7 @@ Basic.args = {
 
 // Full example with all options populated
 export const FullExample = (args) => {
-  return Footer(args);
+  return SiteFooter(args);
 };
 FullExample.args = {
   // Nav footer props (optional)
@@ -225,7 +225,7 @@ FullExample.args = {
 
 // Example without the nav-footer
 export const NoNavFooter = (args) => {
-  return Footer(args);
+  return SiteFooter(args);
 };
 NoNavFooter.args = {
   showNavFooter: false,
@@ -237,7 +237,7 @@ NoNavFooter.args = {
 
 // Example with parent links but no social media
 export const WithParentLinks = (args) => {
-  return Footer(args);
+  return SiteFooter(args);
 };
 WithParentLinks.args = {
   siteName: 'Department of Example',
@@ -250,7 +250,7 @@ WithParentLinks.args = {
 
 // Example with social media but minimal other info
 export const WithSocialMedia = (args) => {
-  return Footer(args);
+  return SiteFooter(args);
 };
 WithSocialMedia.args = {
   siteName: 'Department of Example',

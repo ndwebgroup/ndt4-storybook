@@ -1,5 +1,5 @@
-import Header from './Header.js';
-import Hero from './Hero.js';
+import SiteHeader from './SiteHeader.js';
+import PageHeader from './PageHeader.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 
 // Add styles to document head
@@ -19,7 +19,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Page Header',
-  component: Hero,
+  component: PageHeader,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -39,7 +39,7 @@ export default {
       addHeaderStyles();
       // This will only affect the preview
       const result = Story();
-      return `<div class="wrapper" id="wrapper">${Header({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}</main></div>`;
+      return `<div class="wrapper" id="wrapper">${SiteHeader({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}</main></div>`;
     }
   ],
   argTypes: {
@@ -59,14 +59,14 @@ export default {
       control: 'text',
       description: 'Lede or subtitle of the page',
     },
-    showFeaturedImage: {
+    featuredImage: {
       name: 'Show Featured Image',
       control: 'boolean',
       description: 'Whether to show the featured image',
       defaultValue: true
     },
-    heroLayout: {
-      name: 'Hero Layout',
+    layout: {
+      name: 'Layout',
       control: { type: 'select' },
       options: ['inset', 'container', 'screen'],
       description: 'Layout style for the hero section',
@@ -77,13 +77,13 @@ export default {
     pageTitle: 'Do more than dream about the future. <em>Fight</em> for it.',
     pageTitleSize: 'sm',
     pageLede: '',
-    showFeaturedImage: true,
-    heroLayout: 'inset',
+    featuredImage: true,
+    layout: 'inset',
   }
 };
 
 const Template = (args) => {
-  return Hero(args);
+  return PageHeader(args);
 };
 
 export const Default = Template.bind({});
@@ -98,17 +98,17 @@ WithLede.args = {
 
 export const NoFeaturedImage = Template.bind({});
 NoFeaturedImage.args = {
-  heroLayout: 'inset',
-  showFeaturedImage: false,
+  layout: 'inset',
+  featuredImage: false,
   pageLede: 'This is an example of a page lede or subtitle that provides additional context about the page.',
 };
 export const ContainerLayout = Template.bind({});
 ContainerLayout.args = {
-  heroLayout: 'container',
+  layout: 'container',
   pageLede: 'This is an example of a page lede or subtitle that provides additional context about the page.',
 };
 export const ScreenLayout = Template.bind({});
 ScreenLayout.args = {
-  heroLayout: 'screen',
+  layout: 'screen',
   pageLede: 'This is an example of a page lede or subtitle that provides additional context about the page.',
 };

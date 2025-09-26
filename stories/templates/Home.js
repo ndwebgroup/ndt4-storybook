@@ -8,13 +8,13 @@
  * @returns {string} - The home HTML
  */
 
-import Header from '../collections/Header.js';
-import Hero from '../collections/Hero.js';
+import SiteHeader from '../collections/SiteHeader.js';
+import PageHeader from '../collections/PageHeader.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
 import EventCard from '../components/Cards/EventCard.js';
-import Footer from '../collections/Footer.js';
+import SiteFooter from '../collections/SiteFooter.js';
 
 export default function Home(props) {
   const {
@@ -31,9 +31,9 @@ export default function Home(props) {
   container.id = 'wrapper';
   
   container.innerHTML = `
-  ${Header({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${Hero({ pageTitle:pageTitle, pageLede:``, heroLayout:heroLayout, showFeaturedImage:true })}
+      ${PageHeader({ pageTitle:pageTitle, pageLede:``, heroLayout:heroLayout, showFeaturedImage:true })}
       <div class="page-primary${navTop ? ' full-width' : ''}">
         <div class="section home-primary${navTop ? ' col--md' : ''}">${pageContent}</div>
         <section class="section section--home-news">
@@ -58,7 +58,7 @@ export default function Home(props) {
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${Footer({ siteName:siteTitle })}
+    ${SiteFooter({ siteName:siteTitle })}
 `;
   return container.outerHTML;
 }

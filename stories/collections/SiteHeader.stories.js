@@ -1,4 +1,4 @@
-import Header from './Header.js';
+import SiteHeader from './SiteHeader.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 
 // Add styles to document head
@@ -21,7 +21,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Site Header',
-  component: Header,
+  component: SiteHeader,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -107,7 +107,7 @@ export default {
 };
 
 const Template = (args) => {
-  return Header(args);
+  return SiteHeader(args);
 };
 
 export const Default = Template.bind({});
@@ -118,21 +118,47 @@ Default.args = {
 
 export const WithTagline = Template.bind({});
 WithTagline.args = {
-  siteTagline: 'The University of Example',
+  siteTagline: 'Site Tagline',
   showNavigation: true
 };
 
 export const WithNavigationButton = Template.bind({});
 WithNavigationButton.args = {
   showNavigation: true,
-  showNavButton: true
+  showNavButton: true,
+  navHeaderLinks:
+    [{ label: 'Academics', url: '#' },
+  { label: 'Admissions', url: '#' },
+  { label: 'Research', url: '#' },
+  { label: 'Global', url: '#' },
+  { label: 'Faith', url: '#' },
+  { label: 'Community', url: '#' }],
 };
 
 export const MarkOnRight = Template.bind({});
 MarkOnRight.args = {
-  siteTagline: 'The University of Example',
+  siteTagline: 'Site Tagline',
   showNavigation: true,
   markRight: true
+};
+
+export const InlineNavigation = Template.bind({});
+InlineNavigation.args = {
+  showNavigation: true,
+  groupModifier: 'inline-xl',
+  navHeaderLinks:
+    [{ label: 'Academics', url: '#' },
+  { label: 'Admissions', url: '#' },
+  { label: 'Research', url: '#' },
+  { label: 'Global', url: '#' },
+  { label: 'Faith', url: '#' },
+  { label: 'Community', url: '#' }],
+  
+};
+
+export const WithoutGlobalMenuIcon = Template.bind({});
+WithoutGlobalMenuIcon.args = {
+  showGlobalMenu: false
 };
 
 export const WithoutNavigation = Template.bind({});

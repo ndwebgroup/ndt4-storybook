@@ -8,13 +8,13 @@
  * @returns {string} - The home HTML
  */
 
-import Header from '../collections/Header.js';
-import Hero from '../collections/Hero.js';
+import SiteHeader from '../collections/SiteHeader.js';
+import PageHeader from '../collections/PageHeader.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
 import Pagination from '../components/Pagination.js';
-import Footer from '../collections/Footer.js';
+import SiteFooter from '../collections/SiteFooter.js';
 
 export default function NewsListing(props) {
   const {
@@ -29,9 +29,9 @@ export default function NewsListing(props) {
   container.id = 'wrapper';
 
   container.innerHTML = `
-  ${Header({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${Hero({ pageTitle:`Latest News`, pageTitleSize:`default`, pageLede:``, heroLayout:`default`, showFeaturedImage:false })}
+      ${PageHeader({ pageTitle:`Latest News`, pageTitleSize:`default`, pageLede:``, heroLayout:`default`, showFeaturedImage:false })}
       <div class="page-primary">
         ${pageContent}
         <ol class="list--news no-bullets">
@@ -52,7 +52,7 @@ export default function NewsListing(props) {
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${Footer({ siteName:siteTitle })}
+    ${SiteFooter({ siteName:siteTitle })}
 `;
   return container.outerHTML;
 }
