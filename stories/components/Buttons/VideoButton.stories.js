@@ -1,4 +1,4 @@
-import ButtonVideo from './ButtonVideo.js';
+import VideoButton from './VideoButton.js';
 
 export default {
   title: 'Components/Buttons/Video Button',
@@ -25,8 +25,8 @@ export default {
 };
 
 export const Default = (args) => {
-  return ButtonVideo(args);
+  return VideoButton(args);
 };
-Default.storyName = 'Left Aligned Video Button';
+Default.storyName = 'Default';
 Default.args = {
 };

@@ -1,4 +1,4 @@
-import ButtonIcon from './ButtonIcon.js';
+import IconButton from './IconButton.js';
 
 export default {
   title: 'Components/Buttons/Icon Button',
@@ -29,34 +29,34 @@ export default {
 };
 
 export const Default = (args) => {
-  return ButtonIcon(args);
+  return IconButton(args);
 };
-Default.storyName = 'Left Aligned Icon Button';
+Default.storyName = 'Left';
 Default.args = {
 };
 
 export const Right = (args) => {
-  return ButtonIcon(args);
+  return IconButton(args);
 };
-Right.storyName = 'Right Aligned Icon Button';
+Right.storyName = 'Right';
 Right.args = {
   align:'right',
   icon:'arrow-up',
 };
 
 export const LeftReveal = (args) => {
-  return ButtonIcon(args);
+  return IconButton(args);
 };
-LeftReveal.storyName = 'Left Icon Button With Reveal';
+LeftReveal.storyName = 'Left With Reveal';
 LeftReveal.args = {
   icon:'arrow-up',
   label:'Back to top',
 };
 
 export const RightReveal = (args) => {
-  return ButtonIcon(args);
+  return IconButton(args);
 };
-RightReveal.storyName = 'Right Icon Button With Reveal';
+RightReveal.storyName = 'Right With Reveal';
 RightReveal.args = {
   align:'right',
   icon:'arrow-up',

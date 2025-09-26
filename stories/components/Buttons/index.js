@@ -6,7 +6,8 @@
 
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
-import ButtonIcon from './ButtonIcon';
+import IconButton from './IconButton';
+import VideoButton from './VideoButton';
 import ButtonList from './ButtonList';
 
 /**
@@ -88,7 +89,8 @@ export default function ButtonsOverview() {
   `;
 
   container.appendChild(buttonGroupSection);
-
+  container.appendChild(document.createElement('hr')).className = 'mb-4';
+  
   // Button List Section
   const buttonListSection = document.createElement('section');
   buttonListSection.className = 'button-section';
@@ -107,6 +109,36 @@ export default function ButtonsOverview() {
   `;
 
   container.appendChild(buttonListSection);
+  container.appendChild(document.createElement('hr')).className = 'mb-4';
+
+  // Icon Button Section
+  const iconButtonSection = document.createElement('section');
+  iconButtonSection.className = 'button-section';
+  iconButtonSection.innerHTML = `
+    <h3>Icon Button</h3>
+    <p>Buttons that primarily use icons to represent actions. Can be aligned left or right, with optional reveal text.</p>
+    <ul class="icon-button-examples no-bullets">
+      <li>${IconButton({ icon: 'plus', type: 'primary', label: '', cta: false, align: 'left' }).outerHTML}</li>
+      <li>${IconButton({ icon: 'arrow-up', type: 'primary', label: 'Back to Top', cta: false, align: 'left' }).outerHTML}</li>
+    </ul>
+  `;
+
+  container.appendChild(iconButtonSection);
+  container.appendChild(document.createElement('hr')).className = 'mb-4';
+
+  // Video Button Section
+  const videoButtonSection = document.createElement('section');
+  videoButtonSection.className = 'button-section';
+  videoButtonSection.innerHTML = `
+    <h3>Video Button</h3>
+    <p>Specialized button for video playback actions, typically represented with a play icon.</p>
+    <div class="video-button-example">
+      ${VideoButton({ label: 'Watch Video', videoUrl: '#', type: 'primary' }).outerHTML}
+    </div>
+  `;
+
+  container.appendChild(videoButtonSection);
+  container.appendChild(document.createElement('hr')).className = 'mb-4';
 
   // Usage guidelines
   const guidelines = document.createElement('section');

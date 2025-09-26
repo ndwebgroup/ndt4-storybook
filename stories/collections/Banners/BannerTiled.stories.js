@@ -23,7 +23,7 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Banner/Banner (Tiled Images)',
+  title: 'Collections/Banner/Banner (Tiled)',
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -105,82 +105,87 @@ const exampleButtons = [
   { label:'Button Two', type:'primary', cta:false, more:false, },
 ];
 
-// Two Image Tiled Banner Stories
+// Two Images
 export const Default = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-Default.storyName = 'Default Two Image Tiled Banner';
+Default.storyName = 'Two Images';
 Default.args = {
   imageCount:2,
 };
 
+// Two Images Reversed
 export const ReversedTwo = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-ReversedTwo.storyName = 'Reversed Two Image Tiled Banner';
+ReversedTwo.storyName = 'Two Images Reversed';
 ReversedTwo.args = {
   order:'reversed',
   imageCount:2,
 };
 
-// Three Image Tiled Banner Stories
+// Three Images
 export const DefaultThree = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-DefaultThree.storyName = 'Default Three Image Tiled Banner';
+DefaultThree.storyName = 'Three Images';
 DefaultThree.args = {
   imageCount:3,
 };
 
-export const DefaultThreeOffset = (args) => {
-  const mergedArgs = { ...args };
-  return BannerTiled(mergedArgs);
-};
-DefaultThreeOffset.storyName = 'Default Three Image Tiled Offset Banner';
-DefaultThreeOffset.args = {
-  imageCount:3,
-  imageModifiers: 'offset-start',
-};
-
+// Three Images Reversed
 export const ReversedThree = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-ReversedThree.storyName = 'Reversed Three Image Tiled Banner';
+ReversedThree.storyName = 'Three Images Reversed';
 ReversedThree.args = {
   order:'reversed',
   imageCount:3,
 };
 
+// Three Images with Offset
+export const DefaultThreeOffset = (args) => {
+  const mergedArgs = { ...args };
+  return BannerTiled(mergedArgs);
+};
+DefaultThreeOffset.storyName = 'Three Images Offset';
+DefaultThreeOffset.args = {
+  imageCount:3,
+  imageModifiers: 'offset-start',
+};
+
+// Three Images Reversed with Offset
 export const ReversedThreeOffset = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-ReversedThreeOffset.storyName = 'Reversed Three Image Tiled Offset Banner';
+ReversedThreeOffset.storyName = 'Three Images Offset/Reversed';
 ReversedThreeOffset.args = {
   order:'reversed',
   imageCount:3,
   imageModifiers: 'offset-end',
 };
 
-// Four Image Tiled Banner Stories
+// Four Images
 export const DefaultFour = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-DefaultFour.storyName = 'Default Four Image Tiled Banner';
+DefaultFour.storyName = 'Four Images';
 DefaultFour.args = {
   imageCount:4,
 };
 
+// Four Images Reversed
 export const ReversedFour = (args) => {
   const mergedArgs = { ...args };
   return BannerTiled(mergedArgs);
 };
-ReversedFour.storyName = 'Reversed Four Image Tiled Banner';
+ReversedFour.storyName = 'Four Images Reversed';
 ReversedFour.args = {
   order:'reversed',
   imageCount:4,
