@@ -1,7 +1,7 @@
 import MediaMention from './MediaMention';
 
 export default {
-  title: 'Components/Media Mention',
+  title: 'Components/Media Mentions/Media Mention',
   tags: ['autodocs'],
   argTypes: {
     headingTag: {

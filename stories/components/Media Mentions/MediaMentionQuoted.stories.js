@@ -1,7 +1,7 @@
 import MediaMentionQuoted from './MediaMentionQuoted';
 
 export default {
-  title: 'Components/Media Mention (Quoted)',
+  title: 'Components/Media Mentions/Media Mention (Quoted)',
   tags: ['autodocs'],
   argTypes: {
     showPublication: {
