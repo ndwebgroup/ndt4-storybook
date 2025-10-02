@@ -3,6 +3,16 @@ import Button from './Button.js';
 export default {
   title: 'Components/Buttons/Button',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: [
+          'Component Name helps users take a primary action. Use it for the most important calls to action on a page.',
+          'Common uses include forms, dialogs, and page level actions.',
+        ].join('\n'),
+      }
+    },
+  },
   argTypes: {
     label: {
       name:'Button Label',

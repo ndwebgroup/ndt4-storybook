@@ -5,13 +5,12 @@ export default {
     "name": "@storybook/html-vite",
     "options": {}
   },
-
   "stories": [
+    "../stories/**/index.mdx",
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-
-  "addons": ["@storybook/addon-designs", "@vueless/storybook-dark-mode", "@whitespace/storybook-addon-html", {
+  "addons": ["@storybook/addon-designs", "@vueless/storybook-dark-mode", {
     name: '@storybook/addon-docs',
     options: {
       mdxPluginOptions: {

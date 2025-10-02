@@ -89,13 +89,14 @@ export default {
       disable: true,
     },
     docs: {
+      codePanel: true,
       toc: {
         headingSelector: 'h2, h3',
       }
     },
     options: {
       storySort: {
-        order: ['Foundation', 'Components', 'Collections', 'Templates', '*'],
+        order: ['Introduction', 'Foundation', 'Components', 'Collections', 'Templates', '*'],
       },
     },
     darkMode: {

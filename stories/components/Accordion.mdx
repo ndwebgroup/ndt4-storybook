@@ -1,0 +1,21 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as AccordionStories from './Accordion.stories';
+ 
+<Meta of={AccordionStories} />
+ 
+<Title />
+
+<Description />
+
+--- 
+
+## Preview
+<Primary />
+
+<Controls />
+
+## Accessibility
+
+- Match each accordion header to the surrounding page structure. For example, if the accordion sits within a section headed by h2, use h3 for each panel title in your markup.
+- Large accordions create long tab stops and slow navigation for keyboard users. Group related content, or split content across sections, to reduce the total number of panels.
