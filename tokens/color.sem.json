@@ -1,0 +1,211 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/module.v1.json",
+  "ndt": {
+    "brand": {
+      "name": {
+        "$value": "NDT4 Design Kit"
+      }
+    }
+  },
+  "color": {
+    "palette": {
+      "brand-blue": {
+        "100": {
+          "$name":"Brand Blue Bright",
+          "$value": "#1C4F8F"
+        },
+        "200": {
+          "$name":"Brand Blue Light",
+          "$value": "#143865"
+        },
+        "300": {
+          "$name":"Brand Blue",
+          "$value": "#0C2340"
+        },
+        "400": {
+          "$name":"Brand Blue Dark",
+          "$value": "#081629"
+        }
+      },
+      "brand-gold": {
+        "100": {
+          "$name":"Brand Gold Bright",
+          "$value": "#D39F10"
+        },
+        "200": {
+          "$name":"Brand Gold Light",
+          "$value": "#DDC278"
+        },
+        "300": {
+          "$name":"Brand Gold",
+          "$value": "#AE9142"
+        },
+        "400": {
+          "$name":"Brand Gold Dark",
+          "$value": "#8C7535"
+        }
+      },
+      "brand-green": {
+        "100": {
+          "$name":"Brand Green Bright",
+          "$value": "#35B36A"
+        },
+        "200": {
+          "$name":"Brand Green",
+          "$value": "#0A843D"
+        },
+        "300": {
+          "$name":"Brand Green Dark",
+          "$value": "#103D23"
+        }
+      },
+      "sky-blue": {
+        "100": {
+          "$name":"Sky Blue Light",
+          "$value": "#EDF2F9"
+        },
+        "200": {
+          "$name":"Sky Blue",
+          "$value": "#E1E8F2"
+        },
+        "300": {
+          "$name":"Sky Blue Dark",
+          "$value": "#C1CDDD"
+        }
+      },
+      "warm-white": {
+        "100": {
+          "$name":"Warm White",
+          "$value": "#F8F4EC"
+        },
+        "200": {
+          "$name":"Warm White Dark",
+          "$value": "#EFE9D9"
+        }
+      },
+      "neutral": {
+        "100": {
+          "$name":"White",
+          "$value": "#FFFFFF"
+        },
+        "200": {
+          "$name":"Gray Extra Extra Light",
+          "$value": "#F1F2F4"
+        },
+        "300": {
+          "$name":"Gray Extra Light",
+          "$value": "#E9EBEE"
+        },
+        "400": {
+          "$name":"Gray Light",
+          "$value": "#D8DCE0"
+        },
+        "500": {
+          "$name":"Gray",
+          "$value": "#555555"
+        },
+        "600": {
+          "$name":"Gray Dark",
+          "$value": "#333333"
+        }
+      },
+      "other": {
+        "100": {
+          "$name":"Focus",
+          "$value":"15A6B5"
+        }
+      }
+    },
+    "brand": {
+      "primary": {
+        "$value": "{color.palette.brand-blue.300}"
+      },
+      "secondary": {
+        "$value": "{color.palette.brand-gold.300}"
+      },
+      "accent": {
+        "$value": "{color.palette.brand-green.200}"
+      }
+    },
+    "text": {
+      "primary": {
+        "$value": "{color.palette.neutral.600}"
+      },
+      "secondary": {
+        "$value": "{color.palette.neutral.500}"
+      },
+      "brand": {
+        "$value": "{color.palette.brand-blue.300}"
+      },
+      "link": {
+        "$value": "{color.palette.brand-blue.100}"
+      }
+    },
+    "surface": {
+      "base": {
+        "$value": "{color.palette.neutral.100}"
+      },
+      "brand": {
+        "$value": "{color.brand.primary}"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.palette.neutral.200}"
+      },
+      "subtle": {
+        "$value": "{color.palette.neutral.300}"
+      },
+      "strong": {
+        "$value": "{color.palette.neutral.400}"
+      },
+      "focus": {
+        "$value": "{color.palette.other.100}"
+      }
+    }
+  },
+  "$extensions": {
+    "modes": {
+      "dark": {
+        "color": {
+          "text": {
+            "primary": {
+              "$value": "{color.palette.neutral.100}"
+            },
+            "secondary": {
+              "$value": "{color.palette.sky-blue.100}"
+            },
+            "brand": {
+              "$value": "{color.palette.neutral.100}"
+            },
+            "link": {
+              "$value": "{color.palette.gold.100}"
+            }
+          },
+          "surface": {
+            "base": {
+              "$value": "{color.palette.brand-blue.400}"
+            },
+            "brand": {
+              "$value": "{color.brand.primary}"
+            }
+          },
+          "border": {
+            "default": {
+              "$value": "{color.palette.neutral.700}"
+            },
+            "subtle": {
+              "$value": "{color.palette.neutral.800}"
+            },
+            "strong": {
+              "$value": "{color.palette.neutral.600}"
+            },
+            "focus": {
+              "$value": "{color.pallete.other.100}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

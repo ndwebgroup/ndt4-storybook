@@ -4,32 +4,39 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Getting Started
 
-**TODO: Review content before public release**
+## Theme Assets
 
-NDT4 is the Notre Dame Web Theme design kit for web designers and developers. The University provides everything a web professional needs to build a new website using the [Notr Dame Web Theme](https://webtheme.nd.edu). Please do not recreate the theme. Use the assets and guidance available here to ensure consistency, performance, and accessibility.
-If you are developing a new website, campus units may partner with the [ND Web Team](https://creative.nd.edu), the preferred vendor for campus projects, or work with an external agency. Units that plan to use outside vendors must consult the Web Team at the start of the project to confirm compliance with performance, hosting, and accessibility standards. The ND Web Team reserves the right to provide corrections or recommendations to any campus websites that do not closely follow University standards.
+In order to maintain consistency across all sites, the Web Theme makes use of common asset files. These shared assets provide a common foundation on which to build.
 
-## Using Storybook
+### CSS and JavaScript
 
-We use Storybook to provide coded components, visual examples, and documentation. Each component includes:
+#### Global CSS
+**Link:** [https://conductor.nd.edu/stylesheets/themes/ndt/4.0/ndt.css](https://conductor.nd.edu/stylesheets/themes/ndt/4.0/ndt.css)\
+**Usage:** Include in head of document before any other stylesheets.
 
-- Docs with usage guidance, accessibility notes, and code snippets
-- Interactive stories with controls to configure variants, sizes, and states
+```html
+  <link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/themes/ndt/3.0/ndt.css">
+```
 
-### What is a story
+#### Global JavaScript
+**Link:** [https://conductor.nd.edu/javascripts/themes/ndt/4.0/ndt.js](https://conductor.nd.edu/javascripts/themes/ndt/4.0/ndt.js)\
+**Usage:** Place toward end of the document, right before the closing body tag.
 
-A story is an interactive preview of a component. Use the controls to change options. The preview and HTML update so you can copy exactly what you need.
+```html
+  <script src="https://conductor.nd.edu/javascripts/themes/ndt/3.0/ndt.js"></script>
+```
 
-### Storybook organization
+#### Site JavaScript
+**Source:** [https://github.com/ndwebgroup/ndt3-html/blob/master/javascripts/site.js](https://github.com/ndwebgroup/ndt3-html/blob/master/javascripts/site.js)\
+**Usage:** Unlike the Global JavaScript file, this file is meant to be copied and modified for each specific site. It includes code responsible for **loading the NDT Icon set**, but can be extended or modified as needed.
 
-- **[Getting Started:](/docs/getting-started--docs)** how to understand NDT4 and add it to your project
-- **[Foundations:](/docs/foundations-about-ndt4-foundations--docs)** design tokens, iconography, and motion
-- **[Components:](/docs/components-about-ndt4-components--docs)** reusable UI elements
-- **[Collections:](/docs/collections-about-ndt4-collections--docs)** groups of components for specific use cases
-- **[Templates:](/docs/templates-about-ndt4-templates--docs)** page level layouts
-- **[Changelog:](/docs/changelog-ndt4-changelog--docs)** a record of releases and updates
+```html
+  <script src="/path/to/site.js"></script>
+```
 
-<div class="notice notice-info"><p class="mb-0"><small>Tip: If you do not see the navigation sidebar, press the S key to toggle the sidebar panel.</small></p></div>
+### Icon Set
+**Link:** [https://static.nd.edu/images/icons/base-v1.svg](https://static.nd.edu/images/icons/base-v1.svg)
+Usage Must be inlined within the document to be accessible. This is done by default by the Web Theme’s site.js.
 
 ## Working with older themes
 
@@ -38,7 +45,7 @@ A story is an interactive preview of a component. Use the controls to change opt
 ## Figma Design Kits
 The NDT4 Figma design kit is available to through the Figma Community. It includes components, templates, and iconography to help you design in Figma using the Web Theme styles and assets.
 
-[University of Notre Dame - Web Theme 3.0 Style Guide](#)
+<p><a href="https://conductor.nd.edu/styleguide/4.0/" class="btn">University of Notre Dame - Web Theme 3.0 Style Guide</a></p>
 
 {/* ## HTML Templates
 
@@ -54,10 +61,3 @@ Developing in WordPress? We have a no-cost, starter WordPress Theme available  u
 
 The **[Working with Content](v4/content)** section contains visual and code examples of the various content elements within the Web Theme.
 For reference information about the fonts and colors used in the Web Theme, visit the **[Colors](/docs/foundation-colors--docs/)** and **[Typography](/docs/foundation-typography--docs/)** page. */}
-
-## Accessibility
-NDT4 supports inclusive design. Color tokens meet contrast targets. Focus states and keyboard navigation are built in. Components include ARIA guidance and labeling patterns.
-
-## Feedback or Questions?
-
-Have questions or feedback? Contact us at **[webhelp@nd.edu](mailto:webhelp@nd.edu)**. You can also browse documentation and examples or request features through our site.

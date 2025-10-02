@@ -6,7 +6,7 @@ addons.setConfig({
   theme: create({
     base: 'light',
     brandTitle: 'Notre Dame Design System',
-    brandUrl: 'https://webtheme.nd.edu',
+    brandUrl: 'https://ndt4-storybook.netlify.app/',
     brandImage: '/logo.svg',
     brandTarget: '_self',
   }),
