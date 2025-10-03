@@ -1,0 +1,45 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as ButtonGroupStories from './ButtonGroup.stories';
+ 
+<Meta of={ButtonGroupStories} />
+ 
+<Title />
+
+The Button Group component is used to group related buttons together, providing a cohesive user experience.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use button groups to organize related actions.</li>
+      <li>Consider the context and importance of each button when grouping.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not mix different types of buttons in the same group.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- Ensure all buttons have accessible labels.
+- Use semantic HTML elements (e.g., `<a>` and `<button>`) for buttons.
+
+## CSS References
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.btn-group`                      | Base class for all button group styles.                                                       |

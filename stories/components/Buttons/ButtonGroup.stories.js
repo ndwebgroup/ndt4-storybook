@@ -2,13 +2,7 @@ import ButtonGroup from './ButtonGroup.js';
 
 export default {
   title: 'Components/Buttons/Button Group',
-  tags: ['autodocs'],
   parameters: {
-    docs: {
-      description: {
-        component: 'Button Group description'
-      }
-    }
   },
   argTypes: {
     items: {

@@ -1,0 +1,55 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as ButtonStories from './Button.stories';
+ 
+<Meta of={ButtonStories} />
+ 
+<Title />
+
+The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, or navigating to another page.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Ensure buttons are easily tappable on mobile devices (at least 44x44 pixels).</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Avoid using vague labels like "Click here", "Learn more", and "View More".</li>
+      <li>Avoide using multiple call-to-action buttons in a single view.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- Ensure all buttons have accessible labels.
+- Use semantic HTML elements (e.g., `<a>` and `<button>`) for buttons.
+
+## Modifier Classes
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.btn--cta`                       | Styles the button as a call-to-action button.                                                 |
+| `.btn--more`                      | Styles the button to include an arrow icon.                                                   |
+| `.btn--secondary`                 | Styles the button as a secondary action button.                                               |
+| `.btn--tertiary`                  | Styles the button as a tertiary action button.                                                |
+| `.btn--neutral`                   | Styles the button as a neutral action button.                                                 |
+| `.no-border`                      | Removes the border from the button.                                                           |
+
+## CSS References
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.btn`                            | Base class for all button styles.                                                             |

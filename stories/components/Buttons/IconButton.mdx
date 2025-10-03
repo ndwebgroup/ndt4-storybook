@@ -1,0 +1,57 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as IconButtonStories from './IconButton.stories';
+ 
+<Meta of={IconButtonStories} />
+ 
+<Title />
+
+The Icon Button component is used to display a button with an icon, providing a cohesive user experience.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use icon buttons to represent actions visually.</li>
+      <li>Consider the context and importance of each icon when grouping.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not mix different types of icons in the same button.</li>
+      <li>Avoid using text labels with icon buttons to maintain visual clarity.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- Ensure all icon buttons have accessible labels.
+- Use semantic HTML elements (e.g., `<a>` and `<button>`) for buttons.
+
+## Modifier Classes
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.btn--right`                     | Aligns the icon button to the right within its container.                                     |
+| `.btn--cta`                       | Class for icon buttons that represent call-to-action actions.                                 |
+| `.btn--secondary`                 | Styles the button as a secondary action button.                                               |
+| `.btn--tertiary`                  | Styles the button as a tertiary action button.                                                |
+| `.btn--neutral`                   | Styles the button as a neutral action button.                                                 |
+| `.no-border`                      | Removes the border from the button.                                                           |
+
+## CSS References
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.btn--icon`                      | Base class for all icon button styles.                                                        |
+| `.btn-reveal`                     | Class for icon buttons reveal text on hover.                                                  |

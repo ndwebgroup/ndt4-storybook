@@ -2,13 +2,7 @@ import ButtonList from './ButtonList.js';
 
 export default {
   title: 'Components/Buttons/Button List',
-  tags: ['autodocs'],
   parameters: {
-    docs: {
-      description: {
-        component: 'Button List description'
-      }
-    }
   },
   argTypes: {
     items: {

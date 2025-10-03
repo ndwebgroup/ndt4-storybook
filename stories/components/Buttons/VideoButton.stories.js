@@ -2,7 +2,6 @@ import VideoButton from './VideoButton.js';
 
 export default {
   title: 'Components/Buttons/Video Button',
-  tags: ['autodocs'],
   argTypes: {
     label: {
       name:'Button Label',
