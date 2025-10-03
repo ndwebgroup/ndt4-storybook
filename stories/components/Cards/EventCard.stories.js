@@ -2,14 +2,6 @@ import EventCard from './EventCard';
 
 export default {
   title: 'Components/Cards/Card (Event)',
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: 'The Event Card component is designed to showcase event details in a clear and engaging manner. It includes options for displaying the event title, date and time, location, excerpt, and aother meta information. The card can be customized with different variants such as default and compact to suit various layout needs.'
-      }
-    },
-  },
   argTypes: {
     title: { name: 'Event Title' },
     featuredImage: { name: 'Featured Image', control: 'boolean' },

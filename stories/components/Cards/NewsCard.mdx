@@ -1,0 +1,51 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as NewsCardStories from './NewsCard.stories';
+ 
+<Meta of={NewsCardStories} />
+ 
+<Title />
+
+The News Card component is designed to showcase news articles in a visually appealing and informative manner. It includes options for displaying the article title, excerpt, image, author, publish date, and a label to categorize the news.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The News Card component can be used to highlight news articles on a homepage or news section. It provides a concise summary of the article, making it easy for users to quickly understand the content and decide whether to read more.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use News Cards to display recent or important news articles.</li>
+      <li>Include high-quality images that are relevant to the article content.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Don't overload the card with too much text; keep the excerpt concise.</li>
+      <li>Don't use News Cards for non-news content, as it may confuse users.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## CSS References
+| CSS Class                                 | Description                                                                     |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| `.card-container`                         | Container for the News Card container queries.                                  |
+| `.card`                                   | Container for the News Card component.                                          |
+| `.card--news`                             | Modifier class for the News Card.                                             |
+| `.card-image`                             | Styles the image within the News Card, including size and aspect ratio.       |
+| `.card-body`                              | Wrapper for the text content of the News Card.                                |
+| `.card-label`                             | Styles the label of the News Card, including font size and color.             |
+| `.card-title`                             | Styles the title of the News Card, including font size and weight.            |
+| `.card-summary`                           | Styles the description text of the News Card, including font size and color. |
+| `.card-link`                              | Styles the link within the News Card, including hover and focus states.      |

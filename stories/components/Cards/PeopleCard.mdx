@@ -1,0 +1,51 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as PeopleCardStories from './PeopleCard.stories';
+ 
+<Meta of={PeopleCardStories} />
+ 
+<Title />
+
+The People Card component is designed to showcase individual profiles in a clean and organized manner. It includes options for displaying the person's name, title, contact information, and a brief biography. The card can be customized with different layouts such as default, horizontal, stacked, and compact to fit various design needs.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The People Card component can be used to highlight individual profiles, such as faculty members, staff, or students. It provides a structured way to present personal information and can be adapted to different contexts on a webpage.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use People Cards to highlight individual profiles that you want users to notice.</li>
+      <li>Ensure that the images used are high-quality and relevant to the person's profile.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Don't use People Cards for non-personal content, as it may confuse users.</li>
+      <li>Don't overload the card with too much text; keep the biography concise.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## CSS References
+| CSS Class                                 | Description                                                                     |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| `.card-container`                         | Container for the People Card container queries.                                |
+| `.card`                                   | Container for the People Card component.                                        |
+| `.card--person`                           | Modifier class for the People Card.                                             |
+| `.card-image`                             | Styles the image within the People Card, including size and aspect ratio.       |
+| `.card-body`                              | Wrapper for the text content of the People Card.                                |
+| `.card-label`                             | Styles the label of the People Card, including font size and color.             |
+| `.card-title`                             | Styles the title of the People Card, including font size and weight.            |
+| `.card-summary`                           | Styles the description text of the People Card, including font size and color.  |
+| `.card-link`                              | Styles the link within the People Card, including hover and focus states.       |

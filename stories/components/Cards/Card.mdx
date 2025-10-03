@@ -1,0 +1,49 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as CardStories from './Card.stories';
+ 
+<Meta of={CardStories} />
+ 
+<Title />
+
+Cards are a flexible content container that can include images, text, and links. They are used to group related information in a visually appealing way. Cards can be displayed in various layouts such as default, horizontal, stacked, and compact.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The Card component can be used to showcase important calls to action. They help to organize information and make it easily scannable for users.
+
+
+
+---
+
+## Accessibility
+
+Ensure that the Card component is accessible by using semantic HTML elements and providing appropriate alt text for images.
+
+---
+
+## CSS References
+
+| CSS Class                                 | Description                                                              |
+|-------------------------------------------|--------------------------------------------------------------------------|
+| `.card-container`                         | Container for the Card container queries.                                |
+| `.card`                                   | Container for the Card component.                                        |
+| `.card--horizontal`                       | Modifier class for horizontal layout of the Card.                        |
+| `.card--stacked`                          | Modifier class for stacked layout of the Card.                           |
+| `.card--compact`                          | Modifier class for compact layout of the Card.                           |
+| `.card-image`                             | Styles the image within the Card, including size and aspect ratio.       |
+| `.card-body`                              | Wrapper for the text content of the Card.                                |
+| `.card-label`                             | Styles the label of the Card, including font size and color.             |
+| `.card-title`                             | Styles the title of the Card, including font size and weight.            |
+| `.card-summary`                           | Styles the description text of the Card, including font size and color   |
+| `.card-link`                              | Styles the link within the Card, including hover and focus states.       |
+
+| CSS Variables                            | Description                                                              |
+|------------------------------------------|--------------------------------------------------------------------------|
+| `--card-image-width`                     | Controls width of card image.                                            |

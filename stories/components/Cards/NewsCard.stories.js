@@ -2,14 +2,6 @@ import NewsCard from './NewsCard.js';
 
 export default {
   title: 'Components/Cards/Card (News Article)',
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: 'The News Card component is designed to showcase news articles in a visually appealing and informative manner. It includes options for displaying the article title, excerpt, image, author, publish date, and a label to categorize the news.'
-      }
-    },
-  },
   argTypes: {
     title: { name: 'Article Title' },
     excerpt: { name: 'Article Excerpt' },

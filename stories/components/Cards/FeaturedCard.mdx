@@ -1,0 +1,53 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as FeaturedCardStories from './FeaturedCard.stories';
+ 
+<Meta of={FeaturedCardStories} />
+ 
+<Title />
+
+The Featured Card component is designed to highlight important content with a visually appealing layout. It typically includes a prominent image, title, and label, making it ideal for showcasing featured articles, faculty, or other key information on a webpage.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The Featured Card component can be used to showcase important content, such as featured faculty or articles. It helps draw attention to specific items on a webpage.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use Featured Cards to highlight important content that you want users to notice.</li>
+      <li>Ensure that the images used are high-quality and relevant to the content being featured.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Don't overcrowd the card with too much text or too many images.</li>
+      <li>Avoid using low-resolution images that may appear pixelated.</li>
+      <li>Don't use Featured Cards for non-essential content that doesn't require emphasis.</li>
+      <li>Avoid using too many Featured Cards on a single page, as this can dilute their impact.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## CSS References
+| CSS Class                                 | Description                                                                     |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| `.card-container`                         | Container for the Featured Card container queries.                              |
+| `.card`                                   | Container for the Featured Card component.                                      |
+| `.card--featured`                         | Modifier class for the Featured Card.                                           |
+| `.card-image`                             | Styles the image within the Featured Card, including size and aspect ratio.     |
+| `.card-body`                              | Wrapper for the text content of the Featured Card.                              |
+| `.card-label`                             | Styles the label of the Featured Card, including font size and color.           |
+| `.card-title`                             | Styles the title of the Featured Card, including font size and weight.          |
+| `.card-summary`                           | Styles the description text of the Featured Card, including font size and color |
+| `.card-link`                              | Styles the link within the Featured Card, including hover and focus states.     |

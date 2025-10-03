@@ -1,0 +1,48 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as EventCardStories from './EventCard.stories';
+ 
+<Meta of={EventCardStories} />
+ 
+<Title />
+
+Event Cards are designed to highlight upcoming events, providing key details such as the event title, date, time, location, and a brief description. Event Cards can be displayed in various layouts to suit different design needs.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+Event Cards can be used to promote events on the homepage and event listing pages. They help users quickly understand the essential details of an event and encourage participation.
+
+---
+
+## Accessibility
+
+Ensure that Event Cards are accessible by using semantic HTML elements and providing appropriate alt text for images.
+
+---
+
+## CSS References
+| CSS Class                                 | Description                                                                    |
+|-------------------------------------------|--------------------------------------------------------------------------------|
+| `.card-container`                         | Container for the Event Card container queries.                                |
+| `.card`                                   | Container for the Event Card component.                                        |
+| `.card--event`                            | Modifier class for the Event Card.                                             |
+| `.card--horizontal`                       | Modifier class for horizontal layout of the Event Card.                        |
+| `.card--stacked`                          | Modifier class for stacked layout of the Event Card.                           |
+| `.card--compact`                          | Modifier class for compact layout of the Event Card.                           |
+| `.card-image`                             | Styles the image within the Event Card, including size and aspect ratio.       |
+| `.card-body`                              | Wrapper for the text content of the Event Card.                                |
+| `.card-label`                             | Styles the label of the Event Card, including font size and color.             |
+| `.card-title`                             | Styles the title of the Event Card, including font size and weight.            |
+| `.card-summary`                           | Styles the description text of the Event Card, including font size and color   |
+| `.card-link`                              | Styles the link within the Event Card, including hover and focus states.       |
+| `.event-date`                             | Styles the event date, including font size and color.                          |
+| `.event-month`                            | Styles the event month, including font size and color.                         |
+| `.event-day`                              | Styles the event day, including font size and color.                           |
+| `.event-time`                             | Styles the event time, including font size and color.                          |
+| `.event-location`                         | Styles the event location, including font size and color.                      |
