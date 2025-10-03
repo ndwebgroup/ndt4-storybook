@@ -2,7 +2,6 @@ import Accordion from './Accordion';
 
 export default {
   title: 'Components/Accordion',
-  tags: ['!autodocs'],
   parameters: {
     design: {
       name: "Figma Assets",

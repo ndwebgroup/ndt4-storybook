@@ -26,6 +26,7 @@
 .sb-show-main .sbdocs-wrapper { padding-inline:5vw; }
 .sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); box-shadow:light-dark(rgba(0, 0, 0, 0.05),rgba(28,79,143,0.2)) 0px 1px 8px 0px; }
 .sbdocs.sbdocs-content { max-width:none; }
+.sbdocs.sbdocs-content code { vertical-align:middle; }
 .sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:clamp(2.5rem,3.5vw + 1rem,3.5rem); color:light-dark(var(--brand-blue),white) }
 .sb-section-title { border-bottom:1px solid light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding-bottom:1em; margin-bottom:3em; }
 .sbdocs-wrapper .sbdocs-a { color:light-dark(var(--link-blue), var(--brand-gold-light)); }
@@ -66,7 +67,7 @@
 /* Colors */
 .swatch-list li { font-size:0.9rem; margin-block-end:1rem;}
 .swatch-list li dt { font-size:0.9rem; }
-.swatch { aspect-ratio:2/1; display:block; width:100%; margin-bottom:0.5rem; border-radius:var(--border-radius); border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); }
+.swatch { aspect-ratio:2/1; display:block; width:100%; margin-bottom:0.5rem; border-radius:var(--border-radius); border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); align-content:center; text-align:center; }
 .swatch--small { display:inline-block; height:1rem; width:1rem; vertical-align:middle; margin-bottom:5px; margin-right:0.25rem; border-radius:2px; border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); }
 .swatch--white { background-color:#FFF; outline:1px solid #efefef; }
 .swatch--black { background-color:#000; }
@@ -92,8 +93,13 @@
 .swatch--gray-extra-light { background-color:var(--gray-extra-light); }
 .swatch--gray-extra-extra-light { background-color:var(--gray-extra-extra-light); }
 
-.swatch--dark-mode-light { background-color:color-mix(in srgb, var(--brand-blue), black 15%); }
-.swatch--dark-mode-dark { background-color:color-mix(in srgb, var(--brand-blue-light), black 10%); }
+.color-table .dark { color-scheme:dark; }
+
+/* Lists */
+.list--todo { display:flex; list-style:none; border:var(--border-primary); border-radius:var(--border-radius); width:fit-content; max-width:100%; }
+.list--todo > li { width:20rem; max-width:50%; padding:1rem 2rem; border-right:var(--border-primary); }
+.list--todo ul { list-style-type:disc; margin:0 0 1rem; }
+.list--todo li:last-child { border-right:none; }
 
 /* Thumbs */
 .thumb-list { margin-block-end:3rem; }
