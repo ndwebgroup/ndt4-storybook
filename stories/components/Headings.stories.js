@@ -2,25 +2,8 @@ import Headings from './Headings';
 
 export default {
   title: 'Components/Headings',
-  tags: ['autodocs'],
   component: Headings,
   parameters: {
-    docs: {
-      description: {
-        component: `
-Headings create clear hierarchical structure for page content. They help with both readability and accessibility.
-
-## Heading Classes
-
-You can also use the corresponding class (e.g., \`.h3\`) to make any element look like a heading.
-This is useful when the HTML structure requires a different heading level for semantic reasons,
-but visually you want it to match a different heading style.
-
-**Note:** Using heading classes doesn't change the semantic meaning of an element.
-For accessibility reasons, use actual heading elements (h1-h6) for page structure when possible.
-        `,
-      },
-    },
   },
   argTypes: {
     text: {

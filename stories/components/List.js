@@ -15,7 +15,7 @@ export default function List(args) {
   switch(type) {
     case 'unordered':
       listHtml = `
-        <ul class="${className}">
+        <ul${className ? ` class="${className}"` : ''}>
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ul>
       `;
@@ -23,7 +23,7 @@ export default function List(args) {
 
     case 'ordered':
       listHtml = `
-        <ol class="${className}">
+        <ol${className ? ` class="${className}"` : ''}>
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ol>
       `;
@@ -31,7 +31,7 @@ export default function List(args) {
 
     case 'unstyled':
       listHtml = `
-        <ul class="list--unstyled ${className}">
+        <ul class="list--unstyled${className ? ` ${className}` : ''}">
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ul>
       `;
@@ -39,7 +39,7 @@ export default function List(args) {
 
     case 'stepped':
       listHtml = `
-        <ol class="ol--stepped ${className}">
+        <ol class="ol--stepped${className ? ` ${className}` : ''}">
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ol>
       `;
@@ -47,7 +47,7 @@ export default function List(args) {
 
     case 'inline':
       listHtml = `
-        <ul class="list--inline ${className}">
+        <ul class="list--inline${className ? ` ${className}` : ''}">
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ul>
       `;
@@ -55,18 +55,16 @@ export default function List(args) {
 
     case 'description':
       listHtml = `
-        <dl class="${className}">
-          ${items.map((item, index) => `
-            <dt>${item}</dt>
-            <dd>${descriptions[index] || ''}</dd>
-          `).join('\n          ')}
+        <dl${className ? ` class="${className}"` : ''}>
+          ${items.map((item, index) => `<dt>${item}</dt>
+          <dd>${descriptions[index] || ''}</dd>`).join('\n          ')}
         </dl>
       `;
       break;
 
     default:
       listHtml = `
-        <ul class="ndt-list ${className}">
+        <ul class="ndt-list${className ? ` ${className}` : ''}">
           ${items.map(item => `<li>${item}</li>`).join('\n          ')}
         </ul>
       `;

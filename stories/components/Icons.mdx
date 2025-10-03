@@ -1,0 +1,69 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as IconsStories from './Icons.stories';
+ 
+<Meta of={IconsStories} />
+ 
+<Title />
+
+SVG icons from the Notre Dame icon set that can be used across components.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The class .icon is used to display an icon. The theme JavaScript will replace the element with an icon class with the SVG that matches the data-icon attribute.
+
+Note: The icons are dependent on the the ND Icon set ([https://static.nd.edu/images/icons/base-v1.svg](https://static.nd.edu/images/icons/base-v1.svg)) being loaded inline in the document. This is handled by the site-specific JavaScript file.
+
+```html
+<!-- Icon used next to text -->
+<span class="icon" data-icon="clock-o"></span> Tuesday, 10 am
+
+<!-- Icon used within button -->
+<a href="#" class="btn">Events <span class="icon" data-icon="calendar"></span></a>
+
+<!-- Icon used by itself -->
+<span class="icon" data-icon="nd-monogram"></span>
+```
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use icons to enhance the meaning of text or actions.</li>
+      <li>Ensure there is sufficient contrast between the icon and its background.</li>
+      <li>Use appropriate icon sizes for different contexts (e.g., small icons for inline text, larger icons for icon buttons).</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Avoid using icons without accompanying text unless the icon is universally recognized.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+When using icons that convey meaning, ensure that they are accessible to all users by providing appropriate ARIA labels or using them in conjunction with text.
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                            |
+|-------------------------------------------|------------------------------------------------------------------------|
+| `.icon--sm`                               | Modifier class for small icon size.                                    |
+| `.icon--md`                               | Modifier class for medium icon size.                                   |
+| `.icon--lg`                               | Modifier class for large icon size.                                    |
+| `.icon--xl`                               | Modifier class for extra-large icon size.                              |
+
+## CSS References
+
+| CSS Class                                 | Description                                                            |
+|-------------------------------------------|------------------------------------------------------------------------|
+| `.icon`                                   | Base class for all icon styles.                                        |

@@ -1,0 +1,28 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as ListStories from './List.stories';
+ 
+<Meta of={ListStories} />
+ 
+<Title />
+
+List component for displaying various types of lists: unordered, ordered, unstyled, stepped, inline, and description lists.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Accessibility
+
+Ensure lists are properly structured using semantic HTML elements (`<ul>`, `<ol>`, `<li>`, `<dl>`, `<dt>`, `<dd>`) to enhance accessibility and readability.
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                                  |
+|-------------------------------------------|------------------------------------------------------------------------------|
+| `.list--unstyled`                         | Removes default list styling (bullets or numbers) from the list.             |
+| `.list--stepped`                          | Styles the list as a stepped list, often used for processes or instructions. |
+| `.list--inline`                           | Displays list items inline, horizontally.                                    |

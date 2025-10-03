@@ -1,0 +1,64 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as HeadingsStories from './Headings.stories';
+ 
+<Meta of={HeadingsStories} />
+ 
+<Title />
+
+Headings create clear hierarchical structure for page content. They help with both readability and accessibility.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Heading Classes
+
+You can also use the corresponding class (e.g., \`.h3\`) to make any element look like a heading.
+This is useful when the HTML structure requires a different heading level for semantic reasons,
+but visually you want it to match a different heading style.
+
+**Note:** Using heading classes doesn't change the semantic meaning of an element.
+For accessibility reasons, use actual heading elements (h1-h6) for page structure when possible.
+
+## Usage
+
+HTML headings `<h2>` through `<h6>` are available for use in content (`<h1>` is reserved for the title of the page). Remember to use headings sequentially without skipping a level. An `<h2>` is always followed by an `<h2>` or `<h3>`, and an `<h3>` is followed by an `<h3>` or `<h4>`, etc. For most content, `<h4>`-`<h6>`s aren't necessary, but they are included for rare instances.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Headings must be white or brand blue, depending on background.</li>
+      <li>Heading fonts may be used only for headlines and titles</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Headings can not be used in all caps unless the heading is an acronym.</li>
+      <li>Avoid linked headings when possible.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+Headings must be used in sequential order (i.e., do not skip heading levels) to ensure proper document structure for screen readers and other assistive technologies.
+
+---
+
+## CSS References
+
+| CSS Class                                 | Description                                                            |
+|-------------------------------------------|------------------------------------------------------------------------|
+| `.h1`                                     | Styles the element as a primary heading (h1).                          |
+| `.h2`                                     | Styles the element as a secondary heading (h2).                        |
+| `.h3`                                     | Styles the element as a tertiary heading (h3).                         |
+| `.h4`                                     | Styles the element as a quaternary heading (h4).                       |
+| `.h5`                                     | Styles the element as a quinary heading (h5).                          |
+| `.h6`                                     | Styles the element as a senary heading (h6).                           |

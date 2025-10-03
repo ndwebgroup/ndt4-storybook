@@ -37,7 +37,14 @@
 .code-example p { margin-bottom:0; }
 .code-example--grid .grid > * { background-color:light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding:1rem 2rem; }
 
-.docblock-source.sb-unstyled { margin-top:0; background-color:light-dark(#f9f9f9,#333); border-radius:0; border:1px solid light-dark(#eee,#444); border-top:0; box-shadow:none; }
+.docblock-source.sb-unstyled { margin-top:0; background-color:light-dark(#f9f9f9,rgba(0, 0, 0, 0.75)); border-radius:0; border:1px solid light-dark(#eee,#444); border-top:0; box-shadow:none; }
+.docblock-source .language-html > * { color:light-dark(#000000,#ffffff); }
+.docblock-source .language-html > .token.tag { color:light-dark(rgb(128, 0, 0),rgb(168, 255, 96)); }
+.docblock-source .language-html > .token.attr-name { color:light-dark(rgb(255, 0, 0),rgb(150, 203, 254)); }
+.docblock-source .language-html > .token.attr-value { color:light-dark(rgb(0, 0, 255),rgb(180, 116, 221)); }
+.docblock-source .language-html > .token.punctuation { color:light-dark(rgb(57, 58, 52),rgb(237, 237, 237)); }
+.docblock-source .language-html > .token.comment { color:light-dark(rgb(0, 128, 0),rgb(124, 124, 124)); font-style:italic; }
+
 .sbdocs-wrapper p > code, .sb-docs-wrapper li > code { vertical-align:text-bottom; }
 
 /* Tables */
@@ -100,7 +107,7 @@
 
 /* Lists */
 .list--todo { display:flex; list-style:none; border:var(--border-primary); border-radius:var(--border-radius); width:fit-content; max-width:100%; padding:0; }
-.list--todo > li { width:20rem; max-width:50%; padding:1rem 2rem; border-right:var(--border-primary); }
+.list--todo > li { width:24rem; max-width:50%; padding:1rem 2rem; border-right:var(--border-primary); }
 .list--todo ul { list-style-type:disc; margin:0 0 1rem; font-size:1rem; }
 .list--todo li:last-child { border-right:none; }
 
@@ -115,12 +122,12 @@
 .icon-showcase { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:1rem;
   .icon { margin-bottom:0.5rem; }
 }
-.icon-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ddd; border-radius:3px; width:120px; min-height:120px; text-align:center; }
-.icon-name { font-size:0.8rem; line-height:1.2em; color:#666; max-width:100%; }
+.icon-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-radius:3px; width:120px; min-height:120px; text-align:center; }
+.icon-name { font-size:0.8rem; line-height:1.2em; color:light-dark(#666,#ddd); max-width:100%; }
 
 
 .sticker-showcase { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:1rem;
   .sticker { margin-bottom:0.5rem; }
 }
-.sticker-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ddd; border-radius:3px; width:120px; min-height:120px; text-align:center; }
-.sticker-name { font-size:0.8rem; line-height:1.2em; color:#666; max-width:100%; }
+.sticker-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-radius:3px; width:120px; min-height:120px; text-align:center; }
+.sticker-name { font-size:0.8rem; line-height:1.2em; color:light-dark(#666,#ddd); max-width:100%; }
