@@ -2,7 +2,6 @@ import Dialog from './Dialog.js';
 
 export default {
   title: 'Components/Dialog',
-  tags: ['autodocs'],
   parameters: {
     design: {
       name: "Figma Assets",
@@ -10,11 +9,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3268-4066",
     },
-    docs: {
-      description: {
-        component: 'Dialog components provide modal interfaces for sharing information, notifications, and alerts. They overlay the main content and require user interaction to dismiss.'
-      }
-    }
   },
   argTypes: {
     title: {
@@ -42,7 +36,7 @@ const dialogDecorator = (story) => {
 
       // For each wrapper, setup its own button-dialog connection
       allDialogWrappers.forEach(wrapper => {
-        const toggleButton = wrapper.querySelector('.dialog-toggle-button');
+        const toggleButton = wrapper.querySelector('.dialog-link');
         const dialog = wrapper.querySelector('.dialog-container-preview dialog');
 
         if (toggleButton && dialog) {
@@ -64,7 +58,7 @@ const dialogDecorator = (story) => {
 
   return `
     <div class="dialog-preview-wrapper">
-      <button class="btn dialog-toggle-button">Open Dialog</button>
+      <button class="btn dialog-link">Open Dialog</button>
       <div class="dialog-container-preview">
         ${dialogHTML}
       </div>

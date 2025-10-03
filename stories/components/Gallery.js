@@ -10,7 +10,7 @@ export default function Gallery(props) {
   const count = images.length;
 
   return `
-    <div class="gallery-wrapper ${classes}">
+    <div class="gallery-wrapper${classes ? ' ' + classes : ''}">
       <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${count}">
         ${images.map((image, index) => `
           <li>

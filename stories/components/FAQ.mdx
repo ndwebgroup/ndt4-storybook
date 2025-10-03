@@ -1,0 +1,44 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as FAQStories from './FAQ.stories';
+ 
+<Meta of={FAQStories} />
+ 
+<Title />
+
+The FAQ component displays a list of frequently asked questions with answers, along with optional features like an anchor list and "Back to top" links.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use the FAQ component to provide users with quick access to common questions and answers.</li>
+      <li>Enable the anchor list for easier navigation if there are many questions.</li>
+      <li>Include "Back to top" links for better user experience on long FAQ pages.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Refrain from using complex language or jargon that may confuse users.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## CSS References
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `faq`                             | Main container for the FAQ component.                                                         |
+| `faq-anchors`                     | Anchor list at the top of the FAQ section for quick navigation to questions.                  |
+| `faq-q`                           | Class for each question in the FAQ.                                                           |
+| `faq-a`                           | Class for each answer in the FAQ.                                                             |

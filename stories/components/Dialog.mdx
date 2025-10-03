@@ -1,0 +1,59 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as DialogStories from './Dialog.stories';
+ 
+<Meta of={DialogStories} />
+ 
+<Title />
+
+Dialog components provide modal interfaces for sharing information, notifications, and alerts. They overlay the main content and require user interaction to dismiss.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+Dialog components can be used in various scenarios, including:
+- Displaying important messages or alerts that require user attention.
+- Confirming user actions, such as deletions or submissions.
+- Providing additional information without navigating away from the current page.
+- Displaying people bios or featured content.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Ensure that the dialog content is clear and concise to facilitate quick understanding.</li>
+      <li>Utilize appropriate dialog sizes and layouts based on the content being presented.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Don't overload dialogs with excessive information or complex interactions.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                                     |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| `.dialog--image`                          | Modifier class for Dialogs that include an image.                               |
+| `.dialog--video`                          | Modifier class for Dialogs that include a video.                                |
+| `.dialog--person`                         | Modifier class for Dialogs that include a person bio.                           |
+
+## CSS References
+| CSS Class                                 | Description                                                                     |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| `.dialog`                                 | Container for the Dialog component.                                             |
+| `.dialog-heading`                         | Styles the header section of the Dialog, including title and close button.      |
+| `.dialog-body`                            | Wrapper for the main content area of the Dialog.                                |
+| `.dialog-title`                           | Styles the title text within the Dialog header.                                 |
+| `.dialog-footer`                          | Styles the footer section of the Dialog, typically containing action buttons.   |
+| `.dialog-link`                            | Class for link that opens the Dialog, including hover and focus states.         | 
+| `.dialog-close`                           | Styles the close button in the Dialog header, including hover and focus states. |

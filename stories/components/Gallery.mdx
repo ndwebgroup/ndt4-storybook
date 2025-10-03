@@ -1,0 +1,46 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as GalleryStories from './Gallery.stories';
+ 
+<Meta of={GalleryStories} />
+ 
+<Title />
+
+The Gallery component displays a collection of images that can be viewed in a lightbox.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use the Gallery component to showcase multiple images in an organized manner.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Avoid using the Gallery component for a small number of images.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Modifier Classes
+| Class Name                        | Description                                                        |
+|-----------------------------------|--------------------------------------------------------------------|
+| `gallery--slider`                 | Displays the gallery items in a slider layout.                     |
+| `gallery--tiled`                  | Displays the gallery items in a tiled layout.                      |
+
+## CSS References
+| CSS Class                         | Description                                                        |
+|-----------------------------------|--------------------------------------------------------------------|
+| `gallery-wrapper`                 | Main container for the Gallery component.                          |
+| `gallery-lb`                      | Class for the individual gallery item.                             |

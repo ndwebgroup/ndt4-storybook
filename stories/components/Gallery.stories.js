@@ -13,18 +13,12 @@ const withGalleryResources = (Story) => {
 
 export default {
   title: 'Components/Gallery',
-  tags: ['autodocs'],
   parameters: {
     design: {
       name: "Figma Assets",
       allowFullscreen: true,
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=994-6646",
-    },
-    docs: {
-      description: {
-        component: 'Gallery component displays a collection of images that can be viewed in a lightbox.'
-      }
     },
     layout: 'padded'
   },
@@ -36,8 +30,8 @@ export default {
       control: 'text'
     },
     classes: {
-      name: 'Additional Classes',
-      description: 'Additional CSS classes to apply to the gallery container',
+      name: 'Modifier Classes',
+      description: 'Modifier CSS classes to apply to the gallery container',
       control: 'text'
     },
     images: {
@@ -45,6 +39,11 @@ export default {
       description: 'Array of image objects with thumbnail, fullsize, alt, and caption properties',
       control: 'object'
     }
+  },
+  args: {
+    id: '2',
+    classes: '',
+    images: [] // Images will be provided in individual stories
   }
 };
 
@@ -61,7 +60,6 @@ const createGalleryImages = (count) => {
 export const TwoImages = (args) => {
   return Gallery({
     ...args,
-    id: "2",
     images: createGalleryImages(2)
   });
 };
