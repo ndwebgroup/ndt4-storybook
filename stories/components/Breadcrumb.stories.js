@@ -2,14 +2,6 @@ import Breadcrumb from './Breadcrumb.js';
 
 export default {
   title: 'Components/Breadcrumb',
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: 'Breadcrumbs indicate the current page\'s location within a navigational hierarchy and help users understand where they are in the website\'s structure.'
-      }
-    }
-  },
   argTypes: {
     items: {
       name: 'Breadcrumb Items',

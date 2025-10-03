@@ -1,0 +1,54 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as AvatarStories from './Avatar.stories';
+ 
+<Meta of={AvatarStories} />
+ 
+<Title />
+
+The avatar component is used to display a person's image within a circular border. If an image is not available, a placeholder image will be displayed.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+Avatar components can be used to represent users in a variety of contexts, such as article authors, blockquote cites, and profile pictures. They help to personalize the user experience and make it easier to identify users at a glance.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use high-quality images that are clear and recognizable</li>
+      <li>Include alt text for accessibility</li>
+      <li>Make sure the profile image is cropped to show the face clearly</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Use low-quality or pixelated images</li>
+      <li>Use images that are not appropriate or professional</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+Avatar components should include appropriate alt text for screen readers. If the avatar represents a user, the alt text should include the user's name. If the avatar is purely decorative, an empty alt attribute (alt="") should be used to prevent screen readers from announcing it.
+
+---
+
+## CSS References
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.avatar`                         | Container for the avatar component.                                                           |
+| `.avatar--xs`                     | Applies an extra-small size style to the avatar component.                                    |
+| `.avatar--sm`                     | Applies a smaller size style to the avatar component.                                         |
+| `.avatar--md`                     | Applies a medium size style to the avatar component.                                          |
+| `.avatar--lg`                     | Applies a larger size style to the avatar component.                                          |
+| `.avatar img`                     | Styles the image within the avatar component, ensuring it fits within the circular frame.     |

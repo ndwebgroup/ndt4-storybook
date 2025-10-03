@@ -24,8 +24,7 @@
 /* Preview overrides */
 .sbdocs.sbdocs-preview, .sb-show-main .sbdocs-wrapper { background-color:transparent; }
 .sb-show-main .sbdocs-wrapper { padding-inline:5vw; }
-.sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); box-shadow:light-dark(rgba(0, 0, 0, 0.05),rgba(28,79,143,0.2)) 0px 1px 8px 0px; }
-.sbdocs.sbdocs-content { max-width:none; }
+.sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); }
 .sbdocs.sbdocs-content code { vertical-align:middle; }
 .sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:clamp(2.5rem,3.5vw + 1rem,3.5rem); color:light-dark(var(--brand-blue),white) }
 .sb-section-title { border-bottom:1px solid light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding-bottom:1em; margin-bottom:3em; }
@@ -38,13 +37,17 @@
 .code-example p { margin-bottom:0; }
 .code-example--grid .grid > * { background-color:light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding:1rem 2rem; }
 
-.docblock-source.sb-unstyled { margin-top:0; background-color:#f9f9f9; border-radius:0; border:1px solid #eee; border-top:0; box-shadow:none; }
+.docblock-source.sb-unstyled { margin-top:0; background-color:light-dark(#f9f9f9,#333); border-radius:0; border:1px solid light-dark(#eee,#444); border-top:0; box-shadow:none; }
 .sbdocs-wrapper p > code, .sb-docs-wrapper li > code { vertical-align:text-bottom; }
 
 /* Tables */
-.docblock-argstable-head {
+.sbdocs-content table { font-size:1rem; }
+.sbdocs-content .docblock-argstable-head {
   tr { border:none; }
   th { background-color:#ddd; color:#fff; }
+}
+.sbdocs-content .docblock-argstable-body {
+  filter: none;;
 }
 
 /* Typography */
@@ -96,9 +99,9 @@
 .color-table .dark { color-scheme:dark; }
 
 /* Lists */
-.list--todo { display:flex; list-style:none; border:var(--border-primary); border-radius:var(--border-radius); width:fit-content; max-width:100%; }
+.list--todo { display:flex; list-style:none; border:var(--border-primary); border-radius:var(--border-radius); width:fit-content; max-width:100%; padding:0; }
 .list--todo > li { width:20rem; max-width:50%; padding:1rem 2rem; border-right:var(--border-primary); }
-.list--todo ul { list-style-type:disc; margin:0 0 1rem; }
+.list--todo ul { list-style-type:disc; margin:0 0 1rem; font-size:1rem; }
 .list--todo li:last-child { border-right:none; }
 
 /* Thumbs */

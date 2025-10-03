@@ -1,4 +1,4 @@
-import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
  
 import * as AccordionStories from './Accordion.stories';
  
@@ -6,9 +6,7 @@ import * as AccordionStories from './Accordion.stories';
  
 <Title />
 
-<Description />
-
---- 
+The `<details>` element is a way to toggle the visibility of content. When closed, only the `<summary>` element is visible. When expanded, all content is visible. FAQ pages are one example where a list of `<details>` may be appropriate.
 
 <Primary />
 
@@ -18,21 +16,20 @@ import * as AccordionStories from './Accordion.stories';
 
 ## Usage
 
-**TODO** Vestibulum a commodo adipiscing suspendisse parturient suscipit eros a et in et etiam accumsan tellus libero curabitur habitasse cubilia himenaeos eget mollis.Praesent vehicula nisi pharetra cras lectus vel suspendisse morbi convallis curabitur.
+Accordion components can be used to hide and show related content, such as FAQs, Program listings, or additional information. They help to keep the page clean and organized by allowing users to expand and collapse sections as needed.
 
 <ul className="list--todo">
   <li>
     ### Dos
     <ul>
-      <li>Lorem</li>
-      <li>Ipsum</li>
+      <li>Accordions should be used to hide non-critical information that users may want to access on demand.</li>
+      <li>Use clear and concise titles for each accordion panel to help users understand the content</li>
     </ul>
   </li>
   <li>
     ### Donts
     <ul>
-      <li>Lorem</li>
-      <li>Ipsum</li>
+      <li>Don't use accordions for content that is already well-organized or easy to scan.</li>
     </ul>
   </li>
 </ul>
@@ -43,3 +40,14 @@ import * as AccordionStories from './Accordion.stories';
 
 - Match each accordion heading `<summary>` to the surrounding page structure. For example, if the accordion sits within a section that has an `<h2>` heading, use `<h3>` for each panel title in your markup.
 - Large accordions create long tab stops and slow navigation for keyboard users. Group related content, or split content across sections, to reduce the total number of panels.
+
+---
+
+## CSS References
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.accordion`                      | Container for the accordion component.                                                        |
+| `.accordion--highlight`           | Applies a highlight style to the accordion component.                                         |
+| `.accordion--lg`                  | Applies a larger size style to the accordion component.                                       |
+| `.accordion summary`              | Styles the summary element, which serves as the clickable header for each accordion item.     |
+| `.accordion[open] summary`        | Styles the summary element when the accordion item is expanded.                               |
