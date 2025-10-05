@@ -3,7 +3,7 @@ import Radio from './Radio.js';
 
 export default {
   title: 'Components/Form/Radio',
-  tags: ['autodocs'],
+  tags: ['stable'],
   argTypes: {
     note: { name: 'Note'},
     label: { name: 'Label'},

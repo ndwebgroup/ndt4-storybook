@@ -2,6 +2,7 @@ import Dialog from './Dialog.js';
 
 export default {
   title: 'Components/Dialog',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

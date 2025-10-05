@@ -2,7 +2,7 @@ import Select from './Select';
 
 export default {
   title: 'Components/Form/Select',
-  tags: ['autodocs'],
+  tags: ['stable'],
   component: Select,
   argTypes: {
     note: { name: 'Note'},

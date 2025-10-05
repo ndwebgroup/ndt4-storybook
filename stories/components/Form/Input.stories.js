@@ -3,7 +3,7 @@ import Input from './Input.js';
 
 export default {
   title: 'Components/Form/Input',
-  tags: ['autodocs'],
+  tags: ['stable'],
   argTypes: {
     type: { name: 'Input Type', control:'select', options: ['date', 'email', 'number', 'password', 'text']},
     placeholder: { name: 'Placeholder Text'},

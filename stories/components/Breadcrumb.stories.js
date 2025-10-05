@@ -2,6 +2,7 @@ import Breadcrumb from './Breadcrumb.js';
 
 export default {
   title: 'Components/Breadcrumb',
+  tags: ['stable'],
   argTypes: {
     items: {
       name: 'Breadcrumb Items',

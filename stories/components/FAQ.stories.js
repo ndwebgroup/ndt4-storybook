@@ -2,6 +2,7 @@ import FAQ from './FAQ';
 
 export default {
   title: 'Components/FAQ',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

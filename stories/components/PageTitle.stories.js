@@ -1,9 +1,8 @@
-import { use } from 'react';
 import PageTitle from './PageTitle.js';
 
 export default {
   title: 'Components/Page Title',
-  tags: ['autodocs'],
+  tags: ['stable'],
   component: PageTitle,
   parameters: {
     docs: {

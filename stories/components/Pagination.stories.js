@@ -2,7 +2,7 @@ import Pagination from './Pagination.js';
 
 export default {
   title: 'Components/Pagination',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

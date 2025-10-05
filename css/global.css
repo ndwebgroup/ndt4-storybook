@@ -112,6 +112,13 @@
 .list--todo ul { list-style-type:disc; margin:0 0 1rem; font-size:1rem; }
 .list--todo li:last-child { border-right:none; }
 
+/* Badge */
+.badge { display:inline-block; font-size:0.9rem; line-height:1; text-transform:uppercase; padding:0.5rem; margin-block-end:2rem; border-radius:4px; background-color:#eee; }
+.badge--ready { background-color:var(--brand-green); color:#fff; }
+.badge--in-progress { background-color:var(--brand-gold); color:#fff; }
+.badge--deprecated { background-color:var(--brand-blue-dark); color:#fff; }
+.badge--experimental { background-color:var(--brand-blue-light); color:#fff; }
+
 /* Thumbs */
 .thumb-list { margin-block-end:3rem; }
 .thumb-list li { font-size:0.9rem; }

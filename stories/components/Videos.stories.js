@@ -2,7 +2,7 @@ import Videos from './Videos';
 
 export default {
   title: 'Components/Videos',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

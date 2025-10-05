@@ -2,7 +2,7 @@ import Quote from './Quote.js';
 
 export default {
   title: 'Components/Quote',
-  tags: ['autodocs'],
+  tags: ['stable'],
   argTypes: {
     text: { name:'Quote Text',},
     cite: { name:'Show Cite',},

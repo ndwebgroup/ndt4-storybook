@@ -2,7 +2,9 @@ import Button from './Button.js';
 
 export default {
   title: 'Components/Buttons/Button',
+  tags: ['stable'],
   parameters: {
+    layout: 'centered',
   },
   argTypes: {
     label: {

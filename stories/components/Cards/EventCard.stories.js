@@ -2,6 +2,7 @@ import EventCard from './EventCard';
 
 export default {
   title: 'Components/Cards/Card (Event)',
+  tags: ['stable'],
   argTypes: {
     title: { name: 'Event Title' },
     featuredImage: { name: 'Featured Image', control: 'boolean' },

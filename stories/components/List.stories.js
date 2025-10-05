@@ -2,6 +2,7 @@ import List from './List.js';
 
 export default {
   title: 'Components/List',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

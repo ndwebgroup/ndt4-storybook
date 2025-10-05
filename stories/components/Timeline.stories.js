@@ -3,7 +3,7 @@ import Timeline from './Timeline.js';
 
 export default {
   title: 'Components/Timeline',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

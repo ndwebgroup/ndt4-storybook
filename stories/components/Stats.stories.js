@@ -2,7 +2,7 @@ import Stats from './Stats.js';
 
 export default {
   title: 'Components/Stats',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

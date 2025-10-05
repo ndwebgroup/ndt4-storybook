@@ -2,6 +2,7 @@ import Card from './Card.js';
 
 export default {
   title: 'Components/Cards/Card (Default)',
+  tags: ['stable'],
   argTypes: {
     layout: { name:'Card Layout', control: 'select', options: ['default','horizontal','stacked', 'compact']},
     link: { name:'Card Link',},

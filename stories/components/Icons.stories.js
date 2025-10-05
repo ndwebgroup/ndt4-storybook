@@ -3,6 +3,7 @@ import { getAvailableIcons } from '../utils/iconUtils.js';
 
 export default {
   title: 'Components/Icons',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

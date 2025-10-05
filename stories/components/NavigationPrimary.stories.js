@@ -2,7 +2,7 @@ import NavigationPrimary, { defaultNavigationItems } from './NavigationPrimary.j
 
 export default {
   title: 'Components/Navigation (Primary)',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

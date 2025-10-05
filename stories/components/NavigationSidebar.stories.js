@@ -2,7 +2,7 @@ import NavigationSidebar from './NavigationSidebar.js';
 
 export default {
   title: 'Components/Navigation (Sidebar)',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

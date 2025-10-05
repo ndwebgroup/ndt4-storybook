@@ -14,6 +14,7 @@ const addCardStyles = () => {
 
 export default {
   title: 'Components/Cards/Card (Featured)',
+  tags: ['stable'],
   argTypes: {
     link: { name:'Card Link',},
     label: { name:'Card Label',},

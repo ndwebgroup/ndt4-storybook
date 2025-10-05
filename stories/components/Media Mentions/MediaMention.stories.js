@@ -2,7 +2,7 @@ import MediaMention from './MediaMention';
 
 export default {
   title: 'Components/Media Mentions/Media Mention',
-  tags: ['autodocs'],
+  tags: ['modified'],
   argTypes: {
     headingTag: {
       control: { type: 'select' },

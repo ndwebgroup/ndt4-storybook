@@ -2,6 +2,7 @@ import Headings from './Headings';
 
 export default {
   title: 'Components/Headings',
+  tags: ['stable'],
   component: Headings,
   parameters: {
   },

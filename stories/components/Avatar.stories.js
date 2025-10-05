@@ -2,6 +2,7 @@ import Avatar from './Avatar.js';
 
 export default {
   title: 'Components/Avatar',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

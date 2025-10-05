@@ -2,7 +2,7 @@ import SocialShare from './SocialShare';
 
 export default {
   title: 'Components/SocialShare',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

@@ -3,7 +3,7 @@ import Checkbox from './Checkbox.js';
 
 export default {
   title: 'Components/Form/Checkbox',
-  tags: ['autodocs'],
+  tags: ['stable'],
   argTypes: {
     note: { name: 'Note'},
     label: { name: 'Label'},

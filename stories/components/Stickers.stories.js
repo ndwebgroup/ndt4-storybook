@@ -3,7 +3,7 @@ import { getAvailableStickers } from '../utils/stickerUtils.js';
 
 export default {
   title: 'Components/Stickers',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     docs: {
       description: {

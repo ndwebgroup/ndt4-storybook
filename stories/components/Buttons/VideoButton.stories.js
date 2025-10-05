@@ -2,6 +2,10 @@ import VideoButton from './VideoButton.js';
 
 export default {
   title: 'Components/Buttons/Video Button',
+  tags: ['stable'],
+  parameters: {
+    layout: 'centered',
+  },
   argTypes: {
     label: {
       name:'Button Label',

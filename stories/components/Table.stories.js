@@ -2,7 +2,7 @@ import Table from './Table.js';
 
 export default {
   title: 'Components/Table',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

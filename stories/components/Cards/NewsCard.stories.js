@@ -2,6 +2,7 @@ import NewsCard from './NewsCard.js';
 
 export default {
   title: 'Components/Cards/Card (News Article)',
+  tags: ['stable'],
   argTypes: {
     title: { name: 'Article Title' },
     excerpt: { name: 'Article Excerpt' },

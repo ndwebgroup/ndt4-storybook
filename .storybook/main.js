@@ -10,7 +10,7 @@ export default {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": ["@storybook/addon-designs", "@vueless/storybook-dark-mode", {
+  "addons": ["@storybook/addon-designs", "@vueless/storybook-dark-mode", "@etchteam/storybook-addon-status", {
     name: '@storybook/addon-docs',
     options: {
       mdxPluginOptions: {

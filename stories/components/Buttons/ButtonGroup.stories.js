@@ -2,7 +2,9 @@ import ButtonGroup from './ButtonGroup.js';
 
 export default {
   title: 'Components/Buttons/Button Group',
+  tags: ['stable'],
   parameters: {
+    layout: 'centered',
   },
   argTypes: {
     items: {

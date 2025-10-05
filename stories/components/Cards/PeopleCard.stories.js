@@ -2,6 +2,7 @@ import PeopleCard from './PeopleCard.js';
 
 export default {
   title: 'Components/Cards/Card (People)',
+  tags: ['stable'],
   argTypes: {
     summary: { name:'Card Summary',},
     placeholder: { name:'Placeholder Image',},

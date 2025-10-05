@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@etchteam/storybook-addon-status": "^7.0.1",
     "@storybook/addon-designs": "^10.0.2",
     "@storybook/addon-docs": "^9.1.10",
     "@storybook/html-vite": "^9.1.10",

@@ -3,7 +3,7 @@ import Textarea from './Textarea.js';
 
 export default {
   title: 'Components/Form/Textarea',
-  tags: ['autodocs'],
+  tags: ['stable'],
   argTypes: {
     rows: { name: 'Row Count', control:'select', options: ['3', '4', '5', '6']},
     placeholder: { name: 'Placeholder Text'},

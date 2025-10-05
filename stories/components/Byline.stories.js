@@ -2,6 +2,7 @@ import Byline from './Byline';
 
 export default {
   title: 'Components/Byline',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

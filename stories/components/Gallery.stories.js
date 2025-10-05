@@ -13,6 +13,7 @@ const withGalleryResources = (Story) => {
 
 export default {
   title: 'Components/Gallery',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

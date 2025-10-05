@@ -3,7 +3,7 @@ import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/bl
 import * as ListStories from './List.stories';
  
 <Meta of={ListStories} />
- 
+
 <Title />
 
 List component for displaying various types of lists: unordered, ordered, unstyled, stepped, inline, and description lists.
@@ -13,6 +13,24 @@ List component for displaying various types of lists: unordered, ordered, unstyl
 <Controls />
 
 ---
+
+## Usage
+<ul class="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use an “Unordered List” when you don’t need to convey a specific order for list items</li>
+      <li>Use an “Ordered List” when the sequence or count of items is important</li>
+      <li>Use a “Description List” with terms and descriptions, such as a glossary, or to display metadata, such as contact details</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Don't overruse lists for long-form or narrative content.</li>
+    </ul>
+  </li>
+</ul>
 
 ## Accessibility
 

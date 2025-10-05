@@ -2,7 +2,7 @@ import Notice from './Notice.js';
 
 export default {
   title: 'Components/Notice',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

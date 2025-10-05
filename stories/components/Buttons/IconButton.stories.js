@@ -2,7 +2,7 @@ import IconButton from './IconButton.js';
 
 export default {
   title: 'Components/Buttons/Icon Button',
-  tags: ['autodocs'],
+  tags: ['stable'],
   argTypes: {
     label: {
       name:'Reveal Text',

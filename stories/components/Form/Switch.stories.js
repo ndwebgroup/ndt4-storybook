@@ -2,7 +2,7 @@ import Switch from './Switch';
 
 export default {
   title: 'Components/Form/Switch',
-  tags: ['autodocs'],
+  tags: ['stable'],
   component: Switch,
   argTypes: {
     note: { name: 'Note'},

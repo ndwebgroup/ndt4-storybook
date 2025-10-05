@@ -2,6 +2,7 @@ import Accordion from './Accordion';
 
 export default {
   title: 'Components/Accordion',
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

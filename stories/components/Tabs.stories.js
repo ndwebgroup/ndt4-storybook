@@ -40,7 +40,7 @@ const tabsDecorator = (story) => {
 
 export default {
   title: 'Components/Tabs',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",
