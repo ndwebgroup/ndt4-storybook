@@ -5,7 +5,10 @@ export default {
   component: EventLanding,
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen'
+    layout: 'fullscreen',
+    docs: {
+      toc: { disable: true }
+    }
   },
   argTypes: {
     title: {
