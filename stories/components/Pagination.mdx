@@ -1,0 +1,29 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+<Title />
+
+The Pagination component allows users to navigate through multiple pages of content. It displays page numbers, next/previous buttons, and can include ellipses for large sets of pages.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+Pagination should be used when content is divided into discrete pages, such as search results or articles.
+
+<ul className="list--todo">
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Pagination styles should not be altered.</li>
+      <li>Do not use pagination for small datasets that can fit on a single page.</li>
+    </ul>
+  </li>
+</ul>

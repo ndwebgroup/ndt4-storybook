@@ -30,22 +30,6 @@ const withSvgSprite = (Story) => {
       });
   }
 
-  const addCopyright = () => {
-    const existing = document.getElementById('ndt4-copyright');
-    if (!existing) {
-      const footer = document.createElement('footer');
-      footer.id = 'ndt4-copyright';
-      footer.style.fontSize = '0.9rem';
-      footer.style.padding = '1rem 5vw 2rem';
-      footer.style.color = '#666';
-      footer.innerHTML = '&copy; ' + new Date().getFullYear() + ' University of Notre Dame. All rights reserved.';
-      document.body.appendChild(footer);
-    }
-  };
-
-  // Add copyright footer after a short delay to ensure Storybook has rendered
-  addCopyright();
-
   // Only inject the sticker sprite if it hasn't been injected already
   if (!document.getElementById('nd-stickers-sprite')) {
     // Fetch the SVG sprite content

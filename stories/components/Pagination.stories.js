@@ -10,11 +10,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3327-22975",
     },
-    docs: {
-      description: {
-        component: 'The Pagination component allows users to navigate through multiple pages of content. It displays page numbers, next/previous buttons, and can include ellipses for large sets of pages.'
-      }
-    }
   },
   argTypes: {
     currentPage: {

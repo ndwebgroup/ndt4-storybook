@@ -4,13 +4,6 @@ export default {
   title: 'Components/Page Title',
   tags: ['stable'],
   component: PageTitle,
-  parameters: {
-    docs: {
-      description: {
-        component: ``,
-      },
-    },
-  },
   argTypes: {
     title: {
       control: 'text',

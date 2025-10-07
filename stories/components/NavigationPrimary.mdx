@@ -1,0 +1,33 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as NavigationPrimaryStories from './NavigationPrimary.stories';
+ 
+<Meta of={NavigationPrimaryStories} />
+
+<Title />
+
+The Primary Navigation component provides a simple and accessible way to create a navigation menu. It is designed to be used as part of the header or main navigation of a website.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>A top navigation may be used only when the number of items (and characters) allows for it. If the top navigation is not able to be displayed normally at 960px, or if any of the navigation items break to a second line, a side navigation must be used.</li>
+      <li>Use clear and descriptive labels for each navigation item.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>The style and location of site navigation may not be altered.</li>
+      <li>Do not use more than one primary navigation on a page.</li>
+    </ul>
+  </li>
+</ul>

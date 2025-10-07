@@ -1,0 +1,59 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as PageTitleStories from './PageTitle.stories';
+ 
+<Meta of={PageTitleStories} />
+
+<Title />
+
+The Page Title component is used to display the main title of a page.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The Page Title component can be used as follows:
+
+```jsx
+import PageTitle from './PageTitle';
+
+const MyPage = () => {
+  return (
+    <div>
+      <PageTitle title="My Page Title" size="lg" />
+    </div>
+  );
+};
+```
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use clear and concise language in your page titles.</li>
+      <li>Ensure the page title accurately reflects the content of the page.</li>
+      <li>A paragraph with the `.page-title` class should be used if the page h1 is styled as a `page-label`</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Do not use decorative elements or icons within the page title.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+ ## Modifier Classes
+ | CSS Class                                 | Description                                        |
+|--------------------------------------------|----------------------------------------------------|
+| `.page-title--xs`                          | Styles the page title with an extra small size.    |
+| `.page-title--sm`                          | Styles the page title with a small size.           |
+| `.page-title--md`                          | Styles the page title with a medium size.          |
+| `.page-title--lg`                          | Styles the page title with a large size.           |
+| `.page-title--xl`                          | Styles the page title with an extra large size.    |

@@ -2,7 +2,7 @@ import Notice from './Notice.js';
 
 export default {
   title: 'Components/Notice',
-  tags: ['stable'],
+  tags: ['modified'],
   parameters: {
     design: {
       name: "Figma Assets",
@@ -10,11 +10,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3327-22975",
     },
-    docs: {
-      description: {
-        component: 'Notices provide contextual feedback messages for typical user actions with the handful of available and flexible notice messages.'
-      }
-    }
   },
   argTypes: {
     variant: {

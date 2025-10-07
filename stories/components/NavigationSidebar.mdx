@@ -1,0 +1,32 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as NavigationSidebarStories from './NavigationSidebar.stories';
+ 
+<Meta of={NavigationSidebarStories} />
+
+<Title />
+
+The Sidebar Navigation component provides a vertical list of links for site navigation, supporting multiple levels of nested items and active states for the current page.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use clear and descriptive labels for each navigation item.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>The style and location of sidebar navigation may not be altered.</li>
+      <li>Do not use more than one sidebar navigation on a page.</li>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,51 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as NoticeStories from './Notice.stories';
+ 
+<Meta of={NoticeStories} />
+
+<Title />
+
+Notices provide contextual feedback messages for typical user actions with the handful of available and flexible notice messages.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use a notice for highlighting important information that you want to relay to your users.</li>
+      <li>Use clear and concise language in your notice messages.</li>
+      <li>For page wide notice, include role="alert" to ensure screen readers announce the content.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Do not use more than one primary notice on a page.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+The inclusion of role="alert" will assist screen readers in announcing this content ahead of other information, so this component should be used with caution.
+
+---
+
+ ## Modifier Classes
+ | CSS Class                                 | Description                                 |
+|--------------------------------------------|---------------------------------------------|
+| `.notice--primary`                         | Styles the notice with a primary theme.     |
+| `.notice--secondary`                       | Styles the notice with a secondary theme.   |
+| `.notice--success`                         | Styles the notice with a success theme.     |
+| `.notice--danger`                          | Styles the notice with a danger theme.      |
+| `.notice--warning`                         | Styles the notice with a warning theme.     |
+| `.notice--info`                            | Styles the notice with an info theme.       |

@@ -29,7 +29,7 @@
 /* Preview overrides */
 .sbdocs.sbdocs-preview, .sb-show-main .sbdocs-wrapper { background-color:transparent; }
 .sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); }
-.manual-full .sbdocs-content { max-width:none; }
+
 .sbdocs.sbdocs-content code { vertical-align:middle; }
 .sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:clamp(2.5rem,3.5vw + 1rem,3.5rem); color:light-dark(var(--brand-blue),white) }
 .sb-section-title { border-bottom:1px solid light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding-bottom:1em; margin-bottom:3em; }

@@ -10,11 +10,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=1663-12974",
     },
-    docs: {
-      description: {
-        component: 'The Primary Navigation component provides a simple and accessible way to create a navigation menu. It is designed to be used as part of the header or main navigation of a website.'
-      }
-    }
   },
   argTypes: {
     items: {
