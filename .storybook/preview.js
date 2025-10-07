@@ -30,6 +30,22 @@ const withSvgSprite = (Story) => {
       });
   }
 
+  const addCopyright = () => {
+    const existing = document.getElementById('ndt4-copyright');
+    if (!existing) {
+      const footer = document.createElement('footer');
+      footer.id = 'ndt4-copyright';
+      footer.style.fontSize = '0.9rem';
+      footer.style.padding = '1rem 5vw 2rem';
+      footer.style.color = '#666';
+      footer.innerHTML = '&copy; ' + new Date().getFullYear() + ' University of Notre Dame. All rights reserved.';
+      document.body.appendChild(footer);
+    }
+  };
+
+  // Add copyright footer after a short delay to ensure Storybook has rendered
+  addCopyright();
+
   // Only inject the sticker sprite if it hasn't been injected already
   if (!document.getElementById('nd-stickers-sprite')) {
     // Fetch the SVG sprite content
@@ -66,7 +82,7 @@ const withNDT4Script = (Story) => {
   if (!document.getElementById('ndt4-script')) {
     const script = document.createElement('script');
     script.id = 'ndt4-script';
-    script.src = '../js/global.js';
+    script.src = '../../js/global.js';
     document.body.appendChild(script);
   }
 
@@ -115,7 +131,7 @@ export default {
 /*!
  * Load ND icons
  * Replaces a `span` with the `.icon` class
- * <span class="icon" data-icon="calendar"></span>
+ * <span className="icon" data-icon="calendar"></span>
  */
 const loadIcons = () => {
   let icons = document.querySelectorAll('span.icon');

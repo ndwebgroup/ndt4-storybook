@@ -52,6 +52,7 @@ export const HeadingClasses = {
   },
 };
 
+
 // Individual heading examples
 export const Heading1 = {
   args: {

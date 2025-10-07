@@ -13,7 +13,7 @@ function getURLParameter(param, href){
 /*!
  * Convert icons
  * Replaces a `span` with the `.icon` class
- * <span class="icon" data-icon="calendar"></span>
+ * <span className="icon" data-icon="calendar"></span>
  */
 (function(){
   var icons = document.querySelectorAll('span.icon');
@@ -115,7 +115,7 @@ function getURLParameter(param, href){
 /*!
  * Video Placeholder
  * Uses a link with the class `video` and a child image
- * <a class="video" href="https://www.youtube.com/watch?v=YTID"><img src="...">Optional text</a>
+ * <a className="video" href="https://www.youtube.com/watch?v=YTID"><img src="...">Optional text</a>
  * v2025-05-19
  */
 (function(){
