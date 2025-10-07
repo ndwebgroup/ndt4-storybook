@@ -4,8 +4,7 @@ export default {
   title: 'Components/Headings',
   tags: ['stable'],
   component: Headings,
-  parameters: {
-  },
+
   argTypes: {
     text: {
       control: 'text',
@@ -19,7 +18,7 @@ export default {
       control: 'boolean',
       description: 'Whether to use a p tag with heading class instead of actual heading element',
     },
-  },
+  }
 };
 
 // Group 1: All headings using the actual heading tags

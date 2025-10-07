@@ -92,8 +92,7 @@ const withNDT4Script = (Story) => {
 export default {
   parameters: {
     viewport: {
-      viewports: INITIAL_VIEWPORTS,
-      defaultViewport: 'responsive',
+      options: INITIAL_VIEWPORTS
     },
     controls: {
       matchers: {
@@ -102,7 +101,7 @@ export default {
       },
     },
     backgrounds: {
-      disable: true,
+      disabled: true,
     },
     docs: {
       codePanel: true,
@@ -125,7 +124,14 @@ export default {
   },
 
   decorators: [withSvgSprite, withNDT4Script],
-  tags: ['autodocs']
+  tags: ['autodocs'],
+
+  initialGlobals: {
+    viewport: {
+      value: 'responsive',
+      isRotated: false
+    }
+  }
 };
 
 /*!

@@ -3,8 +3,7 @@ import ButtonList from './ButtonList.js';
 export default {
   title: 'Components/Buttons/Button List',
   tags: ['stable'],
-  parameters: {
-  },
+
   argTypes: {
     items: {
       name: 'Button List Items',
@@ -12,9 +11,10 @@ export default {
       control: 'object'
     },
   },
+
   args: {
     // Default args for all stories
-  },
+  }
 };
 
 const exampleItems = [
