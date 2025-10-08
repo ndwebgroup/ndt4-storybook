@@ -4,6 +4,11 @@ export default {
   title: 'Components/Buttons/Button',
   tags: ['stable'],
   parameters: {
+    docs: {
+      description: {
+        component: 'The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, or navigating to another page.'
+      }
+    },
     layout: 'centered',
   },
   argTypes: {

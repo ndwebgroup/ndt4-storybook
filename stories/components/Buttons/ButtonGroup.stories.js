@@ -4,6 +4,11 @@ export default {
   title: 'Components/Buttons/Button Group',
   tags: ['stable'],
   parameters: {
+    docs: {
+      description: {
+        component: 'The Button Group component is used to group related buttons together, providing a cohesive user experience.'
+      }
+    },
     layout: 'centered',
   },
   argTypes: {

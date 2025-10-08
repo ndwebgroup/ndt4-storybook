@@ -3,6 +3,13 @@ import PeopleCard from './PeopleCard.js';
 export default {
   title: 'Components/Cards/Card (People)',
   tags: ['stable'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'The People Card component is designed to showcase individual profiles in a clean and organized manner. It includes options for displaying the person\'s name, title, contact information, and a brief biography. The card can be customized with different layouts such as default, horizontal, stacked, and compact to fit various design needs.'
+      }
+    },
+  },
   argTypes: {
     summary: { name:'Card Summary',},
     placeholder: { name:'Placeholder Image',},

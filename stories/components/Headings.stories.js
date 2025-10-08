@@ -4,7 +4,13 @@ export default {
   title: 'Components/Headings',
   tags: ['stable'],
   component: Headings,
-
+  parameters: {
+    docs: {
+      description: {
+        component: 'Headings create clear hierarchical structure for page content. They help with both readability and accessibility.'
+      }
+    },
+  },
   argTypes: {
     text: {
       control: 'text',

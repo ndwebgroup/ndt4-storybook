@@ -4,6 +4,11 @@ export default {
   title: 'Components/Buttons/Video Button',
   tags: ['stable'],
   parameters: {
+    docs: {
+      description: {
+        component: 'The Video Button component is used to display a button with a video icon, providing a cohesive user experience.'
+      }
+    },
     layout: 'centered',
   },
   argTypes: {

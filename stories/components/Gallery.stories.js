@@ -21,6 +21,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=994-6646",
     },
+    docs: {
+      description: {
+        component: 'The Gallery component displays a collection of images that can be viewed in a lightbox.'
+      }
+    },
     layout: 'padded'
   },
   decorators: [withGalleryResources],

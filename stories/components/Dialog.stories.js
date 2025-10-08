@@ -10,6 +10,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3268-4066",
     },
+    docs: {
+      description: {
+        component: 'Dialog components provide modal interfaces for sharing information, notifications, and alerts. They overlay the main content and require user interaction to dismiss.'
+      }
+    }
   },
   argTypes: {
     title: {

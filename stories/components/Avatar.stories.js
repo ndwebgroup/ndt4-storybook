@@ -10,6 +10,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3299-1983",
     },
+    docs: {
+      description: {
+        component: 'The avatar component is used to display a person\'s image within a circular border. If an image is not available, a placeholder image will be displayed.'
+      }
+    }
   },
   argTypes: {
     size: {

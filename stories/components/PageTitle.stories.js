@@ -4,6 +4,13 @@ export default {
   title: 'Components/Page Title',
   tags: ['stable'],
   component: PageTitle,
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Page Title component is used to display the main title of a page.'
+      }
+    },
+  },
   argTypes: {
     title: {
       control: 'text',

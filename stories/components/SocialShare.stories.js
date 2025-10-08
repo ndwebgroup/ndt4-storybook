@@ -10,6 +10,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=3327-23046",
     },
+    docs: {
+      description: {
+        component: 'Social share component allows users to easily share content on various platforms.'
+      }
+    },
   },
   argTypes: {
     url: {

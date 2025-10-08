@@ -3,6 +3,13 @@ import IconButton from './IconButton.js';
 export default {
   title: 'Components/Buttons/Icon Button',
   tags: ['stable'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Icon Button component is used to display a button with an icon, providing a cohesive user experience.'
+      }
+    },
+  },
   argTypes: {
     label: {
       name:'Reveal Text',

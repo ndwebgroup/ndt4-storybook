@@ -16,6 +16,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/NDT-4.0-Beta?node-id=1013-1894",
     },
+    docs: {
+      description: {
+        component: 'Quotes are use `blockquote` elements to highlight key testimonials or statements from individuals or organizations, often accompanied by an image and citation.'
+      }
+    },
   },
   args: {
     cite:true,

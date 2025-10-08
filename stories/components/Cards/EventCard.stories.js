@@ -3,6 +3,13 @@ import EventCard from './EventCard';
 export default {
   title: 'Components/Cards/Card (Event)',
   tags: ['stable'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Event Cards are designed to highlight upcoming events, providing key details such as the event title, date, time, location, and a brief description. Event Cards can be displayed in various layouts to suit different design needs.'
+      }
+    },
+  },
   argTypes: {
     title: { name: 'Event Title' },
     featuredImage: { name: 'Featured Image', control: 'boolean' },

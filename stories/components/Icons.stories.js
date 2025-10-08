@@ -11,6 +11,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=4009-3904",
     },
+    docs: {
+      description: {
+        component: 'SVG icons from the Notre Dame icon set that can be used across components.'
+      }
+    },
   },
   argTypes: {
     icons: {

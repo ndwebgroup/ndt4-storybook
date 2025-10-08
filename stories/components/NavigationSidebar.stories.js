@@ -10,6 +10,11 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=1663-12974",
     },
+    docs: {
+      description: {
+        component: 'The Sidebar Navigation component provides a vertical list of links for site navigation, supporting multiple levels of nested items and active states for the current page.'
+      }
+    }
   },
   argTypes: {
     items: {

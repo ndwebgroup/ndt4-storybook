@@ -3,7 +3,13 @@ import ButtonList from './ButtonList.js';
 export default {
   title: 'Components/Buttons/Button List',
   tags: ['stable'],
-
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Button List component is used to display a list of related buttons, providing a cohesive user experience.'
+      }
+    },
+  },
   argTypes: {
     items: {
       name: 'Button List Items',
