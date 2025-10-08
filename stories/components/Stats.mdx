@@ -1,0 +1,48 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as StatsStories from './Stats.stories';
+
+<Meta of={StatsStories} />
+
+<Title />
+
+Stats display numerical data with optional descriptions and stickers.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The Stats component can be used to display key metrics and data points in a visually appealing way.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Utilize stickers to draw attention to specific stats.</li>
+      <li>Ensure the stats are relevant and up-to-date.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Avoid cluttering the component with too many stats.</li>
+      <li>Do not alter the core design of the Stats component.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                  |
+|-------------------------------------------|--------------------------------------------------------------|
+| `.stat-item--center`                      | Centers the content of the stat item.                        |
+| `.stat-value--underlined`                 | Adds an underline to the stat value.                         |
+| `.stat-value--xs`                         | Applies extra small text size to the stat value.             |
+| `.stat-value--sm`                         | Applies small text size to the stat value.                   |
+| `.stat-value--md`                         | Applies medium text size to the stat value.                  |
+| `.stat-value--lg`                         | Applies large text size to the stat value.                   |

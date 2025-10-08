@@ -1,0 +1,39 @@
+import { Title, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as StickersStories from './Stickers.stories';
+
+<Meta of={StickersStories} />
+
+<Title />
+
+SVG stickers from the Notre Dame sticker set that can be used across components.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+The Stickers component can be used to add visual interest and branding elements to your application. They can be placed in various components to enhance the user interface.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Stickers should be SVGs to ensure scalability and rendering for light and dark themes.</li>
+      <li>Choose stickers that align with the context and purpose of the component.</li>
+      <li>Maintain consistent styling with the overall design theme and other stickers.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                  |
+|-------------------------------------------|--------------------------------------------------------------|
+| `.sticker--sm`                            | Applies small size to the sticker.                           |
+| `.sticker--md`                            | Applies medium size to the sticker.                          |
+| `.sticker--lg`                            | Applies large size to the sticker.                           |
+| `.sticker--xl`                            | Applies extra large size to the sticker.                     |

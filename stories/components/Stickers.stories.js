@@ -4,13 +4,6 @@ import { getAvailableStickers } from '../utils/stickerUtils.js';
 export default {
   title: 'Components/Stickers',
   tags: ['stable'],
-  parameters: {
-    docs: {
-      description: {
-        component: 'SVG stickers from the Notre Dame sticker set that can be used across components.'
-      }
-    }
-  },
   argTypes: {
     stickers: {
       name: 'Stickers',

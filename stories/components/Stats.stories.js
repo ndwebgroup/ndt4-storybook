@@ -10,11 +10,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/design/oMHFAa6HK6xMGMtxPhOkLV/University-of-Notre-Dame---Web-Theme-4.0-Digital-Design-Guide?node-id=957-4858",
     },
-    docs: {
-      description: {
-        component: 'Stats display numerical data with optional descriptions and stickers.'
-      }
-    }
   },
   argTypes: {
     size: { name:'Stat size', control:'select', options:['default','lg']},
