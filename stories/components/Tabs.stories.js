@@ -50,7 +50,7 @@ export default {
     },
     docs: {
       description: {
-        component: 'Tabs description'
+        component: 'The Tabs component is used to organize content into separate views that can be switched between by clicking on the corresponding tab.'
       },
       source: {
         // This will be the code shown in the docs

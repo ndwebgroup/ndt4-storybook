@@ -1,0 +1,37 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as TimelineStories from './Timeline.stories';
+
+<Meta of={TimelineStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use timelines to display chronological events or processes.</li>
+      <li>Ensure that each event is clearly labeled with a date and description.</li>
+      <li>Maintain consistent styling with the overall design theme and other components.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                  |
+|-------------------------------------------|--------------------------------------------------------------|
+| `.timeline--left`                         | Aligns the timeline to the left.                             |
+| `.timeline--right`                        | Aligns the timeline to the right.                            |
+| `.timeline--center`                       | Centers the timeline on the page.                            |

@@ -1,0 +1,37 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+The Table component is used to display data in a structured tabular format, allowing for easy comparison and analysis of information.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Tables should be responsive and accessible, ensuring a good user experience across devices.</li>
+      <li>Use clear and concise headers to describe the content of each column.</li>
+      <li>Maintain consistent styling with the overall design theme and other components.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Avoid overcrowding the table with too much information</li>
+      <li>Do not use tables for layout purposes; they should only be used for displaying tabular data.</li>
+      <li>Don't forget to test the table's functionality and appearance on all platforms and screen sizes.</li>
+    </ul>
+  </li>
+</ul>
