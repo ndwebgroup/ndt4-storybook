@@ -67,7 +67,7 @@ export default {
       description: 'Array of tabs. Each item should have a title property, a content property, and an optional modifier property.',
       control: 'object',
     },
-    tabSize: { name:"Tab Variant", control:'select', options:['default','lg'] }
+    tabVariant: { name:"Tab Variant", control:'select', options:['default','lg'] }
   },
   args: {
   // Default args for stories
@@ -87,7 +87,7 @@ export const Default = (args) => {
   return Tabs(args);
 };
 Default.args = {
-  tabSize: 'default',
+  tabVariant: 'default',
   items: exampleItems,
 };
 

@@ -4,10 +4,9 @@
 export default function Tabs(args) {
   const { items = [], tabVariant } = args;
   const container = document.createElement('div');
-  container.className = 'tabs-container'
-  const navClass = tabVariant === 'lg' ? 'nav-tabs nav-tabs--lg' : 'nav-tabs';
+  container.className = 'tabs-container';
   container.innerHTML = `
-  <nav class="${navClass}" aria-label="Tabs Navigation" role="tablist">
+  <nav class="nav-tabs ${tabVariant === 'lg' ? 'nav-tabs--lg' : ''}" aria-label="Tabs Navigation" role="tablist">
     <ul id="nav-tabs" class="tab-list" role="tablist" aria-label="Tabs" aria-orientation="horizontal">
       ${items.map((item, index) => {
         if (index === 0) {
