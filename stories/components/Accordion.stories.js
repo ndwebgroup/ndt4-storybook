@@ -17,7 +17,7 @@ export default {
     }
   },
   argTypes: {
-    variant: { name:'Variant', control: 'select', options: ['default', 'lg', 'highlight'] },
+    variant: { name:'Variant', control: 'select', options: ['default', 'sm', 'lg', 'highlight'] },
     items: {
       name: 'List Items',
       description: 'Array of detail/summary items. Each item should have a summary and detail property.',
@@ -52,6 +52,26 @@ export const Highlighted = (args) => {
 Highlighted.storyName = 'Highlighted Accordion';
 Highlighted.args = {
   variant: 'highlight',
+  items: exampleItems,
+};
+
+export const Small = (args) => {
+  const mergedArgs = { ...args };
+  return Accordion(mergedArgs);
+};
+Small.storyName = 'Small Accordion';
+Small.args = {
+  variant: 'sm',
+  items: exampleItems,
+};
+
+export const SmallHighlighted = (args) => {
+  const mergedArgs = { ...args };
+  return Accordion(mergedArgs);
+};
+SmallHighlighted.storyName = 'Small Highlighted Accordion';
+SmallHighlighted.args = {
+  variant: 'sm accordion--highlight',
   items: exampleItems,
 };
 
