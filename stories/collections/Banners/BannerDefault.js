@@ -14,7 +14,7 @@
  */
 
 import Button from '/stories/components/Buttons/Button.js';
-import Video from '/stories/components/Videos';
+import Video from '/stories/components/Video';
 
 export default function Banner(props) {
   const container = document.createElement('div');
