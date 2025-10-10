@@ -202,7 +202,7 @@ withVideo.args = {
   content: '<p>This is a caption for the video.</p>',
   closeButtonText: 'Close',
   dialogModifier: 'dialog--video',
-  media:'<iframe width="1280" height="720" src="https://www.youtube.com/embed/p_vC10eq474" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>',
+  media:'<iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/p_vC10eq474" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>',
 };
 
 withVideo.parameters = {

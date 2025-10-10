@@ -85,7 +85,7 @@ export default {
       },
     },
     backgrounds: {
-      disabled: true,
+      disable: true,
     },
     docs: {
       codePanel: true,
