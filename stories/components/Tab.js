@@ -7,7 +7,7 @@ export default function Tab(args) {
   container.className = 'tabs-container';
   container.innerHTML = `
   <nav class="nav-tabs ${tabVariant === 'lg' ? 'nav-tabs--lg' : ''}" aria-label="Tabs Navigation" role="tablist">
-    <ul id="nav-tabs" class="tab-list" role="tablist" aria-label="Tabs" aria-orientation="horizontal">
+    <ul id="nav-tabs" role="tablist" aria-label="Tabs" aria-orientation="horizontal">
       ${items.map((item, index) => {
         if (index === 0) {
           return `<li role="presentation"><a href="#tab-${index}" class="tab active" aria-selected="true">${item.title}</a></li>`
