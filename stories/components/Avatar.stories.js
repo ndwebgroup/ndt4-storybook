@@ -21,7 +21,7 @@ export default {
       name: 'Size',
       description: 'The size of the avatar',
       control: 'select',
-      options: ['xs', 'sm', 'md', 'lg']
+      options: ['xs', 'sm', 'md', 'lg', 'xl']
     },
     type: {
       name: 'Type',
