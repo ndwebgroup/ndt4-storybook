@@ -1,12 +1,12 @@
 /**
- * Videos component
+ * Video component
  * @param {string} props.videoId - The youtube id of the video
  * @param {('embed'|'placeholder'|'lightbox')} [props.style='embed'] - The play button style of the video
  * @param {('default'|'outline'|'minimal'|'ornamental')} [props.playStyle='default'] - The play button style of the video
  * @param {string} props.playText - The optional play button text of the video
  */
 
-export default function SidebarNavigation(args) {
+export default function Video(args) {
   const { style, videoId, playText, playStyle } = args;
   const container = document.createElement('p')
   container.className = `video--${style}`;

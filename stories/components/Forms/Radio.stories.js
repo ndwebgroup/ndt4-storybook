@@ -2,7 +2,7 @@
 import Radio from './Radio.js';
 
 export default {
-  title: 'Components/Form/Radio',
+  title: 'Components/Forms/Radio',
   tags: ['stable'],
   argTypes: {
     note: { name: 'Note'},

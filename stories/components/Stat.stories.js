@@ -1,7 +1,7 @@
-import Stats from './Stats.js';
+import Stat from './Stat.js';
 
 export default {
-  title: 'Components/Stats',
+  title: 'Components/Stat',
   tags: ['stable'],
   parameters: {
     design: {
@@ -12,7 +12,7 @@ export default {
     },
     docs: {
       description: {
-        component: 'Stats display numerical data with optional descriptions and stickers.'
+        component: 'Stat displays numerical data with optional descriptions and stickers.'
       }
     },
   },
@@ -46,14 +46,14 @@ const exampleItemsNoStickers = [
 ];
 
 export const Default = (args) => {
-  return Stats(args);
+  return Stat(args);
 };
 Default.args = {
   items: exampleItemsNoStickers,
 };
 
 export const Large = (args) => {
-  return Stats(args);
+  return Stat(args);
 };
 Large.args = {
   items: exampleItemsNoStickers,
@@ -61,7 +61,7 @@ Large.args = {
 };
 
 export const Centered = (args) => {
-  return Stats(args);
+  return Stat(args);
 };
 Centered.args = {
   items: exampleItemsNoStickers,
@@ -69,14 +69,14 @@ Centered.args = {
 };
 
 export const WithStickers = (args) => {
-  return Stats(args);
+  return Stat(args);
 };
 WithStickers.args = {
   items: exampleItems,
 };
 
 export const CenteredWithStickers = (args) => {
-  return Stats(args);
+  return Stat(args);
 };
 CenteredWithStickers.args = {
   items: exampleItems,

@@ -1,11 +1,11 @@
 /**
- * Stats component
+ * Stat component
  * @param {('default'|'lg')} [props.size='default'] - The size of the stat number
  * @param {('left'|'center')} [props.alignment='left'] - Alignment of the stats)
  */
 import { getSticker } from '../utils/stickerUtils.js';
 
-export default function Stats(args) {
+export default function Stat(args) {
   const { items = [], size, alignment } = args;
 
   return `<ul class="no-bullets list--stats grid grid-sm-3">

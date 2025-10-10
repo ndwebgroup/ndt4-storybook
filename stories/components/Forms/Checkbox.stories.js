@@ -2,7 +2,7 @@
 import Checkbox from './Checkbox.js';
 
 export default {
-  title: 'Components/Form/Checkbox',
+  title: 'Components/Forms/Checkbox',
   tags: ['stable'],
   argTypes: {
     note: { name: 'Note'},

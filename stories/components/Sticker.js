@@ -1,9 +1,9 @@
 /**
-Stickers component to showcase available stickers
+Sticker component to showcase available stickers
  */
 import { getSticker } from '../utils/stickerUtils.js';
 
-export default function Stickers(args) {
+export default function Sticker(args) {
   const { stickers = [], showNames = true, size = 'md' } = args;
 
   return `

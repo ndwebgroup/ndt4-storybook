@@ -1,4 +1,4 @@
-import Tabs from './Tabs.js';
+import Tab from './Tab.js';
 
 const tabsDecorator = (story) => {
   const tabsElement = story();
@@ -39,7 +39,7 @@ const tabsDecorator = (story) => {
 };
 
 export default {
-  title: 'Components/Tabs',
+  title: 'Components/Tab',
   tags: ['stable'],
   parameters: {
     design: {
@@ -50,7 +50,7 @@ export default {
     },
     docs: {
       description: {
-        component: 'The Tabs component is used to organize content into separate views that can be switched between by clicking on the corresponding tab.'
+        component: 'The Tab component is used to organize content into separate views that can be switched between by clicking on the corresponding tab.'
       },
       source: {
         // This will be the code shown in the docs
@@ -84,7 +84,7 @@ const exampleItems = [
 ];
 
 export const Default = (args) => {
-  return Tabs(args);
+  return Tab(args);
 };
 Default.args = {
   tabVariant: 'default',
@@ -92,7 +92,7 @@ Default.args = {
 };
 
 export const Large = (args) => {
-  return Tabs(args);
+  return Tab(args);
 };
 Large.args = {
   tabVariant: 'lg',

@@ -17,7 +17,7 @@ class SbComponentsList extends HTMLElement {
         // For folders with multiple components, only include canonical examples
         if (e.title.startsWith('Components/Buttons/') && e.title !== 'Components/Buttons/Button') continue;
         if (e.title.startsWith('Components/Cards/') && e.title !== 'Components/Cards/Card (Default)') continue;
-        if (e.title.startsWith('Components/Form/') && e.title !== 'Components/Form/Index') continue;
+        if (e.title.startsWith('Components/Forms/') && e.title !== 'Components/Forms/Form') continue;
         if (e.title.startsWith('Components/Media Mentions/') && e.title !== 'Components/Media Mentions/Media Mention') continue;
 
         if (e.type === 'docs' && !map.has(e.title)) {

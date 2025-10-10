@@ -2,7 +2,7 @@
 import FormCombinations from './index';
 
 export default {
-  title: 'Components/Form/Index',
+  title: 'Components/Forms/Form',
   tags: ['autodocs'],
   parameters: {
     docs: {

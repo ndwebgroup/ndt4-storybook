@@ -5,7 +5,7 @@
  * @param {string} props.text - Text content of the heading
  * @returns {string} - The heading HTML
  */
-export default function Headings(props) {
+export default function Heading(props) {
   const {
     size = '',
     title = 'Page Title',
@@ -17,6 +17,6 @@ export default function Headings(props) {
   const element = document.createElement(titleWrapper);
   element.textContent = title;
   element.className = `page-title${size ? ` page-title--${size}` : ''}`;
-  
+
   return element.outerHTML;
 }

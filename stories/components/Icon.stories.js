@@ -1,8 +1,8 @@
-import Icons from './Icons.js';
+import Icon from './Icon.js';
 import { getAvailableIcons } from '../utils/iconUtils.js';
 
 export default {
-  title: 'Components/Icons',
+  title: 'Components/Icon',
   tags: ['stable'],
   parameters: {
     design: {
@@ -44,7 +44,7 @@ export default {
 const availableIcons = getAvailableIcons();
 
 export const AllIcons = (args) => {
-  return Icons({
+  return Icon({
     ...args,
     icons: availableIcons
   });
@@ -54,7 +54,7 @@ AllIcons.args = {
 };
 
 export const SmallIcons = (args) => {
-  return Icons({
+  return Icon({
     ...args,
     size: 'sm'
   });
@@ -65,7 +65,7 @@ SmallIcons.args = {
 };
 
 export const LargeIcons = (args) => {
-  return Icons({
+  return Icon({
     ...args,
     size: 'lg'
   });
@@ -76,7 +76,7 @@ LargeIcons.args = {
 };
 
 export const ExtraLargeIcons = (args) => {
-  return Icons({
+  return Icon({
     ...args,
     size: 'xl'
   });
@@ -87,7 +87,7 @@ ExtraLargeIcons.args = {
 };
 
 export const IconsWithoutNames = (args) => {
-  return Icons({
+  return Icon({
     ...args,
     showNames: false
   });

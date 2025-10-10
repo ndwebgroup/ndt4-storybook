@@ -1,7 +1,7 @@
-import Videos from './Videos';
+import Video from './Video';
 
 export default {
-  title: 'Components/Videos',
+  title: 'Components/Video',
   tags: ['stable'],
   parameters: {
     design: {
@@ -12,7 +12,7 @@ export default {
     },
     docs: {
       description: {
-        component: 'The Videos component allows for embedding YouTube videos in three styles: embed, placeholder, and lightbox.'
+        component: 'The Video component allows for embedding YouTube videos in three styles: embed, placeholder, and lightbox.'
       }
     }
   },
@@ -32,21 +32,21 @@ export default {
 };
 
 export const Embed = (args) => {
-  return Videos(args);
+  return Video(args);
 };
 Embed.args = {
   style: 'embed'
 };
 
 export const Placeholder = (args) => {
-  return Videos(args);
+  return Video(args);
 };
 Placeholder.args = {
   style: 'placeholder'
 };
 
 export const PlaceholderWithLabel = (args) => {
-  return Videos(args);
+  return Video(args);
 };
 PlaceholderWithLabel.args = {
   style: 'placeholder',
@@ -54,7 +54,7 @@ PlaceholderWithLabel.args = {
 };
 
 export const Lightbox = (args) => {
-  return Videos(args);
+  return Video(args);
 };
 Lightbox.args = {
   style: 'lightbox'

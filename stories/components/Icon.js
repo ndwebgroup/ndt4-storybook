@@ -1,9 +1,9 @@
 /**
- * Icons component to showcase available icons
+ * Icon component to showcase available icons
  */
 import { getIcon } from '../utils/iconUtils.js';
 
-export default function Icons(args) {
+export default function Icon(args) {
   const { icons = [], showNames = true, size = 'md' } = args;
 
   return `

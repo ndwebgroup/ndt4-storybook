@@ -2,7 +2,7 @@
 import Textarea from './Textarea.js';
 
 export default {
-  title: 'Components/Form/Textarea',
+  title: 'Components/Forms/Textarea',
   tags: ['stable'],
   argTypes: {
     rows: { name: 'Row Count', control:'select', options: ['3', '4', '5', '6']},

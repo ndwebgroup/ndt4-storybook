@@ -1,7 +1,7 @@
 import Select from './Select';
 
 export default {
-  title: 'Components/Form/Select',
+  title: 'Components/Forms/Select',
   tags: ['stable'],
   component: Select,
   argTypes: {

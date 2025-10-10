@@ -1,7 +1,7 @@
 import Switch from './Switch';
 
 export default {
-  title: 'Components/Form/Switch',
+  title: 'Components/Forms/Switch',
   tags: ['stable'],
   component: Switch,
   argTypes: {

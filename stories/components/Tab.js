@@ -1,7 +1,7 @@
 /**
- * Tabs component
+ * Tab component
  */
-export default function Tabs(args) {
+export default function Tab(args) {
   const { items = [], tabVariant } = args;
   const container = document.createElement('div');
   container.className = 'tabs-container';

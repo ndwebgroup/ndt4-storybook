@@ -1,9 +1,9 @@
-import Headings from './Headings';
+import Heading from './Heading';
 
 export default {
-  title: 'Components/Headings',
+  title: 'Components/Heading',
   tags: ['stable'],
-  component: Headings,
+  component: Heading,
   parameters: {
     docs: {
       description: {
@@ -31,7 +31,7 @@ export default {
 export const AllHeadings = {
   render: () => {
     const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map(level => {
-      return Headings({
+      return Heading({
         level,
         text: `This is a ${level} heading`,
         useClass: false
@@ -46,7 +46,7 @@ export const AllHeadings = {
 export const HeadingClasses = {
   render: () => {
     const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map(level => {
-      return Headings({
+      return Heading({
         level,
         text: `This is a paragraph with class ".${level}"`,
         useClass: true

@@ -1,13 +1,13 @@
-import Stickers from './Stickers.js';
+import Sticker from './Sticker.js';
 import { getAvailableStickers } from '../utils/stickerUtils.js';
 
 export default {
-  title: 'Components/Stickers',
+  title: 'Components/Sticker',
   tags: ['stable'],
   parameters: {
     docs: {
       description: {
-        component: 'SVG stickers from the Notre Dame sticker set that can be used across components.'
+        component: 'SVG sticker from the Notre Dame sticker set that can be used across components.'
       }
     },
   },
@@ -38,7 +38,7 @@ export default {
 const availableStickers = getAvailableStickers();
 
 export const AllStickers = (args) => {
-  return Stickers({
+  return Sticker({
     ...args,
     stickers: availableStickers
   });
@@ -48,7 +48,7 @@ AllStickers.args = {
 };
 
 export const SmallStickers = (args) => {
-  return Stickers({
+  return Sticker({
     ...args,
     size: 'sm'
   });
@@ -59,7 +59,7 @@ SmallStickers.args = {
 };
 
 export const LargeStickers = (args) => {
-  return Stickers({
+  return Sticker({
     ...args,
     size: 'lg'
   });
@@ -70,7 +70,7 @@ LargeStickers.args = {
 };
 
 export const ExtraLargeStickers = (args) => {
-  return Stickers({
+  return Sticker({
     ...args,
     size: 'xl'
   });
@@ -81,7 +81,7 @@ ExtraLargeStickers.args = {
 };
 
 export const StickersWithoutNames = (args) => {
-  return Stickers({
+  return Sticker({
     ...args,
     showNames: false
   });

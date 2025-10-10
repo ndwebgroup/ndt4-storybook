@@ -1,5 +1,5 @@
 /**
- * Headings component
+ * Heading component
  * @param {Object} props - Component properties
  * @param {string} props.level - Heading level (h1-h6)
  * @param {string} props.text - Text content of the heading
@@ -7,7 +7,7 @@
  * @param {boolean} props.useClass - Whether to use the h-class instead of the actual heading tag
  * @returns {string} - The heading HTML
  */
-export default function Headings(props) {
+export default function Heading(props) {
   const {
     level = 'h1',
     text = 'Heading',

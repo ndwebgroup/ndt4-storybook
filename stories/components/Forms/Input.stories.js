@@ -2,7 +2,7 @@
 import Input from './Input.js';
 
 export default {
-  title: 'Components/Form/Input',
+  title: 'Components/Forms/Input',
   tags: ['stable'],
   argTypes: {
     type: { name: 'Input Type', control:'select', options: ['date', 'email', 'number', 'password', 'text']},
