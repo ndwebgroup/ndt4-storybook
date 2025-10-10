@@ -1,9 +1,9 @@
 :root {
   --thumb-primary:light-dark(#0c2340,#fff);
   --thumb-secondary:#ae9142;
-  --thumb-tertiary:light-dark(#777,#e1e8f2);
-  --thumb-bg-light:light-dark(rgba(0,0,0,0.06),rgba(255,255,255,0.1));
-  --thumb-border-light:light-dark(#e2e2e2,#143865);
+  --thumb-tertiary:light-dark(#777,#c1cddd);
+  --thumb-bg-light:light-dark(#f4f4f4,#224672);
+  --thumb-border-light:light-dark(#e2e2e2,#49617f);
   --thumb-border-dark:light-dark(#333,rgba(255,255,255,0.3));
 }
 
