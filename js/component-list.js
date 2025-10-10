@@ -7,14 +7,19 @@ class SbComponentsList extends HTMLElement {
       const res = await fetch(url);
       const data = await res.json();
       const entries = Object.values(data.entries);
-
       const skip = new Set(['Components/About Components']);
-      
       const map = new Map();
 
       for (const e of entries) {
         if (!e.title || !e.title.startsWith('Components/')) continue;
         if (skip.has(e.title)) continue;
+
+        // For folders with multiple components, only include canonical examples
+        if (e.title.startsWith('Components/Buttons/') && e.title !== 'Components/Buttons/Button') continue;
+        if (e.title.startsWith('Components/Cards/') && e.title !== 'Components/Cards/Card (Default)') continue;
+        if (e.title.startsWith('Components/Form/') && e.title !== 'Components/Form/Index') continue;
+        if (e.title.startsWith('Components/Media Mentions/') && e.title !== 'Components/Media Mentions/Media Mention') continue;
+
         if (e.type === 'docs' && !map.has(e.title)) {
           map.set(e.title, { link: `/?path=/docs/${e.id}`, title: e.title, tags: Array.isArray(e.tags) ? e.tags : [] });
         }
@@ -27,7 +32,7 @@ class SbComponentsList extends HTMLElement {
         a.title.localeCompare(b.title, undefined, { numeric: true })
       );
 
-      // Whitelist: only render these tags
+      // Allowlist: only render these tags
       const ALLOWED = new Set(['modified', 'coming']);
       const tagLine = (tags) => {
         const visible = (tags || []).filter(t => ALLOWED.has(t));
