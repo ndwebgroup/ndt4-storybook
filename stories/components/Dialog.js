@@ -27,7 +27,7 @@ export default function Dialog(args) {
       </div>
       <div class="dialog-content ${contentModifier}">
         ${media}
-        ${content ? `<div class="dialog-body">${content}</div>` : ''}
+        ${content ? `<div>${content}</div>` : ''}
       </div>
       <div class="dialog-footer">${footer}</div>
     </dialog>
