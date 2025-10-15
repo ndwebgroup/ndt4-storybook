@@ -143,19 +143,19 @@
 /* Thumbs */
 .thumb-list { margin-block-end:3rem; }
 .thumb-list li { font-size:0.9rem; }
-.thumb-list li a { text-decoration:none; color:light-dark(var(--brand-blue),var(--gray-extra-extra-light)); }
-.thumb { background-color:light-dark(#fff,var(--brand-blue)); aspect-ratio:4/3; display:block; width:100%; border-radius:var(--border-radius); border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); object-fit:cover; transition:background-color var(--anim-duration-fast) var(--anim-ease); }
+.thumb-list li a { text-decoration:none; color:var(--brand-blue); color:light-dark(var(--brand-blue),var(--gray-extra-extra-light)); }
+.thumb { background-color:#fff; background-color:light-dark(#fff,var(--brand-blue)); aspect-ratio:4/3; display:block; width:100%; border-radius:var(--border-radius); border:1px solid transparent; border-color:light-dark(transparent,rgba(255,255,255,0.2)); object-fit:cover; transition:background-color var(--anim-duration-fast) var(--anim-ease); }
 .thumb svg { width:100%; height:auto; transition:scale var(--anim-duration-fast) var(--anim-ease); }
 .thumb .c-tags { position:absolute; bottom:1em; right:1em; }
-.thumb-list li:hover .thumb { background-color:light-dark(#fafafa,var(--brand-blue-light)); }
+.thumb-list li:hover .thumb { background-color:#fafafa; background-color:light-dark(#fafafa,var(--brand-blue-light)); }
 .thumb-list li:hover .thumb svg { scale:1.04; }
 
 /* Icons */
 .icon-showcase { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:1rem;
   .icon { margin-bottom:0.5rem; }
 }
-.icon-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-radius:3px; width:120px; min-height:120px; text-align:center; }
-.icon-name { font-size:0.8rem; line-height:1.2em; color:light-dark(#666,#ddd); max-width:100%; }
+.icon-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-color:light-dark(#ccc,#224672); border-radius:3px; width:120px; min-height:120px; text-align:center; }
+.icon-name { font-size:0.8rem; line-height:1.2em; color:#6667 color:light-dark(#666,#ddd); max-width:100%; }
 
 /* Status Tags */ 
 .c-tag { display:inline-block; align-self:center; border-radius:0.25em; text-decoration:none; user-select:none; font-size:11px; text-transform:uppercase; line-height:20px; font-weight:700; padding:0px 0.5em; }
@@ -166,5 +166,5 @@
 .sticker-showcase { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:1rem;
   .sticker { margin-bottom:0.5rem; }
 }
-.sticker-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-radius:3px; width:120px; min-height:120px; text-align:center; }
+.sticker-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-color:light-dark(#ccc,#224672); border-radius:3px; width:120px; min-height:120px; text-align:center; }
 .sticker-name { font-size:0.8rem; line-height:1.2em; color:light-dark(#666,#ddd); max-width:100%; }

@@ -1,0 +1,41 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as NavigationAnchorStories from './NavigationAnchor.stories';
+ 
+<Meta of={NavigationAnchorStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Only use the anchor navigation for in-page navigation to sections within a long page.</li>
+      <li>Use clear and descriptive labels for each navigation item.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Don't use the anchor navigation for primary site navigation or linking to external pages.</li>
+      <li>Don't overload the navigation with too many items; keep it concise and relevant.</li>
+    </ul>
+  </li>
+</ul>
+
+--- 
+
+## CSS References
+| CSS Class              | Description                                          |
+|------------------------|------------------------------------------------------|
+| `.nav-anchor`          | Container for the anchor navigation component.       |
+| `.nav-anchor li`       | List item for each anchor link.                      |

@@ -29,7 +29,7 @@ export default function EventsListing(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeader({ pageTitle:`Upcoming Events`, pageLede:``, heroLayout:`default`, showFeaturedImage:false })}
+      ${PageHeader({ pageTitle:`Upcoming Events`, pageLede:``, layout:`default`, featuredImage:false })}
       <div class="page-primary">
         ${pageContent}
         <ol class="list--events no-bullets">

@@ -33,7 +33,7 @@ export default function Home(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeader({ pageTitle:pageTitle, pageLede:``, heroLayout:heroLayout, showFeaturedImage:true })}
+      ${PageHeader({ pageTitle:pageTitle, pageLede:``, layout:heroLayout, showFeaturedImage:true })}
       <div class="page-primary${navTop ? ' full-width' : ''}">
         <div class="section home-primary${navTop ? ' col--md' : ''}">${pageContent}</div>
         <section class="section section--home-news">
