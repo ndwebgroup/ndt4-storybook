@@ -45,8 +45,8 @@
 
 .sb-show-main {
   .sbdocs-wrapper { padding-inline:5vw; }
-  .sbdocs-wrapper, .sbdocs-wrapper nav { padding-block-start:clamp(2rem, 3dvh + 1rem, 4rem); }
-  .sbdocs-wrapper .sbdocs-a { color:light-dark(var(--link-blue), var(--brand-gold-light)); }
+  .sbdocs-wrapper { padding-block-start:clamp(2rem, 3dvh + 1rem, 4rem); }
+  .sbdocs-wrapper .sbdocs-a { color:light-dark(var(--link-blue), var(--brand-gold-light)); font-family:inherit; }
   .sbdocs-wrapper .sbdocs-a:hover, .sbdocs-wrapper .sbdocs-a:focus { color:light-dark(var(--brand-blue-bright), var(--brand-gold-bright)); }
 }
 
@@ -76,7 +76,7 @@
   th { background-color:#ddd; color:#fff; }
 }
 .sbdocs-content .docblock-argstable-body {
-  filter: none;;
+  filter: none;
 }
 
 /* Typography */
@@ -155,7 +155,7 @@
   .icon { margin-bottom:0.5rem; }
 }
 .icon-item { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; border:1px solid #ccc; border-color:light-dark(#ccc,#224672); border-radius:3px; width:120px; min-height:120px; text-align:center; }
-.icon-name { font-size:0.8rem; line-height:1.2em; color:#6667 color:light-dark(#666,#ddd); max-width:100%; }
+.icon-name { font-size:0.8rem; line-height:1.2em; color:#666; color:light-dark(#666,#ddd); max-width:100%; }
 
 /* Status Tags */ 
 .c-tag { display:inline-block; align-self:center; border-radius:0.25em; text-decoration:none; user-select:none; font-size:11px; text-transform:uppercase; line-height:20px; font-weight:700; padding:0px 0.5em; }

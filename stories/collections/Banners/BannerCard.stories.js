@@ -1,4 +1,4 @@
-import BannerCards from './BannerCards';
+import BannerCard from './BannerCard';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -71,6 +71,11 @@ export default {
       options: ['none', 'brand-blue', 'brand-blue-dark', 'sky-blue-light', 'warm-white'],
       description: 'The background color of the banner'
     },
+    cardCount: { 
+      name: 'Card Count',
+      control: { type: 'number', min: 1, max: 6, step: 1 },
+      description: 'The number of cards to display in the banner',
+    },
   },
   args: {
     // Default args for all stories
@@ -88,7 +93,7 @@ export default {
 // Default
 export const Default = (args) => {
   const mergedArgs = { ...args };
-  return BannerCards(mergedArgs);
+  return BannerCard(mergedArgs);
 };
 Default.storyName = 'Default';
 Default.args = {
@@ -98,7 +103,7 @@ Default.args = {
 // With Single Card
 export const WithSingleCard = (args) => {
   const mergedArgs = { ...args };
-  return BannerCards(mergedArgs);
+  return BannerCard(mergedArgs);
 };
 WithSingleCard.storyName = 'With Single Card';
 WithSingleCard.args = {
@@ -108,7 +113,7 @@ WithSingleCard.args = {
 // With Two Cards
 export const WithTwoCards = (args) => {
   const mergedArgs = { ...args };
-  return BannerCards(mergedArgs);
+  return BannerCard(mergedArgs);
 };
 WithTwoCards.storyName = 'With Two Cards';
 WithTwoCards.args = {
@@ -117,7 +122,7 @@ WithTwoCards.args = {
 // With Background Color
 export const BackgroundColor = (args) => {
   const mergedArgs = { ...args };
-  return BannerCards(mergedArgs);
+  return BannerCard(mergedArgs);
 };
 BackgroundColor.storyName = 'With Background Color';
 BackgroundColor.args = {

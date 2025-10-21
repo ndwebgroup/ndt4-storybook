@@ -14,7 +14,7 @@ export default function Card(props) {
     title,
     label,
     showImage = true,
-    image,
+    imageUrl,
     summary,
     link,
     layout = 'default',
@@ -23,12 +23,14 @@ export default function Card(props) {
 
   const container = document.createElement('div');
   container.className = 'card-container';
-  const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`,`${backgroundColor !== 'none' ? ` bg--${backgroundColor}` : ''}`];
+  const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`];
 
-  if (showImage) {
+  if (backgroundColor && backgroundColor !== 'none') {
+    classes.push(` bg--${backgroundColor}`);
+  }
+
   container.innerHTML = `
   <div class="${ classes.join('') }">
-    ${image ? `<figure class="card-image"><img src="${image}" width="600" height="400" alt=""></figure>` : '<figure class="card-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'}
     <div class="card-body">
       ${label ? `<p class="card-label">${label}</p>` : ''}
       <h2 class="card-title"><a class="card-link" href="${link}">${title}</a></h2>
@@ -36,17 +38,12 @@ export default function Card(props) {
     </div>
   </div>
 `;
-  } else {
-  container.innerHTML = `
-  <div class="${ classes.join(' ') }">
-    <div class="card-body">
-      ${label ? `<p class="card-label">${label}</p>` : ''}
-      <h2 class="card-title"><a class="card-link" href="${link}">${title}</a></h2>
-      <p class="card-summary">${summary}</p>
-    </div>
-  </div>
-`;
-  }
+
+const cardElement = container.querySelector('.card');
+
+if (showImage) {
+  cardElement.insertAdjacentHTML('afterbegin', `${imageUrl ? `<figure class="card-image"><img src="${imageUrl}" width="600" height="400" alt=""></figure>` : '<figure class="card-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'}`);
+}
 
   return container;
 }

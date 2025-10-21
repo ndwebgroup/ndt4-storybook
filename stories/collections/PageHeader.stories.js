@@ -16,7 +16,6 @@ const addHeaderStyles = () => {
   }
 };
 
-
 export default {
   title: 'Collections/Page Header',
   component: PageHeader,
@@ -65,6 +64,12 @@ export default {
       description: 'Whether to show the featured image',
       defaultValue: true
     },
+    imageUrl: {
+      name: 'Image URL',
+      control: 'text',
+      description: 'URL of the featured image',
+      defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
+    },
     layout: {
       name: 'Layout',
       control: { type: 'select' },
@@ -78,6 +83,7 @@ export default {
     pageTitleSize: 'sm',
     pageLede: '',
     featuredImage: true,
+    imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
     layout: 'inset',
   }
 };

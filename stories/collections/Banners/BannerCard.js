@@ -20,14 +20,14 @@ export default function Banner(props) {
 
   container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
 
-  // Create banner secondary content first without buttons
+  // Create banner secondary
   container.innerHTML = `
   <div class="section-intro text-center">
     <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `
-  // Get the banner body element to append buttons properly
+  // Get the banner body element
   const bannerBody = container.querySelector('.section-intro');
 
   // Handle label
