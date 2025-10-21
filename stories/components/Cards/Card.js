@@ -2,8 +2,8 @@
  * Card component
  * @param {Object} props - Component properties
  * @param {string} props.title - The title of the card
-* @param {string} props.label - The label of the card 
-* @param {boolean} props.showImage - Whether to show the card image
+ * @param {string} props.label - The label of the card
+ * @param {boolean} props.showImage - Whether to show the card image
  * @param {string} props.summary - The summary of the card
  * @param {string} props.link - The link of the card
  * @param {('default'|'horizontal'|'stacked' | 'compact')} [props.layout='default'] - The layout of the card
