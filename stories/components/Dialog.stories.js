@@ -34,43 +34,11 @@ export default {
 const dialogDecorator = (story) => {
   const dialogHTML = story();
 
-  // Add dialog initialization script
-  const initScript = `
-    document.addEventListener('DOMContentLoaded', function() {
-      // Find all dialog preview wrappers on the page
-      const allDialogWrappers = document.querySelectorAll('.dialog-preview-wrapper');
-
-      // For each wrapper, setup its own button-dialog connection
-      allDialogWrappers.forEach(wrapper => {
-        const toggleButton = wrapper.querySelector('.dialog-link');
-        const dialog = wrapper.querySelector('.dialog-container-preview dialog');
-
-        if (toggleButton && dialog) {
-          toggleButton.addEventListener('click', () => {
-            dialog.showModal();
-          });
-
-          // Ensure the close button works
-          const closeButton = dialog.querySelector('.dialog-close button');
-          if (closeButton) {
-            closeButton.addEventListener('click', () => {
-              dialog.close();
-            });
-          }
-        }
-      });
-    });
-  `;
-
   return `
-    <div class="dialog-preview-wrapper">
+    <div class="dialog-item">
       <button class="btn dialog-link">Open Dialog</button>
-      <div class="dialog-container-preview">
-        ${dialogHTML}
-      </div>
+      ${dialogHTML}
     </div>
-
-    <script>${initScript}</script>
   `;
 };
 
@@ -81,7 +49,6 @@ export const Default = (args) => {
 Default.args = {
   title: 'Dialog Title',
   content: '<p>This is the default dialog content. Dialogs can contain any type of information that requires user attention.</p>',
-  closeButtonText: 'Close',
   footer: 'This is a default dialog footer. Use this space for supporting text or action buttons'
 };
 
@@ -127,7 +94,6 @@ Alert.args = {
   <button class="btn btn--cta">Delete</button>
   <button class="btn btn--neutral">Cancel</button>
   `,
-  closeButtonText: 'Close',
   dialogModifier: 'dialog--narrow'
 };
 
@@ -156,7 +122,6 @@ LongContent.args = {
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc quis nisl.</p>
   `,
   footer: ``,
-  closeButtonText: 'Close'
 };
 
 LongContent.parameters = {
@@ -177,7 +142,6 @@ withImage.storyName = 'With Image';
 withImage.args = {
   title: '',
   content: '<p>This is a caption for the image.</p>',
-  closeButtonText: 'Close',
   dialogModifier: 'dialog--image',
   media:'<figure class="dialog-image"><img src="/images/placeholder-campus-1-2000x1333.jpg" width="2000" height="1333" alt=""></figure>',
 };
@@ -200,7 +164,6 @@ withVideo.storyName = 'With Large Video';
 withVideo.args = {
   title: '',
   content: '<p>This is a caption for the video.</p>',
-  closeButtonText: 'Close',
   dialogModifier: 'dialog--video',
   media:'<iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/p_vC10eq474" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>',
 };
@@ -222,7 +185,6 @@ export const withPerson = (args) => {
 withPerson.storyName = 'With Person';
 withPerson.args = {
   title: '',
-  closeButtonText: 'Close',
   dialogModifier: 'dialog--person',
   media:'<figure class="dialog-image"><img class="image-circle" src="/images/placeholder-profile-1-500x500.jpg" width="600" height="400" alt=""></figure>',
   content: `<h2>John Doe</h2>

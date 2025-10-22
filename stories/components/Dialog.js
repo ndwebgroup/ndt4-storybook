@@ -8,8 +8,8 @@
  */
 export default function Dialog(args) {
   const {
-    title = 'Dialog Title',
-    content = 'Dialog content goes here.',
+    title = '',
+    content = '',
     closeButtonText = 'Close',
     footer = '',
     media = '',
@@ -17,19 +17,17 @@ export default function Dialog(args) {
     contentModifier = ''
   } = args;
 
-  return `
-    <dialog class="dialog${dialogModifier ? ` ${dialogModifier}` : ''}">
-      <div class="dialog-header">
-        <form method="dialog" class="dialog-close">
-          <button type="submit" title="${closeButtonText}">×</button>
-        </form>
-        ${title ? `<p class="dialog-heading h4">${title}</p>` : ''}
-      </div>
-      <div class="dialog-content ${contentModifier}">
-        ${media}
-        ${content ? `<div>${content}</div>` : ''}
-      </div>
-      <div class="dialog-footer">${footer}</div>
-    </dialog>
-  `;
+  return `<dialog class="dialog${dialogModifier ? ` ${dialogModifier}` : ''}">
+        <div class="dialog-header">
+          <form method="dialog" class="dialog-close">
+            <button type="submit" title="${closeButtonText}">×</button>
+          </form>
+          ${title ? `<p class="dialog-heading h4">${title}</p>` : ''}
+        </div>
+        <div class="dialog-content ${contentModifier}">
+          ${media}
+          ${content ? `${content}` : ''}
+        </div>
+        <div class="dialog-footer">${footer}</div>
+      </dialog>`;
 }
