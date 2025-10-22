@@ -29,7 +29,7 @@ export default function PageHeader(props) {
   }
 
   container.innerHTML = `
-      ${featuredImage ? `<figure class="page-image${layout !== `inset` ? ` bg--dark bg--gradient` : ``}" aria-hidden="true"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
+      ${featuredImage ? `<figure class="page-image${layout !== `inset` ? ` bg--dark bg--gradient` : ``}"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
       <div class="page-title-wrapper">
         <h1 class="page-title${pageTitleSize !== 'default' ? ` page-title--${pageTitleSize}` : ''}">${pageTitle}</h1>
         ${pageLede ? `<p class="page-lede">${pageLede}</p>` : ''}
