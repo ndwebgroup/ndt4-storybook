@@ -15,7 +15,8 @@ export default function NewsCard(props) {
     title,
     excerpt,
     showImage = true,
-    label = 'Card Label',
+    imageUrl,
+    label = '',
     link = '#',
     author = 'Author Name',
     publishDate = 'April 1, 2025',
@@ -30,17 +31,13 @@ export default function NewsCard(props) {
 
   if (showImage) {
     articleHTML += `
-      <figure class="card-image entry-image">
-        <img property="image" width="600" height="400" loading="lazy"
-             src="/images/placeholder-campus-1-600x400.jpg"
-             alt="Placeholder image">
-      </figure>
+      ${imageUrl ? `<figure class="card-image entry-image"><img property="image" src="${imageUrl}" width="600" height="400" alt="" loading="lazy"></figure>` : '<figure class="card-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'}
     `;
   }
 
   articleHTML += `
       <div class="card-body">
-        <p class="card-label">${label}</p>
+        ${label ? `<p class="card-label">${label}</p>` : ''}
         <${headingTag} class="article-title card-title" property="headline">
           <a class="card-link" href="${link}">${title}</a>
         </${headingTag}>

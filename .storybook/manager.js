@@ -8,12 +8,12 @@ addons.setConfig({
       coming: {
         background: '#ae9142',
         color: '#ffffff',
-        description: 'This component is coming in the next release',
+        description: 'This component is coming in the next CSS release',
       },
       modified: {
         background: '#1c4f8f',
         color: '#ffffff',
-        description: 'This component has been modified and will be updated in the next release',
+        description: 'This component will be updated in the next CSS release',
       },
     },
     sidebarDots: 'none',
