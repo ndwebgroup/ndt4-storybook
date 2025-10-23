@@ -45,6 +45,14 @@ export default function List(args) {
       `;
       break;
 
+    case 'stepped grid':
+      listHtml = `
+        <ol class="ol--stepped grid grid-md-3${className ? ` ${className}` : ''}">
+          ${items.map(item => `<li>${item}</li>`).join('\n          ')}
+        </ol>
+      `;
+      break;
+
     case 'inline':
       listHtml = `
         <ul class="list--inline${className ? ` ${className}` : ''}">

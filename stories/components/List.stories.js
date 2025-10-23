@@ -20,7 +20,7 @@ export default {
     type: {
       description: 'The type of list to display',
       control: 'select',
-      options: ['unordered', 'ordered', 'unstyled', 'stepped', 'inline', 'description']
+      options: ['unordered', 'ordered', 'unstyled', 'stepped', 'stepped grid', 'inline', 'description']
     },
     items: {
       description: 'Array of list items. For description lists, these are the terms.',
@@ -127,9 +127,19 @@ Stepped.args = {
 Stepped.parameters = {
   docs: {
     description: {
-      story: 'A stepped list `<ul class="ol--stepped">` is used when a styled sequence of items matters. Useful for process steps, instructions, etc.'
+      story: 'A stepped list `<ol class="ol--stepped">` is used when a styled sequence of items matters. Useful for process steps, instructions, etc.'
     }
   }
+};
+
+export const SteppedGrid = (args) => {
+  return List(args);
+};
+
+SteppedGrid.storyName = 'Stepped List (Grid)';
+SteppedGrid.args = {
+  type: 'stepped grid',
+  items: ['<strong>Step 1</strong><p>Quisque ante adipiscing vestibulum.</p>', '<strong>Step 2</strong><p>Quisque ante adipiscing vestibulum.</p>', '<strong>Step 3</strong><p>Quisque ante adipiscing vestibulum.</p>'],
 };
 
 export const Inline = (args) => {
