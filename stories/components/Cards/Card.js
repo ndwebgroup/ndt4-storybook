@@ -17,11 +17,14 @@ export default function Card(props) {
     imageUrl,
     summary,
     link,
+    wrapperTag = 'div',
+    headingTag = 'h2',
     layout = 'default',
+    
     backgroundColor,
   } = props;
 
-  const container = document.createElement('div');
+  const container = document.createElement(wrapperTag);
   container.className = 'card-container';
   const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`];
 
@@ -31,10 +34,9 @@ export default function Card(props) {
 
   container.innerHTML = `
   <div class="${ classes.join('') }">
-    <div class="card-body">
-      ${label ? `<p class="card-label">${label}</p>` : ''}
-      <h2 class="card-title"><a class="card-link" href="${link}">${title}</a></h2>
-      <p class="card-summary">${summary}</p>
+    <div class="card-body">${label ? `\n      <p class="card-label">${label}</p>` : ''}
+      <${headingTag} class="card-title"><a class="card-link" href="${link}">${title}</a></${headingTag}>
+      ${summary ? `<p class="card-summary">${summary}</p>` : ''}
     </div>
   </div>
 `;
