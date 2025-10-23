@@ -23,7 +23,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Banner/Banner (Cards)',
-  tags: ['autodocs'],
+  tags: ['modified'],
   parameters: {
     layout: 'fullscreen',
     docs: {

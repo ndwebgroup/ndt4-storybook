@@ -21,12 +21,15 @@ export default function Banner(props) {
   container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
 
   // Create banner secondary
-  container.innerHTML = `
+  container.innerHTML = ``;
+
+  if (title || summary) container.innerHTML += `
   <div class="section-intro text-center">
     <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
-`
+`;
+
   // Get the banner body element
   const bannerBody = container.querySelector('.section-intro');
 
@@ -46,7 +49,7 @@ export default function Banner(props) {
       const card = Card({
         title: `Card Title ${i + 1}`,
         summary: 'This is a summary of the card content. It provides a brief overview of the information contained within the card.',
-        imageUrl: 'https://via.placeholder.com/300x200',
+        imageUrl: '/images/placeholder-campus-1-600x400.jpg',
         imageAlt: `Placeholder Image for Card ${i + 1}`,
         backgroundColor: 'none',
       });

@@ -31,7 +31,7 @@ export default function BannerMulti(props) {
   container.innerHTML = `
   ${mediaHTML}
   <div class="section-content">
-    <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
+    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `

@@ -25,7 +25,7 @@ export default function Banner(props) {
     <img src="/images/placeholder-campus-3-1600x900.jpg" alt="" width="1600" height="900">
   </figure>
   <div class="section-body${textAlign == 'center' ? ` text-center block-center span-md-2` : ''}">
-    <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
+    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `

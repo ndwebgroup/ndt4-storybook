@@ -31,12 +31,10 @@ export default function Banner(props) {
   // Create banner secondary content
   container.innerHTML = `
   <div class="section-content">
-    <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
+    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
-  <ul class="details-group--aside-list section-images">
-
-  </ul>
+  <ul class="details-group--aside-list section-images"></ul>
 `
   // Get the banner body element
   const bannerBody = container.querySelector('.section-content');

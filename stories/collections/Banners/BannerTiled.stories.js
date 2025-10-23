@@ -1,4 +1,3 @@
-import { background } from 'storybook/internal/theming';
 import BannerTiled from './BannerTiled';
 
 // Add styles to document head
@@ -24,7 +23,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Banner/Banner (Tiled)',
-  tags: ['autodocs'],
+  tags: ['modified'],
   parameters: {
     layout: 'fullscreen',
     docs: {
