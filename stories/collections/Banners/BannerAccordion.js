@@ -14,16 +14,16 @@
 import Accordion from '/stories/components/Accordion.js';
 
 export default function Banner(props) {
-  const container = document.createElement('div');
-  const { 
-    bannerWidth, 
-    headingTag, 
-    label, 
-    title, 
-    titleSize, 
-    summary, 
-    backgroundColor, 
-    accordions 
+  const container = document.createElement('section');
+  const {
+    bannerWidth,
+    headingTag,
+    label,
+    title,
+    titleSize,
+    summary,
+    backgroundColor,
+    accordions
   } = props;
 
   container.className = `section details-group grid grid-ml-2${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
@@ -42,7 +42,7 @@ export default function Banner(props) {
 
   // Handle accordions
   if (accordions && accordions.length > 0) {
-    
+
     const accordionElement = Accordion({
       items: accordions.map(item => ({
         summary: item.summary,

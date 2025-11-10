@@ -17,7 +17,7 @@ import Button from '/stories/components/Buttons/Button.js';
 import Video from '/stories/components/Video';
 
 export default function Banner(props) {
-  const container = document.createElement('div');
+  const container = document.createElement('section');
   const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor } = props;
 
   container.className = `section align-center${media !== 'none' ? ' grid grid-md-2' : ''}${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;

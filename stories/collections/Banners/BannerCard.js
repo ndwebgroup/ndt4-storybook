@@ -15,7 +15,7 @@
 import Card from '/stories/components/Cards/Card.js';
 
 export default function Banner(props) {
-  const container = document.createElement('div');
+  const container = document.createElement('section');
   const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, cardCount } = props;
 
   container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;

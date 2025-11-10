@@ -15,7 +15,7 @@
 import Button from '/stories/components/Buttons/Button.js';
 
 export default function Banner(props) {
-  const container = document.createElement('div');
+  const container = document.createElement('section');
   const { headingTag, label, title, titleSize, summary, textAlign, buttons, buttonList, backgroundOverlay, backgroundOverlayColor } = props;
 
   // Create banner body content first without buttons

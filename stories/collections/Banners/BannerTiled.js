@@ -16,7 +16,7 @@
 import Button from '/stories/components/Buttons/Button.js';
 
 export default function BannerMulti(props) {
-  const container = document.createElement('div');
+  const container = document.createElement('section');
   const { bannerWidth, order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList, imageModifiers, backgroundColor } = props;
 
   container.className = `section grid grid-md-2 align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor == 'none' ? '' : ` bg--${backgroundColor} bg--full-bleed` }`;
