@@ -43,7 +43,7 @@ export default function MediaMentionQuoted(props) {
         ? Avatar({
             size: 'xs',
             type: 'image',
-            helper_class: 'byline-image'
+            modifier: 'byline-image'
           })
         : '';
 

@@ -1,0 +1,57 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as QuoteStories from './QuoteStacked.stories';
+
+<Meta of={QuoteStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use images to enhance the quote when appropriate.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Do not alter the style of the quote component.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+When using images, ensure they have appropriate alt text for screen readers. The quote text should be clear and legible.
+
+---
+
+## Modifier Classes
+| CSS Class                                 | Description                                                    |
+|--------------------------------------------|---------------------------------------------------------------|
+| `.blockquote--right`                       | Styles the blockquote to float right. Usually next to content.|
+| `.blockquote--centered`                    | Styles the blockquote with a centered image, text, and cite.  |
+| `.blockquote--reversed`                    | Styles the blockquote with an image on the right.             |
+
+
+## CSS References
+| CSS Class                                 | Description                                                   |
+|-------------------------------------------|---------------------------------------------------------------|
+| `.list-blockquotes`                       | Container for a list of blockquotes.                           |
+| `.blockquote`                             | Container for the blockquote component.                       |
+| `.blockquote p`                           | Styles the paragraph text within the blockquote component.    |
+| `.blockquote cite`                        | Styles the citation text within the blockquote component.     |
+| `.blockquote .byline`                     | Styles the byline section, typically containing author info.  |

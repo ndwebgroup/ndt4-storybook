@@ -1,7 +1,7 @@
-import Quote from './Quote.js';
+import QuoteStacked from './QuoteStacked.js';
 
 export default {
-  title: 'Components/Quote',
+  title: 'Components/Quote (Stacked)',
   tags: ['stable'],
   argTypes: {
     text: { name:'Quote Text',},
@@ -18,7 +18,7 @@ export default {
     },
     docs: {
       description: {
-        component: 'Quotes are use `blockquote` elements to highlight key testimonials or statements from individuals or organizations, often accompanied by an image and citation.'
+        component: 'Stacked Quotes use `blockquote` elements to highlight key testimonials or statements from individuals or organizations, often accompanied by an image and citation.'
       }
     },
   },
@@ -31,20 +31,20 @@ export default {
 };
 
 export const Primary = (args) => {
-  return Quote(args);
+  return QuoteStacked(args);
 };
 Primary.args = {
 };
 
 export const Centered = (args) => {
-  return Quote(args);
+  return QuoteStacked(args);
 };
 Centered.args = {
   layout: 'centered',
 };
 
 export const Reversed = (args) => {
-  return Quote(args);
+  return QuoteStacked(args);
 };
 Reversed.args = {
   layout: 'reversed',

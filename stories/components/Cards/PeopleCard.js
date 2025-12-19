@@ -44,8 +44,8 @@ export default function PeopleCard(props) {
 
   // Get the same image source that will be used in the Avatar component
   const imageSrc = placeholder ? '/images/placeholder-person.svg' : `/images/placeholder-profile-1-500x500.jpg`;
-  const avatarImage = Avatar({ size: 'lg', type: 'image', helper_class: 'card-image' });
-  const avatarPlaceholder = Avatar({ size: 'lg', type: 'placeholder', helper_class: 'card-image' });
+  const avatarImage = Avatar({ size: 'lg', type: 'image', modifier: 'card-image' });
+  const avatarPlaceholder = Avatar({ size: 'lg', type: 'placeholder', modifier: 'card-image' });
 
   // Create the title element based on whether dialog is used
   const titleElement = useDialog

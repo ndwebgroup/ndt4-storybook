@@ -23,9 +23,9 @@ export default function Byline(props) {
   const titleHTML = `${link ? `<a class="byline-link" href="${link}">${name}</a>` : `${name}`}`;
 
   if (image == 'image') {
-    avatarHTML = Avatar({ size: 'xs', type:'image', helper_class:'byline-image' });
+    avatarHTML = Avatar({ size: 'xs', type:'image', modifier:'byline-image' });
   } else if ( image == 'placeholder'){
-    avatarHTML = Avatar({ size:'xs', type:'placeholder', helper_class:'byline-image' });
+    avatarHTML = Avatar({ size:'xs', type:'placeholder', modifier:'byline-image' });
   }
 
   container.innerHTML = `

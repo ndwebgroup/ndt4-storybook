@@ -10,7 +10,7 @@
 
 import Byline from './Byline';
 
-export default function Quote(props) {
+export default function QuoteStacked(props) {
   const {
     cite = true,
     image = true,
