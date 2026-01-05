@@ -3,38 +3,65 @@ import { Meta } from "@storybook/addon-docs/blocks";
 <Meta title="Foundation/Animations" />
 
 
-# Accessibility and Usability
+# Animations
 
-In the context of a website "accessibility" refers to the practice of creating and maintaining a website such that all users can navigate and understand the information presented.
-
-It is vital that all users, including those with disabilities, find a website usable--that is, they are able to use the website effectively and efficiently to meet their goals.
-
-Part of maintaining a good website is being careful to avoid adding obstacles for users, regardless of their ability.
-
-When building a site in Conductor, the Web Team considers a wide variety of accessibility and usability concerns as they make decisions about colors, typefaces, page layouts, features, styles and more.
+Animations can enhance user experience by providing visual feedback and guiding user attention. However, it's important to use them judiciously to avoid overwhelming users or causing distractions.
 
 ---
 
-## Common Accessibility Concerns
+## Theme Assets
+The Notre Dame Design System provides a set of predefined CSS classes and guidelines for implementing animations in a consistent manner across applications.
 
-### Visual
+### Animation CSS
+Link coming soon.
 
-- **Color blindness**: Using color alone to convey information may create problem for color blind users. Use underlined text for links, as well as distinct colors.
-- **Slight to moderate vision impairment**: Calls for a larger minimum type size.
-- **Blindness or severe vision impairment**: Visitors may make use of screen readers to browse a website.
-  - Images should have adequate alt (alternative) text.
-  - Headings styles should have a logical order.
-  - Links should provide context (do not use "click here" or "read more")
+{/* **Link:** [https://conducor.nd.edu/stylesheets/themes/ndt/4.0/animation.css](https://conducor.nd.edu/stylesheets/themes/ndt/4.0/animation.css)\
+**Usage:** Include in head of document after main stylesheet.
 
-### Hearing
-Video audio: If there are no captions for your video, the content may be of little use to hearing-impaired visitors.
+```html
+  <link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/themes/ndt/4.0/animation.css">
+``` */}
 
-### ​Hand/Mobility
+### Accessibility
+In order to reduce motion for users who have indicated a preference for reduced motion in their system settings, animations must be wrapped in a media query as shown below:
 
-- Visitors may not be able to use a mouse and must rely on other means to navigate the website, making good and consistent headings, links, and images very important.
-- Visitors might struggle to control their devices well enough to locate small buttons on the page. Designers employ a minimum size for navigation and interactive elements.
+```css
+@media (prefers-reduced-motion: no-preference) {}
+```
 
-### Cognition
+## How It Works
+The animation system works by using the `.animate` class plus a `.animation--*` modifier class to apply different types of animations to elements.
 
-- Colloquial terms or jargon may be helpful to some of your audience, but you may be adding confusion for a significant percentage of users. Speaking in plain terms is most often the best way to help users accomplish their goals.
-- If using icons, make sure they are generally accepted images and that they make sense in context.
+### Available Animation Classes
+| CSS Class                                 | Description                                                   |
+|-------------------------------------------|---------------------------------------------------------------|
+| `.animate`                                | Base class to enable animations on an element.                |
+| `.animate--fade-in`                       | Fades the element in from 0% to 100% opacity.                 |
+| `.animate--fade-in-up`                    | Fades the element in while moving it up slightly.             |
+| `.animate--fade-in-down`                  | Fades the element in while moving it down slightly.           |
+| `.animate--fade-in-left`                  | Fades the element in while moving it left slightly.           |
+| `.animate--fade-in-right`                 | Fades the element in while moving it right slightly.          |
+| `.animate--move-up`                       | Moves the element up slightly without changing opacity.       |
+| `.animate--move-down`                     | Moves the element down slightly without changing opacity.     |
+| `.animate--move-left`                     | Moves the element left slightly without changing opacity.     |
+| `.animate--move-right`                    | Moves the element right slightly without changing opacity.    |
+
+## Best Practices
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use animations to indicate state changes, such as loading indicators or button presses.</li>
+      <li>Keep animations short and purposeful, typically under 500 milliseconds.</li>
+      <li>Ensure animations are smooth and do not hinder usability.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Avoid excessive or unnecessary animations that can distract users.</li>
+      <li>Do not use animations that may trigger motion sensitivity in users.</li>
+      <li>Avoid long or complex animations that delay user interactions.</li>
+    </ul>
+  </li>
+</ul>
