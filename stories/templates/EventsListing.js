@@ -7,7 +7,7 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-import PageHeader from '../collections/PageHeader.js';
+import PageHeaderInset from '../collections/PageHeaderInset.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import EventCard from '../components/Cards/EventCard.js';
@@ -29,7 +29,7 @@ export default function EventsListing(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeader({ pageTitle:`Upcoming Events`, pageLede:``, layout:`default`, featuredImage:false })}
+      ${PageHeaderInset({ pageTitle:`Upcoming Events`, pageLede:``, featuredImage:false })}
       <div class="page-primary">
         ${pageContent}
         <ol class="list--events no-bullets">

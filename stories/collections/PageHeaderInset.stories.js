@@ -1,5 +1,5 @@
 import SiteHeader from './SiteHeader.js';
-import PageHeader from './PageHeader.js';
+import PageHeaderInset from './PageHeaderInset.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 
 // Add styles to document head
@@ -17,8 +17,8 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Page Header',
-  component: PageHeader,
+  title: 'Collections/Page Header (Inset)',
+  component: PageHeaderInset,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -70,12 +70,6 @@ export default {
       description: 'URL of the featured image',
       defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
     },
-    layout: {
-      name: 'Layout',
-      control: { type: 'select' },
-      options: ['inset', 'container', 'screen'],
-      description: 'Layout style for the hero section',
-    },
   },
   args: {
     // Default values for the component
@@ -84,12 +78,11 @@ export default {
     pageLede: '',
     featuredImage: true,
     imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
-    layout: 'inset',
   }
 };
 
 const Template = (args) => {
-  return PageHeader(args);
+  return PageHeaderInset(args);
 };
 
 export const Default = Template.bind({});
@@ -104,17 +97,6 @@ WithLede.args = {
 
 export const NoFeaturedImage = Template.bind({});
 NoFeaturedImage.args = {
-  layout: 'inset',
   featuredImage: false,
-  pageLede: 'This is an example of a page lede or subtitle that provides additional context about the page.',
-};
-export const ContainerLayout = Template.bind({});
-ContainerLayout.args = {
-  layout: 'container',
-  pageLede: 'This is an example of a page lede or subtitle that provides additional context about the page.',
-};
-export const ScreenLayout = Template.bind({});
-ScreenLayout.args = {
-  layout: 'screen',
   pageLede: 'This is an example of a page lede or subtitle that provides additional context about the page.',
 };

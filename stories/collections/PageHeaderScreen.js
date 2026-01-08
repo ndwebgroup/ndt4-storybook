@@ -1,5 +1,5 @@
 /**
- * PageHeader component
+ * PageHeaderScreen component
  * @param {Object} props - Component properties
  * @param {string} [props.pageTitle=''] - Title of the page
  * @param {string} [props.pageTitleSize=''] - Size of the page title (e.g., 'sm', 'md', 'lg')
@@ -9,27 +9,21 @@
  * @returns {string} - The page header HTML
  */
 
-export default function PageHeader(props) {
+export default function PageHeaderScreen(props) {
   const {
     pageTitle = '',
     pageTitleSize = '',
     pageLede = '',
-    layout = '',
     featuredImage = true,
     imageUrl = '/images/placeholder-campus-3-1600x900.jpg',
   } = props;
 
   // Create the hero HTML
   const container = document.createElement('div');
-  container.className = `page-header${layout !== 'default' ? ` page-header--${layout}` : ''}`;
-
-  // If featuredImage is true and layout is not 'inset', add the featured image
-  if (featuredImage && layout !== 'inset') {
-    container.classList.add('bg--dark');
-  }
+  container.className = `page-header page-header--screen bg--dark`;
 
   container.innerHTML = `
-      ${featuredImage ? `<figure class="page-image${layout !== `inset` ? ` bg--dark bg--gradient` : ``}"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
+      ${featuredImage ? `<figure class="page-image bg--gradient bg--brand-blue"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
       <div class="page-title-wrapper">
         <h1 class="page-title${pageTitleSize !== 'default' ? ` page-title--${pageTitleSize}` : ''}">${pageTitle}</h1>
         ${pageLede ? `<p class="page-lede">${pageLede}</p>` : ''}

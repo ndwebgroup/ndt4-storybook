@@ -9,7 +9,11 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-import PageHeader from '../collections/PageHeader.js';
+
+import PageHeaderInset from '../collections/PageHeaderInset.js';
+import PageHeaderContainer from '../collections/PageHeaderContainer.js';
+import PageHeaderScreen from '../collections/PageHeaderScreen.js';
+
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
@@ -22,7 +26,6 @@ export default function Home(props) {
     pageTitle = '',
     pageContent = '',
     navTop = false,
-    heroLayout = ''
   } = props;
   
   const container = document.createElement('div');
@@ -33,7 +36,7 @@ export default function Home(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeader({ pageTitle:pageTitle, pageLede:``, layout:heroLayout, showFeaturedImage:true })}
+      ${PageHeaderScreen({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true })}
       <div class="page-primary${navTop ? ' full-width' : ''}">
         <div class="section home-primary${navTop ? ' col--md' : ''}">${pageContent}</div>
         <section class="section section--home-news">

@@ -9,7 +9,7 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-import PageHeader from '../collections/PageHeader.js';
+import PageHeaderInset from '../collections/PageHeaderInset.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
@@ -31,7 +31,7 @@ export default function NewsListing(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeader({ pageTitle:`Latest News`, pageTitleSize:`default`, pageLede:``, layout:`default`, featuredImage:false })}
+      ${PageHeaderInset({ pageTitle:`Latest News`, pageTitleSize:`default`, pageLede:``, featuredImage:false })}
       <div class="page-primary">
         ${pageContent}
         <ol class="list--news no-bullets">
