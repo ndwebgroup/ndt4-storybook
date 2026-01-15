@@ -2,7 +2,7 @@ import NavigationAnchor, { defaultNavigationItems } from './NavigationAnchor.js'
 
 export default {
   title: 'Components/Navigation (Anchor)',
-  tags: ['coming'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",

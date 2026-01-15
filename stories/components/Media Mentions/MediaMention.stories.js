@@ -2,7 +2,7 @@ import MediaMention from './MediaMention';
 
 export default {
   title: 'Components/Media Mentions/Media Mention',
-  tags: ['modified'],
+  tags: ['stable'],
   argTypes: {
     headingTag: {
       control: { type: 'select' },

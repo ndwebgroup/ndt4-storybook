@@ -23,7 +23,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Banner/Banner (Tiled)',
-  tags: ['modified'],
+  tags: ['stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {
