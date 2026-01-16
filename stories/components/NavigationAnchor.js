@@ -21,13 +21,11 @@ export default function NavigationAnchor(args) {
   const navItems = Array.isArray(items) ? items : defaultItems;
   return `
 <nav id="nav-anchor" class="nav-anchor" aria-label="Anchor">
-  <div id="anchor">
-    <ul>
-      ${navItems.map((item) => {
-          return `<li><a href="${item.url ? item.url : '#' }">${item.label}</a></li>`;
-        }).join('\n      ')}
-    </ul>
-  </div>
+  <ul>
+    ${navItems.map((item) => {
+        return `<li><a href="${item.url ? item.url : '#' }">${item.label}</a></li>`;
+      }).join('\n      ')}
+  </ul>
 </nav>
   `;
 }
