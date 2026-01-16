@@ -13,14 +13,22 @@ export default {
   },
   argTypes: {
     text: {
+      name: 'Heading Text',
       control: 'text',
       description: 'The text content of the heading',
     },
+    link: {
+      name: 'Styled as Link',
+      control: 'boolean',
+      description: 'Whether to style the heading as a link',
+    },
     className: {
+      name: 'Additional Classes',
       control: 'text',
       description: 'Additional CSS classes to apply to the heading',
     },
     useClass: {
+      name: 'Use Paragraph with Heading Class',
       control: 'boolean',
       description: 'Whether to use a p tag with heading class instead of actual heading element',
     },
@@ -122,6 +130,16 @@ export const HeadingWithAdditionalClass = {
     level: 'h3',
     text: 'Heading with additional class',
     className: 'text-center margin-top',
+    useClass: false,
+  },
+};
+
+export const HeadingWithStyledLink = {
+  args: {
+    level: 'h2',
+    link: true,
+    text: 'Heading with a styled link',
+    className: 'heading--linked',
     useClass: false,
   },
 };
