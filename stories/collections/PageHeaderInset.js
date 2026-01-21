@@ -9,6 +9,8 @@
  * @returns {string} - The page header HTML
  */
 
+import PageTitle from '../components/PageTitle.js';
+
 export default function PageHeaderInset(props) {
   const {
     pageTitle = '',
@@ -25,7 +27,7 @@ export default function PageHeaderInset(props) {
   container.innerHTML = `
       ${featuredImage ? `<figure class="page-image"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
       <div class="page-title-wrapper">
-        <h1 class="page-title${pageTitleSize !== 'default' ? ` page-title--${pageTitleSize}` : ''}">${pageTitle}</h1>
+        ${PageTitle({ title: pageTitle, size: pageTitleSize })}
         ${pageLede ? `<p class="page-lede">${pageLede}</p>` : ''}
       </div>
   `;

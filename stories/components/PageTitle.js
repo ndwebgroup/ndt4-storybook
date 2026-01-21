@@ -16,7 +16,10 @@ export default function Heading(props) {
   const titleWrapper = useParagraph ? 'p' : 'h1';
   const element = document.createElement(titleWrapper);
   element.textContent = title;
-  element.className = `page-title${size ? ` page-title--${size}` : ''}`;
+  element.className = `page-title${size !== 'dynamic' ? ` page-title--${size}` : ''}`;
+  if (size === 'dynamic') {
+    element.setAttribute('data-length', title.length);
+  }
 
   return element.outerHTML;
 }

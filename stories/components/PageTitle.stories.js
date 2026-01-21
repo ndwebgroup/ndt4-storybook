@@ -18,9 +18,8 @@ export default {
     },
     size: {
       control: { type: 'select' },
-      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl', 'dynamic'],
       description: 'The size of the page title',
-      defaultValue: 'md',
     },
     useParagraph: {
       control: 'boolean',

@@ -19,7 +19,7 @@ const addHeaderStyles = () => {
 export default {
   title: 'Collections/Page Header (Container)',
   component: PageHeaderContainer,
-  tags: ['autodocs'],
+  tags: ['!autodocs'],
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -50,7 +50,7 @@ export default {
     pageTitleSize: {
       name: 'Page Title Size',
       control: { type: 'select' },
-      options: ['default', 'xs', 'sm', 'md', 'lg', 'xl'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl', 'dynamic'],
       description: 'Size of the page title',
     },
     pageLede: {
@@ -73,8 +73,8 @@ export default {
   },
   args: {
     // Default values for the component
-    pageTitle: 'Do more than dream about the future. <em>Fight</em> for it.',
-    pageTitleSize: 'sm',
+    pageTitle: `Do more than dream about the future. Fight for it.`,
+    pageTitleSize: 'md',
     pageLede: '',
     featuredImage: true,
     imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
