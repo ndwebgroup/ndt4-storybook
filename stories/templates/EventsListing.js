@@ -7,7 +7,6 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-import PageHeaderInset from '../collections/PageHeaderInset.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import EventCard from '../components/Cards/EventCard.js';
@@ -16,8 +15,7 @@ import SiteFooter from '../collections/SiteFooter.js';
 
 export default function EventsListing(props) {
   const {
-    siteTitle = '',
-    pageContent = '',
+    pageCopy = '<p>This is an example of an events listing page. It features a list of upcoming events with their titles, dates, locations, and links for more information.</p>',
     navTop = true,
   } = props;
   
@@ -27,11 +25,15 @@ export default function EventsListing(props) {
   container.id = 'wrapper';
 
   container.innerHTML = `
-  ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeaderInset({ pageTitle:`Upcoming Events`, pageLede:``, featuredImage:false })}
+      <div class="page-header">
+        <div class="page-title-wrapper">
+          <h1 class="page-title">Upcoming Events</h1>
+        </div>
+      </div>
       <div class="page-primary">
-        ${pageContent}
+        ${pageCopy}
         <ol class="list--events no-bullets">
           <li>${EventCard({ title: 'Big Party at the Art Museum', startDate: '2025-09-22T10:00', endDate: '2025-09-22T12:00', location: 'Raclin Murphy Art Museum', link: '#'}).outerHTML}</li>
           <li>${EventCard({ title: 'Community Meeting', startDate: '2025-10-15T18:00', endDate: '2025-10-15T20:00', location: 'Bond Hall', link: '#'}).outerHTML}</li>
@@ -50,7 +52,7 @@ export default function EventsListing(props) {
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${SiteFooter({ siteName:siteTitle })}
+    ${SiteFooter({ siteName:'Department Title' })}
 `;
   return container.outerHTML;
 }

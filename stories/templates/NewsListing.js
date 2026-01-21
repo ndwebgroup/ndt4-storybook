@@ -9,7 +9,6 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-import PageHeaderInset from '../collections/PageHeaderInset.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
@@ -19,7 +18,7 @@ import SiteFooter from '../collections/SiteFooter.js';
 export default function NewsListing(props) {
   const {
     siteTitle = '',
-    pageContent = '',
+    pageCopy = '<p>This is an example of a news listing page. It features a selection of recent news articles displayed in a list format. Each article includes a title, image, and link to read more.</p>',
     navTop = true,
   } = props;
   
@@ -29,11 +28,15 @@ export default function NewsListing(props) {
   container.id = 'wrapper';
 
   container.innerHTML = `
-  ${SiteHeader({ siteName:siteTitle, showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      ${PageHeaderInset({ pageTitle:`Latest News`, pageTitleSize:`default`, pageLede:``, featuredImage:false })}
+      <div class="page-header">
+        <div class="page-title-wrapper">
+          <h1 class="page-title">Latest News</h1>
+        </div>
+      </div>
       <div class="page-primary">
-        ${pageContent}
+        ${pageCopy}
         <ol class="list--news no-bullets">
           <li>${NewsCard({ label:``, title:'New Research Initiative Launched', showImage:true, link:'#', publishDate:`September 9, 2025` }).outerHTML}</li>
           <li>${NewsCard({ label:``, title:'Department Receives Major Grant', showImage:true, link:'#', publishDate:`August 22, 2025` }).outerHTML}</li>

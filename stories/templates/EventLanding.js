@@ -27,7 +27,8 @@ export default function EventLanding(props) {
     endDate = new Date(new Date().getTime() + 60 * 60 * 1000).toISOString(),
     allDay = false,
     location = 'Main Building',
-    pageContent = '',
+    pageCopy = `<p>This is an example of an event landing page. It features details about a specific event, including the date, time, location, and a description of what attendees can expect.</p>
+     <p>Additional information about the event can be included here, such as speakers, agenda, and registration details.</p>`,
     repeatDate = false,
     navTop = true,
   } = props;
@@ -68,14 +69,17 @@ export default function EventLanding(props) {
 
 
   container.innerHTML = `
-  ${SiteHeader({ siteName:'Department of Example', showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      <div class="page-header"></div>
+      <div class="page-header">
+        <div class="page-title-wrapper">
+          ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'Events', link: '#' }, { text: title, link: '#' } ] })}
+          <h1 class="article-title entry-title" property="name">${title}</h1>
+        </div>
+      </div>
       <div class="page-primary">
         <article class="article" typeof="Event"> 
-          ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'Events', link: '#' }, { text: title, link: '#' } ] })}
           <header class="article-header" style="view-transition-name:event-{{ event.id }}">
-            <h1 class="article-title entry-title" property="name">${title}</h1>
             <div class="meta-share-group">
               <div class="meta">
                 <link property="organizer" resource="#siteorg">
@@ -98,7 +102,7 @@ export default function EventLanding(props) {
               <img src="/images/placeholder-campus-1-1200x675.jpg" width="1200" height="675" alt="${title}" property="image">
             </figure>
             ` : ''}
-            ${pageContent}
+            ${pageCopy}
           </div>
           <footer class="article-footer">
             <div class="meta-tags">

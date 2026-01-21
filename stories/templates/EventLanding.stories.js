@@ -3,7 +3,7 @@ import EventLanding from './EventLanding.js';
 export default {
   title: 'Templates/Event Landing',
   component: EventLanding,
-  tags: ['autodocs'],
+  tags: ['!autodocs'],
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -33,11 +33,6 @@ export default {
       description: 'Whether the event runs all day'
     },
     location: { name: 'Event Location' },
-    pageContent: {
-      name: 'Page Content',
-      description: 'HTML content for the main area of the home page',
-      control: 'text'
-    },
     repeatDate: {
       name: 'Repeat Date',
       control: 'boolean',
@@ -51,8 +46,6 @@ export default {
   },
   args: {
     title: 'Example Event Title',
-    pageContent: `<p>This is an example of an event landing page. It features details about a specific event, including the date, time, location, and a description of what attendees can expect.</p>
-     <p>Additional information about the event can be included here, such as speakers, agenda, and registration details.</p>`,
     navTop: false,
     featuredImage: false,
     startDate: '2025-09-22T10:00',

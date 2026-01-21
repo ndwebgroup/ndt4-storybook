@@ -1,27 +1,28 @@
-import NewsListing from './NewsListing.js';
+import PeopleListing from './PeopleListing.js';
 
 export default {
-  title: 'Templates/News Listing',
-  component: NewsListing,
+  title: 'Templates/People Listing',
+  component: PeopleListing,
   tags: ['!autodocs'],
   parameters: {
     layout: 'fullscreen'
   },
   argTypes: {
-    siteTitle: {
-      name: 'Site Title',
-      description: 'Title of the site',
-      control: 'text'
-    },
     navTop: {
       name: 'Navigation Top',
       description: 'Whether to show the top navigation',
       control: 'boolean'
     },
+    format: {
+      name: 'Format',
+      description: 'The format of the page',
+      control: { type: 'select' },
+      options: ['grid', 'list'],
+      defaultValue: 'grid'
+    }
   },
   args: {
-   siteTitle: 'Department of Example',
-    navTop: false,
+   navTop: false,
   },
   decorators: [
     (Story) => {
@@ -33,7 +34,7 @@ export default {
 };
 
 const Template = (args) => {
-  return NewsListing(args);
+  return PeopleListing(args);
 };
 
 export const Default = Template.bind({});
