@@ -71,32 +71,30 @@ export default function EventLanding(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
-      <div class="page-header">
-        <div class="page-title-wrapper">
-          ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'Events', link: '#' }, { text: title, link: '#' } ] })}
-          <h1 class="article-title entry-title" property="name">${title}</h1>
-        </div>
-      </div>
-      <div class="page-primary">
-        <article class="article" typeof="Event"> 
-          <header class="article-header" style="view-transition-name:event-{{ event.id }}">
-            <div class="meta-share-group">
-              <div class="meta">
-                <link property="organizer" resource="#siteorg">
-                <p class="meta-item" title="${startDateFormatted}, ${startTimeFormatted} - ${endTimeFormatted}">
-                  <time property="startDate" datetime="${startDateISO}"><span class="icon" data-icon="clock">Time:</span>
-                  <span class="date-string">${startDateFormatted}</span>${allDay ? ', All Day' : ` at ${startTimeFormatted}`}</time> ${!allDay ? ' - ' : ''}
-                  <time property="endDate" datetime="${endDateISO}">${!allDay ? endTimeFormatted : ''}</time>
-                  ${repeatDate ? `<span class="muted">(part of a series)</span>` : ''}
-                </p>
-                  ${location ? `<p class="meta-item" property="location" typeof="Place" ><span class="icon" data-icon="map-pin">Location:</span> <span property="name address">${location}</span>
-                  <a href="{{ event.placemark_url }}" target="_blank" rel="noopener" aria-label="View on map.nd.edu">View on map <span class="icon" data-icon="external-link"></span></a>
-                  </p>` : ''}
+        <article class="article article-page-wrapper" typeof="Event"> 
+          <header class="page-header article-header">
+            <div class="page-title-wrapper">
+              ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'Events', link: '#' }, { text: title, link: '#' } ] })}
+              <h1 class="article-title entry-title" property="name">${title}</h1>
+              
+              <div class="meta-share-group">
+                <div class="meta">
+                  <link property="organizer" resource="#siteorg">
+                  <p class="meta-item" title="${startDateFormatted}, ${startTimeFormatted} - ${endTimeFormatted}">
+                    <time property="startDate" datetime="${startDateISO}"><span class="icon" data-icon="clock">Time:</span>
+                    <span class="date-string">${startDateFormatted}</span>${allDay ? ', All Day' : ` at ${startTimeFormatted}`}</time> ${!allDay ? ' - ' : ''}
+                    <time property="endDate" datetime="${endDateISO}">${!allDay ? endTimeFormatted : ''}</time>
+                    ${repeatDate ? `<span class="muted">(part of a series)</span>` : ''}
+                  </p>
+                    ${location ? `<p class="meta-item" property="location" typeof="Place" ><span class="icon" data-icon="map-pin">Location:</span> <span property="name address">${location}</span>
+                    <a href="{{ event.placemark_url }}" target="_blank" rel="noopener" aria-label="View on map.nd.edu">View on map <span class="icon" data-icon="external-link"></span></a>
+                    </p>` : ''}
+                </div>
+                ${SocialShare({ url: '#', title: title, via: 'Example', hashtags: 'example,events' }).outerHTML}
               </div>
-              ${SocialShare({ url: '#', title: title, via: 'Example', hashtags: 'example,events' }).outerHTML}
             </div>
           </header> 
-          <div class="article-content" property="description">
+          <div class="page-primary article-content" property="description">
             ${featuredImage ? `
             <figure class="article-image">
               <img src="/images/placeholder-campus-1-1200x675.jpg" width="1200" height="675" alt="${title}" property="image">
@@ -104,36 +102,36 @@ export default function EventLanding(props) {
             ` : ''}
             ${pageCopy}
           </div>
-          <footer class="article-footer">
-            <div class="meta-tags">
-              <p class="meta-label">Posted In:</p>
-              <ul class="meta-list no-bullets list--inline">
-                <li><a class="tag" href="#">Calendar Name</a></li>
-              </ul>
-            </div>
-
-            <div class="article-actions">
-              <a class="btn" href="#" target="_blank" rel="nofollow"><span class="icon" data-icon="calendar-add"></span> Add to Google Calendar</a>
-              ${SocialShare({ url: '#', title: title, via: 'Example', hashtags: 'example,events' }).outerHTML}
-            </div>
-            
-            ${repeatDate ? `
-              <details class="article-series accordion accordion--highlight mb-4">
-                <summary>All dates in this series</summary>
-                <ul>
-                {%- for entry in event.all_entries reversed %}
-                  <li><a href="{{ entry.link }}">{{ entry.start_at | strftime:'%a %b %e, %Y' }}</a> {% if entry.id == event.id %}<strong>(Current)</strong>{% endif %}</li>
-                {%- endfor %}
+          <footer class="page-secondary article-footer">
+            <div class="grid grid-md-2 grid-gap-sm">
+              <div class="meta-tags">
+                <p class="meta-label">Posted In:</p>
+                <ul class="meta-list no-bullets list--inline">
+                  <li><a class="tag" href="#">Calendar Name</a></li>
                 </ul>
-              </details>
-            ` : ''}
-            
+              </div>
+
+              <div class="article-actions">
+                <a class="btn" href="#" target="_blank" rel="nofollow"><span class="icon" data-icon="calendar-add"></span> Add to Google Calendar</a>
+                ${SocialShare({ url: '#', title: title, via: 'Example', hashtags: 'example,events' }).outerHTML}
+              </div>
+              
+              ${repeatDate ? `
+                <details class="article-series accordion accordion--highlight mb-4">
+                  <summary>All dates in this series</summary>
+                  <ul>
+                  {%- for entry in event.all_entries reversed %}
+                    <li><a href="{{ entry.link }}">{{ entry.start_at | strftime:'%a %b %e, %Y' }}</a> {% if entry.id == event.id %}<strong>(Current)</strong>{% endif %}</li>
+                  {%- endfor %}
+                  </ul>
+                </details>
+              ` : ''}
+            </div>
           </footer>
+          <div class="page-sidebar">
+            ${NavigationSidebar({ items: defaultNavigationItems })}
+          </div>
         </article>
-      </div>
-      <div class="page-sidebar">
-        ${NavigationSidebar({ items: defaultNavigationItems })}
-      </div>
     </main>
     ${SiteFooter({ siteName:'Department of Example' })}
 `;
