@@ -8,11 +8,6 @@ export default {
     layout: 'fullscreen'
   },
   argTypes: {
-    pageContent: {
-      name: 'Page Content',
-      description: 'HTML content for the main area of the home page',
-      control: 'text'
-    },
     navTop: {
       name: 'Navigation Top',
       description: 'If true, navigation is at the top of the page',
@@ -21,13 +16,8 @@ export default {
     heroLayout: {
       name: 'Hero Layout',
       control: { type: 'select' },
-      options: ['inline', 'inset', 'container', 'screen'],
+      options: ['Default', 'Inset', 'Container', 'Screen'],
       description: 'Layout style for the hero section',
-    },
-    siteTitle: {
-      name: 'Site Title',
-      description: 'Title of the site',
-      control: 'text'
     },
     pageTitle: {
       name: 'Page Title',
@@ -36,10 +26,9 @@ export default {
     }
   },
   args: {
-   siteTitle: 'Department Title',
-   pageTitle: 'Exploring the Future',
+    heroLayout: 'Default',
+    pageTitle: 'Exploring the Future',
     navTop: false,
-    heroLayout: 'inset',
   },
   decorators: [
     (Story) => {

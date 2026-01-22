@@ -10,6 +10,7 @@
 
 import SiteHeader from '../collections/SiteHeader.js';
 
+import PageHeaderDefault from '../collections/PageHeaderDefault.js';
 import PageHeaderInset from '../collections/PageHeaderInset.js';
 import PageHeaderContainer from '../collections/PageHeaderContainer.js';
 import PageHeaderScreen from '../collections/PageHeaderScreen.js';
@@ -23,6 +24,7 @@ import SiteFooter from '../collections/SiteFooter.js';
 export default function Home(props) {
   const {
     siteTitle = '',
+    heroLayout = 'Default',
     pageTitle = '',
     pageCopy = `<h2>Welcome to Department Title</h2>
     <p>This is a sample home page layout. Use the controls to customize the content.</p>
@@ -36,9 +38,12 @@ export default function Home(props) {
   container.id = 'wrapper';
   
   container.innerHTML = `
-  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
+  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier: 'inline-xl' })}
     <main id="content" class="site-content">
-      ${PageHeaderScreen({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true })}
+      ${heroLayout === 'Default' ? PageHeaderDefault({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Inset' ? PageHeaderInset({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Container' ? PageHeaderContainer({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Screen' ? PageHeaderScreen({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
       <div class="page-primary${navTop ? ' full-width' : ''}">
         <div class="section home-primary${navTop ? ' col--md' : ''}">${pageCopy}</div>
         <section class="section section--home-news">
