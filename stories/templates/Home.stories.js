@@ -23,11 +23,17 @@ export default {
       name: 'Page Title',
       description: 'Title text for the hero section',
       control: 'text',
+    },
+    pageLede: {
+      name: 'Page Lede',
+      description: 'Lede text for the hero section',
+      control: 'text',
     }
   },
   args: {
     heroLayout: 'Default',
     pageTitle: 'Exploring the Future',
+    pageLede: '',
     navTop: false,
   },
   decorators: [

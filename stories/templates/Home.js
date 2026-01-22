@@ -26,6 +26,7 @@ export default function Home(props) {
     siteTitle = '',
     heroLayout = 'Default',
     pageTitle = '',
+    pageLede = '',
     pageCopy = `<h2>Welcome to Department Title</h2>
     <p>This is a sample home page layout. Use the controls to customize the content.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`,
@@ -40,10 +41,10 @@ export default function Home(props) {
   container.innerHTML = `
   ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier: 'inline-xl' })}
     <main id="content" class="site-content">
-      ${heroLayout === 'Default' ? PageHeaderDefault({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
-      ${heroLayout === 'Inset' ? PageHeaderInset({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
-      ${heroLayout === 'Container' ? PageHeaderContainer({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
-      ${heroLayout === 'Screen' ? PageHeaderScreen({ pageTitle:pageTitle, pageLede:``, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Default' ? PageHeaderDefault({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Inset' ? PageHeaderInset({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Container' ? PageHeaderContainer({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Screen' ? PageHeaderScreen({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
       <div class="page-primary${navTop ? ' full-width' : ''}">
         <div class="section home-primary${navTop ? ' col--md' : ''}">${pageCopy}</div>
         <section class="section section--home-news">
