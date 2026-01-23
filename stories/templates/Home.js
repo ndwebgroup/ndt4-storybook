@@ -9,12 +9,10 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-
 import PageHeaderDefault from '../collections/PageHeaderDefault.js';
 import PageHeaderInset from '../collections/PageHeaderInset.js';
 import PageHeaderContainer from '../collections/PageHeaderContainer.js';
 import PageHeaderScreen from '../collections/PageHeaderScreen.js';
-
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
