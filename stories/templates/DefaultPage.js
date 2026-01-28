@@ -10,8 +10,8 @@
 
 import SiteHeader from '../collections/SiteHeader.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
-import PageHeaderDefault from '../collections/PageHeaderDefault.js';
-import PageHeaderInset from '../collections/PageHeaderInset.js';
+import PageHeaderDefault from '../collections/PageHeader/PageHeaderDefault.js';
+import PageHeaderInset from '../collections/PageHeader/PageHeaderInset.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import SiteFooter from '../collections/SiteFooter.js';
 

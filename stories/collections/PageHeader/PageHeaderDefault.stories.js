@@ -1,6 +1,7 @@
-import SiteHeader from './SiteHeader.js';
-import PageHeaderScreen from './PageHeaderScreen.js';
-import { defaultNavigationItems } from '../components/NavigationPrimary.js';
+import SiteHeader from '../SiteHeader.js';
+import PageHeaderDefault from './PageHeaderDefault.js';
+import { defaultNavigationItems } from '../../components/NavigationPrimary.js';
+import NavigationSidebar from '../../components/NavigationSidebar.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -17,8 +18,8 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Page Header (Screen)',
-  component: PageHeaderScreen,
+  title: 'Collections/Page Header/Page Header (Default)',
+  component: PageHeaderDefault,
   tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
@@ -38,7 +39,7 @@ export default {
       addHeaderStyles();
       // This will only affect the preview
       const result = Story();
-      return `<div class="wrapper" id="wrapper">${SiteHeader({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}</main></div>`;
+      return `<div class="wrapper" id="wrapper">${SiteHeader({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavigation:false, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}<div class="page-sidebar">${NavigationSidebar({ items: defaultNavigationItems })}</div></main></div>`;
     }
   ],
   argTypes: {
@@ -82,7 +83,7 @@ export default {
 };
 
 const Template = (args) => {
-  return PageHeaderScreen(args);
+  return PageHeaderDefault(args);
 };
 
 export const Default = Template.bind({});

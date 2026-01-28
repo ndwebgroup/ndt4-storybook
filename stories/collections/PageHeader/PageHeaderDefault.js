@@ -9,7 +9,7 @@
  * @returns {string} - The page header HTML
  */
 
-import PageTitle from '../components/PageTitle.js';
+import PageTitle from '../../components/PageTitle.js';
 
 export default function PageHeaderDefault(props) {
   const {

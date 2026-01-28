@@ -23,7 +23,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Banner/Banner (Accordion)',
-  tags: ['stable'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {

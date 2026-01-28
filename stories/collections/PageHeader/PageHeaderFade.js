@@ -1,5 +1,5 @@
 /**
- * PageHeaderScreen component
+ * PageHeader component
  * @param {Object} props - Component properties
  * @param {string} [props.pageTitle=''] - Title of the page
  * @param {string} [props.pageTitleSize=''] - Size of the page title (e.g., 'sm', 'md', 'lg')
@@ -9,23 +9,24 @@
  * @returns {string} - The page header HTML
  */
 
-import PageTitle from '../components/PageTitle.js';
+import PageTitle from '../../components/PageTitle.js';
 
-export default function PageHeaderScreen(props) {
+export default function PageHeaderFade(props) {
   const {
     pageTitle = '',
     pageTitleSize = '',
     pageLede = '',
     featuredImage = true,
+    backgroundColor = 'brand-blue',
     imageUrl = '/images/placeholder-campus-3-1600x900.jpg',
   } = props;
 
   // Create the hero HTML
   const container = document.createElement('div');
-  container.className = `page-header page-header--screen ${featuredImage === true ? 'bg--dark' : ''}`;
+  container.className = `page-header page-header--fade ${featuredImage ? `has-featured-image bg--${backgroundColor}` : ''}`;
 
   container.innerHTML = `
-      ${featuredImage ? `<figure class="page-image bg--gradient bg--brand-blue"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
+      ${featuredImage ? `<figure class="page-image bg--gradient bg--to-right"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
       <div class="page-title-wrapper">
         ${PageTitle({ title: pageTitle, size: pageTitleSize })}
         ${pageLede ? `<p class="page-lede">${pageLede}</p>` : ''}

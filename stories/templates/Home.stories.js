@@ -16,7 +16,7 @@ export default {
     heroLayout: {
       name: 'Hero Layout',
       control: { type: 'select' },
-      options: ['Default', 'Inset', 'Container', 'Screen'],
+      options: ['Default', 'Fade', 'Inset', 'Container', 'Screen'],
       description: 'Layout style for the hero section',
     },
     pageTitle: {

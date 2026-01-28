@@ -1,6 +1,6 @@
-import SiteHeader from './SiteHeader.js';
-import PageHeaderContainer from './PageHeaderContainer.js';
-import { defaultNavigationItems } from '../components/NavigationPrimary.js';
+import SiteHeader from '../SiteHeader.js';
+import PageHeaderInset from './PageHeaderInset.js';
+import { defaultNavigationItems } from '../../components/NavigationPrimary.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -17,8 +17,8 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Page Header (Container)',
-  component: PageHeaderContainer,
+  title: 'Collections/Page Header/Page Header (Inset)',
+  component: PageHeaderInset,
   tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
@@ -73,8 +73,8 @@ export default {
   },
   args: {
     // Default values for the component
-    pageTitle: `Do more than dream about the future. Fight for it.`,
-    pageTitleSize: 'md',
+    pageTitle: 'Do more than dream about the future. Fight for it.',
+    pageTitleSize: 'sm',
     pageLede: '',
     featuredImage: true,
     imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
@@ -82,7 +82,7 @@ export default {
 };
 
 const Template = (args) => {
-  return PageHeaderContainer(args);
+  return PageHeaderInset(args);
 };
 
 export const Default = Template.bind({});

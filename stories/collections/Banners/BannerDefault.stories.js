@@ -24,7 +24,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Collections/Banner/Banner (Default)',
-  tags: ['stable'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {

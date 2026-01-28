@@ -1,7 +1,6 @@
-import SiteHeader from './SiteHeader.js';
-import PageHeaderFade from './PageHeaderFade.js';
-import { defaultNavigationItems } from '../components/NavigationPrimary.js';
-import { background } from 'storybook/internal/theming';
+import SiteHeader from '../SiteHeader.js';
+import PageHeaderContainer from './PageHeaderContainer.js';
+import { defaultNavigationItems } from '../../components/NavigationPrimary.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -18,9 +17,9 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Page Header (Fade)',
-  component: PageHeaderFade,
-  tags: ['!autodocs', 'coming'],
+  title: 'Collections/Page Header/Page Header (Container)',
+  component: PageHeaderContainer,
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -65,13 +64,6 @@ export default {
       description: 'Whether to show the featured image',
       defaultValue: true
     },
-    backgroundColor: {
-      name: 'Background Color',
-      control: { type: 'select' },
-      options: ['brand-blue', 'brand-blue-light', 'brand-blue-dark', 'warm-white', 'sky-blue', 'sky-blue-light', 'gray-extra-extra-light', 'gray-dark'],
-      description: 'Background color behind the featured image',
-      defaultValue: 'brand-blue'
-    },
     imageUrl: {
       name: 'Image URL',
       control: 'text',
@@ -81,17 +73,16 @@ export default {
   },
   args: {
     // Default values for the component
-    pageTitle: 'Do more than dream about the future. Fight for it.',
+    pageTitle: `Do more than dream about the future. Fight for it.`,
     pageTitleSize: 'md',
     pageLede: '',
     featuredImage: true,
-    backgroundColor: 'brand-blue',
     imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
   }
 };
 
 const Template = (args) => {
-  return PageHeaderFade(args);
+  return PageHeaderContainer(args);
 };
 
 export const Default = Template.bind({});

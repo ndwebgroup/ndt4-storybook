@@ -9,10 +9,11 @@
  */
 
 import SiteHeader from '../collections/SiteHeader.js';
-import PageHeaderDefault from '../collections/PageHeaderDefault.js';
-import PageHeaderInset from '../collections/PageHeaderInset.js';
-import PageHeaderContainer from '../collections/PageHeaderContainer.js';
-import PageHeaderScreen from '../collections/PageHeaderScreen.js';
+import PageHeaderDefault from '../collections/PageHeader/PageHeaderDefault.js';
+import PageHeaderFade from '../collections/PageHeader/PageHeaderFade.js';
+import PageHeaderInset from '../collections/PageHeader/PageHeaderInset.js';
+import PageHeaderContainer from '../collections/PageHeader/PageHeaderContainer.js';
+import PageHeaderScreen from '../collections/PageHeader/PageHeaderScreen.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
 import NewsCard from '../components/Cards/NewsCard.js';
@@ -40,6 +41,7 @@ export default function Home(props) {
   ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier: 'inline-xl' })}
     <main id="content" class="site-content">
       ${heroLayout === 'Default' ? PageHeaderDefault({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
+      ${heroLayout === 'Fade' ? PageHeaderFade({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
       ${heroLayout === 'Inset' ? PageHeaderInset({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
       ${heroLayout === 'Container' ? PageHeaderContainer({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
       ${heroLayout === 'Screen' ? PageHeaderScreen({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
