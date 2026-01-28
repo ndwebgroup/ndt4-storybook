@@ -20,7 +20,7 @@ const addHeaderStyles = () => {
 export default {
   title: 'Collections/Page Header (Default)',
   component: PageHeaderDefault,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {

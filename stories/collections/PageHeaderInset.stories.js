@@ -19,7 +19,7 @@ const addHeaderStyles = () => {
 export default {
   title: 'Collections/Page Header (Inset)',
   component: PageHeaderInset,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {
