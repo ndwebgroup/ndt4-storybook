@@ -1,7 +1,6 @@
 import SiteHeader from './SiteHeader.js';
 import PageHeaderFade from './PageHeaderFade.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
-import { background } from 'storybook/internal/theming';
 
 // Add styles to document head
 const addHeaderStyles = () => {
