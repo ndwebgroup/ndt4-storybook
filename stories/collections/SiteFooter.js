@@ -72,12 +72,11 @@ export default function SiteFooter(props) {
     }).join('');
 
     navFooterHTML = `
-      <nav class="nav-footer full sticky">
-        <ul>
-          ${navLinks}
-        </ul>
-      </nav>
-    `;
+    <nav class="nav-footer full sticky">
+      <ul>
+        ${navLinks}
+      </ul>
+    </nav>`;
   }
 
   // Build parent/grandparent links HTML if needed
@@ -89,29 +88,30 @@ export default function SiteFooter(props) {
     const parent2LinkHTML = hasParent2Links ?
       ` &amp; <a href="${footerParent2Link}">${footerParent2}</a>` : '';
 
-    breadcrumbsHTML = `
-      <ul class="footer-breadcrumbs list-unstyled">
+    breadcrumbsHTML = `<ul class="footer-breadcrumbs list-unstyled">
         ${grandparentLinkHTML}
         <li><a href="${footerParentLink}">${footerParent}</a>${parent2LinkHTML}</li>
-      </ul>
-    `;
+      </ul>`;
   }
 
   // Build address HTML
   const addressHTML = siteAddress ?
-    `<span property="streetAddress">${siteAddress}</span><br>` : '';
+  `<span property="streetAddress">${siteAddress}</span><br>` : '';
 
   // Build phone HTML
   const phoneHTML = sitePhone ?
-    `<span class="footer-phone" property="telephone" content="+1 ${sitePhone}">Phone <a href="tel:${sitePhone.replace(/\s/g, '')}">${sitePhone}</a></span>` : '';
+  `  <span class="footer-phone" property="telephone" content="+1 ${sitePhone}">Phone <a href="tel:${sitePhone.replace(/\s/g, '')}">${sitePhone}</a></span>
+        ` : '';
 
   // Build fax HTML
   const faxHTML = siteFax ?
-    `<span class="footer-fax" property="faxNumber" content="+1 ${siteFax}">Fax ${siteFax}</span>` : '';
+  `  <span class="footer-fax" property="faxNumber" content="+1 ${siteFax}">Fax ${siteFax}</span>
+        ` : '';
 
   // Build email HTML
   const emailHTML = siteEmail ?
-    `<span class="footer-email" property="email"><a rel="noopener" href="mailto:${siteEmail}">${siteEmail}</a></span>` : '';
+  `  <span class="footer-email" property="email"><a rel="noopener" href="mailto:${siteEmail}">${siteEmail}</a></span>
+        ` : '';
 
   // Build social media links HTML if needed
   let socialMediaHTML = '';
@@ -131,101 +131,104 @@ export default function SiteFooter(props) {
     const linkedinHTML = siteLinkedin ?
       `<li><a class="soc-linkedin" href="${siteLinkedin}" rel="noopener" aria-label="${siteName} on LinkedIn"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a></li>` : '';
 
-    socialMediaHTML = `
-      <nav class="social" aria-label="${siteName} social media navigation" vocab="">
-        <ul>
-          ${facebookHTML}
-          ${twitterHTML}
-          ${instagramHTML}
-          ${youtubeHTML}
-          ${linkedinHTML}
-        </ul>
-      </nav>
-    `;
+    socialMediaHTML = `<nav class="social" aria-label="${siteName} social media navigation" vocab="">
+          <ul>
+            ${facebookHTML}
+            ${twitterHTML}
+            ${instagramHTML}
+            ${youtubeHTML}
+            ${linkedinHTML}
+          </ul>
+        </nav>`;
   }
 
   // Create the footer HTML
-  const footerHTML = `
-    <footer id="footer" class="site-footer">
-      ${navFooterHTML}
-
-      <div class="footer-org" typeof="Organization" resource="#siteorg">
-        <meta property="parentOrganization" resource="#parentorg" content="University of Notre Dame">
-
-        ${breadcrumbsHTML}
-
-        <p><a href="/" class="site-link" property="url"><span property="name">${siteName}</span></a></p>
-
-        <div class="footer-contacts">
-          <p class="contact-info">
-            <span class="address" property="address" typeof="PostalAddress">
-              ${addressHTML}
-              <span property="addressLocality">Notre Dame</span>, <span property="addressRegion">IN</span> <span property="postalCode">46556</span> <span property="addressCountry">USA</span>
-            </span>
-            ${phoneHTML}
-            ${faxHTML}
-            ${emailHTML}
-          </p>
-
-          ${socialMediaHTML}
-        </div>
-
-        <div property="logo" typeof="ImageObject">
-          <meta property="url" content="https://static.nd.edu/images/webclips/default/webclip-60.png">
-        </div>
-      </div>
-
-      <div class="footer-nd" property="parentOrganization" typeof="CollegeOrUniversity" resource="#parentorg">
-        <meta property="name" content="University of Notre Dame">
-        <a href="https://www.nd.edu/" class="mark-footer" property="url logo" typeof="ImageObject" aria-label="University of Notre Dame">
-          <svg width="200" height="48" aria-hidden="true" alt="University of Notre Dame"><use xlink:href="#academic-mark"></use></svg>
-        </a>
-
-        <div class="footer-parent-links">
-          <nav class="footer--links" aria-label="Notre Dame network navigation">
-            <ul>
-              <li><a href="https://search.nd.edu/" aria-label="Search Notre Dame">Search</a></li>
-              <li><a href="https://news.nd.edu/" aria-label="Notre Dame News">News</a></li>
-              <li><a href="https://events.nd.edu/" aria-label="Notre Dame Events">Events</a></li>
-              <li><a href="https://www.nd.edu/visit/" aria-label="Visit Notre Dame">Visit</a></li>
-              <li><a href="https://mobile.nd.edu/" aria-label="Notre Dame Mobile App">Mobile App</a></li>
-              <li><a href="https://www.nd.edu/about/accessibility/" aria-label="Notre Dame Accessibility Information">Accessibility</a></li>
-            </ul>
-          </nav>
-          <nav class="footer-social" aria-label="Notre Dame social media navigation" vocab="">
-            <ul>
-              <li><a class="soc-facebook" href="https://www.facebook.com/notredame/" rel="noopener" aria-label="Notre Dame on Facebook"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-facebook"></use></svg> Facebook</a></li>
-              <li><a class="soc-twitter" href="https://twitter.com/NotreDame/" rel="noopener" aria-label="Notre Dame on X/Twitter"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-twitter-x"></use></svg> X/Twitter</a></li>
-              <li><a class="soc-instagram" href="https://www.instagram.com/notredame/" rel="noopener" aria-label="Notre Dame on Instagram"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg> Instagram</a></li>
-              <li><a class="soc-youtube" href="https://www.youtube.com/user/NDdotEDU" rel="noopener" aria-label="Notre Dame on YouTube"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-youtube"></use></svg> YouTube</a></li>
-              <li><a class="soc-linkedin" href="https://www.linkedin.com/school/university-of-notre-dame/" rel="noopener" aria-label="Notre Dame on Linkedin"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div><!-- .footer-nd -->
-
-      <div class="footer-global">
-        <div class="footer-global--utils">
-          <ul class="list--inline justify-center m-0">
-            <li class="light-dark footer--utils-lightdark">
-              <label>
-                <span class="switch">
-                  <input type="checkbox" name="light-dark" class="light-dark-toggle">
-                  <span class="slider"><svg class="icon" data-icon="mode" aria-hidden="true" focusable="false"><use xlink:href="#icon-mode"></use></svg></span>
-                </span>
-                <span>Light/Dark</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <p id="copyright" class="footer-global--copyright copyright url fn org">
-          <a href="/copyright/"> &copy; ${currentYear}</a>
-          <a href="/" class="url fn org">University of Notre Dame</a>
+  const footer = document.createElement('footer');
+  footer.classList.add('site-footer');
+  footer.id = 'footer';
+  footer.innerHTML = `
+    <div class="footer-org" typeof="Organization" resource="#siteorg">
+      <meta property="parentOrganization" resource="#parentorg" content="University of Notre Dame">
+      ${breadcrumbsHTML}
+      <p><a href="/" class="site-link" property="url"><span property="name">${siteName}</span></a></p>
+      <div class="footer-contacts">
+        <p class="contact-info">
+          <span class="address" property="address" typeof="PostalAddress">
+            <span property="addressLocality">Notre Dame</span>, <span property="addressRegion">IN</span> <span property="postalCode">46556</span> <span property="addressCountry">USA</span>
+          </span>
         </p>
-      </div><!-- .footer-global -->
-    </footer>
+        ${socialMediaHTML}
+      </div>
+      <div property="logo" typeof="ImageObject">
+        <meta property="url" content="https://static.nd.edu/images/webclips/default/webclip-60.png">
+      </div>
+    </div>
+    <div class="footer-nd" property="parentOrganization" typeof="CollegeOrUniversity" resource="#parentorg">
+      <meta property="name" content="University of Notre Dame">
+      <a href="https://www.nd.edu/" class="mark-footer" property="url logo" typeof="ImageObject" aria-label="University of Notre Dame">
+        <svg width="200" height="48" aria-hidden="true" alt="University of Notre Dame"><use xlink:href="#academic-mark"></use></svg>
+      </a>
+      <div class="footer-parent-links">
+        <nav class="footer--links" aria-label="Notre Dame network navigation">
+          <ul>
+            <li><a href="https://search.nd.edu/" aria-label="Search Notre Dame">Search</a></li>
+            <li><a href="https://news.nd.edu/" aria-label="Notre Dame News">News</a></li>
+            <li><a href="https://events.nd.edu/" aria-label="Notre Dame Events">Events</a></li>
+            <li><a href="https://www.nd.edu/visit/" aria-label="Visit Notre Dame">Visit</a></li>
+            <li><a href="https://mobile.nd.edu/" aria-label="Notre Dame Mobile App">Mobile App</a></li>
+            <li><a href="https://www.nd.edu/about/accessibility/" aria-label="Notre Dame Accessibility Information">Accessibility</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-social" aria-label="Notre Dame social media navigation" vocab="">
+          <ul>
+            <li><a class="soc-facebook" href="https://www.facebook.com/notredame/" rel="noopener" aria-label="Notre Dame on Facebook"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-facebook"></use></svg> Facebook</a></li>
+            <li><a class="soc-twitter" href="https://twitter.com/NotreDame/" rel="noopener" aria-label="Notre Dame on X/Twitter"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-twitter-x"></use></svg> X/Twitter</a></li>
+            <li><a class="soc-instagram" href="https://www.instagram.com/notredame/" rel="noopener" aria-label="Notre Dame on Instagram"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg> Instagram</a></li>
+            <li><a class="soc-youtube" href="https://www.youtube.com/user/NDdotEDU" rel="noopener" aria-label="Notre Dame on YouTube"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-youtube"></use></svg> YouTube</a></li>
+            <li><a class="soc-linkedin" href="https://www.linkedin.com/school/university-of-notre-dame/" rel="noopener" aria-label="Notre Dame on Linkedin"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div><!-- .footer-nd -->
+    <div class="footer-global">
+      <div class="footer-global--utils">
+        <ul class="list--inline justify-center m-0">
+          <li class="light-dark footer--utils-lightdark">
+            <label>
+              <span class="switch">
+                <input type="checkbox" name="light-dark" class="light-dark-toggle">
+                <span class="slider"><svg class="icon" data-icon="mode" aria-hidden="true" focusable="false"><use xlink:href="#icon-mode"></use></svg></span>
+              </span>
+              <span>Light/Dark</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <p id="copyright" class="footer-global--copyright copyright url fn org">
+        <a href="/copyright/"> &copy; ${currentYear}</a>
+        <a href="/" class="url fn org">University of Notre Dame</a>
+      </p>
+    </div><!-- .footer-global -->
   `;
 
+if (navFooterHTML) {
+    footer.insertAdjacentHTML('afterbegin', navFooterHTML);
+}
+
+if (addressHTML) {
+    footer.querySelector('.footer-contacts .contact-info').insertAdjacentHTML('afterbegin', addressHTML);
+}
+
+if (phoneHTML) {
+    footer.querySelector('.footer-contacts .contact-info').insertAdjacentHTML('beforeend', phoneHTML);
+}
+if (faxHTML) {
+    footer.querySelector('.footer-contacts .contact-info').insertAdjacentHTML('beforeend', faxHTML);
+}
+if (emailHTML) {
+    footer.querySelector('.footer-contacts .contact-info').insertAdjacentHTML('beforeend', emailHTML);
+}
+
   // Otherwise, return the footer HTML directly
-  return footerHTML;
+  return footer.outerHTML;
 }

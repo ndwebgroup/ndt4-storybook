@@ -28,7 +28,7 @@ export default {
         // This will be the code shown in the docs
         transform: (code) => {
           // Remove the wrapper div from the code view
-          return code.replace(/<div class="wrapper">(.*?)<\/div>/gs, '$1');
+          return code.replace(/<section class="wrapper">(.*?)<\/section>/gs, '$1');
         }
       }
     }
@@ -39,7 +39,7 @@ export default {
       addFooterStyles();
       // This will only affect the preview
       const result = Story();
-      return `<div class="wrapper">${result}</div>`;
+      return `<section class="wrapper">${result}</section>`;
     }
   ],
   argTypes: {
