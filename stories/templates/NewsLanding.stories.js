@@ -1,7 +1,7 @@
 import NewsLanding from './NewsLanding.js';
 
 export default {
-  title: 'Templates/News Landing',
+  title: 'Templates/News Landing Page',
   component: NewsLanding,
   tags: ['!autodocs'],
   parameters: {

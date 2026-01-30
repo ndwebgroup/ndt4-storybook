@@ -50,7 +50,7 @@ export default function NavigationSidebar(args) {
 
       // Build the list item
       return `<li class="${classes.join(' ')}"${item.id ? ` id="${item.id}"` : ''}>
-        <a href="${item.href}"${anchorClasses.length ? ` class="${anchorClasses.join(' ')}"` : ''}${isCurrent ? ' aria-current="page"' : ''}>${item.label}</a>
+        <a href="${item.url}"${anchorClasses.length ? ` class="${anchorClasses.join(' ')}"` : ''}${isCurrent ? ' aria-current="page"' : ''}>${item.label}</a>
         ${childrenHTML}
       </li>`;
     }).join('\n      ');

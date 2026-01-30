@@ -69,7 +69,7 @@ export default function Home(props) {
         ${NavigationSidebar({ items: defaultNavigationItems })}
       </div>
     </main>
-    ${SiteFooter({ siteName:siteTitle })}
+    ${SiteFooter({ siteName:'Department Title' })}
 `;
   return container.outerHTML;
 }

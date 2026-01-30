@@ -1,7 +1,7 @@
 import EventLanding from './EventLanding.js';
 
 export default {
-  title: 'Templates/Event Landing',
+  title: 'Templates/Event Landing Page',
   component: EventLanding,
   tags: ['!autodocs'],
   parameters: {

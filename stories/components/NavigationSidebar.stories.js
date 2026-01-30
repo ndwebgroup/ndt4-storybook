@@ -19,7 +19,7 @@ export default {
   argTypes: {
     items: {
       name: 'Navigation Items',
-      description: 'Array of nav items. Each item should have a text property and an href property.',
+      description: 'Array of nav items. Each item should have a text property and a url property.',
       control: 'object'
     },
     navClass: {
@@ -42,45 +42,45 @@ export default {
 
 // Example navigation items
 const exampleItems = [
-  { label: 'Mission & Commitment', href: '#' },
-  { label: 'Leadership', href: '#' },
-  { label: 'Campus', href: '#' },
-  { label: 'Visit', href: '#' },
-  { label: 'History', href: '#' },
-  { label: 'Endowment', href: '#' },
-  { label: 'Recent News', href: '#' },
-  { label: 'Contact Notre Dame', href: '#' },
+  { label: 'Mission & Commitment', url: '#' },
+  { label: 'Leadership', url: '#' },
+  { label: 'Campus', url: '#' },
+  { label: 'Visit', url: '#' },
+  { label: 'History', url: '#' },
+  { label: 'Endowment', url: '#' },
+  { label: 'Recent News', url: '#' },
+  { label: 'Contact Notre Dame', url: '#' },
 ];
 
 // Example multi-level navigation items
 const multiLevelItems = [
-  { label: 'Home', href: '/' },
-  { label: 'News', href: '/news/', children: [] },
-  { label: 'Events', href: '/events/', children: [] },
+  { label: 'Home', url: '/' },
+  { label: 'News', url: '/news/', children: [] },
+  { label: 'Events', url: '/events/', children: [] },
   {
     label: 'Web',
-    href: '/web/',
+    url: '/web/',
     active: true,
     current: true,
     children: [
-      { label: 'Design System', href: '/web/design-system/', children: [] },
-      { label: 'URL Shortener', href: '/web/url-shortener/' },
+      { label: 'Design System', url: '/web/design-system/', children: [] },
+      { label: 'URL Shortener', url: '/web/url-shortener/' },
       {
         label: 'Websites',
-        href: '/web/websites/',
+        url: '/web/websites/',
         active: true,
         current: true,
         children: [
-          { label: 'Custom', href: '/web/websites/custom/' },
-          { label: 'DIY', href: '/web/websites/diy/' },
-          { label: 'WordPress', href: '/web/websites/wordpress/' },
+          { label: 'Custom', url: '/web/websites/custom/' },
+          { label: 'DIY', url: '/web/websites/diy/' },
+          { label: 'WordPress', url: '/web/websites/wordpress/' },
         ]
       },
-      { label: 'Subdomains', href: '/web/subdomains/' },
+      { label: 'Subdomains', url: '/web/subdomains/' },
     ]
   },
-  { label: 'Forms', href: '/forms/', children: [] },
-  { label: 'Contact Us', href: '/contact-us/', children: [] },
+  { label: 'Forms', url: '/forms/', children: [] },
+  { label: 'Contact Us', url: '/contact-us/', children: [] },
 ];
 
 export const Default = (args) => {

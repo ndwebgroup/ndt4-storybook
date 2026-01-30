@@ -1,7 +1,7 @@
 import PeopleListing from './PeopleListing.js';
 
 export default {
-  title: 'Templates/People Listing',
+  title: 'Templates/People Listing Page',
   component: PeopleListing,
   tags: ['!autodocs'],
   parameters: {

@@ -5,7 +5,12 @@ export default {
   component: Home,
   tags: ['!autodocs'],
   parameters: {
-    layout: 'fullscreen'
+    layout: 'fullscreen',
+    options: {
+      storySort: {
+        order: [],
+      },
+    },
   },
   argTypes: {
     navTop: {

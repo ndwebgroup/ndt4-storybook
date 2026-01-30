@@ -1,7 +1,7 @@
 import EventsListing from './EventsListing.js';
 
 export default {
-  title: 'Templates/Events Listing',
+  title: 'Templates/Events Listing Page',
   component: EventsListing,
   tags: ['!autodocs'],
   parameters: {

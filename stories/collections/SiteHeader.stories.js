@@ -22,7 +22,7 @@ const addHeaderStyles = () => {
 export default {
   title: 'Collections/Site Header',
   component: SiteHeader,
-  tags: ['autodocs'],
+  tags: ['!autodocs'],
   parameters: {
     layout: 'fullscreen',
     docs: {
