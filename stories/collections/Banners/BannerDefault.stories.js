@@ -1,4 +1,3 @@
-import { background } from 'storybook/internal/theming';
 import BannerDefault from './BannerDefault';
 
 // Add styles to document head

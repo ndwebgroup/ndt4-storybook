@@ -13,3 +13,7 @@ npx storybook dev
 ## Updating Storybook
 
 `npx storybook@latest upgrade`
+
+## Health check
+
+`npx storybook doctor`
