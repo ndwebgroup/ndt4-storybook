@@ -24,7 +24,7 @@ export default function NavigationAnchor(args) {
   <ul>
     ${navItems.map((item) => {
         return `<li><a href="${item.url ? item.url : '#' }">${item.label}</a></li>`;
-      }).join('\n      ')}
+      }).join('\n    ')}
   </ul>
 </nav>
   `;

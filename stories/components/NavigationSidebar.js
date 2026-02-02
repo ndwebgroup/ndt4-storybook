@@ -45,15 +45,15 @@ export default function NavigationSidebar(args) {
 
       // Build children HTML if they exist
       const childrenHTML = hasChildren
-        ? `<ul class="nav-level-${depth + 1} depth_${depth + 1}">${renderItems(item.children, depth + 1)}</ul>`
+        ? `
+          <ul class="nav-level-${depth + 1} depth_${depth + 1}">
+            ${renderItems(item.children, depth + 1)}
+          </ul>`
         : '';
 
       // Build the list item
-      return `<li class="${classes.join(' ')}"${item.id ? ` id="${item.id}"` : ''}>
-        <a href="${item.url}"${anchorClasses.length ? ` class="${anchorClasses.join(' ')}"` : ''}${isCurrent ? ' aria-current="page"' : ''}>${item.label}</a>
-        ${childrenHTML}
-      </li>`;
-    }).join('\n      ');
+      return `<li${classes.length ? ` class="${classes.join(' ')}"` : ''}${item.id ? ` id="${item.id}"` : ''}><a href="${item.url}"${anchorClasses.length ? ` class="${anchorClasses.join(' ')}"` : ''}${isCurrent ? ' aria-current="page"' : ''}>${item.label}</a>${childrenHTML}</li>`;
+    }).join('\n        ');
   };
 
   return `
