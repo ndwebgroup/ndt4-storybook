@@ -29,6 +29,14 @@ import NewsCard from '../components/Cards/NewsCard.js';
   }).outerHTML }} />
   
   <div dangerouslySetInnerHTML={{ __html: NewsCard({
+    title: 'Arts Biennial',
+    link: 'https://artsbiennial.nd.edu',
+    excerpt: 'Showcasing the creative talents of Notre Dame students, faculty, and staff through various art forms.',
+    publishDate: 'December 5, 2025',
+    imageUrl: `/images/recent-launches/artsbiennial.webp`
+  }).outerHTML }} />
+
+  <div dangerouslySetInnerHTML={{ __html: NewsCard({
     title: 'Eck Institute for Global Health',
     link: 'https://globalhealth.nd.edu',
     excerpt: 'Advancing global health through research, education, and community engagement.',
