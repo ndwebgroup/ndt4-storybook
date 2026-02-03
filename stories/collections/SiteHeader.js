@@ -66,7 +66,7 @@ export default function SiteHeader(props) {
 
 // Add tagline if provided
 if (siteTagline) {
-    const titleContainer = headerHTML.querySelector('.site-title-name');
+    const titleContainer = headerHTML.querySelector('.header-title-name');
     const tagline = document.createElement('p');
     tagline.className = 'site-tagline';
     tagline.textContent = siteTagline;

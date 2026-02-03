@@ -7,6 +7,9 @@ const addHeaderStyles = () => {
     const style = document.createElement('style');
     style.id = 'header-styles';
     style.textContent = `
+      :root {
+        --logo-text:light-dark(#0c2340,white);
+      }
       .wrapper {
         min-height: revert;
         grid-template-rows: auto;
@@ -142,6 +145,21 @@ MarkOnRight.args = {
   siteTagline: 'Site Tagline',
   showNavigation: true,
   markRight: true
+};
+
+export const WithLogo = Template.bind({});
+WithLogo.args = {
+  siteName: '<svg width="200" height="75" aria-hidden="true" alt="Eck Institute For Global Health"><use xlink:href="#logo-globalhealth"></use></svg>',
+  siteTagline: '',
+  showNavigation: true,
+  markRight: true,
+  groupModifier: 'inline-ml',
+  navHeaderLinks:
+    [{ label: 'About', url: '#' },
+  { label: 'Education', url: '#' },
+  { label: 'Research', url: '#' },
+  { label: 'Impact', url: '#' },
+  { label: 'News & Events', url: '#' }],
 };
 
 export const InlineNavigation = Template.bind({});
