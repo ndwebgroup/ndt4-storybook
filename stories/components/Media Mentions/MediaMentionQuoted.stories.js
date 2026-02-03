@@ -32,7 +32,7 @@ const sampleMediaMention = {
       first_name: 'Tim',
       last_name: 'Weninger',
       url: '#',
-      image: 'https://engineering.nd.edu/wp-content/uploads/2020/06/Weninger-Tim-HS-300x300.jpg'
+      image: '/images/profile-weninger.jpg'
     }
   ]
 };

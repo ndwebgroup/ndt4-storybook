@@ -40,18 +40,18 @@ const sampleMediaMention = {
   },
   people: [
     {
-      first_name: 'Aaron',
-      last_name: 'Greene',
+      first_name: 'John',
+      last_name: 'Smith',
       department: 'College of Arts and Letters',
-      url: '#aaron-greene',
-      image: '/public/images/placeholder-profile-1-300x300.jpg'
+      url: '#john-smith',
+      image: '/images/profile-weninger.jpg'
     },
     {
-      first_name: 'Erik',
-      last_name: 'Runyon',
+      first_name: 'John',
+      last_name: 'Doe',
       department: 'Computer Science and Engineering',
-      url: '#erik-runyon',
-      image: '/public/images/placeholder-profile-1-300x300.jpg'
+      url: '#jane-doe',
+      image: '/images/profile-dowd.jpg'
     }
   ]
 };

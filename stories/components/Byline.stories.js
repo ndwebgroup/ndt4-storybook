@@ -37,6 +37,16 @@ export const Default = (args) => {
 Default.args = {
 };
 
+export const withImageUrl = (args) => {
+  return Byline(args);
+}
+withImageUrl.args = {
+  image:'image',
+  imgUrl:'/images/profile-weninger.jpg',
+  name: 'Tim Weninger',
+  title: 'Associate Professor, Computer Science and Engineering'
+};
+
 export const withPlaceholder = (args) => {
   return Byline(args);
 };

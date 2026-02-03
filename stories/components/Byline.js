@@ -14,7 +14,8 @@ export default function Byline(props) {
     name,
     title,
     link,
-    image,
+    image = 'image',
+    imgUrl,
   } = props;
 
   const container = document.createElement('div');
@@ -22,11 +23,7 @@ export default function Byline(props) {
   let avatarHTML = ''
   const titleHTML = `${link ? `<a class="byline-link" href="${link}">${name}</a>` : `${name}`}`;
 
-  if (image == 'image') {
-    avatarHTML = Avatar({ size: 'xs', type:'image', modifier:'byline-image' });
-  } else if ( image == 'placeholder'){
-    avatarHTML = Avatar({ size:'xs', type:'placeholder', modifier:'byline-image' });
-  }
+  avatarHTML = Avatar({ size:'xs', type:image, imgUrl:imgUrl, modifier:'byline-image' });
 
   container.innerHTML = `
   ${avatarHTML}

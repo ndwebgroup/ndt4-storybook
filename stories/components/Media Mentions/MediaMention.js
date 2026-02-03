@@ -65,7 +65,8 @@ export default function MediaMention(props) {
         ? Avatar({
             size: 'xs',
             type: 'image',
-            modifier: 'byline-image'
+            modifier: 'byline-image',
+            imgUrl: person.image
           })
         : '';
 
