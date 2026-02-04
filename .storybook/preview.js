@@ -66,7 +66,7 @@ const withNDT4Script = (Story) => {
   if (!document.getElementById('ndt4-script')) {
     const script = document.createElement('script');
     script.id = 'ndt4-script';
-    script.src = '../../js/global.js';
+    script.src = '/js/global.js';
     document.body.appendChild(script);
   }
 
