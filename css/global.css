@@ -39,7 +39,7 @@
 .sbdocs.sbdocs-preview, .sb-show-main .sbdocs-wrapper { background-color:transparent; }
 .sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); }
 
-.sbdocs.sbdocs-content code { vertical-align:middle; }
+.sbdocs.sbdocs-content code { vertical-align:middle; color:light-dark(var(--gray-dark),var(--gray-extra-light)); background-color:light-dark(rgba(0, 0, 0, 0.02),rgba(0, 0, 0, 0.2)); border:1px solid light-dark(rgba(0,0,0,0.05),rgba(0,0,0,0.3)); }
 .sbdocs-content .sbdocs-title { font-family:var(--font-heading); font-weight: 400; font-size:clamp(2.5rem,3.5vw + 1rem,3.5rem); color:light-dark(var(--brand-blue),white) }
 .sb-section-title { border-bottom:1px solid light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding-bottom:1em; margin-bottom:3em; }
 
