@@ -44,6 +44,24 @@ Default.parameters = {
   }
 };
 
+export const Small = (args) => {
+  return ButtonList(args);
+};
+
+Small.storyName = 'Small Button List';
+Small.args = {
+  items: exampleItems,
+  className: 'btn-list--sm'
+};
+
+Small.parameters = {
+  docs: {
+    description: {
+      story: 'Use a small button list for compact content'
+    }
+  }
+};
+
 export const Large = (args) => {
   return ButtonList(args);
 };
@@ -51,7 +69,7 @@ export const Large = (args) => {
 Large.storyName = 'Large Button List';
 Large.args = {
   items: exampleItems,
-  className: 'btn--list-lg'
+  className: 'btn-list--lg'
 };
 
 Large.parameters = {
