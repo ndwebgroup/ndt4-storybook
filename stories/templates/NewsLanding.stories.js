@@ -17,6 +17,7 @@ export default {
       description: 'Title of the news article',
     },
     featuredImage: { name: 'Featured Image', control: 'boolean' },
+    imagePlacement: { name: 'Image Placement', control: 'select', options: ['right', 'top'] },
     publishDate: {
       name: 'Publish Date',
       control: 'date',

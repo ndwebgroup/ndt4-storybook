@@ -72,7 +72,7 @@ export default function EventLanding(props) {
   ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
         <article class="article article-page-wrapper" typeof="Event"> 
-          <header class="page-header article-header">
+          <header class="page-header article-header${navTop === true ? ' col--md' : ''}">
             <div class="page-title-wrapper">
               ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'Events', link: '#' }, { text: title, link: '#' } ] })}
               <h1 class="article-title entry-title" property="name">${title}</h1>
@@ -94,15 +94,16 @@ export default function EventLanding(props) {
               </div>
             </div>
           </header> 
-          <div class="page-primary article-content" property="description">
+          <div class="page-primary article-content${navTop === true ? ' col--md' : ''}" property="description">
             ${featuredImage ? `
-            <figure class="article-image">
+            <figure class="article-image image-default">
               <img src="/images/placeholder-campus-1-1200x675.jpg" width="1200" height="675" alt="${title}" property="image">
+              <figcaption class="image-caption">Caption describing the image.</figcaption>
             </figure>
             ` : ''}
             ${pageCopy}
           </div>
-          <footer class="page-secondary article-footer">
+          <footer class="page-secondary article-footer${navTop === true ? ' col--md' : ''}">
             <div class="grid grid-md-2 grid-gap-sm">
               <div class="meta-tags">
                 <p class="meta-label">Posted In:</p>

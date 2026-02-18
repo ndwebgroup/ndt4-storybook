@@ -24,6 +24,7 @@ export default function NewsLanding(props) {
   const {
     title = '',
     featuredImage = false,
+    imagePlacement = 'right',
     publishDate = new Date().toISOString(),
     pageCopy = `<p>This is an example of a news landing page. It features details about a specific news item, including the date, time, location, and a description of what attendees can expect.</p>
      <p>Additional information about the news item can be included here, such as speakers, agenda, and registration details.</p>`,
@@ -51,7 +52,7 @@ export default function NewsLanding(props) {
   ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false })}
     <main id="content" class="site-content">
         <article class="article article-page-wrapper" typeof="NewsArticle"> 
-          <header class="page-header article-header">
+          <header class="page-header article-header${navTop === true ? ' col--md' : ''}">
             <div class="page-title-wrapper">
               ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'News', link: '#' }, { text: title, link: '#' } ] })}
               <h1 class="entry-title entry-title" property="headline" data-length="${title.length}">${title}</h1>
@@ -70,16 +71,17 @@ export default function NewsLanding(props) {
               </div>
             </div>
           </header> 
-          <div class="page-primary article-content entry-content" property="mainEntityOfPage">
+          <div class="page-primary article-content entry-content${navTop === true ? ' col--md' : ''}">
             ${featuredImage ? `
-            <figure class="image-right">
+            <figure class="article-image image-${imagePlacement === 'top' ? 'default' : imagePlacement}">
               <img src="/images/placeholder-campus-1-1200x675.jpg" width="1200" height="675" alt="${title}">
+              <figcaption class="image-caption">Caption describing the image.</figcaption>
             </figure>
             ` : ''}
             ${pageCopy}
           </div>
 
-          <footer class="page-secondary article-footer">
+          <footer class="page-secondary article-footer${navTop === true ? ' col--md' : ''}">
             <div class="meta-share-group">
               <div class="meta-tags">
                 <p class="meta-label">Posted In:</p>
