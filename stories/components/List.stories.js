@@ -149,7 +149,7 @@ export const Inline = (args) => {
 Inline.storyName = 'Inline List';
 Inline.args = {
   type: 'inline',
-  items: ['<Home>', 'About', 'Services', 'Contact']
+  items: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
 };
 
 Inline.parameters = {
