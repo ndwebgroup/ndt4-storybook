@@ -26,19 +26,22 @@ export default function Banner(props) {
     accordions
   } = props;
 
-  container.className = `section details-group grid grid-ml-2${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
+  container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
 
   // Create banner secondary content
   container.innerHTML = `
-  <div class="section-content">
+  <div class="section-intro text-center col--sm">
     ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
-  <ul class="details-group--aside-list section-images"></ul>
+  <div class="details-group grid grid-ml-2">
+    <div class="order-ml-1 details-group--aside-list"></div>  
+  </div>
 `
   // Get the banner body element
-  const bannerBody = container.querySelector('.section-content');
-  const bannerImages = container.querySelector('.section-images');
+  const bannerWrapper = container.querySelector('.details-group');
+  const bannerBody = container.querySelector('.section-intro');
+  const bannerImages = container.querySelector('.details-group--aside-list');
 
   // Handle accordions
   if (accordions && accordions.length > 0) {
@@ -53,9 +56,9 @@ export default function Banner(props) {
     if (typeof accordionElement === 'string') {
       const temp = document.createElement('div');
       temp.innerHTML = accordionElement;
-      Array.from(temp.childNodes).forEach(node => bannerBody.appendChild(node));
+      Array.from(temp.childNodes).forEach(node => bannerWrapper.appendChild(node));
     } else {
-      bannerBody.appendChild(accordionElement);
+      bannerWrapper.appendChild(accordionElement);
     }
   }
 
@@ -63,7 +66,7 @@ export default function Banner(props) {
   if (accordions && accordions.length > 0) {
     accordions.forEach((item, index) => {
       const figure = document.createElement('figure');
-      figure.className = 'details-group--aside';
+      figure.className = 'details-group--aside section-media';
       const img = document.createElement('img');
       img.src = `/images/placeholder-campus-${index + 1}-1600x900.jpg`;
       img.alt = item.imageAlt || `Accordion Image ${index + 1}`;

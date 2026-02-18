@@ -21,6 +21,27 @@ const addHeaderStyles = () => {
   }
 };
 
+// Add click event listener to details elements to toggle active class on corresponding aside
+const addAccordionEventListeners = () => {
+  const details = document.querySelectorAll('details');
+	const asides = document.querySelectorAll('.details-group--aside');
+  details.forEach((detail) => {
+    detail.addEventListener('click', () => {
+      let detailsIndex = Array.from(detail.parentNode.children).indexOf(detail);
+      asides.forEach((aside, index) => {
+        if (index === detailsIndex) {
+          aside.classList.add('active');
+        } else {
+          aside.classList.remove('active');
+        }
+      });
+    });
+  });
+};
+
+// Call the function to add event listeners
+addAccordionEventListeners();
+
 export default {
   title: 'Collections/Banner/Banner (Accordion)',
   tags: ['!autodocs', 'stable'],
