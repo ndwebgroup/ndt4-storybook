@@ -45,6 +45,14 @@ Placeholder.args = {
   style: 'placeholder'
 };
 
+export const PlaceholderMinimal = (args) => {
+  return Video(args);
+};
+PlaceholderMinimal.args = {
+  style: 'placeholder',
+  playStyle: 'minimal'
+};
+
 export const PlaceholderWithLabel = (args) => {
   return Video(args);
 };

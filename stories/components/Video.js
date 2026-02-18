@@ -1,14 +1,15 @@
 /**
  * Video component
- * @param {string} props.videoId - The youtube id of the video
+ * @param {string} props.videoSrc - The source URL of the video to embed
+ * @param {string} props.videoId - The video id
  * @param {('embed'|'placeholder'|'lightbox')} [props.style='embed'] - The play button style of the video
  * @param {('default'|'outline'|'minimal'|'ornamental')} [props.playStyle='default'] - The play button style of the video
  * @param {string} props.playText - The optional play button text of the video
  */
 
 export default function Video(args) {
-  const { style, videoId, playText, playStyle } = args;
-  const container = document.createElement('p')
+  const { style, videoSrc, videoId, playText, playStyle } = args;
+  const container = document.createElement('figure')
   container.className = `video--${style}`;
 
   switch(style) {
@@ -19,7 +20,7 @@ export default function Video(args) {
       break;
     case 'placeholder':
       container.innerHTML = `
-  <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
+  <a class="video video--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
     <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" alt="A YouTube Video">
     ${playText}
   </a>
@@ -27,7 +28,7 @@ export default function Video(args) {
       break;
     case 'lightbox':
       container.innerHTML = `
-  <a class="video play--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
+  <a class="video video--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
     <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg"  alt="A YouTube Video">
     ${playText}
   </a>
