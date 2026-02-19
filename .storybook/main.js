@@ -10,16 +10,22 @@ export default {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": ["@storybook/addon-designs", "@vueless/storybook-dark-mode", "@etchteam/storybook-addon-status", {
-    name: '@storybook/addon-docs',
-    options: {
-      mdxPluginOptions: {
-        mdxCompileOptions: {
-          remarkPlugins: [remarkGfm],
+  "addons": [
+    "@storybook/addon-designs",
+    "@vueless/storybook-dark-mode",
+    "@etchteam/storybook-addon-status",
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
         },
       },
     },
-  }],
+    "@storybook/addon-mcp"
+  ],
 
   staticDirs: ['../public']
 };
