@@ -34,6 +34,20 @@ export default function SiteHeader(props) {
     ...(navHeaderLinks && { items: navHeaderLinks })
   });
 
+  let utilHTML = `
+  <div class="header-util">
+    <div class="header-nav-toggle">
+      <button class="btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
+        <svg class="icon-search-menu" alt="Toggle Global Menu"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-search-menu"></use></svg>
+        <svg class="icon-search" alt="Toggle Search"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+      </button>
+    </div>
+  </div>`;
+
+  if (markRight) {
+    utilHTML = showNavigation ? utilHTML : '';
+  }
+
   // Create the site header HTML
   const headerHTML = document.createElement('header');
   headerHTML.id = 'header';
@@ -52,14 +66,7 @@ export default function SiteHeader(props) {
     </div>
     <div class="header-nav">
       ${showNavigation ? `${navElement}` : ''}
-      <div class="header-util">
-        <div class="header-nav-toggle">
-          <button class="btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
-            <svg class="icon-search-menu" alt="Toggle Global Menu"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-search-menu"></use></svg>
-            <svg class="icon-search" alt="Toggle Search"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
-          </button>
-        </div>
-      </div>
+      ${utilHTML}
     </div>
   </div>
 `;
