@@ -1,7 +1,7 @@
 import Home from './Home.js';
 
 export default {
-  title: 'Templates/Homepage',
+  title: 'Templates/Home Page',
   component: Home,
   tags: ['!autodocs'],
   parameters: {

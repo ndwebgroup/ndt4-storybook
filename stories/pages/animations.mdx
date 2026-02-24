@@ -2,6 +2,36 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Foundation/Animations" />
 
+<link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/themes/ndt/4.0/animate.css" />
+<style>
+{`
+.animation-container {
+  width:100%;
+  height:15rem;
+  overflow:scroll;
+  border:var(--border-primary);
+  text-align:center;
+}
+.scroll-intro {
+  height:100%;
+  align-content:center;
+}
+.animation-block {
+  background-color:light-dark(#0c2340,#fff); 
+  color:light-dark(#fff,#0c2340);
+  height:100%;
+  padding:1rem;
+  align-content:center;
+  margin-block-end:1rem;
+}
+.animation-block p {
+  color:inherit;
+}
+.animation-container + pre {
+  margin-top:0;
+}
+`}
+</style>
 
 # Animations
 
@@ -35,7 +65,6 @@ The animation system works by using the `.animate` class plus a `.animation--*` 
 | `.animate`                                | Base class to enable animations on an element.                |
 | `.animate--fade-in`                       | Fades the element in from 0% to 100% opacity.                 |
 | `.animate--fade-in-up`                    | Fades the element in while moving it up slightly.             |
-| `.animate--fade-in-down`                  | Fades the element in while moving it down slightly.           |
 | `.animate--fade-in-left`                  | Fades the element in while moving it left slightly.           |
 | `.animate--fade-in-right`                 | Fades the element in while moving it right slightly.          |
 | `.animate--move-up`                       | Moves the element up slightly without changing opacity.       |
@@ -62,3 +91,73 @@ The animation system works by using the `.animate` class plus a `.animation--*` 
     </ul>
   </li>
 </ul>
+
+## Samples
+
+<div class="grid grid-ml-2">
+  <div class="animation-item">
+    <h3>Fade In Animation</h3>
+    <div class="animation-container">
+      <p class="scroll-intro">Scroll down to see the animation effect.</p>
+      <div class="animation-block animate animate--fade-in">
+        <p>This element will fade in when it appears.</p>
+      </div>
+      <div class="animation-block animate animate--fade-in-up">
+        <p>This element will fade in and move up when it appears.</p>
+      </div>
+      <div class="animation-block animate animate--fade-in-right">
+        <p>This element will fade in and move right when it appears.</p>
+      </div>
+      <div class="animation-block animate animate--fade-in-left">
+        <p>This element will fade in and move left when it appears.</p>
+      </div>
+    </div>
+    ```html
+    <div class="animate animate--fade-in">
+      This element will fade in when it appears.
+    </div>
+    <div class="animate animate--fade-in-up">
+      This element will fade in and move up when it appears.
+    </div>
+    <div class="animate animate--fade-in-right">
+      This element will fade in and move right when it appears.
+    </div>
+    <div class="animate animate--fade-in-left">
+      This element will fade in and move left when it appears.
+    </div>
+    ```
+  </div>
+
+  <div class="animation-item">
+    <h3>Move In Animation</h3>
+    <div class="animation-container">
+      <p class="scroll-intro">Scroll down to see the animation effect.</p>
+      <div class="animation-block animate animate--move-right">
+        <p>This element will move in from the right when it appears.</p>
+      </div>
+      <div class="animation-block animate animate--move-left">
+        <p>This element will move in from the left when it appears.</p>
+      </div>
+      <div class="animation-block animate animate--move-up">
+        <p>This element will move in from the top when it appears.</p>
+      </div>
+      <div class="animation-block animate animate--move-down">
+        <p>This element will move in from the bottom when it appears.</p>
+      </div>
+    </div>
+    ```html
+    <div class="animate animate--move-right">
+      This element will move in from the right when it appears.
+    </div>
+    <div class="animate animate--move-left">
+      This element will move in from the left when it appears.
+    </div>
+    <div class="animate animate--move-up">
+      This element will move in from the top when it appears.
+    </div>
+    <div class="animate animate--move-down">
+      This element will move in from the bottom when it appears.
+    </div>
+    ```
+  </div>
+</div>
