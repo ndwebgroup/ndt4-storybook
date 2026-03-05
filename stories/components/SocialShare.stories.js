@@ -1,7 +1,7 @@
 import SocialShare from './SocialShare';
 
 export default {
-  title: 'Components/SocialShare',
+  title: 'Components/Social Share',
   tags: ['stable'],
   parameters: {
     design: {
