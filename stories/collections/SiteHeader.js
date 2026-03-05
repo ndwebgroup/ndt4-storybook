@@ -44,10 +44,6 @@ export default function SiteHeader(props) {
     </div>
   </div>`;
 
-  if (markRight) {
-    utilHTML = showNavigation ? utilHTML : '';
-  }
-
   // Create the site header HTML
   const headerHTML = document.createElement('header');
   headerHTML.id = 'header';

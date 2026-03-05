@@ -153,7 +153,6 @@ WithLogo.args = {
   siteTagline: '',
   showNavigation: true,
   markRight: true,
-  groupModifier: 'inline-ml',
   navHeaderLinks:
     [{ label: 'About', url: '#' },
   { label: 'Education', url: '#' },
