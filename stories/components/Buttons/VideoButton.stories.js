@@ -15,18 +15,15 @@ export default {
     label: {
       name:'Button Label',
     },
-    cta: { 
-      name: 'Call to Action',
-    },
     type: { 
-      name: 'Button Type',
+      name: 'Video Button Type',
       control: 'select', 
-      options: ['primary', 'secondary', 'tertiary', 'neutral']
+      options: ['default', 'outline', 'minimal', 'ornamental'],
     },
   },
   args: {
     // Default args for all stories
-    type: 'primary',
+    type: 'default',
     label:'View Video',
     cta: false,
   }
@@ -38,3 +35,18 @@ export const Default = (args) => {
 Default.storyName = 'Default';
 Default.args = {
 };
+
+export const Outline = (args) => {
+  return VideoButton({ ...args, type: 'outline' });
+};
+Outline.storyName = 'Outline';
+
+export const Minimal = (args) => {
+  return VideoButton({ ...args, type: 'minimal' });
+};
+Minimal.storyName = 'Minimal';
+
+export const Ornamental = (args) => {
+  return VideoButton({ ...args, type: 'ornamental' });
+};
+Ornamental.storyName = 'Ornamental';

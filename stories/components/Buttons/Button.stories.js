@@ -21,7 +21,7 @@ export default {
     type: { 
       name: 'Button Type',
       control: 'select', 
-      options: ['primary', 'secondary', 'tertiary', 'neutral']
+      options: ['primary', 'secondary', 'tertiary', 'neutral', 'noborder'],
     },
     cta: { 
       name: 'Call to Action', 
@@ -50,7 +50,7 @@ Default.args = {
 // Default Buttons
 export const DefaultButtons = (args) => {
   const container = document.createElement('div');
-  const types = ['primary', 'secondary', 'tertiary', 'neutral'];
+  const types = ['primary', 'secondary', 'tertiary', 'neutral', 'noborder'];
 
   types.forEach(type => {
     const buttonProps = { ...args, type };
@@ -92,7 +92,7 @@ CTA.args = {
 // Buttons with More Icon
 export const More = (args) => {
   const container = document.createElement('div');
-  const types = ['primary', 'secondary', 'tertiary', 'neutral'];
+  const types = ['primary', 'secondary', 'tertiary', 'neutral', 'noborder'];
 
   types.forEach(type => {
     const buttonProps = { ...args, type };
