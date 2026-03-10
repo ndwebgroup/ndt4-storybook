@@ -1,4 +1,4 @@
-import BannerTiled from './BannerTiled';
+import BannerMosaic from './BannerMosaic';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -22,7 +22,7 @@ const addHeaderStyles = () => {
 };
 
 export default {
-  title: 'Collections/Banner/Banner (Tiled)',
+  title: 'Collections/Banner/Banner (Mosaic)',
   tags: ['!autodocs', 'modified'],
   parameters: {
     layout: 'fullscreen',
@@ -107,29 +107,62 @@ const exampleButtons = [
 // Two Images
 export const Default = (args) => {
   const mergedArgs = { ...args };
-  return BannerTiled(mergedArgs);
+  return BannerMosaic(mergedArgs);
 };
 Default.storyName = 'Two Images';
 Default.args = {
   imageCount:2,
 };
 
+// Two Images Reversed
+export const ReversedTwo = (args) => {
+  const mergedArgs = { ...args };
+  return BannerMosaic(mergedArgs);
+};
+ReversedTwo.storyName = 'Two Images Reversed';
+ReversedTwo.args = {
+  order:'reversed',
+  imageCount:2,
+};
+
 // Three Images
 export const DefaultThree = (args) => {
   const mergedArgs = { ...args };
-  return BannerTiled(mergedArgs);
+  return BannerMosaic(mergedArgs);
 };
 DefaultThree.storyName = 'Three Images';
 DefaultThree.args = {
   imageCount:3,
 };
 
+// Three Images Reversed
+export const ReversedThree = (args) => {
+  const mergedArgs = { ...args };
+  return BannerMosaic(mergedArgs);
+};
+ReversedThree.storyName = 'Three Images Reversed';
+ReversedThree.args = {
+  order:'reversed',
+  imageCount:3,
+};
+
 // Four Images
 export const DefaultFour = (args) => {
   const mergedArgs = { ...args };
-  return BannerTiled(mergedArgs);
+  return BannerMosaic(mergedArgs);
 };
 DefaultFour.storyName = 'Four Images';
 DefaultFour.args = {
+  imageCount:4,
+};
+
+// Four Images Reversed
+export const ReversedFour = (args) => {
+  const mergedArgs = { ...args };
+  return BannerMosaic(mergedArgs);
+};
+ReversedFour.storyName = 'Four Images Reversed';
+ReversedFour.args = {
+  order:'reversed',
   imageCount:4,
 };

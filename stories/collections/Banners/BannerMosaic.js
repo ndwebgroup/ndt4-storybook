@@ -15,15 +15,15 @@
 
 import Button from '/stories/components/Buttons/Button.js';
 
-export default function BannerMulti(props) {
+export default function BannerMosaic(props) {
   const container = document.createElement('section');
-  const { bannerWidth, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList, imageModifiers, backgroundColor } = props;
+  const { bannerWidth, order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList, imageModifiers, backgroundColor } = props;
 
   container.className = `section grid grid-md-2 align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor == 'none' ? '' : ` bg--${backgroundColor} bg--full-bleed` }`;
 
   // Limit imageCount to a maximum of 4 and ensure it's at least 1
   const count = Math.max(2, Math.min(parseInt(imageCount, 10) || 3, 4));
-  let mediaHTML = `<figure class="section-image image--tiled${imageModifiers ? ` ${imageModifiers}` : ''}">
+  let mediaHTML = `<figure class="section-image image--mosaic${order == `default` ? `` : ` order-md-2 image--mosaic-${order}`}${imageModifiers ? ` ${imageModifiers}` : ''}">
     ${Array.from({ length: count }).map(() => `<img src="/images/placeholder-campus-3-1200x675.jpg" width="1200" height="675" alt="Modern university campus with tall glass buildings surrounded by green lawns and trees under a clear sky, conveying a welcoming and vibrant academic atmosphere">`).join('')}
   </figure>`
 
