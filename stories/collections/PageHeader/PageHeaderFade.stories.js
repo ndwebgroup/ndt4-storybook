@@ -19,7 +19,7 @@ const addHeaderStyles = () => {
 export default {
   title: 'Collections/Page Header/Page Header (Fade)',
   component: PageHeaderFade,
-  tags: ['!autodocs', 'coming'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {
