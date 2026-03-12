@@ -38,7 +38,7 @@ export default function Home(props) {
   container.id = 'wrapper';
   
   container.innerHTML = `
-  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier: 'inline-xl' })}
+  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier:`${navTop === true ? 'inline-xl' : ''}` })}
     <main id="content" class="site-content">
       ${heroLayout === 'Default' ? PageHeaderDefault({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
       ${heroLayout === 'Fade' ? PageHeaderFade({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}

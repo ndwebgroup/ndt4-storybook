@@ -2,7 +2,7 @@ import Footnote from './Footnote.js';
 
 export default {
   title: 'Components/Footnote',
-  tags: ['coming'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",
