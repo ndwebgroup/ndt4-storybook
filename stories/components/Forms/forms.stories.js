@@ -201,6 +201,59 @@ ContactForm.args = {
   submitText: 'Send Message'
 };
 
+export const ContactFormWithBackgroundColor = (args) => {
+  return FormCombinations(args);
+};
+ContactFormWithBackgroundColor.storyName = 'Contact Form with Background Color';
+ContactFormWithBackgroundColor.args = {
+  backgroundColor: 'sky-blue-light',
+  title: 'Contact Information',
+  inputFields: [
+    { label: 'First Name', type: 'text', placeholder: 'Enter your first name' },
+    { label: 'Last Name', type: 'text', placeholder: 'Enter your last name' },
+    { label: 'Email', type: 'email', placeholder: 'email@nd.edu' },
+    { label: 'Phone', type: 'text', placeholder: '(574) 631-5000' }
+  ],
+  selects: [
+    {
+      label: 'Department',
+      items: [
+        { text: 'Admissions' },
+        { text: 'Registrar' },
+        { text: 'Financial Aid' },
+        { text: 'Student Affairs' }
+      ]
+    }
+  ],
+  checkboxGroups: [
+    {
+      label: 'Interests',
+      items: [
+        { text: 'Campus Tours' },
+        { text: 'Information Sessions' },
+        { text: 'Alumni Events' }
+      ]
+    }
+  ],
+  radioGroups: [
+    {
+      label: 'Preferred Contact Method',
+      items: [
+        { text: 'Email' },
+        { text: 'Phone' }
+      ]
+    }
+  ],
+  textareas: [
+    {
+      label: 'Message',
+      placeholder: 'Your message here...',
+      rows: '4'
+    }
+  ],
+  submitText: 'Send Message'
+};
+
 export const RegistrationForm = (args) => {
   return FormCombinations(args);
 };
