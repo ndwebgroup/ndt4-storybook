@@ -18,6 +18,12 @@ export default {
       control: 'boolean',
       description: 'Toggle to show or hide the article image'
     },
+    layout: {
+      name: 'Card Layout',
+      control: { type: 'select' },
+      options: ['default', 'horizontal', 'stacked', 'compact'],
+      description: 'Select the layout style for the news card'
+    },
     label: { name: 'Card Label' },
     link: { name: 'Article Link' },
     author: { name: 'Author Name' },

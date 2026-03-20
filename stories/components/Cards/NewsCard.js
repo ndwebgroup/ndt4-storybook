@@ -1,6 +1,7 @@
 /**
  * Creates a news article component
  * @param {Object} props - Component properties
+ * @param {('default'|'horizontal'|'stacked' | 'compact')} [props.layout='default'] - The layout of the card
  * @param {string} props.title - The title of the news article
  * @param {boolean} props.showImage - Whether to show the article image
  * @param {string} props.label - The label of the article
@@ -20,14 +21,15 @@ export default function NewsCard(props) {
     link = '#',
     author = 'Author Name',
     publishDate = 'April 1, 2025',
-    headingTag = 'h2'
+    headingTag = 'h2',
+    layout = 'default'
   } = props;
 
   const container = document.createElement('article');
   container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
 
-  let articleHTML = `\n  <div class="card">`;
+  let articleHTML = `\n  <div class="card ${layout !== 'default' ? `card--${layout}` : ''}">`;
 
   if (showImage) {
     articleHTML += `
