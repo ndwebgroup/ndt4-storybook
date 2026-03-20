@@ -10,6 +10,7 @@ import Textarea from './Textarea.js';
  */
 const FormCombinations = (args) => {
   const {
+    backgroundColor,
     title,
     inputFields = [],
     selects = [],
@@ -23,6 +24,11 @@ const FormCombinations = (args) => {
   // Create container
   const container = document.createElement('div');
   container.className = 'form-combinations';
+
+  if (backgroundColor) {
+    container.classList.add(`bg--${backgroundColor}`);
+    container.classList.add('p-3', 'border-radius');
+  }
 
   // Add form title if provided
   if (title) {

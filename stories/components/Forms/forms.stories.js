@@ -1,4 +1,5 @@
 // import { createStoryElement } from '../../utils';
+import { background } from 'storybook/internal/theming';
 import FormCombinations from './forms';
 
 // Add styles to document head
@@ -38,6 +39,12 @@ export default {
     }
   ],
   argTypes: {
+    backgroundColor: {
+      name: 'Background Color',
+      control: 'select',
+      options: ['brand-blue', 'brand-blue-dark', 'brand-blue-light', 'sky-blue-light', 'gray-extra-light', 'gray-extra-extra-light', 'white'],
+      description: 'Set the background color of the form container'
+    },
     title: { name: 'Form Title' },
     inputFields: {
       name: 'Input Fields',
