@@ -1,6 +1,23 @@
 // import { createStoryElement } from '../../utils';
 import FormCombinations from './forms';
 
+// Add styles to document head
+const addHeaderStyles = () => {
+  if (!document.getElementById('header-styles')) {
+    const style = document.createElement('style');
+    style.id = 'header-styles';
+    style.textContent = `
+      .form-combinations {
+        width:100%;
+        margin-block: 2rem;
+        margin-inline:auto;
+        max-width: 40rem;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+};
+
 export default {
   title: 'Components/Forms/Form',
   tags: ['autodocs'],
@@ -11,6 +28,15 @@ export default {
       }
     },
   },
+  decorators: [
+    (Story) => {
+      // Add styles to document head
+      addHeaderStyles();
+      // This will only affect the preview
+      const result = Story();
+      return `${result.outerHTML}`;
+    }
+  ],
   argTypes: {
     title: { name: 'Form Title' },
     inputFields: {
