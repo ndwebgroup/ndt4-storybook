@@ -21,10 +21,12 @@ export default {
     imagePosition: { name: 'Image Position', control: 'select', options: ['default', 'left', 'right'] },
     imageVariant: { name: 'Image Variant', control: 'select', options: ['none', 'circle', 'mosaic', 'tiled'] },
     imageCount: { name: 'Image Count', control: 'number', min: 1, max: 4, step: 1 },
+    imageCaption: { name: 'Image Caption', control: 'text' },
   },
   args: {
     //Default args for stories
     imageSrc: '/images/placeholder-campus-3-1200x675.jpg',
+    imageCaption: '',
     imagePosition: 'default',
     imageVariant: 'none',
     imageCount: 1,

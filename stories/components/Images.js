@@ -5,12 +5,13 @@
  * @param {('none'|'mosaic'|'tiled')} [props.imageVariant='default'] - The variant of the image
  * @param {number} props.imageCount - The number of images to display
  * @param {string} props.imagePosition - The position of the image
+ * @param {string} props.imageCaption - The caption for the image
  */
 
 export default function Image(args) {
-  const { imageSrc, imagePosition, imageVariant, imageCount } = args;
+  const { imageSrc, imagePosition, imageVariant, imageCount, imageCaption } = args;
   const container = document.createElement('figure')
-  container.className = `image image-${imagePosition} ${imageVariant == 'none' ? '' : imageVariant == 'circle' ? 'image-circle' : `image--${imageVariant}`}`;
+  container.className = `image image-${imagePosition}${imageVariant == 'none' ? '' : imageVariant == 'circle' ? ' image-circle' : ` image--${imageVariant}`}`;
 
   switch(imageVariant) {
     case 'mosaic':
@@ -24,6 +25,10 @@ export default function Image(args) {
     break;  
     case 'none':
       container.innerHTML = `<img src="${imageSrc}" width="1200" height="765" alt="Image">`;
+  }
+
+  if (imageCaption) {
+    container.innerHTML += `<figcaption>${imageCaption}</figcaption>`;
   }
 
   return container;

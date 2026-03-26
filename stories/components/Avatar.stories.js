@@ -58,3 +58,13 @@ PlaceholderAvatar.args = {
   size: 'md',
   type: 'placeholder'
 };
+
+export const CaptionAvatar = (args) => {
+  return Avatar(args);
+};
+
+CaptionAvatar.args = {
+  size: 'md',
+  type: 'image',
+  caption: 'Rev. Robert A. Dowd, C.S.C. standing in front of a staircase in the Main Building on the University of Notre Dame campus.'
+};

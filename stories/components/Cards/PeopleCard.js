@@ -36,7 +36,7 @@ export default function PeopleCard(props) {
 
   const container = document.createElement('div');
   container.className = 'card-container';
-  let classes = ['card', ' card--person', `${layout === 'default' ? '' : ` card--${layout}`}`];
+  let classes = ['card', 'card--person', `${layout === 'default' ? '' : `card--${layout}`}`];
 
   if (useDialog) {
     classes.push('dialog-item');
