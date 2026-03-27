@@ -1,5 +1,4 @@
 // import { createStoryElement } from '../../utils';
-import { background } from 'storybook/internal/theming';
 import FormCombinations from './forms';
 
 // Add styles to document head
