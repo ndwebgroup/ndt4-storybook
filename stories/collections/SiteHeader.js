@@ -53,7 +53,7 @@ export default function SiteHeader(props) {
     <svg width="512" height="86" aria-hidden="true" alt="University of Notre Dame"><use xlink:href="#mobile-mark"></use></svg>
     <span class="visually-hidden">University of Notre Dame</span>
   </a>
-  <div class="header-group${markRight ? ' header-group--logo' : ''}${groupModifier ? ` header-group--${groupModifier}` : ''}">
+  <div class="header-group${markRight ? ' header-group--logo' : ''}${groupModifier ? ` ${groupModifier}` : ''}">
     <div class="header-title">
       <svg class="header-mark" width="250" height="60" aria-hidden="true" alt="University of Notre Dame"><use xlink:href="#academic-mark"></use></svg>
       <div class="header-title-name">

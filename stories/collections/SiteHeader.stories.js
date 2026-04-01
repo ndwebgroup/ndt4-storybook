@@ -164,7 +164,7 @@ WithLogo.args = {
 export const InlineNavigation = Template.bind({});
 InlineNavigation.args = {
   showNavigation: true,
-  groupModifier: 'inline-xl',
+  groupModifier: 'header-group--inline-xl',
   navHeaderLinks:
     [{ label: 'Academics', url: '#' },
   { label: 'Admissions', url: '#' },
@@ -172,7 +172,19 @@ InlineNavigation.args = {
   { label: 'Global', url: '#' },
   { label: 'Faith', url: '#' },
   { label: 'Community', url: '#' }],
-  
+};
+
+export const CompactNavigation = Template.bind({});
+CompactNavigation.args = {
+  showNavigation: true,
+  groupModifier: 'header-group--inline-xl header-group--compact',
+  navHeaderLinks:
+    [{ label: 'Academics', url: '#' },
+  { label: 'Admissions', url: '#' },
+  { label: 'Research', url: '#' },
+  { label: 'Global', url: '#' },
+  { label: 'Faith', url: '#' },
+  { label: 'Community', url: '#' }],
 };
 
 export const WithoutGlobalMenuIcon = Template.bind({});

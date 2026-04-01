@@ -29,7 +29,7 @@ export default function NewsCard(props) {
   container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
 
-  let articleHTML = `\n  <div class="card ${layout !== 'default' ? `card--${layout}` : ''}">`;
+  let articleHTML = `\n  <div class="card card--news ${layout !== 'default' ? `card--${layout}` : ''}">`;
 
   if (showImage) {
     articleHTML += `
