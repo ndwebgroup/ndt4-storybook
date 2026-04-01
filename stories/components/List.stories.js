@@ -18,19 +18,23 @@ export default {
   },
   argTypes: {
     type: {
+      name: 'List Type',
       description: 'The type of list to display',
       control: 'select',
       options: ['unordered', 'ordered', 'unstyled', 'stepped', 'stepped grid', 'inline', 'description']
     },
     items: {
+      name: 'List Items',
       description: 'Array of list items. For description lists, these are the terms.',
       control: 'object'
     },
     descriptions: {
+      name: 'Descriptions',
       description: 'Array of descriptions (only used for description lists)',
       control: 'object'
     },
     className: {
+      name: 'Additional CSS Classes',
       description: 'Additional CSS class names to add to the list',
       control: 'text'
     }
