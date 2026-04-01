@@ -18,16 +18,24 @@ export default {
   },
   argTypes: {
     showAnchors: {
+      name: 'Show Anchors',
       control: 'boolean',
       description: 'Whether to show the anchor list at the top'
     },
     showBackToTop: {
+      name: 'Show Back to Top',
       control: 'boolean',
       description: 'Whether to show "Back to top" links'
     },
     id: {
+      name: 'FAQ Section ID',
       control: 'text',
       description: 'ID for the FAQ section'
+    },
+    faqItems: {
+      name: 'FAQ Items',
+      control: 'object',
+      description: 'The list of FAQ items'
     }
   },
 };
