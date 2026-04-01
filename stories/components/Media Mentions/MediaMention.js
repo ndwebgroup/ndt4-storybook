@@ -103,7 +103,7 @@ export default function MediaMention(props) {
             <a class="card-link" href="${item.public_url || '#'}" target="_blank"
                id="${item.html_id || ''}" rel="noopener">${item.title}</a>
           </${headingTag}>
-          <div class="summary">
+          <div class="card-summary">
             ${dateHTML}
             ${item.content || ''}
           </div>

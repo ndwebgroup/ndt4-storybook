@@ -5,23 +5,39 @@ export default {
   tags: ['stable'],
   argTypes: {
     headingTag: {
+      name: 'Heading Tag',
       control: { type: 'select' },
       options: ['h2', 'h3', 'h4'],
       description: 'The heading tag to use for the title'
     },
     showPublication: {
+      name: 'Show Publication',
       control: 'boolean',
       description: 'Whether to show the publication information'
     },
     showDate: {
+      name: 'Show Date',
       control: 'boolean',
       description: 'Whether to show the publication date'
     },
     showPeople: {
+      name: 'Show People',
       control: 'boolean',
       description: 'Whether to show the mentioned people'
+    },
+      item: {
+      name: 'Media Mention Content',
+      control: 'object',
+      description: 'The media mention data object containing title, content, publication info, etc.'
     }
   },
+  args: {
+    headingTag: 'h2',
+    showPublication: true,
+    showDate: true,
+    showPeople: true,
+    item:'',
+  }
 };
 
 // Sample media mention data

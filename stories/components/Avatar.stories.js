@@ -2,7 +2,7 @@ import Avatar from './Avatar.js';
 
 export default {
   title: 'Components/Avatar',
-  tags: ['modified'],
+  tags: ['stable'],
   parameters: {
     design: {
       name: "Figma Assets",
@@ -62,7 +62,7 @@ PlaceholderAvatar.args = {
 export const CaptionAvatar = (args) => {
   return Avatar(args);
 };
-
+CaptionAvatar.storyName = 'With caption';
 CaptionAvatar.args = {
   size: 'md',
   type: 'image',
