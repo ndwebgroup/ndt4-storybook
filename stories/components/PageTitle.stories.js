@@ -13,15 +13,18 @@ export default {
   },
   argTypes: {
     title: {
+      name: 'Title Text',
       control: 'text',
       description: 'The text content of the page title',
     },
     size: {
+      name: 'Size',
       control: { type: 'select' },
       options: ['xs', 'sm', 'md', 'lg', 'xl', 'dynamic'],
       description: 'The size of the page title',
     },
     useParagraph: {
+      name: 'Use Paragraph Style',
       control: 'boolean',
       description: 'Whether to use a p tag with page title class instead of actual h1 element',
       defaultValue: false,
