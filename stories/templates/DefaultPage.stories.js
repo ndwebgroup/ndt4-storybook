@@ -25,7 +25,7 @@ export default {
     },
   },
   args: {
-    pageTitle: 'Exploring the Future',
+    pageTitle: 'Do more than dream about the future. Fight for it.',
     featuredImage: false,
     navTop: false,
   },

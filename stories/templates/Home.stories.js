@@ -43,12 +43,12 @@ export default {
       name: 'Banner Options',
       description: 'Select which banner to display on the home page',
       control: { type: 'check' },
-      options: ['News', 'Events', 'Feature'],
+      options: ['Cards', 'News', 'Events', 'Feature'],
     },
   },
   args: {
     heroLayout: 'Default',
-    pageTitle: 'Exploring the Future',
+    pageTitle: 'Do more than dream about the future. Fight for it.',
     pageLede: '',
     navTop: false,
     fullWidth: false,
@@ -59,7 +59,6 @@ export default {
       return `${result}`;
     }
   ],
-
 };
 
 const Template = (args) => {
@@ -69,4 +68,28 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   // Basic example uses the default args
+};
+
+export const WithHeroInset = Template.bind({});
+WithHeroInset.args = {
+  heroLayout: 'Inset',
+  fullWidth: true,
+  navTop: true,
+  bannerOptions: ['Cards', 'News', 'Events', 'Feature'],
+};
+
+export const WithHeroScreen = Template.bind({});
+WithHeroScreen.args = {
+  heroLayout: 'Screen',
+  fullWidth: true,
+  navTop: true,
+  bannerOptions: ['Cards', 'News', 'Events', 'Feature'],
+};
+
+export const WithHeroFade = Template.bind({});
+WithHeroFade.args = {
+  heroLayout: 'Fade',
+  fullWidth: true,
+  navTop: true,
+  bannerOptions: ['Cards', 'News', 'Events', 'Feature'],
 };

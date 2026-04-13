@@ -6,7 +6,7 @@
  * @param {string} [props.siteTitle=''] - Title of the site
  * @param {string} [props.pageContent=''] - HTML content for the main area of the home page
  * @param {select} [props.heroLayout=''] - Layout style for the hero (e.g., 'inset', 'inline')
- * @param {('news'|'events'|'feature')} [props.bannerOptions=''] - Selected banner options
+ * @param {('Cards'|'News'|'Events'|'Feature')} [props.bannerOptions=''] - Selected banner options
  * @returns {string} - The home HTML
  */
 
@@ -19,6 +19,7 @@ import PageHeaderScreen from '../collections/PageHeader/PageHeaderScreen.js';
 import NavigationSidebar from '../components/NavigationSidebar.js';
 import Banner from '../collections/Banners/BannerDefault.js';
 import { defaultNavigationItems } from '../components/NavigationPrimary.js';
+import Card from '../components/Cards/Card.js';
 import NewsCard from '../components/Cards/NewsCard.js';
 import EventCard from '../components/Cards/EventCard.js';
 import SiteFooter from '../collections/SiteFooter.js';
@@ -42,7 +43,7 @@ export default function Home(props) {
   container.id = 'wrapper';
 
   container.innerHTML = `
-  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier:`${navTop === true ? 'inline-xl' : ''}` })}
+  ${SiteHeader({ siteName:'Department Title', showNavigation:navTop, showNavButton:false, markRight:false, groupModifier:`${navTop === true ? 'header-group--inline-xl' : ''}` })}
     <main id="content" class="site-content">
       ${heroLayout === 'Default' ? PageHeaderDefault({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
       ${heroLayout === 'Fade' ? PageHeaderFade({ pageTitle:pageTitle, pageLede:pageLede, showFeaturedImage:true }) : ''}
@@ -63,7 +64,18 @@ export default function Home(props) {
 const bannerWidth = fullWidth ? 'full-width' : 'default';
 
 const pageSecondary = container.querySelector('.page-secondary');
-  if (bannerOptions.includes('News')) {
+if (bannerOptions.includes('Cards')) {
+    pageSecondary.innerHTML += `
+      <section class="section section--home-cards">
+        <ul class="grid grid-lg-3">
+          <li>${Card({ label:``, title:'Academic Excellence', showImage:true, link:'#' }).outerHTML}</li>
+          <li>${Card({ label:``, title:'Research Opportunities', showImage:true, link:'#' }).outerHTML}</li>
+          <li>${Card({ label:``, title:'Student Success', showImage:true, link:'#' }).outerHTML}</li>
+        </ul>
+      </section>
+    `
+  }
+if (bannerOptions.includes('News')) {
     pageSecondary.innerHTML += `
       <section class="section section--home-news">
         <h2 class="section-title">Latest News</h2>
