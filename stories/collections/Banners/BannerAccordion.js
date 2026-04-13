@@ -8,6 +8,7 @@
  * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} props.summary - The summary of the banner
  * @param {string} props.backgroundColor - The background color of the banner
+ * @param {('default'|'full-width')} [props.backgroundWidth='default'] - The background width of the banner
  * @returns {HTMLElement} - The banner element
  */
 
@@ -15,18 +16,9 @@ import Accordion from '/stories/components/Accordion.js';
 
 export default function Banner(props) {
   const container = document.createElement('section');
-  const {
-    bannerWidth,
-    headingTag,
-    label,
-    title,
-    titleSize,
-    summary,
-    backgroundColor,
-    accordions
-  } = props;
+  const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, backgroundWidth, accordions } = props;
 
-  container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
+  container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor}` : '' }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
   // Create banner secondary content
   container.innerHTML = `

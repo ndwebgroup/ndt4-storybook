@@ -83,6 +83,12 @@ export default {
       options: ['none', 'brand-blue', 'brand-blue-dark', 'brand-blue-light', 'sky-blue-light', 'dark', 'light'],
       description: 'The background color of the banner'
     },
+    backgroundWidth: {
+      name: 'Background Width',
+      control: { type: 'select' },
+      options: ['default', 'full-width'],
+      description: 'The background width of the banner'
+    },
     buttons: { name: 'Single Button', control: 'object' },
     buttonList: { name: 'Button List', control: 'object' },
   },
@@ -96,6 +102,7 @@ export default {
     order:'default',
     summary:'Quis platea neque nisi a parturient mi suspendisse fusce nisl vestibulum montes dui fames curabitur ridiculus a a id himenaeos vehicula nisi.',
     backgroundColor:'none',
+    backgroundWidth:'default',
   },
 };
 

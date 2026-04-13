@@ -84,6 +84,12 @@ export default {
       options: ['none', 'brand-blue', 'brand-blue-dark', 'sky-blue-light', 'warm-white'],
       description: 'The background color of the banner'
     },
+    backgroundWidth: {
+      name: 'Background Width',
+      control: { type: 'select' },
+      options: ['default', 'full-width'],
+      description: 'The background width of the banner'
+    },
   },
   args: {
     // Default args for all stories
@@ -96,6 +102,7 @@ export default {
     imageCount:1,
     bannerWidth:'default',
     backgroundColor:'none',
+    backgroundWidth:'default',
   },
 };
 
@@ -123,4 +130,5 @@ BackgroundColor.storyName = 'With Background Color';
 BackgroundColor.args = {
   buttons: { label: 'Learn More', type: 'primary', cta:false, more: false },
   backgroundColor: 'brand-blue',
+  backgroundWidth: 'full-width',
 };

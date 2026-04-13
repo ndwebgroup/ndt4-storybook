@@ -10,6 +10,7 @@
  * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} props.summary - The summary of the banner
  * @param {string} props.backgroundColor - The background color of the banner
+ * @param {('default'|'full-width')} [props.backgroundWidth='default'] - The background width of the banner
  * @returns {HTMLElement} - The banner element
  */
 
@@ -18,9 +19,9 @@ import Video from '/stories/components/Video';
 
 export default function Banner(props) {
   const container = document.createElement('section');
-  const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor } = props;
+  const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor, backgroundWidth } = props;
 
-  container.className = `section align-center${media !== 'none' ? ' grid grid-md-2' : ''}${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
+  container.className = `section align-center${media !== 'none' ? ' grid grid-md-2' : ''}${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor}` : '' }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
   let mediaHTML = ''
 

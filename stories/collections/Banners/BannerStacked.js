@@ -10,6 +10,7 @@
  * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} props.summary - The summary of the banner
  * @param {string} props.backgroundColor - The background color of the banner
+ * @param {('default'|'full-width')} [props.backgroundWidth='default'] - The background width of the banner
  * @returns {HTMLElement} - The banner element
  */
 
@@ -17,9 +18,9 @@ import Button from '/stories/components/Buttons/Button.js';
 
 export default function Banner(props) {
   const container = document.createElement('div');
-  const { bannerWidth, imageCount, textOrientation, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor } = props;
+  const { bannerWidth, imageCount, textOrientation, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor, backgroundWidth } = props;
 
-  container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
+  container.className = `section${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor}` : '' }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
   let mediaHTML = '<img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt="">'
 

@@ -1,3 +1,4 @@
+import { background } from 'storybook/internal/theming';
 import BannerCard from './BannerCard';
 
 // Add styles to document head
@@ -71,6 +72,12 @@ export default {
       options: ['none', 'brand-blue', 'brand-blue-dark', 'sky-blue-light', 'warm-white'],
       description: 'The background color of the banner'
     },
+    backgroundWidth: {
+      name: 'Background Width',
+      control: { type: 'select' },
+      options: ['default', 'full-width'],
+      description: 'The background width of the banner'
+    },
     cardCount: { 
       name: 'Card Count',
       control: { type: 'number', min: 1, max: 6, step: 1 },
@@ -86,6 +93,7 @@ export default {
     summary:'Risus parturient ullamcorper luctus tempor nisl lacus nec sociis cras a vestibulum cras parturient sociosqu augue senectus parturient laoreet euismod.',
     bannerWidth:'default',
     backgroundColor:'none',
+    backgroundWidth:'default',
     cardCount: 3,
   },
 };
@@ -127,4 +135,5 @@ export const BackgroundColor = (args) => {
 BackgroundColor.storyName = 'With Background Color';
 BackgroundColor.args = {
   backgroundColor: 'brand-blue',
+  backgroundWidth: 'full-width',
 };

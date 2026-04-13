@@ -9,6 +9,7 @@
  * @param {string} props.summary - The summary of the banner
  * @param {string} props.imageModifiers - Additional modifier classes for the banner
  * @param {string} props.backgroundColor - The background color of the banner
+ * @param {('default'|'full-width')} [props.backgroundWidth='default'] - The background width of the banner
  * @param {('sm'|'md'|'lg'|'xl'|'screen')} props.bannerWidth - The width of the banner
  * @returns {HTMLElement} - The banner element
  */
@@ -17,9 +18,9 @@ import Button from '/stories/components/Buttons/Button.js';
 
 export default function BannerMosaic(props) {
   const container = document.createElement('section');
-  const { bannerWidth, order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList, imageModifiers, backgroundColor } = props;
+  const { bannerWidth, order, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList, imageModifiers, backgroundColor, backgroundWidth } = props;
 
-  container.className = `section grid grid-md-2 align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor == 'none' ? '' : ` bg--${backgroundColor} bg--full-bleed` }`;
+  container.className = `section grid grid-md-2 align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor == 'none' ? '' : ` bg--${backgroundColor}` }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
   // Limit imageCount to a maximum of 4 and ensure it's at least 1
   const count = Math.max(2, Math.min(parseInt(imageCount, 10) || 3, 4));

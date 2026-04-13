@@ -91,6 +91,12 @@ export default {
       options: ['none', 'brand-blue', 'brand-blue-dark', 'sky-blue-light', 'warm-white'],
       description: 'The background color of the banner'
     },
+    backgroundWidth: {
+      name: 'Background Width',
+      control: { type: 'select' },
+      options: ['default', 'full-width'],
+      description: 'The background width of the banner'
+    },
     accordions: { name: 'Accordions', control: 'object' },
   },
   args: {
@@ -102,6 +108,7 @@ export default {
     summary:'Risus parturient ullamcorper luctus tempor nisl lacus nec sociis cras a vestibulum cras parturient sociosqu augue senectus parturient laoreet euismod.',
     bannerWidth:'default',
     backgroundColor:'none',
+    backgroundWidth:'default',
   },
 };
 
@@ -140,5 +147,6 @@ export const WithBackground = (args) => {
 WithBackground.storyName = 'With Background';
 WithBackground.args = {
   backgroundColor: 'brand-blue',
+  backgroundWidth: 'full-width',
   accordions: exampleItems,
 };

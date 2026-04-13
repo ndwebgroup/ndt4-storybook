@@ -9,6 +9,7 @@
  * @param {('default'|'sm'|'md'|'lg'|'xl')} props.titleSize - The title size of the banner
  * @param {string} props.summary - The summary of the banner
  * @param {string} props.backgroundColor - The background color of the banner
+ * @param {('default'|'full-width')} [props.backgroundWidth='default'] - The background width of the banner
  * @returns {HTMLElement} - The banner element
  */
 
@@ -79,9 +80,9 @@ import Gallery from '/stories/components/Gallery';
 
 export default function Banner(props) {
   const container = document.createElement('section');
-  const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, variant } = props;
+  const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, backgroundWidth, variant } = props;
 
-  container.className = `section align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor} bg--full-bleed` : '' }`;
+  container.className = `section align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor}` : '' }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
  const createGalleryImages = (count) => {
   return Array.from({ length: count }, (_, i) => ({

@@ -33,13 +33,25 @@ export default {
       name: 'Page Lede',
       description: 'Lede text for the hero section',
       control: 'text',
-    }
+    },
+    fullWidth: {
+      name: 'Full Width Secondary',
+      description: 'If true, the secondary content area is full width',
+      control: 'boolean'
+    },
+    bannerOptions: {
+      name: 'Banner Options',
+      description: 'Select which banner to display on the home page',
+      control: { type: 'check' },
+      options: ['News', 'Events', 'Feature'],
+    },
   },
   args: {
     heroLayout: 'Default',
     pageTitle: 'Exploring the Future',
     pageLede: '',
     navTop: false,
+    fullWidth: false,
   },
   decorators: [
     (Story) => {
