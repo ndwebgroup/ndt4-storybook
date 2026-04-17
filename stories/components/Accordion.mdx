@@ -14,6 +14,13 @@ import * as AccordionStories from './Accordion.stories';
 
 ---
 
+## Accessibility
+
+- Match each accordion heading `<summary>` to the surrounding page structure. For example, if the accordion sits within a section that has an `<h2>` heading, use `<h3>` for each panel title in your markup.
+- Large accordions create long tab stops and slow navigation for keyboard users. Group related content, or split content across sections, to reduce the total number of panels.
+
+---
+
 ## Usage
 
 Accordion components can be used to hide and show related content, such as FAQs, Program listings, or additional information. They help to keep the page clean and organized by allowing users to expand and collapse sections as needed.
@@ -34,25 +41,40 @@ Accordion components can be used to hide and show related content, such as FAQs,
   </li>
 </ul>
 
----
-
-## Accessibility
-
-- Match each accordion heading `<summary>` to the surrounding page structure. For example, if the accordion sits within a section that has an `<h2>` heading, use `<h3>` for each panel title in your markup.
-- Large accordions create long tab stops and slow navigation for keyboard users. Group related content, or split content across sections, to reduce the total number of panels.
-
----
-
-## Modifier Classes
+### Modifier Classes
 | CSS Class                         | Description                                                                                   |
 |-----------------------------------|-----------------------------------------------------------------------------------------------|
 | `.accordion--highlight`           | Applies a highlight style to the accordion component.                                         |
 | `.accordion--sm`                  | Applies a smaller size style to the accordion component.                                      |
 | `.accordion--lg`                  | Applies a larger size style to the accordion component.                                       |
 
-## CSS References
+### CSS References
 | CSS Class                         | Description                                                                                   |
 |-----------------------------------|-----------------------------------------------------------------------------------------------|
 | `.accordion`                      | Container for the accordion component.                                                        |
 | `.accordion summary`              | Styles the summary element, which serves as the clickable header for each accordion item.     |
 | `.accordion[open] summary`        | Styles the summary element when the accordion item is expanded.                               |
+
+---
+
+## Examples
+<ul className="grid grid-md-2 grid-lg-3">
+  <li className="card-container">
+    <div className="card">
+      <figure className="card-image"><img src="/images/components/accordion-nd.webp" alt="Notre Dame logo" /></figure>
+      <h3 className="card-title"><a className="card-link" href="https://www.nd.edu/">University of Notre Dame</a></h3>
+    </div>
+  </li>
+  <li className="card-container">
+    <div className="card">
+      <figure className="card-image"><img src="/images/components/accordion-careers.webp" alt="Notre Dame logo" /></figure>
+      <h3 className="card-title"><a className="card-link" href="https://careers.nd.edu/">Notre Dame Careers</a></h3>
+    </div>
+  </li>
+  <li className="card-container">
+    <div className="card">
+      <figure className="card-image"><img src="/images/components/accordion-dining.webp" alt="Notre Dame logo" /></figure>
+      <h3 className="card-title"><a className="card-link" href="https://dining.nd.edu/about/">Campus Dining</a></h3>
+    </div>
+  </li>
+</ul>
