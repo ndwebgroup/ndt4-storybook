@@ -36,8 +36,8 @@ export default function SiteFooter(props) {
     siteName = '',
     footerGrandparent = '',
     footerGrandparentLink = '',
-    footerParent = '',
-    footerParentLink = '',
+    footerParent = 'Site Parent',
+    footerParentLink = '#',
     footerParent2 = '',
     footerParent2Link = '',
 

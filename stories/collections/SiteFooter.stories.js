@@ -156,10 +156,10 @@ export default {
       { label: 'Footer Link 2', url: '/#' },
       { label: 'Protected section', url: '/#', locked: true },
     ],
-    siteName: 'Department of Example',
+    siteName: 'Department Title',
     currentYear: 2025,
-    footerParent: '',
-    footerParentLink: '',
+    footerParent: 'Site Parent',
+    footerParentLink: '#',
     footerGrandparent: '',
     footerGrandparentLink: '',
     footerParent2: '',
@@ -229,7 +229,6 @@ export const NoNavFooter = (args) => {
 };
 NoNavFooter.args = {
   showNavFooter: false,
-  siteName: 'Department of Example',
   sitePhone: '574-631-5555',
   siteEmail: 'example@nd.edu',
   currentYear: 2025,
@@ -240,7 +239,6 @@ export const WithParentLinks = (args) => {
   return SiteFooter(args);
 };
 WithParentLinks.args = {
-  siteName: 'Department of Example',
   footerParent: 'College of Science',
   footerParentLink: 'https://science.nd.edu/',
   siteAddress: '100 Main Building',
@@ -253,7 +251,6 @@ export const WithSocialMedia = (args) => {
   return SiteFooter(args);
 };
 WithSocialMedia.args = {
-  siteName: 'Department of Example',
   siteFacebook: 'https://www.facebook.com/notredame/',
   siteTwitter: 'https://twitter.com/NotreDame/',
   siteInstagram: 'https://www.instagram.com/notredame/',
