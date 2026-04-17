@@ -31,10 +31,12 @@ export default function PeopleCard(props) {
     mobile = '',
     fax = '',
     street = '',
-    content = ''
+    content = '',
+    wrapperTag = 'div',
+    headingTag = 'h2',
   } = props;
 
-  const container = document.createElement('div');
+  const container = document.createElement(wrapperTag);
   container.className = 'card-container';
   let classes = ['card', 'card--person', `${layout === 'default' ? '' : `card--${layout}`}`];
 
@@ -49,8 +51,8 @@ export default function PeopleCard(props) {
 
   // Create the title element based on whether dialog is used
   const titleElement = useDialog
-    ? `<h2 class="card-title person-name">${name}</h2>`
-    : `<h2 class="card-title person-name"><a class="card-link" href="#">${name}</a></h2>`;
+    ? `<${headingTag} class="card-title person-name">${name}</${headingTag}>`
+    : `<${headingTag} class="card-title person-name"><a class="card-link" href="#">${name}</a></${headingTag}>`;
 
   // Create the dialog button if needed
   const dialogButton = useDialog

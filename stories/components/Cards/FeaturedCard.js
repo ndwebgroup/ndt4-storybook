@@ -13,9 +13,11 @@ export default function FeaturedCard(props) {
     image,
     link,
     label,
+    wrapperTag = 'div',
+    headingTag = 'h2',
   } = props;
 
-  const container = document.createElement('div');
+  const container = document.createElement(wrapperTag);
   container.className = 'card-container';
   const classes = ['card', `card--featured`];
 
@@ -24,7 +26,7 @@ export default function FeaturedCard(props) {
     ${image ? `<figure class="card-image"><img src="${image}" width="600" height="400" alt=""></figure>` : '<figure class="card-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'}
     <div class="card-body">
       ${label ? `<p class="card-label"><span>${label}</span></p>` : ''}
-      <h2 class="card-title"><a class="card-link" href="${link}">${title}</a></h2>
+      <${headingTag} class="card-title"><a class="card-link" href="${link}">${title}</a></${headingTag}>
     </div>
   </div>
 `;
