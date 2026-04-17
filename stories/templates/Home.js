@@ -68,9 +68,9 @@ if (bannerOptions.includes('Cards')) {
     pageSecondary.innerHTML += `
       <section class="section section--home-cards">
         <ul class="grid grid-lg-3">
-          <li>${Card({ label:``, title:'Academic Excellence', showImage:true, link:'#' }).outerHTML}</li>
-          <li>${Card({ label:``, title:'Research Opportunities', showImage:true, link:'#' }).outerHTML}</li>
-          <li>${Card({ label:``, title:'Student Success', showImage:true, link:'#' }).outerHTML}</li>
+          ${Card({ label:``, title:'Academic Excellence', showImage:true, link:'#', wrapperTag:'li' }).outerHTML}
+          ${Card({ label:``, title:'Research Opportunities', showImage:true, link:'#', wrapperTag:'li' }).outerHTML}
+          ${Card({ label:``, title:'Student Success', showImage:true, link:'#', wrapperTag:'li' }).outerHTML}
         </ul>
       </section>
     `

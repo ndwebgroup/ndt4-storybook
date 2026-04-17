@@ -36,16 +36,16 @@ export default function PeopleListing(props) {
       <div class="page-primary">
         ${pageCopy}
         <ul class="no-bullets ${format === 'grid' ? 'grid grid-md-2 grid-ml-3 grid-lg-4 grid-xl-5' : 'list--directory'}">
-          <li>${PeopleCard({ name: 'Alice Johnson', title: 'Assistant Professor of Physics', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Bob Brown', title: 'Lecturer in Mathematics', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Carol White', title: 'Senior Researcher in Computer Science', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'David Green', title: 'Professor of History', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Eva Blue', title: 'Assistant Professor of English', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Frank Black', title: 'Associate Professor of Economics', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Grace Yellow', title: 'Lecturer in Political Science', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Hank Purple', title: 'Senior Researcher in Sociology', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'Jane Doe', title: 'Professor of Biology', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
-          <li>${PeopleCard({ name: 'John Smith', title: 'Associate Professor of Chemistry', summary:'', placeholder: true, layout: format === 'list' ? 'compact' : null }).outerHTML}</li>
+    ${PeopleCard({ name: 'Alice Johnson', title: 'Assistant Professor of Physics', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Bob Brown', title: 'Lecturer in Mathematics', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Carol White', title: 'Senior Researcher in Computer Science', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'David Green', title: 'Professor of History', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Eva Blue', title: 'Assistant Professor of English', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Frank Black', title: 'Associate Professor of Economics', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Grace Yellow', title: 'Lecturer in Political Science', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Hank Purple', title: 'Senior Researcher in Sociology', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'Jane Doe', title: 'Professor of Biology', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
+    ${PeopleCard({ name: 'John Smith', title: 'Associate Professor of Chemistry', summary:'', placeholder: true, wrapperTag: 'li', layout: format === 'list' ? 'compact' : 'default' }).outerHTML}
         </ul>
         ${Pagination({ currentPage:1, totalPages:5, baseUrl:'#' }).outerHTML}
       </div>
