@@ -14,14 +14,22 @@ import * as HeadingStories from './Heading.stories';
 
 ---
 
+## Accessibility
+
+Headings must be used in sequential order (i.e., do not skip heading levels) to ensure proper document structure for screen readers and other assistive technologies.
+
+---
+
 ## Heading Classes
 
 You can also use the corresponding class (e.g., \`.h3\`) to make any element look like a heading.
 This is useful when the HTML structure requires a different heading level for semantic reasons,
 but visually you want it to match a different heading style.
 
-**Note:** Using heading classes doesn't change the semantic meaning of an element.
-For accessibility reasons, use actual heading elements (h1-h6) for page structure when possible.
+<div className="notice"><p className="mbe-0">Using a heading class doesn't change the semantic meaning of an element.
+For accessibility reasons, use actual heading elements (h1-h6) for page structure when possible.</p></div>
+
+---
 
 ## Usage
 
@@ -44,15 +52,7 @@ HTML headings `<h2>` through `<h6>` are available for use in content (`<h1>` is 
   </li>
 </ul>
 
----
-
-## Accessibility
-
-Headings must be used in sequential order (i.e., do not skip heading levels) to ensure proper document structure for screen readers and other assistive technologies.
-
----
-
-## CSS References
+### CSS References
 
 | CSS Class                                 | Description                                                            |
 |-------------------------------------------|------------------------------------------------------------------------|

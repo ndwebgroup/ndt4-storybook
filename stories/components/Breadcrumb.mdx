@@ -14,6 +14,11 @@ import * as BreadcrumbStories from './Breadcrumb.stories';
 
 ---
 
+## Accessibility
+Breadcrumbs should be implemented using a `<nav>` element with an `aria-label` attribute set to "Breadcrumbs". The current page should be indicated using `aria-current="page"` on the last breadcrumb item.
+
+---
+
 ## Usage
 
 Breadcrumbs should be displayed above the page title on level 2 or lower pages to enhance navigation and provide users with a clear understanding of their location within a website.
@@ -34,14 +39,7 @@ Breadcrumbs should be displayed above the page title on level 2 or lower pages t
   </li>
 </ul>
 
----
-
-## Accessibility
-Breadcrumbs should be implemented using a `<nav>` element with an `aria-label` attribute set to "Breadcrumbs". The current page should be indicated using `aria-current="page"` on the last breadcrumb item.
-
----
-
-## CSS References
+### CSS References
 | CSS Class                                 | Description                                                              |
 |-------------------------------------------|--------------------------------------------------------------------------|
 | `.breadcrumbs`                            | Container for the breadcrumb component.                                  |

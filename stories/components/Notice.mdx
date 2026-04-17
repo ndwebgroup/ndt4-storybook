@@ -14,6 +14,12 @@ import * as NoticeStories from './Notice.stories';
 
 ---
 
+## Accessibility
+
+The inclusion of role="alert" will assist screen readers in announcing this content ahead of other information, so this component should be used with caution.
+
+---
+
 ## Usage
 <ul className="list--todo">
   <li>
@@ -32,15 +38,8 @@ import * as NoticeStories from './Notice.stories';
   </li>
 </ul>
 
----
+### Modifier Classes
 
-## Accessibility
-
-The inclusion of role="alert" will assist screen readers in announcing this content ahead of other information, so this component should be used with caution.
-
----
-
- ## Modifier Classes
  | CSS Class                                 | Description                                 |
 |--------------------------------------------|---------------------------------------------|
 | `.notice--primary`                         | Styles the notice with a primary theme.     |
@@ -50,7 +49,8 @@ The inclusion of role="alert" will assist screen readers in announcing this cont
 | `.notice--warning`                         | Styles the notice with a warning theme.     |
 | `.notice--info`                            | Styles the notice with an info theme.       |
 
-## CSS References
+### CSS References
+
 | CSS Class                                | Description                                  |
 |------------------------------------------|----------------------------------------------|
 | `.notice`                                | Container for the notice component.          |

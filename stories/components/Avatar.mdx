@@ -14,6 +14,11 @@ import * as AvatarStories from './Avatar.stories';
 
 ---
 
+## Accessibility
+Avatar components should include appropriate alt text for screen readers. If the avatar represents a user, the alt text should include the user's name. If the avatar is purely decorative, an empty alt attribute (alt="") should be used to prevent screen readers from announcing it.
+
+---
+
 ## Usage
 
 Avatar components can be used to represent users in a variety of contexts, such as article authors, blockquote cites, and profile pictures. They help to personalize the user experience and make it easier to identify users at a glance.
@@ -36,14 +41,7 @@ Avatar components can be used to represent users in a variety of contexts, such 
   </li>
 </ul>
 
----
-
-## Accessibility
-Avatar components should include appropriate alt text for screen readers. If the avatar represents a user, the alt text should include the user's name. If the avatar is purely decorative, an empty alt attribute (alt="") should be used to prevent screen readers from announcing it.
-
----
-
-## Modifier Classes
+### Modifier Classes
 | CSS Class                         | Description                                                                                   |
 |-----------------------------------|-----------------------------------------------------------------------------------------------|
 | `.avatar--xs`                     | Applies an extra-small size style to the avatar component.                                    |
@@ -52,7 +50,7 @@ Avatar components should include appropriate alt text for screen readers. If the
 | `.avatar--lg`                     | Applies a larger size style to the avatar component.                                          |
 | `.avatar--xl`                     | Applies an extra-large size style to the avatar component.                                    |
 
-## CSS References
+### CSS References
 | CSS Class                         | Description                                                                                   |
 |-----------------------------------|-----------------------------------------------------------------------------------------------|
 | `.avatar`                         | Container for the avatar component.                                                           |

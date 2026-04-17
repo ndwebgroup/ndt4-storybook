@@ -128,10 +128,15 @@
 .color-table .mode--light { color-scheme:light; }
 
 /* Lists */
-.list--todo { list-style:none; border-left:var(--border-primary); }
-.list--todo > li { margin-block-end:1.5rem; }
+.list--todo { list-style:none; border:var(--border-primary); border-radius:var(--border-radius); padding:1.5rem; }
 .list--todo ul { list-style-type:disc; margin:0 0 1rem; font-size:1rem; }
+.list--todo > li { margin-bottom:2rem; }
 .list--todo li:last-child { border-right:none; }
+
+@media (width >= 60em) {
+  .list--todo { display:grid; grid-template-columns:1fr 1fr; grid-gap:1.5rem; padding:2rem; column-rule:1px solid #ddd; }
+  .list--todo > li { margin-bottom:0; }
+}
 
 /* Badge */
 .badge { display:inline-block; font-size:0.9rem; line-height:1; text-transform:uppercase; padding:0.5rem; margin-block-end:2rem; border-radius:4px; background-color:#eee; }
