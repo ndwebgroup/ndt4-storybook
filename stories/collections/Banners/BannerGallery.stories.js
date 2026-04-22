@@ -103,3 +103,10 @@ export const Default = (args) => {
   return BannerGallery(mergedArgs);
 };
 Default.storyName = 'Default';
+
+// Gallery Carousel
+export const GalleryCarousel = (args) => {
+  const mergedArgs = { ...args, variant: 'carousel' };
+  return BannerGallery(mergedArgs);
+};
+GalleryCarousel.storyName = 'Carousel';
