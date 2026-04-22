@@ -14,17 +14,34 @@ import * as EventCardStories from './EventCard.stories';
 
 ---
 
-## Usage
-
-Event Cards can be used to promote events on the homepage and event listing pages. They help users quickly understand the essential details of an event and encourage participation.
-
----
-
 ## Accessibility
 
 Ensure that Event Cards are accessible by using semantic HTML elements and providing appropriate alt text for images.
 
 ---
+
+## Usage
+
+Event Cards can be used to promote events on the homepage and event listing pages. They help users quickly understand the essential details of an event and encourage participation.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Ensure there is sufficient padding and margin around cards to prevent clutter.</li>
+      <li>Use high-quality images that are relevant to the content of the card.</li>
+      <li>When a card contains a `.card-link`, an arrow must be placed after the card title.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Avoid overcrowding cards with too much information.</li>
+      <li>Since a card acts as a single unit, each one should have no more than one `.card-link` associated with it.</li>
+      <li>Do not alter the border or border-radius on cards as these are defined by the design system and should be consistent across all implementations.</li>
+    </ul>
+  </li>
+</ul>
 
 ## CSS References
 | CSS Class                                 | Description                                                                    |

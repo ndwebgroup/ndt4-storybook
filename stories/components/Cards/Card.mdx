@@ -14,6 +14,12 @@ import * as CardStories from './Card.stories';
 
 ---
 
+## Accessibility
+
+Ensure that the Card component is accessible by using semantic HTML elements and providing appropriate alt text for images.
+
+---
+
 ## Usage
 
 The Card component can be used to showcase important calls to action. They help to organize information and make it easily scannable for users.
@@ -24,6 +30,7 @@ The Card component can be used to showcase important calls to action. They help 
     <ul>
       <li>Ensure there is sufficient padding and margin around cards to prevent clutter.</li>
       <li>Use high-quality images that are relevant to the content of the card.</li>
+      <li>When a card contains a `.card-link`, an arrow must be placed after the card title.</li>
     </ul>
   </li>
   <li>
@@ -31,17 +38,10 @@ The Card component can be used to showcase important calls to action. They help 
     <ul>
       <li>Avoid overcrowding cards with too much information.</li>
       <li>Since a card acts as a single unit, each one should have no more than one `.card-link` associated with it.</li>
+      <li>Do not alter the border or border-radius on cards as these are defined by the design system and should be consistent across all implementations.</li>
     </ul>
   </li>
 </ul>
-
----
-
-## Accessibility
-
-Ensure that the Card component is accessible by using semantic HTML elements and providing appropriate alt text for images.
-
----
 
 ## Modifier Classes
 | CSS Class                                 | Description                                                            |
