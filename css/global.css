@@ -1,12 +1,4 @@
-:root {
-  --thumb-primary:light-dark(#0c2340,#fff);
-  --thumb-secondary:#ae9142;
-  --thumb-tertiary:light-dark(#777,#c1cddd);
-  --thumb-bg-light:light-dark(#f4f4f4,#224672);
-  --thumb-border-light:light-dark(#e2e2e2,#49617f);
-  --thumb-border-dark:light-dark(#333,rgba(255,255,255,0.3));
-}
-
+/* Global styles for Storybook */
 .dark { color-scheme:dark; }
 .light { color-scheme:light; }
 
@@ -147,7 +139,15 @@
 .badge--experimental { background-color:var(--brand-blue-light); color:#fff; }
 
 /* Thumbs */
-.thumb-list { margin-block-end:3rem; }
+.thumb-list {
+  --thumb-primary:light-dark(#0c2340,#fff);
+  --thumb-secondary:#ae9142;
+  --thumb-tertiary:light-dark(#777,#c1cddd);
+  --thumb-bg-light:light-dark(#f4f4f4,#224672);
+  --thumb-border-light:light-dark(#e2e2e2,#49617f);
+  --thumb-border-dark:light-dark(#333,rgba(255,255,255,0.3));
+  margin-block-end:3rem; 
+}
 .thumb-list li { font-size:0.9rem; }
 .thumb-list li a { text-decoration:none; color:var(--brand-blue); color:light-dark(var(--brand-blue),var(--gray-extra-extra-light)); }
 .thumb { background-color:#fff; background-color:light-dark(#fff,var(--brand-blue)); aspect-ratio:4/3; display:block; width:100%; border-radius:var(--border-radius); border:1px solid transparent; border-color:light-dark(transparent,rgba(255,255,255,0.2)); object-fit:cover; transition:background-color var(--anim-duration-fast) var(--anim-ease); }
