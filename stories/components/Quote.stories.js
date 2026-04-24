@@ -1,14 +1,12 @@
-import QuoteInline from './QuoteInline.js';
+import Quote from './Quote.js';
 
 export default {
-  title: 'Components/Quotes/Quote (Inline)',
+  title: 'Components/Quotes/Quote (Default)',
   tags: ['stable'],
   argTypes: {
     text: { name:'Quote Text',},
-    cite: { name:'Show Cite',},
-    image: { name:'Show Image',},
-    imageSize: { name:'Image Size', control: 'select', options: ['sm', 'md', 'lg'] },
-    layout: { name:'Quote Layout', control: 'select', options: ['left', 'centered', 'reversed'] },
+    cite: { name:'Cite Text',},
+    size: { name:'Quote Size', control: 'select', options: ['sm', 'md', 'lg'] },
   },
   parameters: {
     design: {
@@ -24,30 +22,14 @@ export default {
     },
   },
   args: {
-    cite:true,
-    image: true,
-    imageSize: 'md',
     text: '"As a premier Catholic research university, our research and learning drive insights, innovation, and impact for good around the world."',
-    layout: 'left'
+    cite:'- Rev. John I. Jenkins, C.S.C., President of the University of Notre Dame',
+    size: 'md',
   }
 };
 
 export const Primary = (args) => {
-  return QuoteInline(args);
+  return Quote(args);
 };
 Primary.args = {
-};
-
-export const Centered = (args) => {
-  return QuoteInline(args);
-};
-Centered.args = {
-  layout: 'centered',
-};
-
-export const Reversed = (args) => {
-  return QuoteInline(args);
-};
-Reversed.args = {
-  layout: 'reversed',
 };

@@ -1,0 +1,41 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as QuoteStories from './Quote.stories';
+
+<Meta of={QuoteStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Accessibility
+
+Ensure that blockquotes are properly marked up with the `<blockquote>` element and include a `<cite>` element for the source of the quote. This helps screen readers and other assistive technologies understand the structure and content of the quote.
+
+---
+
+## Usage
+
+### Modifier Classes
+
+| CSS Class                                 | Description                                                   |
+|-------------------------------------------|---------------------------------------------------------------|
+| `.blockquote--sm`                         | Styles the blockquote in a small variant.                     |
+| `.blockquote--lg`                         | Styles the blockquote in a large variant.                     |
+
+
+### CSS References
+
+| CSS Class                                 | Description                                                   |
+|-------------------------------------------|---------------------------------------------------------------|
+| `.list-blockquotes`                       | Container for a list of blockquotes.                          |
+| `.blockquote`                             | Container for the blockquote component.                       |
+| `.blockquote p`                           | Styles the paragraph text within the blockquote component.    |
+| `.blockquote cite`                        | Styles the citation text within the blockquote component.     |
+| `.blockquote .byline`                     | Styles the byline section, typically containing author info.  |

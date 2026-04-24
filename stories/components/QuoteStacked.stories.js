@@ -1,7 +1,7 @@
 import QuoteStacked from './QuoteStacked.js';
 
 export default {
-  title: 'Components/Quote (Stacked)',
+  title: 'Components/Quotes/Quote (Stacked)',
   tags: ['stable'],
   argTypes: {
     text: { name:'Quote Text',},
