@@ -13,6 +13,22 @@ import NewsCard from '../components/Cards/NewsCard.js';
 
 <div className="grid grid-md-2 grid-ml-3 grid-gap-md">
   <div dangerouslySetInnerHTML={{ __html: NewsCard({
+    title: 'Office of Undergraduate Education',
+    link: 'https://undergraduateeducation.nd.edu',
+    excerpt: 'Supporting the academic and personal development of undergraduate students at Notre Dame',
+    publishDate: 'April 1, 2026',
+    imageUrl: `/images/recent-launches/undergraduateeducation.webp`
+  }).outerHTML }} />
+  
+  <div dangerouslySetInnerHTML={{ __html: NewsCard({
+    title: 'Cloud Center of Excellence',
+    link: 'https://cloud.nd.edu',
+    excerpt: 'Notre Dame`s team of certified experts that lead the University`s Cloud`First, multi-cloud strategy',
+    publishDate: 'March 3, 2026',
+    imageUrl: `/images/recent-launches/cloudcenter.webp`
+  }).outerHTML }} />
+  
+  <div dangerouslySetInnerHTML={{ __html: NewsCard({
     title: 'Campus Dining',
     link: 'https://dining.nd.edu',
     excerpt: 'Campus Dining offers hospitality and dining services to the University of Notre Dame community.',
