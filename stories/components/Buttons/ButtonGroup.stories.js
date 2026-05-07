@@ -2,7 +2,7 @@ import ButtonGroup from './ButtonGroup.js';
 
 export default {
   title: 'Components/Buttons/Button Group',
-  tags: ['stable'],
+  tags: ['modified'],
   parameters: {
     docs: {
       description: {
@@ -17,9 +17,15 @@ export default {
       description: 'Array of buttons. Each item should have a text property and an href property.',
       control: 'object'
     },
+    divided: {
+      name: 'Border Divider',
+      description: 'Adds a divider between buttons when set to true.',
+      control: 'boolean'
+    }
   },
   args: {
     //Default args for all stories
+    divided: false
   },
 };
 
@@ -27,6 +33,7 @@ const exampleItems = [
   { text: 'Button 1', href: '#' },
   { text: 'Button 2', href: '#' },
   { text: 'Button 3', href: '#' },
+  { text: 'Button 4', href: '#' },
 ];
 
 export const Default = (args) => {
@@ -42,4 +49,12 @@ Default.parameters = {
       story: 'Description'
     }
   }
+};
+
+export const Border = (args) => {
+  return ButtonGroup(args);
+};
+Border.args = {
+  items: exampleItems,
+  divided: true
 };
