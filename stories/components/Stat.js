@@ -13,7 +13,7 @@ export default function Stat(args) {
     const stickerHtml = item.sticker ? getSticker(item.sticker, 'stat-sticker sticker--md') : '';
     return `<li class="stat-item${ alignment === 'center' ? ' stat-item--center' : '' }">
     ${stickerHtml}
-    <span class="stat-value stat-value--${size}">${item.value}</span>
+    <span class="stat-value${size !== 'default' ? ` stat-value--${size}` : ''}">${item.value}</span>
     <span class="stat-label">${item.label}</span>
   </li>`;
   }).join('\n  ')}
