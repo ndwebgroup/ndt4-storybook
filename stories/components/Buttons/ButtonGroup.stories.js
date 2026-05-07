@@ -51,8 +51,9 @@ Default.parameters = {
   }
 };
 
-export const Border = (args) => {
-  return ButtonGroup(args);
+export const Border = {
+  render: (args) => ButtonGroup(args),
+  tags: ['!modified','coming']
 };
 Border.args = {
   items: exampleItems,
