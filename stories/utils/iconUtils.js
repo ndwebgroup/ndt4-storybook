@@ -52,6 +52,7 @@ export function getAvailableIcons() {
     'icon-play',
     'icon-feed',
     'icon-mode',
+    'icon-newsletter',
     //Brands
     'icon-bluesky',
     'icon-linkedin',
