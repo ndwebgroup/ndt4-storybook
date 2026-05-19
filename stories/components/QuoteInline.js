@@ -24,7 +24,7 @@ export default function QuoteInline(props) {
 
   container.innerHTML = `
       <div class="flex-md align-start">
-        ${image ? Avatar({ size: imageSize, modifier: 'avatar--quote mi-auto' }) : ''}
+        ${image ? Avatar({ size: imageSize, modifier: 'avatar--quote mi-auto mbe-3' }) : ''}
         <p>${text}</p>
       </div>
   `;
