@@ -8,7 +8,7 @@ export default {
     cite: { name:'Show Cite',},
     image: { name:'Show Image',},
     imageSize: { name:'Image Size', control: 'select', options: ['sm', 'md', 'lg'] },
-    layout: { name:'Quote Layout', control: 'select', options: ['left', 'centered', 'reversed'] },
+    layout: { name:'Quote Layout', control: 'select', options: ['primary', 'reversed'] },
   },
   parameters: {
     design: {
@@ -26,9 +26,9 @@ export default {
   args: {
     cite:true,
     image: true,
-    imageSize: 'md',
+    imageSize: 'sm',
     text: '"As a premier Catholic research university, our research and learning drive insights, innovation, and impact for good around the world."',
-    layout: 'left'
+    layout: 'primary'
   }
 };
 
@@ -36,13 +36,6 @@ export const Primary = (args) => {
   return QuoteInline(args);
 };
 Primary.args = {
-};
-
-export const Centered = (args) => {
-  return QuoteInline(args);
-};
-Centered.args = {
-  layout: 'centered',
 };
 
 export const Reversed = (args) => {

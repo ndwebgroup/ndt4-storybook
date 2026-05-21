@@ -21,7 +21,11 @@ export default function QuoteStacked(props) {
   } = props;
 
   const container = document.createElement('blockquote');
-  container.classList.add('blockquote', modifier);
+  container.classList.add('blockquote');
+  if (modifier) {
+    container.classList.add(modifier);
+  }
+
   if (layout !== 'left') {
     container.classList.add(`blockquote--${layout}`);
   }

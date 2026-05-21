@@ -16,7 +16,7 @@ export default function QuoteInline(props) {
     image = true,
     imageSize = 'md',
     text,
-    layout = 'left'
+    layout = 'primary'
   } = props;
 
   const container = document.createElement('blockquote');
