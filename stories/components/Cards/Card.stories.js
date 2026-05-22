@@ -45,6 +45,14 @@ NoImage.args = {
   showImage: false,
 };
 
+export const ImageRight = {
+  render: (args) => Card(args),
+  tags: ['!stable','coming']
+};
+ImageRight.args = {
+  modifier: 'card--image-right',
+};
+
 export const Horizontal = (args) => {
   return Card(args);
 };
@@ -64,4 +72,18 @@ export const BackgroundColor = (args) => {
 };
 BackgroundColor.args = {
   backgroundColor: 'sky-blue-light',
+};
+
+export const AllOptions = (args) => {
+  return Card(args);
+};
+AllOptions.args = {
+  layout:'horizontal',
+  showImage: true,
+  label: 'Card Label',
+  headingTag: 'h3',
+  title: 'Card Title',
+  summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
+  link: '#',
+  backgroundColor: 'sky-blue-light'
 };

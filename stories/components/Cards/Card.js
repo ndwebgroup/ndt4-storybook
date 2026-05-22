@@ -20,13 +20,17 @@ export default function Card(props) {
     wrapperTag = 'div',
     headingTag = 'h2',
     layout = 'default',
-    
+    modifier = '',
     backgroundColor,
   } = props;
 
   const container = document.createElement(wrapperTag);
   container.className = 'card-container';
   const classes = ['card',`${layout === 'default' ? '' : ` card--${layout}`}`];
+
+  if (modifier) {
+    classes.push(` ${modifier}`);
+  }
 
   if (backgroundColor && backgroundColor !== 'none') {
     classes.push(` bg--${backgroundColor}`);

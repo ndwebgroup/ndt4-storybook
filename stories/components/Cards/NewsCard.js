@@ -22,6 +22,7 @@ export default function NewsCard(props) {
     author = 'Author Name',
     publishDate = 'April 1, 2025',
     headingTag = 'h2',
+    modifier = '',
     layout = 'default'
   } = props;
 
@@ -29,7 +30,7 @@ export default function NewsCard(props) {
   container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
 
-  let articleHTML = `\n  <div class="card card--news ${layout !== 'default' ? `card--${layout}` : ''}">`;
+  let articleHTML = `\n  <div class="card card--news ${layout !== 'default' ? `card--${layout}` : ''}${modifier ? ` ${modifier}` : ''}">`;
 
   if (showImage) {
     articleHTML += `

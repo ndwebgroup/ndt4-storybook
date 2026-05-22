@@ -57,6 +57,14 @@ WithoutImage.args = {
   showImage: false
 };
 
+export const ImageRight = {
+  render: (args) => NewsCard(args),
+  tags: ['!stable','coming']
+};
+ImageRight.args = {
+  modifier: 'card--image-right',
+};
+
 export const WithDifferentHeading = (args) => {
   return NewsCard(args);
 };
