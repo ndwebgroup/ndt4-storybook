@@ -20,7 +20,7 @@ export default {
     imageSrc: { name: 'Image Source', },
     imagePosition: { name: 'Image Position', control: 'select', options: ['default', 'left', 'right'] },
     imageVariant: { name: 'Image Variant', control: 'select', options: ['none', 'circle', 'mosaic', 'tiled'] },
-    imageCount: { name: 'Image Count', control: 'number', min: 1, max: 4, step: 1 },
+    imageCount: { name: 'Image Count', description: 'Only applicable for mosaic and tiled variants.', control: 'number', min: 1, max: 4, step: 1 },
     imageCaption: { name: 'Image Caption', control: 'text' },
   },
   args: {
@@ -29,7 +29,7 @@ export default {
     imageCaption: '',
     imagePosition: 'default',
     imageVariant: 'none',
-    imageCount: 1,
+    imageCount: 3,
   }
 };
 
@@ -46,9 +46,9 @@ export const Right = (args) => {
 };
 
 export const Mosaic = (args) => {
-  return Image({ ...args, imageVariant: 'mosaic', imageCount: 3 });
+  return Image({ ...args, imageVariant: 'mosaic', imageCount: args.imageCount });
 };
 
 export const Tiled = (args) => {
-  return Image({ ...args, imageVariant: 'tiled', imageCount: 3 });
+  return Image({ ...args, imageVariant: 'tiled', imageCount: args.imageCount });
 };
