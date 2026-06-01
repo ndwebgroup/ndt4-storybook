@@ -1,7 +1,7 @@
 import Image from './Images.js';
 
 export default {
-  title: 'Components/Image',
+  title: 'Components/Image (Single)',
   tags: ['stable'],
   parameters: {
     design: {
@@ -12,16 +12,15 @@ export default {
     },
     docs: {
       description: {
-        component: 'The Video component allows for embedding YouTube videos in three styles: embed, placeholder, and lightbox.'
+        component: 'The Images component allows for displaying single images with various options for positioning, styling, and aspect ratios. It supports left, right, and default positioning, as well as circle styling and multiple aspect ratios including 1:1, 16:9, and more.'
       }
     }
   },
   argTypes: {
     imageSrc: { name: 'Image Source', },
     imagePosition: { name: 'Image Position', control: 'select', options: ['default', 'left', 'right'] },
-    imageVariant: { name: 'Image Variant', control: 'select', options: ['none', 'circle', 'mosaic', 'tiled'] },
-    imageCount: { name: 'Image Count', description: 'Only applicable for mosaic and tiled variants.', control: 'number', min: 1, max: 4, step: 1 },
     imageCaption: { name: 'Image Caption', control: 'text' },
+    imageRatio: { name: 'Image Ratio', control: 'select', options: ['default', '1x1', '1x2', '1x3', '1x4', '2x1', '2x3', '3x1', '3x2', '4x1', '16x9'] },
   },
   args: {
     //Default args for stories
@@ -29,7 +28,7 @@ export default {
     imageCaption: '',
     imagePosition: 'default',
     imageVariant: 'none',
-    imageCount: 3,
+    imageRatio: 'default',
   }
 };
 
@@ -45,10 +44,6 @@ export const Right = (args) => {
   return Image({ ...args, imagePosition: 'right' });
 };
 
-export const Mosaic = (args) => {
-  return Image({ ...args, imageVariant: 'mosaic', imageCount: args.imageCount });
-};
-
-export const Tiled = (args) => {
-  return Image({ ...args, imageVariant: 'tiled', imageCount: args.imageCount });
-};
+export const Circle = (args) => {
+  return Image({ ...args, imageVariant: 'image-circle' });
+}
