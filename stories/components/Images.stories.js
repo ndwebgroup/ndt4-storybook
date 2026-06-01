@@ -12,7 +12,7 @@ export default {
     },
     docs: {
       description: {
-        component: 'The Images component allows for displaying single images with various options for positioning, styling, and aspect ratios. It supports left, right, and default positioning, as well as circle styling and multiple aspect ratios including 1:1, 16:9, and more.'
+        component: 'The Image component allows for displaying a single image with various options for positioning, styling, and aspect ratios. It supports left, right, and default positioning, as well as circle styling and multiple aspect ratios including 1:1, 16:9, and more.'
       }
     }
   },

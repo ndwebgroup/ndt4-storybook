@@ -19,7 +19,7 @@ export default {
   argTypes: {
     imageSrc: { name: 'Image Source', },
     imageVariant: { name: 'Image Variant', control: 'select', options: ['none', 'mosaic', 'tiled'] },
-    imageCount: { name: 'Image Count', control: 'number', min: 1, max: 4, step: 1 },
+    imageCount: { name: 'Image Count', control: { type: 'range', min:1, max:4, step: 1 } },
   },
   args: {
     //Default args for stories
