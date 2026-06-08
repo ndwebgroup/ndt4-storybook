@@ -13,6 +13,22 @@ import NewsCard from '../components/Cards/NewsCard.js';
 
 <div className="grid grid-md-2 grid-ml-3 grid-gap-md">
   <div dangerouslySetInnerHTML={{ __html: NewsCard({
+    title: 'Dante Among Theologians',
+    link: 'https://dante-among-theologians-initiative.nd.edu',
+    excerpt: 'An international research project exploring Dante as both poet and theologian.',
+    publishDate: 'May 1, 2026',
+    imageUrl: `/images/recent-launches/dante.webp`
+  }).outerHTML }} />
+
+  <div dangerouslySetInnerHTML={{ __html: NewsCard({
+    title: 'Notre Dame Global',
+    link: 'https://global.nd.edu',
+    excerpt: 'Where Notre Dame meets the world and the world meets Notre Dame.',
+    publishDate: 'April 27, 2026',
+    imageUrl: `/images/recent-launches/global.webp`
+  }).outerHTML }} />
+  
+  <div dangerouslySetInnerHTML={{ __html: NewsCard({
     title: 'Office of Undergraduate Education',
     link: 'https://undergraduateeducation.nd.edu',
     excerpt: 'Supporting the academic and personal development of undergraduate students at Notre Dame',
