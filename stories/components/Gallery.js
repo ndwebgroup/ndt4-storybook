@@ -2,22 +2,22 @@
  * Gallery component
  * @param {Object} props - Component properties
  * @param {string} props.id - The ID for the gallery
- * @param {Array} props.images - Array of image objects
+ * @param {string} [props.classes] - Additional CSS classes to apply to the gallery container
+ * @param {number} props.images - Number of images in the gallery
  * @returns {string} - The gallery HTML
  */
 export default function Gallery(props) {
   const { id, classes, images } = props;
-  const count = images.length;
 
   return `
     <div class="gallery-wrapper${classes ? ' ' + classes : ''}">
-      <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${count}">
-        ${images.map((image, index) => `
+      <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${images}">
+        ${Array.from({ length: images }, (_, i) => `
           <li>
-            <a href="${image.fullsize}" title="${image.caption || ''}" data-title="${image.caption || ''}">
+            <a href="#" title="" data-title="Image ${i + 1}">
               <img
-                src="${image.thumbnail}"
-                alt="${image.alt || `Gallery image ${index + 1}`}"
+                src="/images/placeholder-campus-1-600x600.jpg"
+                alt="Gallery image ${i + 1}"
                 width="400"
                 height="400"
                 loading="lazy"

@@ -42,31 +42,27 @@ export default {
     },
     images: {
       name: 'Gallery Images',
-      description: 'Array of image objects with thumbnail, fullsize, alt, and caption properties',
-      control: 'object'
+      description: 'Number of images to display in the gallery',
+      control: { type: 'range', min:1, max:40, step: 1 },
     }
   },
   args: {
-    id: '2',
+    id: '15',
     classes: '',
-    images: [] // Images will be provided in individual stories
+    images: 15,
+    imageSrc: '/images/placeholder-campus-3-1200x675.jpg',
   }
 };
 
-// Helper function to create gallery images with the requested format
-const createGalleryImages = (count) => {
-  return Array.from({ length: count }, (_, i) => ({
-    thumbnail: `/images/placeholder-campus-3-600x600.jpg`,
-    fullsize: `/images/placeholder-campus-3-1200x675.jpg`,
-    alt: `Gallery image ${i + 1}`,
-    caption: i % 2 === 0 ? `Caption for image ${i + 1}` : '',
-  }));
+export const Default = (args) => {
+  return Gallery(args);
+  
 };
 
 export const TwoImages = (args) => {
   return Gallery({
     ...args,
-    images: createGalleryImages(2)
+    images: 2
   });
 };
 
@@ -74,7 +70,7 @@ export const ThreeImages = (args) => {
   return Gallery({
     ...args,
     id: "3",
-    images: createGalleryImages(3)
+    images: 3
   });
 };
 
@@ -82,7 +78,7 @@ export const FiveImages = (args) => {
   return Gallery({
     ...args,
     id: "5",
-    images: createGalleryImages(5)
+    images: 5
   });
 };
 
@@ -90,7 +86,7 @@ export const TwelveImages = (args) => {
   return Gallery({
     ...args,
     id: "12",
-    images: createGalleryImages(12)
+    images: 12
   });
 };
 
@@ -99,15 +95,15 @@ export const GalleryTiled = (args) => {
     ...args,
     id: "15",
     classes: 'gallery--tiled',
-    images: createGalleryImages(15)
+    images: args.images
   });
 };
 
 export const GallerySlider = (args) => {
   return Gallery({
     ...args,
-    id: "15",
+    id: "21",
     classes: 'gallery--slider',
-    images: createGalleryImages(21)
+    images: args.images
   });
 };

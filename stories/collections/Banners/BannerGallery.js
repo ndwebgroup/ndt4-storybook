@@ -13,40 +13,11 @@
  * @returns {HTMLElement} - The banner element
  */
 
-const addCarouselStyles = () => {
-  const style = document.createElement('style');
-  style.textContent = `
-    .gallery--carousel {
-      position:relative; 
-      z-index:1;
-    }
-    .gallery--carousel::after { content:''; display:block; position:absolute; right:0; bottom:3px; left:0; height:1px; border-top:var(--border-primary); z-index:-1; }
-
-    @supports selector(::-webkit-scrollbar) {
-      .gallery--carousel ul::-webkit-scrollbar { height:7px; background-color:transparent; }
-      .gallery--carousel ul::-webkit-scrollbar-thumb { border-radius:var(--border-radius); background-color:var(--brand-gold); cursor:grab; }
-      .gallery--carousel ul::-webkit-scrollbar-track { border-radius:0; background-color:transparent; }
-    }
-    .gallery--carousel ul {
-      height:100%; padding-block:0 2rem; display:grid; grid-template-columns:repeat(auto-fill, minmax(65vw,1fr)); scroll-behavior:smooth; overflow-x:scroll; overflow-y:hidden; scroll-snap-type:x mandatory; grid-auto-columns:65vw; grid-template-rows:1fr; grid-auto-flow:column; grid-gap:1.75rem; margin:0; list-style:none; max-width:90dvw;
-    }
-    .gallery--carousel li {
-      grid-column:span 1; grid-row:span 1; position:relative;
-    }
-    .gallery--carousel img { aspect-ratio:6/4; width:100%; height:100%; object-fit:cover; scroll-snap-align:center; }
-
-    @media (min-width: 60em) {
-      .gallery--carousel ul { padding-block:2rem; grid-template-columns:repeat(auto-fill, minmax(36vw,1fr)); grid-auto-columns:36vw; }
-    }
-
-    @media (min-width: 100em) {
-      .gallery--carousel ul { grid-template-columns:repeat(auto-fill, minmax(21vw,1fr)); grid-auto-columns:21vw; }
-    }
-  `;
+const addCarouselScript = () => {
   const script = document.createElement('script');
   script.textContent = `
     document.addEventListener('DOMContentLoaded', function(){
-      var sliders = document.querySelectorAll('.gallery--carousel');
+      var sliders = document.querySelectorAll('.list--carousel');
       [].forEach.call(sliders, function(slider){
         var slides = slider.querySelector('ul');
         var slide_items = slides.querySelectorAll('li');
@@ -73,7 +44,6 @@ const addCarouselStyles = () => {
     });
   `;
   document.head.appendChild(script);
-  document.head.appendChild(style);
 }
 
 import Gallery from '/stories/components/Gallery';
@@ -84,15 +54,6 @@ export default function Banner(props) {
 
   container.className = `section align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor !== 'none' ? ` bg--${backgroundColor}` : '' }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
- const createGalleryImages = (count) => {
-  return Array.from({ length: count }, (_, i) => ({
-    thumbnail: `/images/placeholder-campus-3-600x600.jpg`,
-    fullsize: `/images/placeholder-campus-3-1200x675.jpg`,
-    alt: `Gallery image ${i + 1}`,
-    caption: i % 2 === 0 ? `Caption for image ${i + 1}` : '',
-  }));
-};
-
   // Create banner secondary content first without buttons
   container.innerHTML = `
   <div class="section-content grid ${title && summary ? 'grid-ml-2 grid-gap--lg align-end' : ''}">
@@ -101,9 +62,7 @@ export default function Banner(props) {
       ${summary ? `<p>${summary}</p>` : ''}
     </div>
   </div>
-  <div class="${variant === 'carousel' ? 'gallery--carousel' : 'gallery--tiled'}">
-    ${Gallery({ id:4, images:createGalleryImages(7) })}
-  </div>
+  ${Gallery({ id:4, classes:`${variant === 'carousel' ? 'list--carousel' : 'gallery--tiled'}`, images:7 })}
 `
 
   // Get the banner body element to append buttons properly
@@ -117,6 +76,6 @@ export default function Banner(props) {
     bannerBody.prepend(labelElement);
   }
 
-  {variant === 'carousel' ? addCarouselStyles() : ''}
+  {variant === 'carousel' ? addCarouselScript() : ''}
   return container.outerHTML;
 }
