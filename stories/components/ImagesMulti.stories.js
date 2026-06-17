@@ -17,15 +17,15 @@ export default {
     }
   },
   argTypes: {
-    imageSrc: { name: 'Image Source', },
     imageVariant: { name: 'Image Variant', control: 'select', options: ['none', 'mosaic', 'tiled'] },
     imageCount: { name: 'Image Count', control: { type: 'range', min:1, max:4, step: 1 } },
+    imageNumber: { name: 'Show Image Numbers', control: 'boolean' },
   },
   args: {
     //Default args for stories
-    imageSrc: '/images/placeholder-campus-3-1200x675.jpg',
     imageVariant: 'tiled',
     imageCount: 3,
+    imageNumber: false,
   }
 };
 

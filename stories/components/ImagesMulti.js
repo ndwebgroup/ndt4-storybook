@@ -1,28 +1,18 @@
 /**
  * Image component
- * @param {string} props.imageSrc - The source URL of the image to display
  * @param {('none'|'mosaic'|'tiled')} [props.imageVariant='none'] - The variant of the image
  * @param {number} props.imageCount - The number of images to display
+ * @param {boolean} props.imageNumber - Whether to show image numbers
  */
 
 export default function MultiImage(args) {
-  const { imageSrc, imagePosition, imageVariant, imageCount, imageCaption } = args;
+  const { imagePosition, imageVariant, imageCount, imageCaption, imageNumber } = args;
   const container = document.createElement('figure')
-  container.className = `image${imageVariant == 'none' ? '' : ` image--${imageVariant}`}`;
+  container.className = `image${imageVariant == 'none' ? ' grid grid-ml-3 grid-gap-xs' : ` image--${imageVariant}`}`;
 
-  switch(imageVariant) {
-    case 'mosaic':
-    case 'tiled':
-    container.innerHTML = `
-      ${Array.from({ length: imageCount }, (_, i) => `<img src="${imageSrc}" alt="Image ${i + 1}">`).join('')}
-    `;
-    break;
-    case 'none':
-    container.className += ` grid grid-ml-3 grid-gap-xs`;
-    container.innerHTML = `
-      ${Array.from({ length: imageCount }, (_, i) => `<img src="${imageSrc}" alt="Image ${i + 1}">`).join('')}
-    `;
-  }
-
+  container.innerHTML = `
+    ${Array.from({ length: imageCount }, (_, i) => `<img src="/images/placeholder-campus-${imageNumber ? 'number-' : ''}${i + 1}-1200x675.jpg" alt="Image ${i + 1}">`).join('')}
+  `;
+  
   return container;
 }
