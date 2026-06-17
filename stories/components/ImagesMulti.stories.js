@@ -40,3 +40,7 @@ export const Mosaic = (args) => {
 export const Tiled = (args) => {
   return MultiImage({ ...args, imageVariant: 'tiled', imageCount: args.imageCount });
 };
+
+export const WithImageNumbers = (args) => {
+  return MultiImage({ ...args, imageVariant: 'tiled', imageCount: args.imageCount, imageNumber: true });
+}
