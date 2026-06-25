@@ -47,10 +47,18 @@ NoImage.args = {
 
 export const ImageRight = {
   render: (args) => Card(args),
-  tags: ['!stable','coming']
+  // tags: ['!stable','coming']
 };
 ImageRight.args = {
   modifier: 'card--image-right',
+};
+
+export const ImageSmall = {
+  render: (args) => Card(args),
+  //tags: ['!stable','coming']
+};
+ImageSmall.args = {
+  modifier: 'card--image-sm',
 };
 
 export const Horizontal = (args) => {
