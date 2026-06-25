@@ -1,4 +1,4 @@
-import NavigationAnchor, { defaultNavigationItems } from './NavigationAnchor.js';
+import NavigationAnchor, { defaultNavigationItems, activeNavigationItems } from './NavigationAnchor.js';
 
 export default {
   title: 'Components/Navigation (Anchor)',
@@ -46,4 +46,12 @@ export const Default = (args) => {
 
 Default.args = {
   items: defaultNavigationItems
+};
+
+export const Active = (args) => {
+  return NavigationAnchor(args);
+};
+
+Active.args = {
+  items: activeNavigationItems
 };

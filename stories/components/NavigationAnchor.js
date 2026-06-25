@@ -11,6 +11,16 @@ export const defaultNavigationItems = [
   { label: 'About', url: '#' },
 ];
 
+export const activeNavigationItems = [
+  { label: 'Academics', url: '#' },
+  { label: 'Admissions', url: '#' },
+  { label: 'Research', url: '#', active: true },
+  { label: 'Global', url: '#' },
+  { label: 'Faith', url: '#' },
+  { label: 'Community', url: '#' },
+  { label: 'About', url: '#' },
+];
+
 /**
  * Anchor Navigation component
  * @param {Object} args - Component arguments
@@ -23,7 +33,7 @@ export default function NavigationAnchor(args) {
 <nav id="nav-anchor" class="nav-anchor" aria-label="Anchor">
   <ul>
     ${navItems.map((item) => {
-        return `<li><a href="${item.url ? item.url : '#' }">${item.label}</a></li>`;
+        return `<li ${item.active ? 'class="active"' : ''}><a href="${item.url ? item.url : '#' }">${item.label}</a></li>`;
       }).join('\n    ')}
   </ul>
 </nav>
