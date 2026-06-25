@@ -70,6 +70,13 @@ export default {
       description: 'URL of the featured image',
       defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
     },
+    contain: {
+      name: 'Contain Image',
+      control: 'boolean',
+      description: 'Whether to vertically contain the image within the browser window',
+      defaultValue: true,
+      if: { arg: 'featuredImage'}
+    },
     backgroundGradient: {
       name: 'Show Gradient',
       control: 'boolean',
@@ -100,6 +107,7 @@ export default {
     pageTitleSize: 'md',
     pageLede: '',
     featuredImage: true,
+    contain: false,
     imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
     backgroundColor: 'brand-blue',
     backgroundGradient: true,
