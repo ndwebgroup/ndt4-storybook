@@ -26,16 +26,24 @@ export default function PageHeaderMosaic(props) {
 
   const fImage = document .createElement('figure');
   fImage.className = 'page-image image--mosaic image--mosaic-reversed';
-  fImage.innerHTML = `
-  ${[...Array(imageCount)].map(() => `<img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt="">`).join('')}`;
+  fImage.innerHTML = `${[...Array(imageCount)].map(() => `<img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt="">`).join('')}`;
 
   container.innerHTML = `
-      ${featuredImage ? fImage.outerHTML : ''}
-      <div class="page-title-wrapper">
-        ${PageTitle({ title: pageTitle, size: pageTitleSize })}
-        ${pageLede ? `<p class="page-lede">${pageLede}</p>` : ''}
-      </div>
+    ${featuredImage ? fImage.outerHTML : ''}
+    <div class="page-title-wrapper">
+      ${PageTitle({ title: pageTitle, size: pageTitleSize })}
+    </div>
   `;
+
+  const titleWrapper = container.querySelector('.page-title-wrapper');
+
+  if (pageLede) {
+    const lede = document.createElement('p');
+    lede.className = 'page-lede';
+    lede.textContent = pageLede;
+    titleWrapper.innerHTML += `  ${lede.outerHTML}
+    `;
+  }
 
   return container.outerHTML;
 }

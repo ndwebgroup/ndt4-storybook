@@ -25,12 +25,21 @@ export default function PageHeaderInset(props) {
   container.className = `page-header page-header--inset`;
 
   container.innerHTML = `
-      ${featuredImage ? `<figure class="page-image"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
-      <div class="page-title-wrapper">
-        ${PageTitle({ title: pageTitle, size: pageTitleSize })}
-        ${pageLede ? `<p class="page-lede">${pageLede}</p>` : ''}
-      </div>
+    ${featuredImage ? `<figure class="page-image"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}
+    <div class="page-title-wrapper">
+      ${PageTitle({ title: pageTitle, size: pageTitleSize })}
+    </div>
   `;
+
+  const titleWrapper = container.querySelector('.page-title-wrapper');
+
+  if (pageLede) {
+    const lede = document.createElement('p');
+    lede.className = 'page-lede';
+    lede.textContent = pageLede;
+    titleWrapper.innerHTML += `  ${lede.outerHTML}
+    `;
+  }
 
   return container.outerHTML;
 }

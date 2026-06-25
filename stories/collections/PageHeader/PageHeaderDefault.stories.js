@@ -28,7 +28,7 @@ export default {
         // This will be the code shown in the docs
         transform: (code) => {
           // Remove the wrapper div from the code view
-          return code.replace(/<div class="wrapper">(.*?)<\/div>/gs, '$1');
+          return code.replace(/<section class="wrapper" id="wrapper"><header(.*?)class="site-content">(.*?)<div class="page-sidebar">(.*?)<\/main><\/section>/gs, '$2');
         }
       }
     }
@@ -39,7 +39,7 @@ export default {
       addHeaderStyles();
       // This will only affect the preview
       const result = Story();
-      return `<div class="wrapper" id="wrapper">${SiteHeader({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavigation:false, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}<div class="page-sidebar">${NavigationSidebar({ items: defaultNavigationItems })}</div></main></div>`;
+      return `<section class="wrapper" id="wrapper">${SiteHeader({ siteName:`Department of Example`, navHeaderLinks: defaultNavigationItems, showNavigation:false, showNavButton:false, markRight:false })}<main id="content" class="site-content">${result}<div class="page-sidebar">${NavigationSidebar({ items: defaultNavigationItems })}</div></main></section>`;
     }
   ],
   argTypes: {
