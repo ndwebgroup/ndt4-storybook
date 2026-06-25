@@ -27,7 +27,7 @@ export default {
         // This will be the code shown in the docs
         transform: (code) => {
           // Remove the wrapper div from the code view
-          return code.replace(/<section class="wrapper" id="wrapper">(.*?)<\/section>/gs, '$1');
+          return code.replace(/<section class="wrapper" id="wrapper"><header(.*?)class="site-content">(.*?)<\/main><\/section>/gs, '$2');
         }
       }
     }
@@ -70,6 +70,29 @@ export default {
       description: 'URL of the featured image',
       defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
     },
+    backgroundGradient: {
+      name: 'Show Gradient',
+      control: 'boolean',
+      description: 'Whether to show the background gradient',
+      defaultValue: true,
+      if: { arg: 'featuredImage'}
+    },
+    backgroundColor: {
+      name: 'Background Color',
+      control: { type: 'select' },
+      options: ['black','brand-blue', 'brand-blue-light', 'brand-blue-dark', 'warm-white', 'sky-blue', 'sky-blue-light', 'gray-extra-extra-light', 'gray-dark'],
+      description: 'Background color behind the featured image',
+      defaultValue: 'brand-blue',
+      if: { arg: 'featuredImage'}
+    },
+    fadeDirection: {
+      name: 'Fade Direction',
+      control: { type: 'select' },
+      options: ['to-right', 'to-left', 'to-bottom', 'to-top', 'to-top-right', 'to-top-left', 'to-bottom-right', 'to-bottom-left'],
+      description: 'Direction of the fade effect',
+      defaultValue: 'to-right',
+      if: { arg: 'backgroundGradient'}
+    },
   },
   args: {
     // Default values for the component
@@ -78,6 +101,9 @@ export default {
     pageLede: '',
     featuredImage: true,
     imageUrl: '/images/placeholder-campus-3-1600x900.jpg',
+    backgroundColor: 'brand-blue',
+    backgroundGradient: true,
+    fadeDirection: 'to-right',
   }
 };
 
