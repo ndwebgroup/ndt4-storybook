@@ -27,22 +27,10 @@ export default function PageHeaderScreen(props) {
   } = props;
 
   var headerBackground = '';
-  
-  switch (backgroundColor) {
-    case 'black':
-    case 'brand-blue':
-    case 'brand-blue-light':
-    case 'brand-blue-dark':
-    case 'gray-dark':
-      headerBackground = 'bg--dark';
-      break;
-    default:
-      headerBackground = '';
-  }
 
   // Create the hero HTML
   const container = document.createElement('div');
-  container.className = `page-header page-header--screen ${featuredImage === true ? headerBackground : ''}`;
+  container.className = `page-header page-header--screen ${featuredImage === true ? 'bg--dark' : ''}`;
 
   container.innerHTML = `
     ${featuredImage ? `<figure class="page-image ${backgroundGradient ? 'bg--gradient' : 'bg--transparent'}${fadeDirection && fadeDirection !== 'to-right' ? ` bg--${fadeDirection}` : ''} bg--${backgroundColor}"><img src="${imageUrl ?? '/images/placeholder-campus-3-1600x900.jpg'}" width="1600" height="900" alt=""></figure>` : ''}

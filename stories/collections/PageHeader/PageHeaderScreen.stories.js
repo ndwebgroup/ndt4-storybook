@@ -73,7 +73,7 @@ export default {
     backgroundColor: {
       name: 'Background Color',
       control: { type: 'select' },
-      options: ['black','brand-blue', 'brand-blue-light', 'brand-blue-dark', 'warm-white', 'sky-blue', 'sky-blue-light', 'gray-extra-extra-light', 'gray-dark'],
+      options: ['black','brand-blue', 'brand-blue-light', 'brand-blue-dark'],
       description: 'Background color behind the featured image',
       defaultValue: 'brand-blue',
       if: { arg: 'featuredImage'}
