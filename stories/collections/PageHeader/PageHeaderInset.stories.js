@@ -68,7 +68,8 @@ export default {
       name: 'Image URL',
       control: 'text',
       description: 'URL of the featured image',
-      defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
+      defaultValue: '/images/placeholder-campus-3-1600x900.jpg',
+      if: { arg: 'featuredImage' }
     },
   },
   args: {

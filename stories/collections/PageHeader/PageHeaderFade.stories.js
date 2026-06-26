@@ -69,13 +69,15 @@ export default {
       control: { type: 'select' },
       options: ['brand-blue', 'brand-blue-light', 'brand-blue-dark', 'warm-white', 'sky-blue', 'sky-blue-light', 'gray-extra-extra-light', 'gray-dark'],
       description: 'Background color behind the featured image',
-      defaultValue: 'brand-blue'
+      defaultValue: 'brand-blue',
+      if: { arg: 'featuredImage' }
     },
     imageUrl: {
       name: 'Image URL',
       control: 'text',
       description: 'URL of the featured image',
-      defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
+      defaultValue: '/images/placeholder-campus-3-1600x900.jpg',
+      if: { arg: 'featuredImage' }
     },
   },
   args: {

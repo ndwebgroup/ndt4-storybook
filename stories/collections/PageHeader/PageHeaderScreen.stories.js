@@ -68,7 +68,8 @@ export default {
       name: 'Image URL',
       control: 'text',
       description: 'URL of the featured image',
-      defaultValue: '/images/placeholder-campus-3-1600x900.jpg'
+      defaultValue: '/images/placeholder-campus-3-1600x900.jpg',
+      if: { arg: 'featuredImage' }
     },
     backgroundColor: {
       name: 'Background Color',
@@ -91,7 +92,7 @@ export default {
       options: ['to-right', 'to-left', 'to-bottom', 'to-top', 'to-top-right', 'to-top-left', 'to-bottom-right', 'to-bottom-left'],
       description: 'Direction of the fade effect',
       defaultValue: 'to-right',
-      if: { arg: 'backgroundGradient'}
+      if: { arg: 'backgroundGradient' && 'featuredImage' }
     },
   },
   args: {
