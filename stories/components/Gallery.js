@@ -14,7 +14,7 @@ export default function Gallery(props) {
     <div class="gallery-wrapper${classes ? ' ' + classes : ''}">
       <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${images}">
         ${Array.from({ length: images }, (_, i) => `
-          <li ${showNumber ? ' class="show-number"' : ''}">
+          <li ${showNumber ? ' class="show-number"' : ''}>
             <a href="#" title="" data-title="Image ${i + 1}">
               <img
                 src="/images/placeholder-campus-1-600x600.jpg"
