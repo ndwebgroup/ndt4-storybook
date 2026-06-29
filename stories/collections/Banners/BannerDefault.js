@@ -27,7 +27,7 @@ export default function Banner(props) {
 
   switch(media) {
     case 'image':`}`
-      mediaHTML = `<figure class="section-media${order == `default` ? `` : ` order-md-2`}"><img src="/images/placeholder-campus-3-1600x900.jpg" width="1600" height="900" alt=""></figure>`;
+      mediaHTML = `<figure class="section-media${order == `default` ? `` : ` order-md-2`}"><img src="/images/placeholder-campus-1-1200x800.jpg" width="1200" height="800" alt=""></figure>`;
       break;
     case 'video':
       // Create an empty placeholder for the video that we'll fill later

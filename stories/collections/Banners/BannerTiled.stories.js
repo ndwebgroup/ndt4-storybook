@@ -31,7 +31,7 @@ export default {
         // This will be the code shown in the docs
         transform: (code) => {
           // Remove the wrapper div from the code view
-          return code.replace(/<div id="wrapper" class="wrapper"><div class="page-secondary full-width">(.*?)<\/div><\/div>/gs, '$1');
+          return code.replace(/<div class="wrapper"><div class="page-secondary full-width">(.*?)<\/div><\/div>/gs, '$1');
         }
       }
     }
