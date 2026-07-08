@@ -33,6 +33,7 @@ export function getAvailableIcons() {
     'icon-menu',
     'icon-search-menu',
     'icon-refresh',
+    'icon-sync',
     'icon-plus',
     'icon-minus',
     'icon-check',
