@@ -1,5 +1,15 @@
 import { Meta, Canvas } from "@storybook/addon-docs/blocks";
 
+export const pageHeaders = [
+  { layout:'default', name:'Default', url:'/?path=/story/collections-page-header-page-header-default--default' },
+  { layout:'container', name:'Container', url:'/?path=/story/collections-page-header-page-header-container--default' },
+  { layout:'fade', name:'Fade', url:'/?path=/story/collections-page-header-page-header-fade--default' },
+  { layout:'inset', name:'Inset', url:'/?path=/story/collections-page-header-page-header-inset--default' },
+  { layout:'mosaic', name:'Mosaic', url:'/?path=/story/collections-page-header-page-header-mosaic--default' },
+  { layout:'screen', name:'Screen', url:'/?path=/story/collections-page-header-page-header-screen--default' },
+  { layout:'tiled', name:'Tiled', url:'/?path=/story/collections-page-header-page-header-tiled--default' },
+]
+
 <Meta title="Collections/Page Header/Docs" />
 # About Page Headers
 This page is the documentation for page headers. We will need to figure out the rules for page headers.
@@ -9,42 +19,20 @@ This page is the documentation for page headers. We will need to figure out the 
 ## Layouts
 
 <ul className="grid grid-ml-3">
+  {pageHeaders.map((p, index) => (
   <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-default--default" class="card-link">Page Header (Default)</a></h3>
+    <div className="card card--border">
+      <p className="card-label">Page Header</p>
+      <h3 className="card-title"><a href={ p.url } class="card-link">{ p.name }</a></h3>
     </div>
   </li>
-  <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-container--default" class="card-link">Page Header (Container)</a></h3>
-    </div>
-  </li>
-  <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-fade--default" class="card-link">Page Header (Fade)</a></h3>
-    </div>
-  </li>
-  <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-inset--default" class="card-link">Page Header (Inset)</a></h3>
-    </div>
-  </li>
-  <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-mosaic--default" class="card-link">Page Header (Mosaic)</a></h3>
-    </div>
-  </li>
-  <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-screen--default" class="card-link">Page Header (Screen)</a></h3>
-    </div>
-  </li>
-  <li className="card-container">
-    <div className="card">
-      <h3 className="card-title"><a href="/?path=/story/collections-page-header-page-header-tiled--default" class="card-link">Page Header (Tiled)</a></h3>
-    </div>
-  </li>
+  ))}
 </ul>
+
+---
+
+## Best Practices 
+Designed for maximum visual impact on key landing pages, the <a href="/?path=/story/collections-page-header-page-header-screen--default">Page Header (Screen)</a> and <a href="/?path=/story/collections-page-header-page-header-container--default">Page Header (Container)</a> collections should be used sparingly, and only on supported page types. to prevent visual fatigue and maintain its effectiveness.
 
 ---
 
@@ -55,6 +43,7 @@ This page is the documentation for page headers. We will need to figure out the 
     ### Dos
     <ul>
       <li>Use high-quality images that are relevant to the content of the page header.</li>
+      <li>Use the built-in Page Header components to overlay accessible text.</li>
       <li>Ensure the page header is placed at the top of the page.</li>
       <li>Keep the page header concise and focused on the main message or theme of the page.</li>
     </ul>
@@ -62,6 +51,8 @@ This page is the documentation for page headers. We will need to figure out the 
   <li>
     ### Donts
     <ul>
+      <li>Avoid using infographics, charts, maps, diagrams, group photos, or detailed portraits.</li>
+      <li>Avoid baked-in text, which will pixelate, crop poorly, or get obscured.</li>
       <li>Do not use more than one page header per page.</li>
       <li>Do not overload the page header with too much text.</li>
     </ul>
