@@ -21,11 +21,17 @@ export default {
       name: 'Border Divider',
       description: 'Adds a divider between buttons when set to true.',
       control: 'boolean'
+    },
+    active: {
+      name: 'Active Class',
+      description: 'Adds an active class on first button.',
+      controll: 'boolean'
     }
   },
   args: {
     //Default args for all stories
-    divided: false
+    divided: false,
+    active: false
   },
 };
 
@@ -58,4 +64,13 @@ export const Border = {
 Border.args = {
   items: exampleItems,
   divided: true
+};
+
+export const Active = {
+  render: (args) => ButtonGroup(args),
+  tags: ['!modified','coming']
+};
+Active.args = {
+  items: exampleItems,
+  active: true
 };
