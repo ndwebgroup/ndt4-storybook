@@ -1,0 +1,72 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as SiteHeaderStories from './SiteHeader.stories';
+ 
+export const siteHeaders = [
+  { layout:'default', name:'Default', url:'/?path=/story/collections-site-header--default' },
+  { layout:'tagline', name:'With Tagline', url:'/?path=/story/collections-site-header--with-tagline' },
+  { layout:'navButton', name:'With Navigation Button', url:'/?path=/story/collections-site-header--with-navigation-button' },
+  { layout:'markOnRight', name:'Mark On Right', url:'/?path=/story/collections-site-header--mark-on-right' },
+  { layout:'logo', name:'With Logo', url:'/?path=/story/collections-site-header--with-logo' },
+  { layout:'inlineNav', name:'Inline Navigation', url:'/?path=/story/collections-site-header--inline-navigation' },
+  { layout:'compactNav', name:'Compact Navigation', url:'/?path=/story/collections-site-header--compact-navigation' },
+  { layout:'withoutGlobalMenu', name:'Without Global Menu Icon', url:'/?path=/story/collections-site-header--without-global-menu-icon' },
+  { layout:'withoutNan', name:'Without Navigation', url:'/?path=/story/collections-site-header--without-navigation' },
+]
+
+<Meta of={SiteHeaderStories} />
+
+# About Site Headers
+This page is the documentation for site headers. We will need to figure out the rules for site headers.
+
+--- 
+
+## Layouts
+
+<ul className="grid grid-ml-3">
+  {siteHeaders.map((s, index) => (
+  <li className="card-container">
+    <div className="card card--border">
+      <p className="card-label">Site Header</p>
+      <h3 className="card-title"><a href={ s.url } class="card-link">{ s.name }</a></h3>
+    </div>
+  </li>
+  ))}
+</ul>
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Any logos used in the header must be University-approved</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not alter colors, layout, and styles of the site Headers.</li>
+      <li>Animated logos within the site header are prohibited.</li>
+    </ul>
+  </li>
+</ul>
+
+### CSS References
+| CSS Class                                 | Description                                                                    |
+|-------------------------------------------|--------------------------------------------------------------------------------|
+| `.site-header`                            | Container for the Site Header                                                  |
+| `.header-group`                           | Group container for header elements                                            |
+| `.header-nav`                             | Container for the navigation elements                                          |
+| `.header-util`                            | Container for utility elements such as search icon or cta button               |
+
+### Modifier Classes
+| CSS Class                                 | Description                                                                    |
+|-------------------------------------------|--------------------------------------------------------------------------------|
+| `.header-group--inline-ml`                | Modifier class for inline header elements at 960px                             |
+| `.header-group--inline-lg`                | Modifier class for inline header elements at 1280px                            |
+| `.header-group--inline--xl`               | Modifier class for inline header elements at 1440px                            |
+| `.header-group--inline--xxl`              | Modifier class for inline header elements at 1600px                            |
+| `.header-group--logo`                     | Modifier class for swapping title with logo                                    |
