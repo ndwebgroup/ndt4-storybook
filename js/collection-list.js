@@ -7,9 +7,7 @@ class SbCollectionsList extends HTMLElement {
       const res = await fetch(url);
       const data = await res.json();
       const entries = Object.values(data.entries);
-
       const skip = new Set(['Collections/About Collections']);
-      
       const map = new Map();
 
       for (const e of entries) {
@@ -37,13 +35,12 @@ class SbCollectionsList extends HTMLElement {
 
       this.innerHTML = `
         <nav aria-label="Collections">
-          <ul class="thumb-list grid grid-gap-sm grid-sm-2 grid-md-3">
+          <ul class="thumb-list grid grid-gap-sm grid-sm-2">
             ${items.map(({ link, title, tags }) => {
               const label = title.replace(/^Collections\//, '');
               return `<li class="card-container">
-                        <div class="card">
-                          <figure class="card-image thumb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384"><use href="#thumb-${label.replace(/[^a-zA-Z ]/g, "").replace(/\s+/g, '-').toLowerCase()}"></use></svg>${tagLine(tags)}</figure>
-                            <div class="card-body"><h3 class="card-title"><a class="card-link" href="${link}">${label}</a></h3></div>
+                        <div class="card card--border">
+                          <div class="card-body"><p class="card-label">Collection</p><h3 class="card-title"><a class="card-link" href="${link}">${label}</a></h3></div>
                         </div>
                       </li>`;
             }).join('')}

@@ -48,7 +48,7 @@ class SbComponentsList extends HTMLElement {
               return `<li class="card-container">
                         <div class="card">
                           <figure class="card-image thumb"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384"><use href="#thumb-${label.replace(/[^a-zA-Z ]/g, "").replace(/\s+/g, '-').toLowerCase()}"></use></svg>${tagLine(tags)}</figure>
-                            <div class="card-body"><h3 class="card-title"><a class="card-link" href="${link}">${label}</a></h3></div>
+                            <div class="card-body"><p class="card-label">Component</p><h3 class="card-title"><a class="card-link" href="${link}">${label}</a></h3></div>
                         </div>
                       </li>`;
             }).join('')}
