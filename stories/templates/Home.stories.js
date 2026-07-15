@@ -3,7 +3,7 @@ import Home from './Home.js';
 export default {
   title: 'Templates/Home Page',
   component: Home,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     options: {

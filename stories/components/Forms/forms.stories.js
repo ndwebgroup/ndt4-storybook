@@ -20,7 +20,7 @@ const addHeaderStyles = () => {
 
 export default {
   title: 'Components/Forms/Form',
-  tags: ['autodocs'],
+  tags: ['stable'],
   parameters: {
     docs: {
       description: {

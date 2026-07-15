@@ -3,7 +3,7 @@ import EventsListing from './EventsListing.js';
 export default {
   title: 'Templates/Events Listing Page',
   component: EventsListing,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen'
   },

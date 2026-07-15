@@ -3,7 +3,7 @@ import EventLanding from './EventLanding.js';
 export default {
   title: 'Templates/Event Landing Page',
   component: EventLanding,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {

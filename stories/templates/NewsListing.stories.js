@@ -3,7 +3,7 @@ import NewsListing from './NewsListing.js';
 export default {
   title: 'Templates/News Listing Page',
   component: NewsListing,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen'
   },

@@ -47,7 +47,6 @@ NoImage.args = {
 
 export const ImageRight = {
   render: (args) => Card(args),
-  // tags: ['!stable','coming']
 };
 ImageRight.args = {
   modifier: 'card--image-right',
@@ -55,7 +54,6 @@ ImageRight.args = {
 
 export const ImageSmall = {
   render: (args) => Card(args),
-  //tags: ['!stable','coming']
 };
 ImageSmall.args = {
   modifier: 'card--image-sm',

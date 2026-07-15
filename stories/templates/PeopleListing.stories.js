@@ -3,7 +3,7 @@ import PeopleListing from './PeopleListing.js';
 export default {
   title: 'Templates/People Listing Page',
   component: PeopleListing,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen'
   },

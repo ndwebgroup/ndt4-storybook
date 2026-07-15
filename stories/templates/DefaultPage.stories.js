@@ -3,7 +3,7 @@ import DefaultPage from './DefaultPage.js';
 export default {
   title: 'Templates/Default Page',
   component: DefaultPage,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen'
   },

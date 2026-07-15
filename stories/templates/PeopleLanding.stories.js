@@ -3,7 +3,7 @@ import PeopleLanding from './PeopleLanding.js';
 export default {
   title: 'Templates/People Landing Page',
   component: PeopleLanding,
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen'
   },

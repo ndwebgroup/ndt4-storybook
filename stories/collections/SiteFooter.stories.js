@@ -20,7 +20,7 @@ const addFooterStyles = () => {
 
 export default {
   title: 'Collections/Site Footer',
-  tags: ['!autodocs'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {
