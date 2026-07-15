@@ -56,7 +56,7 @@
         },
         "300": {
           "$name":"Brand Green Dark",
-          "$value": "#103D23"
+          "$value": "#085E2C"
         }
       },
       "sky-blue": {
@@ -98,7 +98,7 @@
         },
         "400": {
           "$name":"Gray Light",
-          "$value": "#D8DCE0"
+          "$value": "#D6DADF"
         },
         "500": {
           "$name":"Gray",
@@ -112,7 +112,7 @@
       "other": {
         "100": {
           "$name":"Focus",
-          "$value":"15A6B5"
+          "$value":"#15A6B5"
         }
       }
     },
@@ -179,7 +179,7 @@
               "$value": "{color.palette.neutral.100}"
             },
             "link": {
-              "$value": "{color.palette.gold.100}"
+              "$value": "{color.palette.brand-gold.100}"
             }
           },
           "surface": {
@@ -201,7 +201,7 @@
               "$value": "{color.palette.neutral.600}"
             },
             "focus": {
-              "$value": "{color.pallete.other.100}"
+              "$value": "{color.palette.other.100}"
             }
           }
         }
