@@ -23,10 +23,10 @@ export default function QuoteInline(props) {
   container.classList.add('blockquote', `blockquote--${layout}`);
 
   container.innerHTML = `
-      <div class="flex-md align-start">
-        ${image ? Avatar({ size: imageSize, modifier: 'avatar--quote mi-auto mbe-3' }) : ''}
-        <p>${text}</p>
-      </div>
+    <div class="flex-md align-start">
+      ${image ? Avatar({ size: imageSize, modifier: 'avatar--quote mi-auto mbe-3' }) : ''}
+      <p>${text}</p>
+    </div>
   `;
 
   if (cite) {

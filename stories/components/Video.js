@@ -21,7 +21,7 @@ export default function Video(args) {
     case 'placeholder':
       container.innerHTML = `
   <a class="video video--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
-    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" alt="A YouTube Video">
+    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" width="1280" height="720" alt="A YouTube Video">
     ${playText}
   </a>
 `;
@@ -29,7 +29,7 @@ export default function Video(args) {
     case 'lightbox':
       container.innerHTML = `
   <a class="video video--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
-    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg"  alt="A YouTube Video">
+    <img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" width="1280" height="720" alt="A YouTube Video">
     ${playText}
   </a>
 `;

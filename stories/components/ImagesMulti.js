@@ -11,7 +11,7 @@ export default function MultiImage(args) {
   container.className = `image${imageVariant == 'none' ? ' grid grid-ml-3 grid-gap-xs' : ` image--${imageVariant}`}`;
 
   container.innerHTML = `
-    ${Array.from({ length: imageCount }, (_, i) => `<img src="/images/placeholder-campus-${imageNumber ? 'number-' : ''}${i + 1}-1200x675.jpg" alt="Image ${i + 1}">`).join('')}
+    ${Array.from({ length: imageCount }, (_, i) => `<img src="/images/placeholder-campus-${imageNumber ? 'number-' : ''}${i + 1}-1200x675.jpg" width="1200" height="675" alt="Image ${i + 1}">`).join('')}
   `;
   
   return container;

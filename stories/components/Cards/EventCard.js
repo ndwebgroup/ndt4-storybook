@@ -75,7 +75,7 @@ export default function Event(props) {
     </div>
     ${featuredImage ? `
     <figure class="card-image">
-      <img src="/images/placeholder-campus-1-600x400.jpg" alt="${title}" property="image">
+      <img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt="${title}" property="image">
     </figure>
     ` : ''}
     <div class="card-body">

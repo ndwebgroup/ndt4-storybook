@@ -22,8 +22,6 @@ export default function Byline(props) {
   container.className = 'byline';
   let avatarHTML = ''
   const titleHTML = `${link ? `<a class="byline-link" href="${link}">${name}</a>` : `${name}`}`;
-
-  avatarHTML = '';
   
   if (image !== 'none') {
     avatarHTML = Avatar({ size:'xs', type:image, imgUrl:imgUrl, modifier:'byline-image' });
@@ -31,10 +29,10 @@ export default function Byline(props) {
 
   container.innerHTML = `
   ${avatarHTML}
-  <div class="byline-body">
-    <p class="byline-title person-name">${titleHTML}</p>
-    <p class="person-title">${title}</p>
-  </div>
+    <div class="byline-body">
+      <p class="byline-title person-name">${titleHTML}</p>
+      <p class="person-title">${title}</p>
+    </div>
 `;
 
   return container;

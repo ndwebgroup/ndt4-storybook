@@ -14,5 +14,5 @@ export default function Avatar(args) {
 
   const imageSrc = type !== 'image' ? '/images/placeholder-person.svg' : `${imgUrl ? imgUrl : '/images/profile-dowd.jpg'}`;
   const classes = ['avatar', `avatar--${size}`, `${modifier}`];
-  return `<figure class="${classes.join(' ')}"><img alt="" src="${imageSrc}">${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
+  return `<figure class="${classes.join(' ')}"><img alt="" src="${imageSrc}" width="600" height="600">${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
 }
