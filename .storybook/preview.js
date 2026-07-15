@@ -93,6 +93,7 @@ export default {
     },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: ['Introduction', 'Foundation', 'Components', 'Collections', 'Templates', '*'],
       },
     },

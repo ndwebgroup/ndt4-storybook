@@ -7,7 +7,7 @@ export default {
   },
   "stories": [
     "../stories/**/index.mdx",
-    "../stories/**/*.mdx",
+    "../stories/**/!(*.include).mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": [
