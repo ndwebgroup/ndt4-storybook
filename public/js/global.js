@@ -12,26 +12,32 @@ function getURLParameter(param, href){
 
 /*!
  * Register Dialogs
- * v2025-06-26
+ * v2026-07-20
  */
-document.querySelectorAll('.dialog-item').forEach(function(item){
-  let dialog = item.querySelector('dialog');
-  let dialogLink = item.querySelector('.dialog-link');
-
-  dialog.addEventListener('close', function(e){
-    document.body.classList.remove('has-open-dialog');
-    if(dialog.querySelector('iframe')) dialog.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-  });
-
-  if(dialogLink){
-    dialogLink.addEventListener('click', function(e){
+document.addEventListener('click', function(e){
+  // Open via .dialog-link
+  var link = e.target.closest('.dialog-link');
+  if(link){
+    var item = link.closest('.dialog-item');
+    var dialog = item && item.querySelector('dialog');
+    if(dialog){
       e.preventDefault();
       dialog.showModal();
       document.body.classList.add('has-open-dialog');
-    });
-    dialog.addEventListener('click', function (e) { if (e.target.tagName === 'DIALOG' ) e.target.close(); });
+    }
+    return;
   }
+  // Click on the backdrop closes
+  if(e.target.tagName === 'DIALOG' && e.target.closest('.dialog-item')) e.target.close();
 });
+
+// 'close' does not bubble, so listen in the capture phase
+document.addEventListener('close', function(e){
+  var dialog = e.target;
+  if(dialog.tagName !== 'DIALOG' || !dialog.closest('.dialog-item')) return;
+  document.body.classList.remove('has-open-dialog');
+  if(dialog.querySelector('iframe')) dialog.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}, true);
 
 /*!
  * Convert icons
