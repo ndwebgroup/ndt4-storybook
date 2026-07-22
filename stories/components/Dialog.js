@@ -24,10 +24,10 @@ export default function Dialog(args) {
           </form>
           ${title ? `<p class="dialog-heading h4">${title}</p>` : ''}
         </div>
-        <div class="dialog-content ${contentModifier}">
+        <div class="dialog-content${contentModifier ? ` ${contentModifier}` : ''}">
           ${media}
-          ${content ? `${content}` : ''}
+          ${content ? `<div>${content}</div>` : ''}
         </div>
-        <div class="dialog-footer">${footer}</div>
+        ${footer ? `<div class="dialog-footer">${footer}</div>` : ''}
       </dialog>`;
 }
