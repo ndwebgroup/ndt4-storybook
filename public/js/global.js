@@ -148,13 +148,16 @@ document.addEventListener('close', function(e){
  * v2025-05-19
  */
 (function(){
-  document.body.querySelectorAll('.video').forEach(function(item, i){
-    var video = item,
-        link_text = item.innerText,
+  // Decorate a single .video link (idempotent — safe to call repeatedly)
+  function decorateVideo(video){
+    if(video.dataset.videoInit) return;
+    video.dataset.videoInit = 'true';
+
+    var link_text = video.innerText,
         play_button = document.createElement('div')
     ;
     play_button.setAttribute('class', 'play');
-    
+
     if (link_text) {
       let play_label = document.createElement('span');
       Array.from(video.childNodes).forEach(function(node) {
@@ -170,7 +173,29 @@ document.addEventListener('close', function(e){
       play_button.appendChild(play_label)
     }
     video.appendChild(play_button);
-    video.addEventListener('click', loadVideo, false);
+  }
+
+  function decorateAll(root){
+    if(root.matches && root.matches('.video')) decorateVideo(root);
+    if(root.querySelectorAll) root.querySelectorAll('.video').forEach(decorateVideo);
+  }
+
+  decorateAll(document.body);
+
+  // Decorate .video elements added after load
+  // (CMS-injected content, ajax, Storybook story switches)
+  new MutationObserver(function(mutations){
+    mutations.forEach(function(m){
+      m.addedNodes.forEach(function(node){
+        if(node.nodeType === Node.ELEMENT_NODE) decorateAll(node);
+      });
+    });
+  }).observe(document.body, { childList: true, subtree: true });
+
+  // Click is delegated so it works regardless of when the element appeared
+  document.addEventListener('click', function(e){
+    var target = e.target.closest('.video');
+    if(target) loadVideo.call(target, e);
   });
 
   function loadVideo(e){
