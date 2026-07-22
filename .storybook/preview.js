@@ -1,6 +1,7 @@
 import { themes } from 'storybook/theming';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import '../css/global.css';
+import '../css/prototypes.css';
 
 const withSvgSprite = (Story) => {
   // Only inject the icon sprite if it hasn't been injected already
@@ -73,6 +74,44 @@ const withNDT4Script = (Story) => {
   return Story();
 };
 
+/**
+ * Re-register dialogs after every story render.
+ * global.js binds .dialog-item handlers only once, when the iframe first
+ * loads — but Storybook swaps story DOM without reloading the iframe, so
+ * dialogs rendered later were never bound (until a manual refresh).
+ * Mirrors the registration logic in public/js/global.js; the data-attribute
+ * guard prevents double-binding elements global.js already handled.
+ */
+const withDialogInit = (Story) => {
+  const result = Story();
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.dialog-item').forEach((item) => {
+      if (item.dataset.dialogBound) return;
+      item.dataset.dialogBound = 'true';
+
+      const dialog = item.querySelector('dialog');
+      const dialogLink = item.querySelector('.dialog-link');
+      if (!dialog) return;
+
+      dialog.addEventListener('close', () => {
+        document.body.classList.remove('has-open-dialog');
+        if (dialog.querySelector('iframe')) dialog.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      });
+
+      if (dialogLink) {
+        dialogLink.addEventListener('click', () => {
+          dialog.showModal();
+          document.body.classList.add('has-open-dialog');
+        });
+        dialog.addEventListener('click', (e) => { if (e.target.tagName === 'DIALOG') e.target.close(); });
+      }
+    });
+  });
+
+  return result;
+};
+
 export default {
   parameters: {
     viewport: {
@@ -106,7 +145,7 @@ export default {
     },
   },
 
-  decorators: [withSvgSprite, withNDT4Script],
+  decorators: [withSvgSprite, withNDT4Script, withDialogInit],
   tags: ['autodocs'],
 
   initialGlobals: {
