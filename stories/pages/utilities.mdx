@@ -1,4 +1,6 @@
-import { Meta } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+
+import * as UtilityStories from "../components/Utility.stories";
 
 <Meta title="Foundation/Utilities" />
 
@@ -10,6 +12,16 @@ Available utility classes for layout, spacing, visibility, backgrounds, and more
 
 - Responsive classes (e.g., `.visually-hidden-md`, `.col--sm`) apply at specific breakpoints.
 - All color and spacing variables (e.g., `--brand-blue`, `--gutter-width`) are defined as part of the base theme.
+
+---
+
+### Try It
+
+Use the controls below to apply utility classes to a sample content block and see the result live.
+
+<Canvas of={UtilityStories.Default} />
+
+<Controls of={UtilityStories.Default} />
 
 ---
 
