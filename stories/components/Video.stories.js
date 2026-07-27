@@ -12,15 +12,15 @@ export default {
     },
     docs: {
       description: {
-        component: 'The Video component allows for embedding YouTube videos in three styles: embed, placeholder, and lightbox.'
+        component: 'The Video component allows for embedding YouTube videos in three styles: embed, placeholder, and dialog.'
       }
     }
   },
   argTypes: {
     videoId: { name:'Youtube ID', },
-    style: { name: 'Video Style', control:'select', options:['embed','placeholder','lightbox']},
-    playStyle: { name: 'Play Button Style', description:'only applies to placeholder and lightbox videos', control:'select', options:['default','outline','minimal','ornamental'] },
-    playText: { name: 'Play Button Text', description:'only applies to placeholder and lightbox videos' }
+    style: { name: 'Video Style', control:'select', options:['embed','placeholder','dialog']},
+    playStyle: { name: 'Play Button Style', description:'only applies to placeholder and dialog videos', control:'select', options:['default','outline','minimal','ornamental'] },
+    playText: { name: 'Play Button Text', description:'only applies to placeholder and dialog videos' }
   },
   args: {
     //Default args for stories
@@ -61,9 +61,9 @@ PlaceholderWithLabel.args = {
   playText: 'Welcome to the Notre Dame family'
 };
 
-export const Lightbox = (args) => {
+export const Dialog = (args) => {
   return Video(args);
 };
-Lightbox.args = {
-  style: 'lightbox'
+Dialog.args = {
+  style: 'dialog'
 };

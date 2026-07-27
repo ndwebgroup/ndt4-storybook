@@ -200,21 +200,21 @@ document.addEventListener('close', function(e){
 
   function loadVideo(e){
     e.preventDefault();
-    if(this.classList.contains('lightbox')) return;
+    if(this.classList.contains('lightbox') || this.classList.contains('dialog-link')) return;
 
     var el = this,
-        img = el.getElementsByTagName('img')[0],
-        w = img.width,
-        h = img.height,
-        href = el.getAttribute('href'),
-        service = (href.indexOf('vimeo') >= 0) ? 'vimeo' : 'youtube',
-        baseurl = (service == 'youtube') ? 'https://www.youtube-nocookie.com/embed/' : 'https://player.vimeo.com/video/',
-        id = (service == 'youtube') ? getURLParameter('v', href) : href.split('/').pop(),
-        t = getURLParameter('t', href),
-        timestamp = (t) ? `&start=${t}` : ''
-    ;
+          img = el.getElementsByTagName('img')[0],
+          w = img.width,
+          h = img.height,
+          href = el.getAttribute('href'),
+          service = (href.indexOf('vimeo') >= 0) ? 'vimeo' : 'youtube',
+          baseurl = (service == 'youtube') ? 'https://www.youtube-nocookie.com/embed/' : 'https://player.vimeo.com/video/',
+          id = (service == 'youtube') ? getURLParameter('v', href) : href.split('/').pop(),
+          t = getURLParameter('t', href),
+          timestamp = (t) ? `&start=${t}` : ''
+      ;
 
-    el.parentNode.innerHTML = `<iframe data-init="false" width="${w}" height="${h}" frameborder="0" src="${baseurl + id}?autoplay=1&rel=0&wmode=transparent&vq=hd720&enablejsapi=1${timestamp}" credentialless allowfullscreen referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox" csp="sandbox allow-scripts allow-same-origin;" style="aspect-ratio:${w}/${h}"></iframe>`;
+      el.parentNode.innerHTML = `<iframe data-init="false" width="${w}" height="${h}" frameborder="0" src="${baseurl + id}?autoplay=1&rel=0&wmode=transparent&vq=hd720&enablejsapi=1${timestamp}" credentialless allowfullscreen referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox" csp="sandbox allow-scripts allow-same-origin;" style="aspect-ratio:${w}/${h}"></iframe>`;
   }
 })();
 
