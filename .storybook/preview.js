@@ -61,8 +61,25 @@ const withSvgSprite = (Story) => {
   return Story();
 };
 
+/**
+ * Workaround for a Storybook/user-event/react-aria compatibility bug.
+ */
+const normalizeFocusPatch = () => {
+  for (const key of ['focus', 'blur']) {
+    const desc = Object.getOwnPropertyDescriptor(HTMLElement.prototype, key);
+    if (desc && desc.get) {
+      const fn = document.createElement('div')[key]; // safe read on a real element
+      Object.defineProperty(HTMLElement.prototype, key, { configurable: true, writable: true, value: fn });
+    }
+  }
+};
+normalizeFocusPatch();
+
 // Load NDT4 JavaScript at the end of body
 const withNDT4Script = (Story) => {
+  // Re-check on every render in case the focus patch was applied after module load
+  normalizeFocusPatch();
+
   // Only inject the script if it hasn't been injected already
   if (!document.getElementById('ndt4-script')) {
     const script = document.createElement('script');
