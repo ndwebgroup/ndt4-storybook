@@ -71,18 +71,18 @@ Compact.args = {
   layout:'compact',
 };
 
-export const NoLink = (args) => {
-  return PeopleCard(args);
-};
-NoLink.args = {
-  link:''
-};
-
 export const ExternalLink = (args) => {
   return PeopleCard(args);
 };
 ExternalLink.args = {
   link:'https://www.nd.edu/'
+};
+
+export const NoLink = (args) => {
+  return PeopleCard(args);
+};
+NoLink.args = {
+  link:''
 };
 
 export const WithDialog = (args) => {
