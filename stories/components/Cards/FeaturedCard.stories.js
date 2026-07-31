@@ -49,6 +49,20 @@ export const Default = (args) => {
 Default.args = {
 };
 
+export const ExternalLink = (args) => {
+  return FeaturedCard(args);
+}
+ExternalLink.args = {
+  link:'https://www.nd.edu/',
+};
+
+export const NoLink = (args) => {
+  return FeaturedCard(args);
+}
+NoLink.args = {
+  link:'',
+}
+
 export const VerticalCard = (args) => {
   return FeaturedCard(args);
 };

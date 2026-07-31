@@ -26,7 +26,7 @@ export default function FeaturedCard(props) {
     ${image ? `<figure class="card-image"><img src="${image}" width="600" height="400" alt=""></figure>` : '<figure class="card-image"><img src="/images/placeholder-campus-1-600x400.jpg" width="600" height="400" alt=""></figure>'}
     <div class="card-body">
       ${label ? `<p class="card-label"><span>${label}</span></p>` : ''}
-      <${headingTag} class="card-title"><a class="card-link" href="${link}">${title}</a></${headingTag}>
+      <${headingTag} class="card-title">${link ? `<a class="card-link" href="${link}">${title}</a>` : `${title}`}</${headingTag}>
     </div>
   </div>
 `;

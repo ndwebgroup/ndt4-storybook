@@ -23,6 +23,7 @@ export default function PeopleCard(props) {
     title,
     placeholder = false,
     layout = 'default',
+    link = '#',
     summary,
     useDialog = false,
     email = '',
@@ -52,7 +53,7 @@ export default function PeopleCard(props) {
   // Create the title element based on whether dialog is used
   const titleElement = useDialog
     ? `<${headingTag} class="card-title person-name">${name}</${headingTag}>`
-    : `<${headingTag} class="card-title person-name"><a class="card-link" href="#">${name}</a></${headingTag}>`;
+    : `<${headingTag} class="card-title">${link ? `<a class="card-link" href="${link}">${name}</a>` : `${name}`}</${headingTag}>`;
 
   // Create the dialog button if needed
   const dialogButton = useDialog

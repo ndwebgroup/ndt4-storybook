@@ -39,7 +39,7 @@ export default function Card(props) {
   container.innerHTML = `
   <div class="${ classes.join('') }">
     <div class="card-body">${label ? `\n      <p class="card-label">${label}</p>` : ''}
-      <${headingTag} class="card-title"><a class="card-link" href="${link}">${title}</a></${headingTag}>
+      <${headingTag} class="card-title">${link ? `<a class="card-link" href="${link}">${title}</a>` : `${title}`}</${headingTag}>
       ${summary ? `<p class="card-summary">${summary}</p>` : ''}
     </div>
   </div>

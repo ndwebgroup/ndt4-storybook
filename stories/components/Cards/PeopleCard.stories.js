@@ -17,6 +17,7 @@ export default {
     title: { name:'Person Title',},
     layout: { name:'Layout', control: 'select', options: ['default','horizontal','stacked','compact']},
     useDialog: { name:'Use Dialog', control: 'boolean' },
+    link: { name:'Person Link', if: { arg: 'useDialog', truthy: false } },
     email: { name:'Email Address' },
     website: { name:'Website URL' },
     phone: { name:'Phone Number' },
@@ -32,6 +33,7 @@ export default {
     title: 'Person title',
     summary: 'Hendrerit in quis venenatis aliquet venenatis scelerisque in ipsum parturient congue vulputate convallis ultricies at.',
     useDialog: false,
+    link:'#',
     email: '',
     website: '',
     phone: '',
@@ -67,6 +69,20 @@ export const Compact = (args) => {
 };
 Compact.args = {
   layout:'compact',
+};
+
+export const NoLink = (args) => {
+  return PeopleCard(args);
+};
+NoLink.args = {
+  link:''
+};
+
+export const ExternalLink = (args) => {
+  return PeopleCard(args);
+};
+ExternalLink.args = {
+  link:'https://www.nd.edu/'
 };
 
 export const WithDialog = (args) => {

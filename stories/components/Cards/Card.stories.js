@@ -38,6 +38,20 @@ export const Primary = (args) => {
 Primary.args = {
 };
 
+export const ExternalLink = (args) => {
+  return Card(args);
+};
+ExternalLink.args = {
+  link:'https://www.nd.edu/',
+};
+
+export const NoLink = (args) => {
+  return Card(args);
+};
+NoLink.args = {
+  link:'',
+};
+
 export const NoImage = (args) => {
   return Card(args);
 };
