@@ -4,7 +4,7 @@
 export default function Tab(args) {
   const { items = [], tabVariant } = args;
   const container = document.createElement('div');
-  container.className = 'tabs-container';
+  container.className = 'tabs-wrapper';
   container.innerHTML = `
   <nav class="nav-tabs ${tabVariant === 'lg' ? 'nav-tabs--lg' : ''}" aria-label="Tabs Navigation" role="tablist">
     <ul id="nav-tabs" role="tablist" aria-label="Tabs" aria-orientation="horizontal">
