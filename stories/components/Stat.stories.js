@@ -17,7 +17,7 @@ export default {
     },
   },
   argTypes: {
-    size: { name:'Stat size', control:'select', options:['default','lg']},
+    size: { name:'Stat size', control:'select', options:['xs','sm','md','lg','xl'], defaultValue:'md' },
     items: {
       name: 'Stats Items',
       description: 'Array of stats. Each item should have a value property, a label property, and an optional sticker property.',
@@ -27,7 +27,7 @@ export default {
   },
   args: {
     alignment: 'left',
-    size:'default',
+    size:'md',
   },
 };
 
@@ -52,12 +52,33 @@ Default.args = {
   items: exampleItemsNoStickers,
 };
 
+export const Small = (args) => {
+  return Stat(args);
+};
+Small.args = {
+  items: exampleItemsNoStickers,
+  size: 'sm'
+};
+
 export const Large = (args) => {
   return Stat(args);
 };
 Large.args = {
   items: exampleItemsNoStickers,
   size:'lg'
+};
+
+export const Longform = (args) => {
+  return Stat(args);
+};
+Longform.tags = ['!stable', 'coming'];
+Longform.args = {
+  items: [
+    { value: 'One of the  top-100 patent-earning institutions  in the United States', label: 'Turning research into practical solutions.' },
+    { value: 'More than  30 world-class core facilities  with state-of-the-art equipment', label: 'Powering interdisciplinary efforts that solve real-world problems.' },
+    { value: 'Over  $1 billion in proposals submitted  during 2024', label: 'Demonstrating a commitment to advancing projects that benefit communities and the world.' },
+  ],
+  value_modifier: 'stat-value--long'
 };
 
 export const Centered = (args) => {
