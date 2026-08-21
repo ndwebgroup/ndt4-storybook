@@ -20,7 +20,10 @@ export default function QuoteInline(props) {
   } = props;
 
   const container = document.createElement('blockquote');
-  container.classList.add('blockquote', `${layout == 'primary' ? '' : `blockquote--${layout}`}`);
+  container.classList.add('blockquote');
+  if (layout !== 'primary') {
+    container.classList.add(`blockquote--${layout}`);
+  }
 
   container.innerHTML = `
     <div class="flex-md align-start">

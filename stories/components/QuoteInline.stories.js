@@ -8,7 +8,7 @@ export default {
     cite: { name:'Show Cite',},
     image: { name:'Show Image',},
     imageSize: { name:'Image Size', control: 'select', options: ['sm', 'md', 'lg'] },
-    layout: { name:'Quote Layout', control: 'select', options: ['primary', 'reversed'] },
+    layout: { name:'Quote Layout', control: 'select', options: ['primary', 'reverse'] },
   },
   parameters: {
     design: {
@@ -42,5 +42,5 @@ export const Reversed = (args) => {
   return QuoteInline(args);
 };
 Reversed.args = {
-  layout: 'reversed',
+  layout: 'reverse',
 };
