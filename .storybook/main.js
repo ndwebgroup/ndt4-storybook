@@ -14,6 +14,9 @@ export default {
     "@storybook/addon-designs",
     "@vueless/storybook-dark-mode",
     "@etchteam/storybook-addon-status",
+    // Local preset: generates manifests/components.json for the MCP docs tools.
+    // Must come before addon-docs so MDX docs get attached to these components.
+    new URL('./manifest-preset.js', import.meta.url).pathname,
     {
       name: '@storybook/addon-docs',
       options: {
@@ -27,5 +30,10 @@ export default {
     "@storybook/addon-mcp"
   ],
 
-  staticDirs: ['../public']
+  staticDirs: ['../public'],
+
+  features: {
+    // Emit manifests/{components,docs}.json in builds for the hosted MCP endpoint
+    componentsManifest: true,
+  },
 };
