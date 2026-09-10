@@ -54,7 +54,7 @@ export default function NewsLanding(props) {
         <article class="article article-page-wrapper" typeof="NewsArticle"> 
           <header class="page-header article-header${navTop === true ? ' col--md' : ''}">
             <div class="page-title-wrapper">
-              ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'News', link: '#' }, { text: title, link: '#' } ] })}
+              ${Breadcrumb({ items: [ { text: 'Home', href: '#' }, { text: 'News', href: '#' }, { text: title, href: '#' } ] })}
               <h1 class="entry-title entry-title" property="headline" data-length="${title.length}">${title}</h1>
               <div class="meta-share-group grid grid-md-2">
                 <div class="meta">

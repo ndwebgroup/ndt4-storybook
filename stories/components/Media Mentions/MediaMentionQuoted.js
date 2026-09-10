@@ -85,6 +85,7 @@ export default function MediaMentionQuoted(props) {
       </div>
       <div class="card-meta">
       <a class="card-btn" href="${item.public_url || '#'}" target="_blank" id="${item.html_id || ''}" rel="noopener">Read Article</a>
+      </div>
     </div>
   `;
 

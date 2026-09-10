@@ -31,7 +31,7 @@ export default function Event(props) {
     link = '#',
     headingTag = 'h2',
     repeatDate = false,
-    variant,
+    variant = 'default',
   } = props;
 
   const container = document.createElement('article');
@@ -62,10 +62,15 @@ export default function Event(props) {
     hour12: true
   });
 
-  const startDateISO = startDateObj.toISOString().split('T')[0] + 'T' +
-                      startDateObj.toTimeString().substring(0, 5) + '-05:00';
-  const endDateISO = endDateObj.toISOString().split('T')[0] + 'T' +
-                    endDateObj.toTimeString().substring(0, 5) + '-05:00';
+  // ISO 8601 local date-time with the real UTC offset (e.g. 2025-09-22T10:00-04:00)
+  const toLocalISO = (d) => {
+    const pad = (n) => String(n).padStart(2, '0');
+    const off = -d.getTimezoneOffset();
+    const sign = off >= 0 ? '+' : '-';
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}${sign}${pad(Math.floor(Math.abs(off) / 60))}:${pad(Math.abs(off) % 60)}`;
+  };
+  const startDateISO = toLocalISO(startDateObj);
+  const endDateISO = toLocalISO(endDateObj);
 
   let eventHTML = `
   <div class="card card--event${variant === `default` ? `` : ` card--event-${variant}`}">

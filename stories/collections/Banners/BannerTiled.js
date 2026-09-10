@@ -18,7 +18,7 @@ import Button from '/stories/components/Buttons/Button.js';
 
 export default function BannerMulti(props) {
   const container = document.createElement('section');
-  const { bannerWidth, imageCount, headingTag, label, title, titleSize, summary, buttons, buttonList, imageModifiers, backgroundColor, backgroundWidth } = props;
+  const { bannerWidth, imageCount, headingTag, label, title, titleSize = 'default', summary, buttons, buttonList, imageModifiers, backgroundColor, backgroundWidth } = props;
 
   container.className = `section grid grid-md-2 align-center${ bannerWidth !== 'default' ? ` col--${bannerWidth}` : '' }${ backgroundColor == 'none' ? '' : ` bg--${backgroundColor}` }${ backgroundWidth == 'full-width' ? ' bg--full-bleed' : '' }`;
 
@@ -38,7 +38,7 @@ export default function BannerMulti(props) {
 `
 
   // Get the banner body element to append buttons properly
-  const bannerBody = container.querySelector('.section-secondary');
+  const bannerBody = container.querySelector('.section-content');
 
   // Handle label
   if (label) {

@@ -15,7 +15,7 @@
 #storybook-explorer-menu {
   .sidebar-item a,
   .sidebar-item button { color:light-dark(#333,#fff); }
-  .sidebar-item[data-selected=true]
+  .sidebar-item[data-selected=true],
   .sidebar-item:not([data-selected="true"])[data-nodetype="component"]{ background-color:transparent; }
   .sidebar-item:not([data-selected="true"])[data-nodetype="component"]:hover { background-color:light-dark(#edf2f9,#143865); }
   .sidebar-item[data-selected="true"] { background-color:light-dark(#e1e8f2,#1c4f8f); }
@@ -62,7 +62,7 @@
   .language-html > .token.comment { color:light-dark(rgb(0, 128, 0),rgb(124, 124, 124)); font-style:italic; }
 }
 
-.sbdocs-wrapper p > code, .sb-docs-wrapper li > code { vertical-align:text-bottom; }
+.sbdocs-wrapper p > code, .sbdocs-wrapper li > code { vertical-align:text-bottom; }
 
 /* Tables */
 .sbdocs-content table { font-size:1rem; }

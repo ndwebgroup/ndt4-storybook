@@ -23,7 +23,7 @@ export default function FAQ(props) {
       return `\n      <li><a href="#${item.id}">${item.question}</a></li>`;
     }).join('');
 
-    anchorList = `<ol class="faq-anchors" id="${id}">${anchors}\n    </ol>`;
+    anchorList = `<ol class="faq-anchors">${anchors}\n    </ol>`;
   }
 
   // Create FAQ items
@@ -41,6 +41,7 @@ export default function FAQ(props) {
       </div>`;
   }).join('');
 
+  container.id = id;
   container.innerHTML = `
     ${anchorList}
     <dl class="faq">

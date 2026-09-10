@@ -97,6 +97,7 @@ export default {
     label:'',
     headingTag:'h2',
     title:'Banner Title',
+    titleSize:'default',
     imageCount:'2',
     bannerWidth:'default',
     order:'default',

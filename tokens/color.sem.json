@@ -192,13 +192,13 @@
           },
           "border": {
             "default": {
-              "$value": "{color.palette.neutral.700}"
+              "$value": "{color.palette.neutral.500}"
             },
             "subtle": {
-              "$value": "{color.palette.neutral.800}"
+              "$value": "{color.palette.neutral.600}"
             },
             "strong": {
-              "$value": "{color.palette.neutral.600}"
+              "$value": "{color.palette.neutral.400}"
             },
             "focus": {
               "$value": "{color.palette.other.100}"

@@ -172,19 +172,33 @@ import * as ${name}Stories from './${name}.stories';
 // ---- main -------------------------------------------------------------
 
 const flags = parseArgs(process.argv.slice(2));
+const str = (v) => (typeof v === 'string' ? v : '');
+
+if ('help' in flags || 'h' in flags) {
+  console.log(`Usage: npm run new:component -- [--name Name] [--dir components] [--title "Components/Name"]
+                                [--status stable|coming|modified] [--description "..."] [--figma URL]
+                                [--args text,link] [--mdx | --no-mdx]
+Omitted values are prompted for interactively (or defaulted when stdin is not a TTY).`);
+  process.exit(0);
+}
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
 async function ask(q, fallback) {
+  if (!process.stdin.isTTY) {
+    if (fallback !== undefined) return fallback;
+    console.error(`Missing value for "${q}" and stdin is not interactive; pass it as a flag.`);
+    process.exit(1);
+  }
   const a = (await rl.question(fallback !== undefined ? `${q} [${fallback}]: ` : `${q}: `)).trim();
   return a || fallback || '';
 }
 
-let name = flags.name || (await ask('Component name (PascalCase, e.g. QuoteBlock)'));
+let name = str(flags.name) || (await ask('Component name (PascalCase, e.g. QuoteBlock)'));
 name = name.replace(/[^A-Za-z0-9]/g, '');
 if (!name) { console.error('A component name is required.'); process.exit(1); }
 name = name[0].toUpperCase() + name.slice(1);
 
-let dir = flags.dir;
+let dir = str(flags.dir);
 if (!dir) {
   console.log('\nCategory:');
   for (const [k, v] of Object.entries(CATEGORIES)) console.log(`  ${k}) ${v.dir}`);
@@ -192,16 +206,20 @@ if (!dir) {
   dir = (CATEGORIES[pick] ?? CATEGORIES['1']).dir;
 }
 const catEntry = Object.values(CATEGORIES).find((c) => c.dir === dir);
-const title = flags.title || (await ask('Storybook title', catEntry ? catEntry.title(titleWords(name)) : `Components/${titleWords(name)}`));
+const title = str(flags.title) || (await ask('Storybook title', catEntry ? catEntry.title(titleWords(name)) : `Components/${titleWords(name)}`));
 
-let status = flags.status || (await ask(`Status (${STATUSES.join('/')})`, 'coming'));
+let status = str(flags.status) || (await ask(`Status (${STATUSES.join('/')})`, 'coming'));
 if (!STATUSES.includes(status)) status = 'coming';
 
-const str = (v) => (typeof v === 'string' ? v : '');
 const description = str(flags.description) || (await ask('One-line description for docs'));
 const figma = 'figma' in flags ? str(flags.figma) : (await ask('Figma URL (optional)', ''));
 const argsRaw = str(flags.args) || (await ask('Args (comma-separated prop names)', 'text'));
 const args = argsRaw.split(',').map((s) => s.trim()).filter(Boolean);
+const badArgs = args.filter((a) => !/^[A-Za-z_$][\w$]*$/.test(a));
+if (badArgs.length) {
+  console.error(`Arg names must be valid JS identifiers (letters, digits, _ or $, not starting with a digit): ${badArgs.join(', ')}`);
+  process.exit(1);
+}
 const wantMdx = 'no-mdx' in flags
   ? false
   : 'mdx' in flags

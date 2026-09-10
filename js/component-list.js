@@ -37,7 +37,7 @@ class SbComponentsList extends HTMLElement {
       const tagLine = (tags) => {
         const visible = (tags || []).filter(t => ALLOWED.has(t));
         if (!visible.length) return '';
-        return `<div class="c-tags"><span class="c-tag c-tag--${visible}">${visible.join(', ')}</span></div>`;
+        return `<div class="c-tags">${visible.map(t => `<span class="c-tag c-tag--${t}">${t}</span>`).join('')}</div>`;
       };
 
       this.innerHTML = `

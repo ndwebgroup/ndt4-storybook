@@ -26,6 +26,9 @@ export default function NewsCard(props) {
     layout = 'default'
   } = props;
 
+  const publishDateObj = new Date(publishDate);
+  const publishDateISO = Number.isNaN(publishDateObj.getTime()) ? '' : publishDateObj.toISOString();
+
   const container = document.createElement('article');
   container.className = `article snippet card-container`;
   container.setAttribute('typeof', 'NewsArticle');
@@ -47,7 +50,7 @@ export default function NewsCard(props) {
         <div class="article-meta">
           <link property="publisher" resource="#siteorg">
           <div property="author" typeof="Person"><meta property="name" content="${author}"></div>
-          <p class="meta-item publish-info"><time property="datePublished" datetime="${new Date(publishDate).toISOString()}">${publishDate}</time></p>
+          <p class="meta-item publish-info"><time property="datePublished" datetime="${publishDateISO}">${publishDate}</time></p>
         </div>
         ${excerpt ? `<div class="card-summary">${excerpt}</div>` : ''}
       </div>

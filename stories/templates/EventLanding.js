@@ -62,10 +62,15 @@ export default function EventLanding(props) {
     hour12: true
   });
 
-  const startDateISO = startDateObj.toISOString().split('T')[0] + 'T' +
-                      startDateObj.toTimeString().substring(0, 5) + '-05:00';
-  const endDateISO = endDateObj.toISOString().split('T')[0] + 'T' +
-                    endDateObj.toTimeString().substring(0, 5) + '-05:00';
+  // ISO 8601 local date-time with the real UTC offset (e.g. 2025-09-22T10:00-04:00)
+  const toLocalISO = (d) => {
+    const pad = (n) => String(n).padStart(2, '0');
+    const off = -d.getTimezoneOffset();
+    const sign = off >= 0 ? '+' : '-';
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}${sign}${pad(Math.floor(Math.abs(off) / 60))}:${pad(Math.abs(off) % 60)}`;
+  };
+  const startDateISO = toLocalISO(startDateObj);
+  const endDateISO = toLocalISO(endDateObj);
 
 
   container.innerHTML = `
@@ -74,7 +79,7 @@ export default function EventLanding(props) {
         <article class="article article-page-wrapper" typeof="Event"> 
           <header class="page-header article-header${navTop === true ? ' col--md' : ''}">
             <div class="page-title-wrapper">
-              ${Breadcrumb({ items: [ { text: 'Home', link: '#' }, { text: 'Events', link: '#' }, { text: title, link: '#' } ] })}
+              ${Breadcrumb({ items: [ { text: 'Home', href: '#' }, { text: 'Events', href: '#' }, { text: title, href: '#' } ] })}
               <h1 class="article-title entry-title" property="name">${title}</h1>
               
               <div class="meta-share-group">
@@ -87,7 +92,7 @@ export default function EventLanding(props) {
                     ${repeatDate ? `<span class="muted">(part of a series)</span>` : ''}
                   </p>
                     ${location ? `<p class="meta-item" property="location" typeof="Place" ><span class="icon" data-icon="map-pin">Location:</span> <span property="name address">${location}</span>
-                    <a href="{{ event.placemark_url }}" target="_blank" rel="noopener" aria-label="View on map.nd.edu">View on map <span class="icon" data-icon="external-link"></span></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="View on map.nd.edu">View on map <span class="icon" data-icon="external-link"></span></a>
                     </p>` : ''}
                 </div>
                 ${SocialShare({ url: '#', title: title, via: 'Example', hashtags: 'example,events' }).outerHTML}
@@ -121,9 +126,9 @@ export default function EventLanding(props) {
                 <details class="article-series accordion accordion--highlight mb-4">
                   <summary>All dates in this series</summary>
                   <ul>
-                  {%- for entry in event.all_entries reversed %}
-                    <li><a href="{{ entry.link }}">{{ entry.start_at | strftime:'%a %b %e, %Y' }}</a> {% if entry.id == event.id %}<strong>(Current)</strong>{% endif %}</li>
-                  {%- endfor %}
+                    <li><a href="#">Mon, Sep 8, 2025</a></li>
+                    <li><a href="#">${startDateFormatted}, ${startDateObj.getFullYear()}</a> <strong>(Current)</strong></li>
+                    <li><a href="#">Mon, Oct 6, 2025</a></li>
                   </ul>
                 </details>
               ` : ''}

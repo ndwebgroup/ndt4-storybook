@@ -28,7 +28,7 @@ export const activeNavigationItems = [
  */
 export default function NavigationAnchor(args) {
   const { items = defaultNavigationItems } = args;
-  const navItems = Array.isArray(items) ? items : defaultItems;
+  const navItems = Array.isArray(items) ? items : defaultNavigationItems;
   return `
 <nav id="nav-anchor" class="nav-anchor" aria-label="Anchor">
   <ul>

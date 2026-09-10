@@ -18,7 +18,7 @@ export const defaultNavigationItems = [
  */
 export default function NavigationPrimary(args) {
   const { items = defaultNavigationItems } = args;
-  const navItems = Array.isArray(items) ? items : defaultItems;
+  const navItems = Array.isArray(items) ? items : defaultNavigationItems;
   return `
 <nav id="nav-primary" class="nav-primary" aria-label="Primary">
   <div id="primary">
