@@ -1,0 +1,78 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="AI Assistants" />
+
+# AI Assistants
+
+The Web Theme documentation is available to AI coding assistants through the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). Once connected, tools like Claude Code, Cursor, or VS Code can look up the real markup and options for any Web Theme component instead of guessing.
+
+**Endpoint:** `https://webtheme.nd.edu/mcp`
+
+The endpoint is read-only and requires no login.
+
+## What the assistant can do
+
+Connecting gives the assistant three tools:
+
+- **docs-list** returns every component and documentation page in this Storybook.
+- **docs-show** returns a component's description, its options, and the rendered HTML for each of its variants. It also returns full documentation pages such as Colors or Accessibility.
+- **docs-show-story** returns the HTML for a single variant of a component.
+
+## Setup
+
+### Claude Code
+
+```
+claude mcp add --transport http ndt4 https://webtheme.nd.edu/mcp
+```
+
+### Cursor
+
+Add to `.cursor/mcp.json` in your project, or to `~/.cursor/mcp.json` for all projects:
+
+```json
+{
+  "mcpServers": {
+    "ndt4": {
+      "url": "https://webtheme.nd.edu/mcp"
+    }
+  }
+}
+```
+
+### VS Code
+
+Add to `.vscode/mcp.json` in your project:
+
+```json
+{
+  "servers": {
+    "ndt4": {
+      "type": "http",
+      "url": "https://webtheme.nd.edu/mcp"
+    }
+  }
+}
+```
+
+### Claude Desktop
+
+Go to **Settings → Connectors → Add custom connector** and enter the endpoint URL.
+
+### Other clients
+
+Any MCP client that supports remote servers over HTTP can connect using the endpoint URL. No additional configuration is required.
+
+## Example prompts
+
+- "What variants does the Web Theme accordion support?"
+- "Build a news listing page using NDT4 components."
+- "Rewrite this markup to use the Web Theme card component."
+- "Show me the HTML for a large highlighted accordion."
+
+## What to expect
+
+- The HTML the assistant receives is the rendered markup from each component's Storybook example, including the placeholder text. Expect to replace that content.
+- Your page still needs the global CSS and JavaScript described in [Getting Started](/docs/getting-started--docs). The assistant does not add those for you.
+- Component options come from the controls documented here. If an option is not listed, it does not exist.
+- MCP support in Storybook is new. Tool names or behavior may change as the underlying packages mature.

@@ -53,6 +53,8 @@
 .docblock-source {
   &.sb-unstyled { margin-top:0; background-color:light-dark(#f9f9f9,rgba(0, 0, 0, 0.75)); border-radius:0; border:1px solid light-dark(#eee,#444); border-top:0; box-shadow:none; }
   .language-html > * { color:light-dark(#000000,#ffffff); }
+  /* ndt.css has a global .tag component rule that collides with Prism's .token.tag spans */
+  .token.tag { background:none; border:0; border-radius:0; display:inline; font-size:inherit; margin:0; padding:0; }
   .language-html > .token.tag { color:light-dark(rgb(128, 0, 0),rgb(168, 255, 96)); }
   .language-html > .token.attr-name { color:light-dark(rgb(255, 0, 0),rgb(150, 203, 254)); }
   .language-html > .token.attr-value { color:light-dark(rgb(0, 0, 255),rgb(180, 116, 221)); }

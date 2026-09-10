@@ -113,7 +113,7 @@ export default {
     options: {
       storySort: {
         method: 'alphabetical',
-        order: ['Introduction', 'Foundation', 'Components', 'Collections', 'Templates', '*'],
+        order: ['Introduction', 'Getting Started', 'AI Assistants', 'Foundation', 'Components', 'Collections', 'Templates', '*'],
       },
     },
     darkMode: {
