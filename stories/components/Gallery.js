@@ -15,10 +15,10 @@ export default function Gallery(props) {
       <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${images}">
         ${Array.from({ length: images }, (_, i) => `
           <li ${showNumber ? ' class="show-number"' : ''}>
-            <a href="#" title="" data-title="Image ${i + 1}">
+            <a href="/images/placeholder-campus-1-2000x1333.jpg" title="" data-title="Image ${i + 1}">
               <img
                 src="/images/placeholder-campus-1-600x600.jpg"
-                alt="Gallery image ${i + 1}"
+                alt="The Notre Dame Main Building, with its Golden Dome and statue of the Virgin Mary, against a cloudy sky and bare trees."
                 width="400"
                 height="400"
                 loading="lazy"
