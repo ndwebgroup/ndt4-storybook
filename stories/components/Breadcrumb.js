@@ -12,7 +12,7 @@ export default function Breadcrumb(args) {
       if (isLast) {
         return `<li aria-current="page">${item.text}</li>`;
       } else {
-        return `<li><a href="${item.href}">${item.text}</a></li>`;
+        return `<li><a href="${item.href ?? item.link ?? '#'}">${item.text}</a></li>`;
       }
     }).join('\n    ')}
   </ol>
