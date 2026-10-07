@@ -7,7 +7,7 @@ class SbComponentsList extends HTMLElement {
       const res = await fetch(url);
       const data = await res.json();
       const entries = Object.values(data.entries);
-      const skip = new Set(['Components/About Components']);
+      const skip = new Set(['Components/About Components', 'Components/Utility']);
       const map = new Map();
 
       for (const e of entries) {
