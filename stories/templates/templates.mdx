@@ -1,0 +1,70 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+export const templates = [
+  { name: 'Default Page', description: 'A general-purpose interior page with a standard hero and sidebar navigation.', storyUrl: '/?path=/story/templates-default-page--default', downloadFile: 'default-page.html', downloadSize: '86.8 KB' },
+  { name: 'Home Page', description: 'The site home page, with hero layout options and optional card, news, event, and feature banners.', storyUrl: '/?path=/story/templates-home-page--default', downloadFile: 'home-page.html', downloadSize: '87.1 KB' },
+  { name: 'Event Landing Page', description: 'A single event detail page with date, time, location, and calendar/share actions.', storyUrl: '/?path=/story/templates-event-landing-page--default', downloadFile: 'event-landing-page.html', downloadSize: '92.8 KB' },
+  { name: 'Events Listing Page', description: 'A paginated list of upcoming events.', storyUrl: '/?path=/story/templates-events-listing-page--default', downloadFile: 'events-listing-page.html', downloadSize: '100.0 KB' },
+  { name: 'News Landing Page', description: 'A single news article page with byline, publish date, and share actions.', storyUrl: '/?path=/story/templates-news-landing-page--default', downloadFile: 'news-landing-page.html', downloadSize: '92.5 KB' },
+  { name: 'News Listing Page', description: 'A paginated list of recent news articles.', storyUrl: '/?path=/story/templates-news-listing-page--default', downloadFile: 'news-listing-page.html', downloadSize: '95.1 KB' },
+  { name: 'People Landing Page', description: 'A single person profile page with contact details and biography.', storyUrl: '/?path=/story/templates-people-landing-page--default', downloadFile: 'people-landing-page.html', downloadSize: '88.1 KB' },
+  { name: 'People Listing Page', description: 'A grid or list of staff profiles.', storyUrl: '/?path=/story/templates-people-listing-page--default', downloadFile: 'people-listing-page.html', downloadSize: '91.5 KB' },
+]
+
+<Meta title="Templates/About Templates" />
+
+# About Templates
+
+Templates are complete, ready-to-use page layouts built from the components and collections in this kit. Use them as a starting point for a new page rather than assembling one from scratch.
+
+---
+
+## Available Templates
+
+<ul className="grid grid-ml-2">
+  {templates.map((t, index) => (
+  <li className="card-container" key={index}>
+    <div className="card card--border">
+      <p className="card-label">Template</p>
+      <h3 className="card-title">{ t.name }</h3>
+      <p className="card-summary">{ t.description }</p>
+      <p>
+        <a className="btn" href={ t.storyUrl }>View template</a>
+        <a className="btn btn--secondary" href={ `/downloads/templates/${t.downloadFile}` } download={ t.downloadFile }>Download as HTML</a>
+        <small>{ t.downloadSize }</small>
+      </p>
+    </div>
+  </li>
+  ))}
+</ul>
+
+---
+
+## Using a Downloaded Template
+
+Each download is a standalone HTML file with the template's markup, the icon and sticker sprites inlined, and a link to the externally hosted `ndt.css`. Before using one on a live site:
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Add <code>&lt;script src="/js/global.js"&gt;&lt;/script&gt;</code> to your site so interactive elements (menus, dialogs, the light/dark toggle) work.</li>
+      <li>Replace the placeholder copy, images, and links with real content.</li>
+      <li>Confirm the page still reflects the current version of the components it uses — templates are a snapshot at download time.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Don't ship the downloaded file as-is; it's a starting point, not a finished page.</li>
+      <li>Don't remove the `#wrapper` id or the `nav-top--*` class — layout CSS depends on them.</li>
+      <li>Don't fork component markup here instead of pulling updates from this kit; downloaded templates will drift from the source over time.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Best Practices
+
+Start from the template that's closest to your page's purpose, then customize. If none of these fit, check <a href="/?path=/docs/collections-page-header-docs--docs">Page Headers</a> and the individual component docs to assemble a custom layout instead.
