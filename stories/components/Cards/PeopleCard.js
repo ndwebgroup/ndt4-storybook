@@ -95,7 +95,7 @@ export default function PeopleCard(props) {
       <div class="card-body">
         ${titleElement}
         <p class="person-title">${title}</p>
-        <p class="card-summary">${summary}</p>
+        ${summary ? `<p class="card-summary">${summary}</p>` : ''}
         ${dialogButton}
       </div>
       ${dialogElement}
@@ -108,7 +108,7 @@ export default function PeopleCard(props) {
       <div class="card-body">
         ${titleElement}
         <p class="person-title">${title}</p>
-        <p class="card-summary">${summary}</p>
+        ${summary ? `<p class="card-summary">${summary}</p>` : ''}
         ${dialogButton}
       </div>
       ${dialogElement}

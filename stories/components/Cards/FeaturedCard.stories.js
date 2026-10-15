@@ -26,11 +26,13 @@ export default {
     link: { name:'Card Link',},
     label: { name:'Card Label',},
     title: { name:'Card Title',},
+    summary: { name:'Card Summary',},
   },
   args: {
     label: 'Card Label',
     title: 'Card Title',
     link: '#',
+    summary: '',
   },
   decorators: [
     (Story) => {

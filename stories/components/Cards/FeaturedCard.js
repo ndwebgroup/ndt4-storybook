@@ -13,6 +13,7 @@ export default function FeaturedCard(props) {
     image,
     link,
     label,
+    summary,
     wrapperTag = 'div',
     headingTag = 'h2',
   } = props;
@@ -27,6 +28,7 @@ export default function FeaturedCard(props) {
     <div class="card-body">
       ${label ? `<p class="card-label"><span>${label}</span></p>` : ''}
       <${headingTag} class="card-title">${link ? `<a class="card-link" href="${link}">${title}</a>` : `${title}`}</${headingTag}>
+      ${summary ? `<p class="card-summary">${summary}</p>` : ''}
     </div>
   </div>
 `;
