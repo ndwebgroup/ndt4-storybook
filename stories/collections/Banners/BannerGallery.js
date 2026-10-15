@@ -58,12 +58,12 @@ export default function Banner(props) {
   // Create banner secondary content first without buttons
   container.innerHTML = `
   <div class="section-content grid ${title && summary ? 'grid-ml-2 grid-gap--lg align-end' : ''}">
-    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag, modifier:'mbe-0' })}` : ''}
     <div>
-      ${summary ? `<p>${summary}</p>` : ''}
+      ${summary ? `<p class="mbe-2">${summary}</p>` : ''}
     </div>
   </div>
-  ${Gallery({ id:4, classes:`${variant === 'carousel' ? 'list--carousel' : 'gallery--tiled'}`, images:7 })}
+  ${Gallery({ id:4, classes:`${variant === 'carousel' ? 'list--carousel' : 'gallery--tiled mbs-2'}`, images:7 })}
 `
 
   // Get the banner body element to append buttons properly
