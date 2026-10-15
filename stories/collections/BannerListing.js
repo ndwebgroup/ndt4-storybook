@@ -1,14 +1,14 @@
 /**
- * Banner Group collection
+ * Banner Listing collection
  * @param {string} props.backgroundColor - The background color of the banner
- * @param {number} props.banners - The number of banners to display in the group
+ * @param {number} props.banners - The number of banners to display in the list
  * @param {boolean} props.alternate - Whether to alternate the image of each banner
  * @returns {string} - The footer HTML
  */
 
 import Banner from '../collections/Banners/BannerDefault.js';
 
-export default function BannerGroup(props) {
+export default function BannerListing(props) {
   const {
     backgroundColor = '',
     banners = 3,

@@ -1,4 +1,4 @@
-import BannerGroup from './BannerGroup.js';
+import BannerListing from './BannerListing.js';
 
 // Add styles to document head
 const addFooterStyles = () => {
@@ -26,7 +26,7 @@ const addFooterStyles = () => {
 };
 
 export default {
-  title: 'Collections/Banner Group',
+  title: 'Collections/Banner Listing',
   tags: ['!autodocs', 'coming'],
   parameters: {
     layout: 'fullscreen',
@@ -50,7 +50,7 @@ export default {
     }
   ],
   argTypes: {
-    // Banner group props
+    // Banner listing props
     backgroundColor: {
       name: 'Background Color',
       control: { type: 'select' },
@@ -60,7 +60,7 @@ export default {
     banners: {
       name: 'Number of Banners',
       control: 'number',
-      description: 'The number of banners to display in the group',
+      description: 'The number of banners to display in the list',
     },
     alternate: {
       name: 'Alternate Banners',
@@ -77,27 +77,27 @@ export default {
 
 // Default footer example
 export const Default = (args) => {
-  return BannerGroup(args);
+  return BannerListing(args);
 };
 Default.args = {
   // Default example uses the default args
 };
 
 export const Alternate = (args) => {
-  return BannerGroup(args);
+  return BannerListing(args);
 };
 Alternate.args = {
   alternate: true
 };
 
 export const BackgroundColor = (args) => {
-  return BannerGroup(args);
+  return BannerListing(args);
 };
 BackgroundColor.args = {
   backgroundColor: 'brand-blue'
 };
 export const BackgroundColorAlternate = (args) => {
-  return BannerGroup(args);
+  return BannerListing(args);
 };
 BackgroundColorAlternate.args = {
   backgroundColor: 'brand-blue',
