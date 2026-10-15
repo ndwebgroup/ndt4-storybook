@@ -1,0 +1,52 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as SectionTitleStories from './SectionTitle.stories';
+
+<Meta of={SectionTitleStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use clear and concise language in your section titles.</li>
+      <li>Choose the heading level (`h2`, `h3`, etc.) to match the page outline, then use a size modifier to adjust the appearance.</li>
+      <li>A paragraph with the `.section-title` class can be used when the text shouldn't appear in the page outline.</li>
+    </ul>
+  </li>
+  <li>
+    ### Don'ts
+    <ul>
+      <li>Do not skip heading levels to get a different size; use a size modifier instead.</li>
+      <li>Do not use decorative elements or icons within the section title.</li>
+      <li>Do not overuse the `.section-title--display` size on a single page.</li>
+    </ul>
+  </li>
+</ul>
+
+### Modifier Classes
+
+| CSS Class                                 | Description                                           |
+|-------------------------------------------|-------------------------------------------------------|
+| `.section-title--xs`                      | Styles the section title with an extra small size.    |
+| `.section-title--sm`                      | Styles the section title with a small size.           |
+| `.section-title--lg`                      | Styles the section title with a large size.           |
+| `.section-title--xl`                      | Styles the section title with an extra large size.    |
+| `.section-title--display`                 | Styles the section title with a display size. Used when large callouts are necessary.|
+
+### CSS References
+
+| CSS Class                                 | Description                                           |
+|-------------------------------------------|-------------------------------------------------------|
+| `.section-title`                          | Styles the section title component.                   |
