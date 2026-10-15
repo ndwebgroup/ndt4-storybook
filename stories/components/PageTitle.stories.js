@@ -19,8 +19,8 @@ export default {
     },
     size: {
       name: 'Size',
-      control: { type: 'select' },
-      options: ['xs', 'sm', 'md', 'lg', 'xl', 'dynamic'],
+      control: { type: 'select', labels: { '': 'Default' } },
+      options: ['xs', 'sm', '', 'lg', 'xl', 'dynamic'],
       description: 'The size of the page title',
     },
     useParagraph: {
@@ -32,6 +32,7 @@ export default {
   },
   args: {
     title: 'Page Title',
+    size: '',
     useParagraph: false,
   },
 };
