@@ -57,7 +57,7 @@ export default {
     titleSize: {
       name:'Title Size',
       control: { type: 'select' },
-      options: ['default', 'sm', 'md', 'lg', 'xl'],
+      options: ['xs', 'sm', 'default', 'lg', 'xl', 'display'],
     },
     summary: { name:'Summary' },
     headingTag: {

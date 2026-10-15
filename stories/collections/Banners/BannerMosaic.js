@@ -16,6 +16,7 @@
 
 import Button from '/stories/components/Buttons/Button.js';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function BannerMosaic(props) {
   const container = document.createElement('section');
   const { bannerWidth, order, imageCount, headingTag, label, title, titleSize = 'default', summary, buttons, buttonList, imageModifiers, backgroundColor, backgroundWidth } = props;
@@ -32,7 +33,7 @@ export default function BannerMosaic(props) {
   container.innerHTML = `
   ${mediaHTML}
   <div class="section-content">
-    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `

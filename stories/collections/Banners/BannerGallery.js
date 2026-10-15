@@ -48,6 +48,7 @@ const addCarouselScript = () => {
 
 import Gallery from '/stories/components/Gallery';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function Banner(props) {
   const container = document.createElement('section');
   const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, backgroundWidth, variant } = props;
@@ -57,7 +58,7 @@ export default function Banner(props) {
   // Create banner secondary content first without buttons
   container.innerHTML = `
   <div class="section-content grid ${title && summary ? 'grid-ml-2 grid-gap--lg align-end' : ''}">
-    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
     <div>
       ${summary ? `<p>${summary}</p>` : ''}
     </div>

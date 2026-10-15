@@ -16,6 +16,7 @@
 
 import Button from '/stories/components/Buttons/Button.js';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function Banner(props) {
   const container = document.createElement('div');
   const { bannerWidth, imageCount, textOrientation, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor, backgroundWidth } = props;
@@ -31,7 +32,7 @@ export default function Banner(props) {
   // Create banner secondary content first without buttons
   container.innerHTML = `
   <div class="section-intro${textOrientation ? ` text-${textOrientation}` : ''}">
-    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
   ${imageCount > 1 ? `<figure class="section-media flex-auto">${mediaHTML.repeat(imageCount)}</figure>` : mediaHTML}

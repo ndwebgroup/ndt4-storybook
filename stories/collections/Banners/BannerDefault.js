@@ -17,6 +17,7 @@
 import Button from '/stories/components/Buttons/Button.js';
 import Video from '/stories/components/Video';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function Banner(props) {
   const container = document.createElement('section');
   const { bannerWidth, media, order, headingTag, label, title, titleSize, summary, buttons, buttonList, backgroundColor, backgroundWidth } = props;
@@ -40,7 +41,7 @@ export default function Banner(props) {
   container.innerHTML = `
   ${mediaHTML}
   <div class="section-content">
-    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `

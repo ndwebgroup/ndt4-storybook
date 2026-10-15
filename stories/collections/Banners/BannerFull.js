@@ -14,6 +14,7 @@
 
 import Button from '/stories/components/Buttons/Button.js';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function Banner(props) {
   const container = document.createElement('section');
   const { headingTag, label, title, titleSize, summary, textAlign, buttons, buttonList, backgroundOverlay, backgroundOverlayColor } = props;
@@ -25,7 +26,7 @@ export default function Banner(props) {
     <img src="/images/placeholder-campus-3-1600x900.jpg" alt="" width="1600" height="900">
   </figure>
   <div class="section-body${textAlign == 'center' ? ` text-center block-center span-md-2` : ''}">
-    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `

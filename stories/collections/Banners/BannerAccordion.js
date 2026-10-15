@@ -14,6 +14,7 @@
 
 import Accordion from '/stories/components/Accordion.js';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function Banner(props) {
   const container = document.createElement('section');
   const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, backgroundWidth, accordions } = props;
@@ -23,7 +24,7 @@ export default function Banner(props) {
   // Create banner secondary content
   container.innerHTML = `
   <div class="section-intro text-center col--sm">
-    ${title ? `<${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>` : ''}
+    ${title ? `${SectionTitle({ title, size: titleSize, headingTag })}` : ''}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
   <div class="details-group grid grid-ml-2">

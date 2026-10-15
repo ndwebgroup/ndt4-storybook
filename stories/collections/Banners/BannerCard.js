@@ -15,6 +15,7 @@
 
 import Card from '/stories/components/Cards/Card.js';
 
+import SectionTitle from '../../components/SectionTitle.js';
 export default function Banner(props) {
   const container = document.createElement('section');
   const { bannerWidth, headingTag, label, title, titleSize, summary, backgroundColor, backgroundWidth, cardCount } = props;
@@ -26,7 +27,7 @@ export default function Banner(props) {
 
   if (title || summary) container.innerHTML += `
   <div class="section-intro text-center">
-    <${headingTag} class="section-title${titleSize == 'default' ? '' : ` section-title--${titleSize}`}">${title}</${headingTag}>
+    ${SectionTitle({ title, size: titleSize, headingTag })}
     ${summary ? `<p>${summary}</p>` : ''}
   </div>
 `;
