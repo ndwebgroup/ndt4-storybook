@@ -1,0 +1,94 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+export const banners = [
+  { name:'Default', url:'/?path=/story/collections-banner-banner-default--default' },
+  { name:'Accordion', url:'/?path=/story/collections-banner-banner-accordion--default' },
+  { name:'Cards', url:'/?path=/story/collections-banner-banner-cards--default' },
+  { name:'Full', url:'/?path=/story/collections-banner-banner-full--default' },
+  { name:'Gallery', url:'/?path=/story/collections-banner-banner-gallery--default' },
+  { name:'Mosaic', url:'/?path=/story/collections-banner-banner-mosaic--default' },
+  { name:'Stacked', url:'/?path=/story/collections-banner-banner-stacked--default' },
+  { name:'Sticky Header', url:'/?path=/story/collections-banner-banner-sticky-header--default' },
+  { name:'Testimonial', url:'/?path=/story/collections-banner-banner-testimonial--default' },
+  { name:'Tiled', url:'/?path=/story/collections-banner-banner-tiled--default' },
+]
+
+<Meta title="Collections/Banner/Docs" />
+# About Banners
+
+---
+
+## Layouts
+
+<ul className="grid grid-ml-3">
+  {banners.map((b, index) => (
+  <li className="card-container" key={index}>
+    <div className="card card--border">
+      <p className="card-label">Banner</p>
+      <h3 className="card-title"><a href={ b.url } class="card-link">{ b.name }</a></h3>
+    </div>
+  </li>
+  ))}
+</ul>
+
+---
+
+## Best Practices
+
+### Where Banners Can Be Used
+
+Sections should only be used inside a `.page-primary.full-width` or `.page-secondary.full-width` container. These containers give sections the full-width page grid they depend on for their widths (`.col--*`) and edge-to-edge backgrounds (`.bg--full-bleed`).
+
+<div className="notice notice--primary"><div className="notice-content"><p className="mb-0">Sections placed in a standard `.page-primary` or `.page-secondary` will not lay out correctly.</p></div></div>
+
+### Choosing a Layout
+
+Choose the banner that fits the content rather than the one that looks most interesting. Use <a href="/?path=/story/collections-banner-banner-default--default">Banner (Default)</a> for a headline, short summary, and a call to action beside an image or video. Use the <a href="/?path=/story/collections-banner-banner-cards--default">Cards</a>, <a href="/?path=/story/collections-banner-banner-gallery--default">Gallery</a>, <a href="/?path=/story/collections-banner-banner-testimonial--default">Testimonial</a>, and <a href="/?path=/story/collections-banner-banner-accordion--default">Accordion</a> banners when the section is built around that type of content. Use <a href="/?path=/story/collections-banner-banner-sticky-header--default">Sticky Header</a> when the content beside the title is long enough that keeping the heading in view helps readers.
+
+### Background Colors and Widths
+
+Background colors set a section apart from the content around it. A contained background stays within the content width, while a full-width background extends edge to edge. Use full-width backgrounds for the strongest breaks in a page, and avoid stacking several different background colors back to back. Always use colors from the approved background options so text keeps sufficient contrast.
+
+### Section Titles and Headings
+
+Every banner title uses the <a href="/?path=/docs/components-section-title--docs">Section Title</a> component. Choose the heading level (`h2`, `h3`, `h4`) to match the page outline, then use the title size to adjust appearance. Do not pick a heading level for its size, and do not skip levels.
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Place sections only within `.page-primary.full-width` or `.page-secondary.full-width`.</li>
+      <li>Use a clear, concise title that describes the content of the section.</li>
+      <li>Keep summaries to a sentence or two.</li>
+      <li>Vary banner layouts down the page to keep it engaging.</li>
+      <li>Provide meaningful alt text for any images in a banner.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not place sections in a standard `.page-primary` or `.page-secondary` without `.full-width`.</li>
+      <li>Do not place text directly on busy images without an overlay.</li>
+      <li>Do not use banners for content that belongs in the main body copy.</li>
+      <li>Do not repeat the same banner layout several times in a row.</li>
+      <li>Avoid placing two banners next to each other with a similar tone background color.</li>
+    </ul>
+  </li>
+</ul>
+
+### CSS References
+| CSS Class                                 | Description                                                                    |
+|-------------------------------------------|--------------------------------------------------------------------------------|
+| `.section`                                | Container for a Banner                                                         |
+| `.section-intro`                          | Wrapper for the label, title, and summary                                      |
+| `.section-content`                        | Wrapper for the content that accompanies the title                             |
+| `.section-media`                          | Wrapper for banner images and video                                            |
+| `.section-title`                          | Title element within the Banner (see Section Title)                            |
+| `.section-label`                          | Label displayed above the title                                                |
+| `.col--sm`, `.col--md`, `.col--lg`, `.col--xl`, `.col--screen` | Sets the width of the Banner                              |
+| `.bg--{color}`                            | Sets the background color of the Banner                                        |
+| `.bg--full-bleed`                         | Extends the Banner background edge to edge                                     |
