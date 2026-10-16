@@ -1,0 +1,91 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+ 
+import * as SiteFooterStories from './SiteFooter.stories';
+ 
+export const siteFooters = [
+  { name:'Basic', url:'/?path=/story/collections-site-footer--basic' },
+  { name:'Full Example', url:'/?path=/story/collections-site-footer--full-example' },
+  { name:'No Navigation Footer', url:'/?path=/story/collections-site-footer--no-nav-footer' },
+  { name:'With Parent Links', url:'/?path=/story/collections-site-footer--with-parent-links' },
+  { name:'With Social Media', url:'/?path=/story/collections-site-footer--with-social-media' },
+]
+
+<Meta of={SiteFooterStories} />
+
+# About Site Footers
+The site footer is the bottom section of every page. It identifies the site and the organizations it belongs to, provides contact information and social media links, and connects visitors to University-wide resources. Every footer ends with the Notre Dame academic mark, network links, and the copyright notice. The footer is responsive and includes the light/dark mode toggle.
+
+---
+
+## Layouts
+
+<ul className="grid grid-ml-3">
+  {siteFooters.map((s, index) => (
+  <li className="card-container" key={index}>
+    <div className="card card--border">
+      <p className="card-label">Site Footer</p>
+      <h3 className="card-title"><a href={ s.url } class="card-link">{ s.name }</a></h3>
+    </div>
+  </li>
+  ))}
+</ul>
+
+---
+
+## Best Practices
+
+### Site Name and Parent Organizations
+
+The footer shows the site name followed by its parent organization. Add a grandparent organization when the site sits within a larger unit, and a secondary parent when a site is jointly owned by two units. Parent and grandparent names require a link, otherwise they will not display.
+
+### Contact Information
+
+Include an address, phone, and email when visitors would reasonably use them. Leave a field empty to omit it. The Notre Dame, IN city, state, and postal code are provided automatically, so enter only the street address.
+
+### Social Media
+
+Add only the social accounts the site actively maintains. Accounts left empty are not displayed. The University's social links and network links appear automatically and should not be changed.
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Include the site name, and the parent organization with a link.</li>
+      <li>Keep contact details current.</li>
+      <li>Use full, official URLs for social media accounts.</li>
+      <li>Place the footer once at the bottom of every page.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not alter colors, layout, and styles of the Site Footer.</li>
+      <li>Do not remove or replace the academic mark, network links, or copyright notice.</li>
+      <li>Do not link to social media accounts that are inactive.</li>
+    </ul>
+  </li>
+</ul>
+
+### CSS References
+| CSS Class                                 | Description                                                                    |
+|-------------------------------------------|--------------------------------------------------------------------------------|
+| `.site-footer`                            | Container for the Site Footer                                                  |
+| `.nav-footer`                             | Optional navigation row above the footer                                       |
+| `.footer-org`                             | Wrapper for the site name, parent organizations, and contact information       |
+| `.footer-breadcrumbs`                     | List of parent and grandparent organization links                              |
+| `.site-link`                              | Link to the site home page, displaying the site name                           |
+| `.footer-contacts`                        | Wrapper for contact information and social media links                         |
+| `.contact-info`                           | Address, phone, fax, and email                                                 |
+| `.social`                                 | Social media navigation for the site                                           |
+| `.footer-nd`                              | Wrapper for the academic mark and University links                             |
+| `.mark-footer`                            | The University of Notre Dame academic mark                                     |
+| `.footer-parent-links`                    | Wrapper for the University network and social links                            |
+| `.footer--links`                          | University network navigation                                                  |
+| `.footer-social`                          | University social media navigation                                             |
+| `.footer-global`                          | Wrapper for the light/dark toggle and copyright                                |
+| `.footer-global--utils`                   | Container for the light/dark toggle                                            |
+| `.footer-global--copyright`               | Copyright notice                                                               |
