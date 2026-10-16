@@ -29,6 +29,7 @@
 #sidebar-bottom-wrapper { --sb-sidebar-bottom-card-box-shadow:none; }
 
 /* Preview overrides */
+.position-sticky { top:4rem; }
 .sbdocs.sbdocs-preview, .sb-show-main .sbdocs-wrapper { background-color:transparent; }
 .sbdocs.sbdocs-preview { border-color:light-dark(rgba(0,0,0,0.1),rgba(255,255,255,0.2)); }
 

@@ -4,7 +4,7 @@
  * @param {('default'|'xs'|'sm'|'md'|'lg'|'xl')} [props.size=''] - The section title size (default is the base size)
  * @param {string} [props.title='Section Title'] - Text content of the heading
  * @param {('h2'|'h3'|'h4'|'p')} [props.headingTag='h2'] - The element used for the title
- * @param {string} [props.modifier] - Additional modifier for the title
+ * @param {string} [props.modifier=''] - Additional class(es) to apply
  * @returns {string} - The heading HTML
  */
 export default function SectionTitle(props) {

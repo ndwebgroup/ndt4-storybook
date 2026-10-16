@@ -42,7 +42,7 @@ const renderContent = (contentType) => {
         cite: true,
         image: true,
       }).outerHTML;
-      return `${quote()}${quote()}${quote()}`;
+      return `<div class="grid gap-lg">${quote()}${quote()}${quote()}</div>`;
     }
     case 'accordions':
       return Accordion({ items: sampleAccordions }).outerHTML;
