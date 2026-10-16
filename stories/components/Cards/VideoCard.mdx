@@ -1,0 +1,63 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+ 
+import * as VideoCardStories from './VideoCard.stories';
+ 
+<Meta of={VideoCardStories} />
+ 
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+The Video Card is a standard card that uses a video in place of the card image. The video thumbnail includes a play button, and selecting it opens the video in a modal dialog so visitors can watch without leaving the page. Use it in card listings and grids to highlight videos alongside other content.
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use Video Cards to feature videos in card grids and listings.</li>
+      <li>Write a clear, descriptive title that tells visitors what the video covers.</li>
+      <li>Keep the summary short, and include a caption in the video dialog for context.</li>
+      <li>Use the same play button style for all Video Cards within a listing.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not add a `.card-link` to the title. Its stretched link overlay covers the video and prevents the dialog from opening.</li>
+      <li>Do not use a Video Card to link to a page. Use a standard Card instead.</li>
+      <li>Do not alter the border or border-radius on cards as these are defined by the design system and should be consistent across all implementations.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+The video thumbnail is a link that opens a native `dialog` element, so focus moves into the dialog when it opens and the close button and the Escape key both dismiss it. Closing the dialog pauses the video. Videos should include captions, and the card title should describe the video.
+
+---
+
+## CSS References
+| CSS Class                                 | Description                                                                     |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| `.card-container`                         | Container for the card container queries.                                       |
+| `.card`                                   | Container for the Video Card component.                                         |
+| `.card-image`                             | Wrapper for the video within the card.                                          |
+| `.card-body`                              | Wrapper for the text content of the card.                                       |
+| `.card-label`                             | Styles the label of the card.                                                   |
+| `.card-title`                             | Styles the title of the card.                                                   |
+| `.card-summary`                           | Styles the summary text of the card.                                            |
+| `.video--wrapper`                         | Wrapper for the video and its dialog.                                           |
+| `.video`                                  | Thumbnail link for the video. Includes the play button.                         |
+| `.video--default`, `.video--outline`, `.video--minimal`, `.video--ornamental` | Sets the play button style.     |
+| `.dialog-link`                            | Opens the video dialog when selected.                                           |
+| `.dialog--video`                          | Dialog that contains the video player and caption.                              |
