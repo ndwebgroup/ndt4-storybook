@@ -27,7 +27,7 @@ const addFooterStyles = () => {
 
 export default {
   title: 'Collections/Banner Listing',
-  tags: ['!autodocs', 'coming'],
+  tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
     docs: {
