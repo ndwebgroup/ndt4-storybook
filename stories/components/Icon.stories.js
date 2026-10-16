@@ -31,13 +31,13 @@ export default {
     size: {
       name: 'Icon Size',
       description: 'Size of the icons',
-      control: 'select',
-      options: ['sm', 'md', 'lg', 'xl']
+      control: { type: 'select', labels: { '': 'Default' } },
+      options: ['sm', '', 'lg', 'xl']
     }
   },
   args: {
     showNames: true,
-    size: 'md'
+    size: ''
   }
 };
 

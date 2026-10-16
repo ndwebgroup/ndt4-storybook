@@ -17,7 +17,7 @@ export default {
     }
   },
   argTypes: {
-    variant: { name:'Variant', control: 'select', options: ['default', 'sm', 'lg', 'bg', 'highlight'] },
+    variant: { name:'Variant', control: { type: 'select', labels: { '': 'Default' } }, options: ['sm', '', 'lg', 'bg', 'highlight'] },
     items: {
       name: 'List Items',
       description: 'Array of detail/summary items. Each item should have a summary and detail property.',
@@ -26,7 +26,7 @@ export default {
   },
   args: {
     // Default args for all stories
-    variant: 'default',
+    variant: '',
   },
 };
 

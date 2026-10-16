@@ -25,13 +25,13 @@ export default {
     size: {
       name: 'Sticker Size',
       description: 'Size of the stickers',
-      control: 'select',
-      options: ['sm', 'md', 'lg', 'xl']
+      control: { type: 'select', labels: { '': 'Default' } },
+      options: ['sm', '', 'lg', 'xl']
     }
   },
   args: {
     showNames: true,
-    size: 'md'
+    size: '',
   }
 };
 

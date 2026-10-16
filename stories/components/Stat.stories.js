@@ -17,7 +17,7 @@ export default {
     },
   },
   argTypes: {
-    size: { name:'Stat size', control:'select', options:['xs','sm','md','lg','xl'], defaultValue:'md' },
+    size: { name:'Stat size', control: { type: 'select', labels: { '': 'Default' } }, options:['xs','sm','','lg','xl'] },
     items: {
       name: 'Stats Items',
       description: 'Array of stats. Each item should have a value property, a label property, and an optional sticker property.',
@@ -27,7 +27,7 @@ export default {
   },
   args: {
     alignment: 'left',
-    size:'md',
+    size:'',
   },
 };
 
