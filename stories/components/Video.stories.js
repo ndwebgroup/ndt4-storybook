@@ -19,14 +19,14 @@ export default {
   argTypes: {
     videoId: { name:'Youtube ID', },
     style: { name: 'Video Style', control:'select', options:['embed','placeholder','dialog']},
-    playStyle: { name: 'Play Button Style', description:'only applies to placeholder and dialog videos', control:'select', options:['default','outline','minimal','ornamental'] },
+    playStyle: { name: 'Play Button Style', description:'only applies to placeholder and dialog videos', control: { type: 'select', labels: { '': 'Default' } }, options:['','outline','minimal','ornamental'] },
     playText: { name: 'Play Button Text', description:'only applies to placeholder and dialog videos' }
   },
   args: {
     //Default args for stories
     style: 'embed',
     videoId: 'p_vC10eq474',
-    playStyle: 'default',
+    playStyle: '',
     playText: '',
   }
 };

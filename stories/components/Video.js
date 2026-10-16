@@ -22,7 +22,7 @@ export default function Video(args) {
       break;
     case 'placeholder':
       container.innerHTML = `
-  <a class="video video--${playStyle}" href="https://www.youtube.com/watch?v=${videoId}">
+  <a class="video${playStyle ? ` video--${playStyle}` : ''}" href="https://www.youtube.com/watch?v=${videoId}">
     <figure><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" width="1280" height="720" alt="A YouTube Video"></figure>
     ${playText}
   </a>
@@ -31,7 +31,7 @@ export default function Video(args) {
     case 'dialog':
       container.innerHTML = `
   <div class="dialog-item">
-    <a class="video video--${playStyle} dialog-link" href="https://www.youtube.com/watch?v=${videoId}">
+    <a class="video${playStyle ? ` video--${playStyle}` : ''} dialog-link" href="https://www.youtube.com/watch?v=${videoId}">
       <figure><img title="A YouTube Video" src="http://img.youtube.com/vi/${videoId}/maxresdefault.jpg" width="1280" height="720" alt="A YouTube Video"></figure>
       ${playText}
     </a>
