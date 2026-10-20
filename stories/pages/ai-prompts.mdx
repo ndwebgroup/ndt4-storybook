@@ -1,0 +1,221 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="AI Prompts" />
+
+export const Why = ({ children }) => (
+  <p className="why-it-works" style={{ margin: '0 0 3.5rem', paddingBottom:'1.5rem', fontSize: '0.9em', lineHeight: 1.5 }}>
+    <span style={{ fontWeight: 600, marginRight: '0.5rem' }}>Why it works:</span>
+    {children}
+  </p>
+);
+
+# AI Prompts
+
+These prompts help you build on-brand Notre Dame websites with an AI coding assistant. They work best when your assistant is connected to the Web Theme MCP server. See [AI Assistants](/docs/ai-assistants--docs) for setup.
+
+Copy a prompt, replace the `[bracketed placeholders]` with your own details, and paste it into your assistant. Each prompt tells the assistant to look up real components first, so it uses the design system instead of inventing markup.
+
+<div className="notice notice--primary"><div className="notice-content"><p className="mb-0">Sites on an `nd.edu` subdomain must meet the <a href="https://onmessage.nd.edu/university-branding/website-requirements/">University website brand requirements</a>. AI-generated sites are no exception. Review everything the assistant produces before you publish.</p></div></div>
+
+---
+
+## Tips for Better Results
+
+- **Name the Web Theme.** Say "NDT4 Web Theme" or "Notre Dame Web Theme" so the assistant uses the MCP tools.
+- **Start small.** Build one page, check it, then add more. Large requests produce more mistakes.
+- **Describe content, not styling.** Tell the assistant what the page needs to say and do. Let the components handle how it looks.
+- **Use your real content.** Placeholder text from examples is easy to miss. Paste in real headings, summaries, and contact details.
+- **Ask the assistant to check its work.** The review prompts below catch off-brand markup before it ships.
+
+---
+
+## Start a New Site
+
+### Set up the project
+
+```
+I'm building a website for [department or program name] at the University of Notre Dame using the NDT4 Web Theme. Use the Web Theme MCP server to look up documentation before writing any code.
+
+Set up a basic HTML project that:
+- Links the Web Theme stylesheet (ndt.css) and loads global.js, as described in the Getting Started page
+- Loads the icon sprite sheet (https://static.nd.edu/images/icons/ndt4-v1.svg) inline as the first element in the body, as described on the Icon page. Icons will not display if it is only linked.
+- Uses the Web Theme page structure and wrapper classes
+
+Do not write custom CSS or add other frameworks. Tell me what you set up and anything I need to provide.
+```
+
+<Why>The assistant reads Getting Started first, so the stylesheet, scripts, and sprites are in place before you build pages.</Why>
+
+### Build the site header and footer
+
+```
+Using the NDT4 Web Theme MCP server, add a site header and site footer to my page.
+
+Header: site name "[site name]", [with / without] a tagline "[tagline]", and main navigation with these links: [list of links].
+Footer: site name "[site name]", parent organization "[parent name]" linking to [parent URL], contact information ([address], [phone], [email]), and these social accounts: [list of URLs].
+
+Use the Site Header and Site Footer collections exactly as documented. Do not change their layout or colors. Use the official academic mark from the design system rather than recreating it.
+```
+
+<Why>The header and footer are fixed University elements. Asking for "exactly as documented" keeps the assistant from restyling them.</Why>
+
+---
+
+## Build a Page
+
+### Start from a page template
+
+```
+Use the NDT4 Web Theme MCP server to look up the [home page / default page / news landing page / news listing page / events landing page / events listing page / people landing page / people listing page] template.
+
+Build that page for [site name] using the template structure. Replace the placeholder content with this content:
+
+[paste your headings, text, links, and image descriptions]
+
+Keep the template's wrapper and layout classes. If something I've asked for doesn't fit the template, tell me instead of changing the structure.
+```
+
+<Why>Templates already contain the correct page structure, so you only replace the content.</Why>
+
+### Build a page from a content outline
+
+```
+I need a page for [site name] about [topic]. Using the NDT4 Web Theme MCP server, choose the components that best fit this outline and build the page:
+
+1. [Section 1: what it needs to say]
+2. [Section 2: what it needs to say]
+3. [Section 3: what it needs to say]
+
+For each section, tell me which component you chose and why. Use only components and options that exist in the documentation. Use the correct heading levels so the page outline makes sense.
+```
+
+<Why>Asking the assistant to explain its choices helps you spot mismatches and learn what components are available.</Why>
+
+### Build a listing page
+
+```
+Using the NDT4 Web Theme MCP server, build a listing page for [news stories / events / people / programs] with [number] items.
+
+Use the [Card Listing collection / People Cards / News Cards / Event Cards / Featured Cards] and show them in a [grid of N columns / stacked list]. Use this content for each item: [paste items, or describe the fields available].
+
+Each card should link to its own page.
+```
+
+<Why>Naming the card type and the layout avoids the assistant inventing a custom card.</Why>
+
+---
+
+## Add Sections to a Page
+
+### Add a banner
+
+```
+Add a banner to my page using the NDT4 Web Theme MCP server. Look up the Banner collection and choose the layout that fits this content: [describe what the banner shows, such as a headline and call to action beside an image, a set of cards, a gallery, quotes, or accordion questions].
+
+Title: "[title]". Heading level: [h2 / h3]. Background color: [color or "none"].
+
+Place the banner where the documentation says banners are allowed, and use the Section Title component for the heading.
+```
+
+<Why>Banners have placement and background rules. Pointing the assistant to the documentation keeps those rules intact.</Why>
+
+### Add cards, accordions, or other components
+
+```
+Using the NDT4 Web Theme MCP server, add a [card grid / accordion / tabs / gallery / quote / notice / video / table] to my page.
+
+Content: [paste the content]
+
+Show me the available options for that component and tell me which ones you used. Don't use options that aren't listed.
+```
+
+<Why>The assistant lists the available options, so you can ask for a different variant without guessing at names.</Why>
+
+### Add a form, table, or data
+
+```
+Add a [contact form / data table] to my page using the NDT4 Web Theme. Look up the component documentation first.
+
+Content: [fields or table data]
+
+Make sure labels are connected to inputs, required fields are marked, and tables have header cells. Don't remove the table borders or row striping.
+```
+
+<Why>These elements fail accessibility checks most often, so it helps to spell out the requirements.</Why>
+
+---
+
+## Change Existing Pages
+
+### Convert existing markup to the Web Theme
+
+```
+Here is some existing HTML:
+
+[paste your markup]
+
+Rewrite it using NDT4 Web Theme components. Use the MCP server to find the closest matching component for each part, keep my content, and remove any custom CSS or inline styles that the Web Theme already covers. List anything you couldn't convert.
+```
+
+<Why>The assistant swaps in real components while keeping your content, and tells you what's left.</Why>
+
+### Change how a section looks
+
+```
+On my page, change the [section name] so that [describe the change, such as "it uses a different layout" or "it has a light blue background"].
+
+Use the NDT4 Web Theme MCP server to find a documented option for this. If there isn't one, tell me and suggest the closest alternative. Don't add custom CSS to get around it.
+```
+
+<Why>It makes the assistant look for a supported option first and report back instead of overriding the design.</Why>
+
+{/* ---
+
+## Check Your Work
+
+### Review for brand and design system issues
+
+```
+Review the following page against the NDT4 Web Theme documentation. Use the MCP server to check each component.
+
+[paste your HTML or name the file]
+
+Look for:
+- Components that don't match the documented markup
+- Options or classes that don't exist in the design system
+- Custom CSS, inline styles, or colors that aren't Web Theme colors
+- Altered header, footer, or academic mark
+- Missing stylesheet, script, or sprite references
+
+List each problem with where it is and how to fix it. Don't make changes until I approve them.
+```
+
+<Why>Asking for a list before any edits lets you decide what to change.</Why>
+
+### Review for accessibility
+
+```
+Review this page for accessibility, using the Accessibility documentation from the NDT4 Web Theme MCP server as the reference.
+
+[paste your HTML or name the file]
+
+Check heading order, link text, image alt text, form labels, color contrast of any custom colors, keyboard access, and light/dark mode. List each problem and a fix.
+```
+
+<Why>The assistant checks the page against the Web Theme's own accessibility guidance.</Why>
+
+### Replace leftover placeholder content
+
+```
+Search my page for leftover placeholder content from the NDT4 Web Theme examples, such as lorem ipsum text, "Card Title", "Site Parent", sample links that point to "#", and placeholder images. List each one with its location so I can replace it.
+```
+
+<Why>Component examples include placeholder text that is easy to miss.</Why> */}
+
+---
+
+## Next Steps
+
+- Connect your assistant using the [AI Assistants](/docs/ai-assistants--docs) page.
+- Make sure your page loads the files in [Getting Started](/docs/getting-started--docs).
+- Read the [University website brand requirements](https://onmessage.nd.edu/university-branding/website-requirements/) before publishing.
