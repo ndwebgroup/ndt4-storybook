@@ -21,9 +21,36 @@ When using icons that convey meaning, ensure that they are accessible to all use
 
 ## Usage
 
-The class .icon is used to display an icon. The theme JavaScript will replace the element with an icon class with the SVG that matches the data-icon attribute.
+### Icon Sprite Sheet
 
-Note: The icons are dependent on the the ND Icon set ([https://static.nd.edu/images/icons/base-v1.svg](https://static.nd.edu/images/icons/base-v1.svg)) being loaded inline in the document. This is handled by the site-specific JavaScript file.
+All icons come from the ND icon sprite sheet. **Icons will not display unless the sprite sheet is loaded inline in the document.**
+
+**Sprite sheet:** [https://static.nd.edu/images/icons/ndt4-v1.svg](https://static.nd.edu/images/icons/ndt4-v1.svg)
+
+Browsers do not allow an `<svg><use>` element to reference a cross-origin file, so linking to the sprite sheet with `<use href="https://static.nd.edu/...">` or an `<img>` tag will not work. The contents of the file must be placed in the page itself, as the first element inside `<body>`. Each icon in the sheet has an id of `icon-` followed by the icon name, such as `icon-calendar`.
+
+Either paste the contents of the SVG file directly after the opening `<body>` tag, or load it with JavaScript:
+
+```html
+<script>
+  fetch('https://static.nd.edu/images/icons/ndt4-v1.svg')
+    .then((response) => response.text())
+    .then((svg) => {
+      const sprite = document.createElement('div');
+      sprite.hidden = true;
+      sprite.innerHTML = svg;
+      document.body.prepend(sprite);
+    });
+</script>
+```
+
+### Using Icons
+
+There are two ways to add an icon to a page. Both use the same sprite sheet and produce the same result.
+
+#### Option 1: Icon class with JavaScript
+
+The class `.icon` is used to display an icon. The theme JavaScript will replace the element with an icon class with the SVG that matches the `data-icon` attribute. The `data-icon` value is the icon name without the `icon-` prefix.
 
 ```html
 <!-- Icon used next to text -->
@@ -35,6 +62,23 @@ Note: The icons are dependent on the the ND Icon set ([https://static.nd.edu/ima
 <!-- Icon used by itself -->
 <span class="icon" data-icon="nd-monogram"></span>
 ```
+
+#### Option 2: Standard SVG markup
+
+If you don't want JavaScript to replace the markup, use a standard SVG `<use>` element that references the icon id from the inline sprite sheet. Use the full id, including the `icon-` prefix.
+
+```html
+<!-- Icon used next to text -->
+<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-clock-o"></use></svg> Tuesday, 10 am
+
+<!-- Icon used within button -->
+<a href="#" class="btn">Events <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-calendar"></use></svg></a>
+
+<!-- Icon that conveys meaning on its own -->
+<svg class="icon" role="img" focusable="false"><title>Notre Dame</title><use href="#icon-nd-monogram"></use></svg>
+```
+
+Decorative icons that sit next to text should use `aria-hidden="true"`. An icon that stands alone and conveys meaning needs `role="img"` and a `<title>`.
 <ul className="list--todo">
   <li>
     ### Dos
