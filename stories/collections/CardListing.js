@@ -75,7 +75,7 @@ export default function CardListing(props) {
     : 'card-listing no-bullets';
 
   // Featured cards always have an image; the others honor the toggle.
-  const layout = isGrid ? 'default' : 'horizontal';
+  const layout = isGrid ? 'default' : '';
   const base = { link: '#', headingTag: 'h3' };
 
   // Cards that can't render as an <li> themselves get wrapped in one.

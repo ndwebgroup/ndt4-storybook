@@ -81,6 +81,7 @@ People.args = {
 export const News = (args) => CardListing(args);
 News.args = {
   cardType: 'news',
+  format: 'list',
 };
 
 export const Events = (args) => CardListing(args);
@@ -88,10 +89,12 @@ Events.args = {
   cardType: 'event',
   format: 'list',
   count: 5,
+  showImages: false,
 };
 
 export const Featured = (args) => CardListing(args);
 Featured.args = {
   cardType: 'featured',
   columns: 3,
+  count: 3,
 };
