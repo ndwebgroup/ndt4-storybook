@@ -1,0 +1,186 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundation/Page Structure" />
+
+# Page Structure
+
+Every Web Theme page is built on the same foundational markup. Components such as <a href="/?path=/docs/collections-banner-docs--docs">Banners</a> and the page header use that grid through `subgrid`, so they only lay out correctly when the surrounding structure is in place.
+
+If a page looks unstyled, is missing full-width backgrounds, or ignores column classes like `.col--lg`, check this page first.
+
+---
+
+## Starter Page
+
+This is the minimum structure every page needs. Replace the bracketed comments with your own content. The [Templates](/docs/templates-about-templates--docs) page includes complete downloadable pages that already contain this structure.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title | Site Name</title>
+  <link rel="stylesheet" href="https://ndt4.conductor.nd.edu/stylesheets/ndt.css">
+  <link rel="icon" href="https://static.nd.edu/favicon.ico">
+  <link rel="icon" href="https://static.nd.edu/images/monogram/monogram.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="https://static.nd.edu/images/webclips/default/webclip-180.png">
+</head>
+<body>
+
+  <!-- 1. Icon sprite sheet, inline, as the first element in the body -->
+  <!-- Paste the contents of https://static.nd.edu/images/icons/ndt4-v1.svg here -->
+
+  <!-- 2. The page wrapper: the grid everything else sits in -->
+  <div id="wrapper" class="wrapper nav-top--false">
+
+    <!-- 3. Site header: see the Site Header collection -->
+    <header id="header" class="site-header">
+      <!-- header markup -->
+    </header>
+
+    <!-- 4. Main content -->
+    <main id="content" class="site-content">
+
+      <!-- Optional page header: see the Page Header collection -->
+      <div class="page-header">
+        <div class="page-title-wrapper">
+          <h1 class="page-title">Page Title</h1>
+        </div>
+      </div>
+
+      <!-- Primary content -->
+      <div class="page-primary">
+        <!-- page content -->
+      </div>
+
+      <!-- Optional sidebar navigation -->
+      <div class="page-sidebar">
+        <!-- section navigation -->
+      </div>
+
+    </main>
+
+    <!-- 5. Site footer: see the Site Footer collection -->
+    <footer id="footer" class="site-footer">
+      <!-- footer markup -->
+    </footer>
+
+  </div>
+
+  <!-- 6. Global JavaScript, at the end of the body -->
+  <script src="/js/global.js"></script>
+</body>
+</html>
+```
+
+<div className="notice notice--primary"><div className="notice-content"><p className="mb-0">The header and footer are shown here as placeholders. Use the full markup from the <a href="/?path=/docs/collections-site-header--docs">Site Header</a> and <a href="/?path=/docs/collections-site-footer--docs">Site Footer</a> collections, and do not alter it.</p></div></div>
+
+---
+
+## Favicon
+
+Every Notre Dame website must use the University-approved favicon. Add all three tags to the `<head>` of every page.
+
+```html
+<link rel="icon" href="https://static.nd.edu/favicon.ico">
+<link rel="icon" href="https://static.nd.edu/images/monogram/monogram.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://static.nd.edu/images/webclips/default/webclip-180.png">
+```
+
+The first two tags set the icon shown in browser tabs and bookmarks: the `.ico` file works in every browser, and the SVG is used by browsers that support it. The last tag sets the icon used when a page is saved to the home screen of an iOS device. Do not substitute a custom icon, a department logo, or the default browser icon.
+
+---
+
+## How It Works
+
+### The Wrapper
+
+`.wrapper` is a CSS grid that spans the whole page. It defines named columns and rows that the other layout classes attach to.
+
+- **Columns:** A gutter on each side (`screen` to `container`), with a content area in between. At larger breakpoints the content area is divided into columns that define the `container`, `container-xl`, `container-lg`, `container-md`, and `container-sm` widths.
+- **Rows:** `header`, `hero`, `content`, `secondary`, and `footer`.
+
+The wrapper must be a direct parent of the header, main, and footer. If another element sits between them, the grid lines are lost.
+
+### Subgrid
+
+The elements inside `.wrapper` use `grid-template-columns: subgrid`, which lets nested elements line up with the same columns as the wrapper. This is how a full-width background and centered content can sit in the same section. Because of this, avoid adding extra container `div` elements around `.site-content`, `.page-primary`, or `.page-secondary`.
+
+### Content Regions
+
+| Element | Purpose |
+|---------|---------|
+| `.site-header` | The site header. Sits in the `header` row and spans the full page width. |
+| `.site-content` | The `<main>` element. A subgrid that holds the page header and page content. |
+| `.page-header` | Optional page title area. See the Page Header collection. |
+| `.page-primary` | The main content of the page. |
+| `.page-secondary` | Optional second content region below the primary content. |
+| `.page-sidebar` | Optional section navigation. Hidden on pages that use top navigation or `.page--full-width`. |
+| `.site-footer` | The site footer. Sits in the `footer` row. |
+
+### Full-Width Regions
+
+Add `.full-width` to `.page-primary` or `.page-secondary` when the content needs to span the full width of the page, such as for <a href="/?path=/docs/collections-banner-docs--docs">Banners</a>. Full-width regions become subgrids so that each `.section` inside can choose its own width with `.col--*` classes and its own background with `.bg--*` classes.
+
+```html
+<div class="page-primary full-width">
+  <section class="section col--xl bg--sky-blue-light bg--full-bleed">
+    <!-- banner content -->
+  </section>
+</div>
+```
+
+### Navigation Mode
+
+The wrapper takes a `nav-top--true` or `nav-top--false` class that tells the theme where the main navigation lives.
+
+| Class | Behavior |
+|-------|----------|
+| `.nav-top--false` | Navigation is shown in the sidebar (`.page-sidebar`). |
+| `.nav-top--true` | Navigation is shown in the header, and the sidebar is hidden. |
+
+---
+
+## Common Mistakes
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Place the header, `<main>`, and footer as direct children of `.wrapper`.</li>
+      <li>Load `ndt.css` in the `<head>` before any other stylesheets.</li>
+      <li>Inline the icon sprite sheet at the top of the `<body>`.</li>
+      <li>Load the global JavaScript at the end of the `<body>`.</li>
+      <li>Use `.page-primary.full-width` or `.page-secondary.full-width` for banners and other full-width sections.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not wrap `.wrapper` content in additional layout containers.</li>
+      <li>Do not put `.section` elements directly in `.site-content` without a `.page-primary` or `.page-secondary`.</li>
+      <li>Do not add custom CSS to fix layout problems. Check the structure first.</li>
+      <li>Do not skip `.site-content`. Page regions depend on it for their grid.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## CSS References
+
+| CSS Class | Description |
+|-----------|-------------|
+| `.wrapper` | Page grid with named columns and rows. |
+| `.nav-top--true`, `.nav-top--false` | Sets where the main navigation is shown. |
+| `.site-header` | Container for the site header. |
+| `.site-content` | Main content area. A subgrid of the wrapper. |
+| `.page-header` | Page title region. |
+| `.page-title-wrapper` | Container for the page title. |
+| `.page-primary` | Main content region. |
+| `.page-secondary` | Secondary content region. |
+| `.page-sidebar` | Section navigation region. |
+| `.full-width` | Makes `.page-primary` or `.page-secondary` span the full page width as a subgrid. |
+| `.page--full-width` | Page modifier that hides the sidebar and widens the content. |
+| `.site-footer` | Container for the site footer. |

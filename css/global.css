@@ -52,6 +52,7 @@
 .code-example--grid .grid > * { background-color:light-dark(var(--gray-extra-light),var(--brand-blue-light)); padding:1rem 2rem; }
 
 .docblock-source {
+  pre:has(+ .why-it-works) & { margin-block-end:0.5rem; }
   &.sb-unstyled { margin-top:0; background-color:light-dark(#f9f9f9,rgba(0, 0, 0, 0.75)); border-radius:0; border:1px solid light-dark(#eee,#444); border-top:0; box-shadow:none; }
   .language-html > * { color:light-dark(#000000,#ffffff); }
   /* ndt.css has a global .tag component rule that collides with Prism's .token.tag spans */
@@ -62,6 +63,9 @@
   .language-html > .token.punctuation { color:light-dark(rgb(57, 58, 52),rgb(237, 237, 237)); }
   .language-html > .token.comment { color:light-dark(rgb(0, 128, 0),rgb(124, 124, 124)); font-style:italic; }
 }
+
+/* Code blocks without a highlighted language (e.g. AI prompts) need full-contrast text in dark mode */
+.sbdocs.sbdocs-content .docblock-source code, .docblock-source .language-text, .docblock-source .prismjs .token.punctuation { color:light-dark(#000000,#ffffff); background-color:transparent; border:0; }
 
 .sbdocs-wrapper p > code, .sbdocs-wrapper li > code { vertical-align:text-bottom; }
 
