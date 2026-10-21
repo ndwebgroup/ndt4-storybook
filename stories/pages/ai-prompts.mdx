@@ -37,9 +37,10 @@ Copy a prompt, replace the `[bracketed placeholders]` with your own details, and
 I'm building a website for [department or program name] at the University of Notre Dame using the NDT4 Web Theme. Use the Web Theme MCP server to look up documentation before writing any code.
 
 Set up a basic HTML project that:
-- Links the Web Theme stylesheet (ndt.css) and loads global.js, as described in the Getting Started page
+- Links the Web Theme stylesheet (ndt.css) and loads (ndt.js), as described in the Getting Started page
 - Loads the icon sprite sheet (https://static.nd.edu/images/icons/ndt4-v1.svg) inline as the first element in the body, as described on the Icon page. Icons will not display if it is only linked.
-- Uses the Web Theme page structure and wrapper classes
+- Includes the University-approved favicon tags (the .ico, the SVG monogram, and the apple-touch-icon) in the head
+- Uses the starter page and structure from the Page Structure documentation exactly: the .wrapper as the parent of the header, main.site-content, and footer, with content inside .page-primary or .page-secondary
 
 Do not write custom CSS or add other frameworks. Tell me what you set up and anything I need to provide.
 ```
@@ -146,6 +147,27 @@ Make sure labels are connected to inputs, required fields are marked, and tables
 ---
 
 ## Change Existing Pages
+
+### Retheme an existing web page from a URL
+
+```
+Retheme this existing web page using the NDT4 Web Theme: [paste page URL]
+
+Use the Web Theme MCP server for all component and layout markup. Follow these steps:
+
+1. Fetch the page and list its content: title, headings, text, links, images with alt text, and any forms, tables, or videos. Keep all of the original content and wording unless I say otherwise.
+2. Plan the page before writing code. Choose a page template and a Web Theme component for each section, and tell me your plan, including anything that doesn't map cleanly.
+3. Build the page as a single HTML file using the Page Structure documentation exactly: the starter page, the University-approved favicon tags, the inline icon sprite sheet, the site header and footer from the Web Theme collections, and ndt.css with global.js.
+4. Do not copy the old page's CSS, inline styles, scripts, or layout markup. Use only Web Theme classes and documented component options.
+5. Reuse the original images by their existing URLs, and keep alt text. Don't invent images or content.
+
+Site name: [site name]
+Parent organization: [parent name and URL]
+
+When you're done, list what you changed, any content you couldn't convert, and anything I need to review or provide, such as logos, contact details, or navigation links.
+```
+
+<Why>The assistant plans first and reuses your content, so the result is the same page rebuilt on the design system. If the assistant can't fetch the page, paste the page's HTML or text into the prompt instead.</Why>
 
 ### Convert existing markup to the Web Theme
 
