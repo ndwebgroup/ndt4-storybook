@@ -66,7 +66,7 @@ export default {
     },
     imageCount: {
       name: 'Image Count',
-      control: 'number',
+      control: { type: 'range', min: 1, max: 4, step: 1 },
       description: 'Number of images to display in tiled layout',
       defaultValue: 3
     },

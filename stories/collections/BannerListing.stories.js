@@ -59,7 +59,7 @@ export default {
     },
     banners: {
       name: 'Number of Banners',
-      control: 'number',
+      control: { type: 'range', min: 1, max: 8, step: 1 },
       description: 'The number of banners to display in the list',
     },
     alternate: {

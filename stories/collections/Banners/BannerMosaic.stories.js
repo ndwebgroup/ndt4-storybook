@@ -73,8 +73,7 @@ export default {
     },
     imageCount: {
       name: 'Image Count',
-      control: { type: 'select' },
-      options: ['2', '3', '4'],
+      control: { type: 'range', min: 1, max: 4, step: 1 },
       description: 'The number of images to display in the banner'
     },
     backgroundColor: {
