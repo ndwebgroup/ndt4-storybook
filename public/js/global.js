@@ -105,15 +105,12 @@ document.addEventListener('close', function(e){
  * Global Menu
  * v2025-05-01
  */
-(function(){
-	let menu = document.getElementById('global-menu');
+// Delegated so it works for headers added after load (Storybook, CMS, ajax)
+document.addEventListener('click', function(e){
+	var menu = document.getElementById('global-menu');
 	if (!menu) return;
-	document.querySelectorAll('.global-menu-toggle').forEach(function(item){
-		item.addEventListener('click', function(e){
-			menu.showModal();
-		}, false)
-	});
-})();
+	if (e.target.closest('.global-menu-toggle')) menu.showModal();
+});
 
 /*!
  * Light/Dark Toggle

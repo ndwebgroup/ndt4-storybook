@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Events Listing Page — NDT4 Template</title>
-<link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/themes/ndt/4.0/ndt.css">
+<link rel="stylesheet" href="https://ndt4.conductor.nd.edu/stylesheets/ndt.css">
 <link rel="icon" href="https://static.nd.edu/favicon.ico">
 <link rel="icon" href="https://static.nd.edu/images/monogram/monogram.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="https://static.nd.edu/images/webclips/default/webclip-180.png">
@@ -245,6 +245,120 @@
     </div>
   </div>
 </header>
+<dialog id="global-menu" class="global-menu" aria-label="Global menu and search">
+  <div class="global-menu-header">
+    <div class="global-menu-search">
+      <form class="search-form" role="search" action="https://search.nd.edu/" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="search-button btn--action" type="submit" aria-label="Submit search"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-search"></use></svg></button>
+      </form>
+    </div>
+    <form method="dialog" class="global-menu-close">
+      <button class="btn--action" type="submit" aria-label="Close global menu"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-close"></use></svg></button>
+    </form>
+  </div>
+  <div class="global-menu-body">
+    <nav class="nav-global-menu" aria-label="Global menu">
+      <ul>
+          <li><a href="#">Academics</a>
+            <ul>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">Centers and Institutes</a></li>
+            </ul></li>
+          <li><a href="#">Admissions</a>
+            <ul>
+              <li><a href="#">Undergraduate</a></li>
+              <li><a href="#">Graduate</a></li>
+              <li><a href="#">Financial Aid</a></li>
+            </ul></li>
+          <li><a href="#">Research</a>
+            <ul>
+              <li><a href="#">Graduate Research</a></li>
+              <li><a href="#">Undergraduate Research</a></li>
+            </ul></li>
+          <li><a href="#">Global</a>
+            <ul>
+              <li><a href="#">Global Network</a></li>
+              <li><a href="#">Education Abroad</a></li>
+            </ul></li>
+          <li><a href="#">Faith</a>
+            <ul>
+              <li><a href="#">Offices and Initiatives</a></li>
+              <li><a href="#">Congregation of Holy Cross</a></li>
+            </ul></li>
+          <li><a href="#">Community</a>
+            <ul>
+              <li><a href="#">Student Life</a></li>
+              <li><a href="#">Arts and Culture</a></li>
+              <li><a href="#">Alumni and Friends</a></li>
+            </ul></li>
+          <li><a href="#">About</a>
+            <ul>
+              <li><a href="#">Visit</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul></li>
+      </ul>
+    </nav>
+    <nav class="nav-mobile" aria-label="Mobile menu">
+      <ul>
+          <li><a href="#">Academics</a>
+            <ul>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">Centers and Institutes</a></li>
+            </ul></li>
+          <li><a href="#">Admissions</a>
+            <ul>
+              <li><a href="#">Undergraduate</a></li>
+              <li><a href="#">Graduate</a></li>
+              <li><a href="#">Financial Aid</a></li>
+            </ul></li>
+          <li><a href="#">Research</a>
+            <ul>
+              <li><a href="#">Graduate Research</a></li>
+              <li><a href="#">Undergraduate Research</a></li>
+            </ul></li>
+          <li><a href="#">Global</a>
+            <ul>
+              <li><a href="#">Global Network</a></li>
+              <li><a href="#">Education Abroad</a></li>
+            </ul></li>
+          <li><a href="#">Faith</a>
+            <ul>
+              <li><a href="#">Offices and Initiatives</a></li>
+              <li><a href="#">Congregation of Holy Cross</a></li>
+            </ul></li>
+          <li><a href="#">Community</a>
+            <ul>
+              <li><a href="#">Student Life</a></li>
+              <li><a href="#">Arts and Culture</a></li>
+              <li><a href="#">Alumni and Friends</a></li>
+            </ul></li>
+          <li><a href="#">About</a>
+            <ul>
+              <li><a href="#">Visit</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="global-menu-footer">
+    <ul class="global-menu-utils list--inline">
+      <li class="light-dark">
+        <label>
+          <span class="switch">
+            <input type="checkbox" name="light-dark" class="light-dark-toggle">
+            <span class="slider"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-mode"></use></svg></span>
+          </span>
+          <span>Light/Dark</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</dialog>
     <main id="content" class="site-content">
       <div class="page-header">
         <div class="page-title-wrapper">
@@ -492,13 +606,45 @@
   <nav class="nav-site nav-site--section" aria-label="Section">
     <div id="nav_sub">
       <ul class="nav-level-1 depth_1">
-        <li class="first"><a href="#">Academics</a></li>
-        <li><a href="#">Admissions</a></li>
-        <li><a href="#">Research</a></li>
-        <li><a href="#">Global</a></li>
-        <li><a href="#">Faith</a></li>
-        <li><a href="#">Community</a></li>
-        <li class="last"><a href="#">About</a></li>
+        <li class="first li-has-children"><a href="#">Academics</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Programs</a></li>
+        <li><a href="#">Departments</a></li>
+        <li class="last"><a href="#">Centers and Institutes</a></li>
+          </ul></li>
+        <li class="li-has-children"><a href="#">Admissions</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Undergraduate</a></li>
+        <li><a href="#">Graduate</a></li>
+        <li class="last"><a href="#">Financial Aid</a></li>
+          </ul></li>
+        <li class="li-has-children"><a href="#">Research</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Graduate Research</a></li>
+        <li class="last"><a href="#">Undergraduate Research</a></li>
+          </ul></li>
+        <li class="li-has-children"><a href="#">Global</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Global Network</a></li>
+        <li class="last"><a href="#">Education Abroad</a></li>
+          </ul></li>
+        <li class="li-has-children"><a href="#">Faith</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Offices and Initiatives</a></li>
+        <li class="last"><a href="#">Congregation of Holy Cross</a></li>
+          </ul></li>
+        <li class="li-has-children"><a href="#">Community</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Student Life</a></li>
+        <li><a href="#">Arts and Culture</a></li>
+        <li class="last"><a href="#">Alumni and Friends</a></li>
+          </ul></li>
+        <li class="last li-has-children"><a href="#">About</a>
+          <ul class="nav-level-2 depth_2">
+            <li class="first"><a href="#">Visit</a></li>
+        <li><a href="#">Mission</a></li>
+        <li class="last"><a href="#">Contact</a></li>
+          </ul></li>
       </ul>
     </div>
   </nav>

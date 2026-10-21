@@ -36,6 +36,21 @@ The site header is the topmost section of a website, providing branding, navigat
 
 ---
 
+## Global Menu
+
+The button at the right end of the header opens the global menu, a full-screen dialog that is opened by the theme JavaScript (`global.js`). The header and the dialog are markup siblings: the `<dialog id="global-menu">` element is placed directly after the `<header>`, and the `.global-menu-toggle` button opens whichever dialog has the `global-menu` id.
+
+
+### Without the Global Menu icon
+
+Add `.global-nav-false` to the header and `.global-menu--search` to the dialog. The button shows a search icon only, and the dialog contains only the search form and the close button. Use this for sites with simple navigation, or sites where the primary navigation already shows every page.
+
+### Accessibility
+
+The dialog is a native modal `<dialog>`, so focus moves into it when it opens, is kept inside it, and returns to the button when it closes. The Escape key and the close button both close it. Keep the `aria-controls`, `aria-haspopup`, and `aria-label` attributes on the button.
+
+---
+
 ## Academic Mark
 
 The simplified academic mark is the University's formal identifier used in the site header. Do not recreate, retrace, or export the mark from screenshots or other documents.
@@ -77,6 +92,17 @@ When using the academic mark, maintain its clear space and proportions, keep it 
 | `.header-group`                           | Group container for header elements                                            |
 | `.header-nav`                             | Container for the navigation elements                                          |
 | `.header-util`                            | Container for utility elements such as search icon or cta button               |
+| `.global-menu-toggle`                     | Button that opens the global menu dialog                                       |
+| `.global-nav-false`                       | Header modifier. The toggle shows a search icon instead of the menu icon       |
+| `.global-menu`                            | The global menu dialog                                                         |
+| `.global-menu--search`                    | Dialog modifier. Shows only the search form                                    |
+| `.global-menu-header`                     | Contains the search form and close button                                      |
+| `.global-menu-search`                     | Wrapper for the search form                                                    |
+| `.global-menu-close`                      | Form containing the close button                                               |
+| `.global-menu-body`                       | Contains the navigation                                                        |
+| `.nav-global-menu`                        | Navigation with child links (larger screens)                                   |
+| `.nav-mobile`                             | Navigation shown on small screens                                              |
+| `.global-menu-footer`                     | Contains the light/dark toggle                                                 |
 
 ### Modifier Classes
 | CSS Class                                 | Description                                                                    |

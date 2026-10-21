@@ -1,7 +1,7 @@
 /**
  * Header component
  * @param {Object} props - Component properties
- * @param {Array} [props.navHeaderLinks] - Optional custom links for the navigation (each with label and url properties)
+ * @param {Array} [props.navHeaderLinks] - Optional custom links for the navigation (each with label, url, and optional children [{label, url}]). Children appear in the global menu.
  * @param {string} [props.siteName=''] - Name of the site
  * @param {string} [props.siteTagline=''] - Tagline of the site
  * @param {boolean} [props.showNavigation=true] - Whether to show the navigation
@@ -12,10 +12,7 @@
  * @returns {string} - The site header HTML
  */
 
-// TODO:
-// - Adding toggle for mega-menu icon (I can start on menu-menu build)
-
-import NavigationPrimary from '/stories/components/NavigationPrimary';
+import NavigationPrimary, { defaultNavigationItems } from '/stories/components/NavigationPrimary';
 
 export default function SiteHeader(props) {
   const {
@@ -43,6 +40,57 @@ export default function SiteHeader(props) {
       </button>
     </div>
   </div>`;
+
+  // Global menu dialog. With the global menu icon on, it shows the search and the
+  // navigation (with children). With it off, the toggle is a search icon and the
+  // dialog only shows the search.
+  const menuItems = Array.isArray(navHeaderLinks) ? navHeaderLinks : defaultNavigationItems;
+  const menuLinks = menuItems.map((item) => {
+    const children = Array.isArray(item.children) && item.children.length
+      ? `\n            <ul>\n              ${item.children.map((c) => `<li><a href="${c.url || '#'}">${c.label}</a></li>`).join('\n              ')}\n            </ul>`
+      : '';
+    return `<li><a href="${item.url || '#'}">${item.label}</a>${children}</li>`;
+  }).join('\n          ');
+
+  const globalMenuHTML = `
+<dialog id="global-menu" class="global-menu${showGlobalMenu ? '' : ' global-menu--search'}" aria-label="${showGlobalMenu ? 'Global menu and search' : 'Search'}">
+  <div class="global-menu-header">
+    <div class="global-menu-search">
+      <form class="search-form" role="search" action="https://search.nd.edu/" method="get">
+        <input class="search-input" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="search-button btn--action" type="submit" aria-label="Submit search"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-search"></use></svg></button>
+      </form>
+    </div>
+    <form method="dialog" class="global-menu-close">
+      <button class="btn--action" type="submit" aria-label="Close ${showGlobalMenu ? 'global menu' : 'search'}"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-close"></use></svg></button>
+    </form>
+  </div>${showGlobalMenu ? `
+  <div class="global-menu-body">
+    <nav class="nav-global-menu" aria-label="Global menu">
+      <ul>
+          ${menuLinks}
+      </ul>
+    </nav>
+    <nav class="nav-mobile" aria-label="Mobile menu">
+      <ul>
+          ${menuLinks}
+      </ul>
+    </nav>
+  </div>
+  <div class="global-menu-footer">
+    <ul class="global-menu-utils list--inline">
+      <li class="light-dark">
+        <label>
+          <span class="switch">
+            <input type="checkbox" name="light-dark" class="light-dark-toggle">
+            <span class="slider"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-mode"></use></svg></span>
+          </span>
+          <span>Light/Dark</span>
+        </label>
+      </li>
+    </ul>
+  </div>` : ''}
+</dialog>`;
 
   // Create the site header HTML
   const headerHTML = document.createElement('header');
@@ -85,5 +133,5 @@ if (showNavButton) {
     utilContainer.prepend(navButton);
 }
 
-  return headerHTML.outerHTML;
+  return headerHTML.outerHTML + globalMenuHTML;
 }
