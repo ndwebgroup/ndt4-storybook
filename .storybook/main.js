@@ -35,5 +35,7 @@ export default {
   features: {
     // Emit manifests/{components,docs}.json in builds for the hosted MCP endpoint
     componentsManifest: true,
+    // Remove the built-in "Change background" toolbar tool (theme is handled by the dark-mode addon)
+    backgrounds: false,
   },
 };
