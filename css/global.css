@@ -65,7 +65,7 @@
 }
 
 /* Code blocks without a highlighted language (e.g. AI prompts) need full-contrast text in dark mode */
-.sbdocs.sbdocs-content .docblock-source code, .docblock-source .language-text, .docblock-source .prismjs .token.punctuation { color:light-dark(#000000,#ffffff); background-color:transparent; border:0; }
+.sbdocs.sbdocs-content .docblock-source code, .docblock-source .language-text, .docblock-source .prismjs .token.punctuation { color:light-dark(#333333,#ffffff); background-color:transparent; border:0; }
 
 .sbdocs-wrapper p > code, .sbdocs-wrapper li > code { vertical-align:text-bottom; }
 
