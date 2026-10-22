@@ -13,6 +13,14 @@ import NewsCard from '../components/Cards/NewsCard.js';
 
 <div className="grid grid-md-2 grid-ml-3 grid-gap-md">
   <div dangerouslySetInnerHTML={{ __html: NewsCard({
+    title: 'Undergraduate Admissions',
+    link: 'https://admissions.nd.edu/',
+    excerpt: 'Admissions at Notre Dame is about character, curiosity, and commitment to something greater than yourself.',
+    publishDate: 'Oct 22, 2026',
+    imageUrl: `/images/recent-launches/admissions.webp`
+  }).outerHTML }} />
+  
+  <div dangerouslySetInnerHTML={{ __html: NewsCard({
     title: 'Financial Aid',
     link: 'https://financialaid.nd.edu/',
     excerpt: 'Pathways to Notre Dame reduces financial barriers to a transformative Notre Dame education.',
