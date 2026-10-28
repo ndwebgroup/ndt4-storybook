@@ -1,0 +1,16 @@
+/**
+ * NDT4 Image Compare — optional, opt-in package.
+ *
+ * Depends on NDT4 custom properties (--brand-blue-light, --anim-*)
+ * already defined in ndt.css, so ndt.css must still be loaded on the page.
+ * This file only adds what's specific to Image Compare.
+ */
+.image-compare { display: grid; grid-template-columns: minmax(0, 1fr); margin: .5rem 0 1lh; }
+.image-compare > :not(figcaption) { grid-area: 1 / 1; }
+.image-compare img { display: block; height: 100%; -o-object-fit: cover; object-fit: cover; width: 100%; }
+.image-compare-before { clip-path: inset(0 calc(100% - var(--compare-position, 50%)) 0 0); }
+.image-compare-input { appearance: none; cursor: ew-resize; height: 100%; margin: 0; opacity: 0; touch-action: none; width: 100%; }
+.image-compare-divider { background-color: #fff; height: 100%; margin-inline-start: var(--compare-position, 50%); pointer-events: none; position: relative; transform: translateX(-50%); width: 2px; }
+.image-compare-handle { align-items: center; background-color: light-dark(#fff, var(--brand-blue-light)); border: 1px solid light-dark(rgba(0, 0, 0, .12), rgba(193, 205, 221, .25)); border-radius: 50%; box-shadow: 0 .2em .6em rgba(0, 0, 0, .35); color: light-dark(var(--brand-blue), #fff); display: flex; gap: .125rem; height: 2.75rem; justify-content: center; left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%); width: 2.75rem; }
+.image-compare-handle .icon { fill: currentColor; height: 1rem; width: 1rem; }
+.image-compare-input:focus-visible ~ .image-compare-divider .image-compare-handle { outline: 2px solid #15a6b5; outline-offset: 2px; }

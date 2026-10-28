@@ -1,0 +1,72 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as ImageCompareStories from './ImageCompare.stories';
+
+<Meta of={ImageCompareStories} />
+
+<Title />
+
+<Description />
+
+<div className="notice notice-info">
+  <p className="mb-0"><strong>Image Compare is an opt-in package, not part of ndt.css.</strong> It's used on a minority of pages, so its CSS and JS are never bundled into core ndt.css or global.js. Install it only on sites that use the component — see <strong>Installing on a Site</strong> below.</p>
+</div>
+
+<Primary />
+
+<Controls />
+
+---
+
+## Installing on a Site
+
+| Asset | Download | Purpose |
+|-------|----------|---------|
+| `image-compare.css` | <a href="/downloads/image-compare.css" download="image-compare.css">Download</a> <small>2.4 KB</small> | Component styles. Depends on ndt.css custom properties, so ndt.css must still be loaded on the page. |
+| `image-compare.js` | <a href="/downloads/image-compare.js" download="image-compare.js">Download</a> <small>1.6 KB</small> | A single delegated `input` listener that drives every `.image-compare` on the page — add it as `<script src="/js/image-compare.js">`, separate from global.js. |
+
+The markup itself (see the code sample above) has no required JavaScript dependency beyond that one script — the slider is a native `<input type="range">`, so drag, tap, touch, and keyboard all work as soon as the script and stylesheet are present. `ImageCompare.js` in this repo is a Storybook/authoring convenience for generating that markup; it is not required on a site that hand-authors the HTML.
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use two images of the same subject, size, and framing so the comparison reads clearly.</li>
+      <li>Provide meaningful alt text for both images.</li>
+      <li>Use a caption to explain what changed between the two images.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not use images with different aspect ratios or crops.</li>
+      <li>Avoid overlaying additional text or UI on the images.</li>
+      <li>Do not use more than one Image Compare in the same view.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- The slider is a native `input[type="range"]`: it is keyboard operable (arrow keys), and announces its position via `aria-valuetext`.
+- Both images require `alt` text describing what each shows.
+- The divider and handle are decorative (`aria-hidden`) — all interaction happens through the range input.
+
+## CSS References
+
+Defined in `css/image-compare.css`, not ndt.css — see Installing on a Site above.
+
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.image-compare`                  | Base class for the Image Compare figure; grid that stacks the layers.                         |
+| `.image-compare-before`           | Top image, clipped to the divider position.                                                   |
+| `.image-compare-after`            | Bottom image, fully visible.                                                                  |
+| `.image-compare-input`            | Invisible range input that drives the interaction.                                            |
+| `.image-compare-divider`          | Vertical divider line following the slider position.                                          |
+| `.image-compare-handle`           | Circular drag handle with direction arrows.                                                   |
