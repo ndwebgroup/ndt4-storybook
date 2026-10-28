@@ -21,14 +21,14 @@
   "devDependencies": {
     "@etchteam/storybook-addon-status": "^8.0.0",
     "@storybook/addon-designs": "^11.1.4",
-    "@storybook/addon-docs": "^10.6.0",
-    "@storybook/addon-mcp": "^10.6.0",
-    "@storybook/html-vite": "^10.6.0",
-    "@storybook/mcp": "^10.6.0",
-    "@storybook/web-components-vite": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.5",
+    "@storybook/addon-mcp": "^10.6.5",
+    "@storybook/html-vite": "^10.6.5",
+    "@storybook/mcp": "^10.6.5",
+    "@storybook/web-components-vite": "^10.6.5",
     "@vueless/storybook-dark-mode": "^10.0.7",
     "happy-dom": "^20.14.3",
-    "storybook": "^10.6.0",
+    "storybook": "^10.6.5",
     "storybook-addon-designs": "^6.3.1"
   },
   "dependencies": {
