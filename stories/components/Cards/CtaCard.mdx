@@ -1,0 +1,54 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as CtaCardStories from './CtaCard.stories';
+
+<Meta of={CtaCardStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use for a single focused action — apply, visit, give, register.</li>
+      <li>Keep titles short and verb-driven; the title is the call to action.</li>
+      <li>Choose a background that contrasts with the surrounding section.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not place more than one CTA Card in the same view.</li>
+      <li>Do not put links inside the summary — the whole card is already a link.</li>
+      <li>Avoid long summaries; two short sentences at most.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- The whole card is a single `<a>` element, so it is one tab stop with one accessible name — keep the title meaningful on its own.
+- The arrow is decorative (`aria-hidden`); no interaction is lost without it.
+- Text colors resolve through `light-dark()` against both dark and light card backgrounds.
+
+## CSS References
+
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `.card--cta`                      | CTA modifier for the card; makes the whole card the link.                                     |
+| `.card-cta-arrow`                 | Circled arrow affordance; fills on hover.                                                     |
+| `.card-label`                     | Kicker label above the title (existing card element).                                         |
+| `.card-title`                     | Card title (existing card element).                                                           |
+| `.card-summary`                   | Supporting text (existing card element).                                                      |
