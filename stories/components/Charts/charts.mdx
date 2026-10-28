@@ -1,0 +1,92 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Charts/Docs" />
+
+# About Charts
+
+Charts render numerical data — enrollment trends, budget breakdowns, campaign progress — as Bar, Line, Pie, and Stat Ring components. Unlike the rest of the kit, charts are drawn to `<canvas>` by [Chart.js](https://www.chartjs.org/), a real JavaScript dependency rather than markup plus ndt.css.
+
+<div className="notice notice-info">
+  <p className="mb-0"><strong>Charts are an opt-in package, not part of ndt.css.</strong> Chart.js and the chart styles are used on a minority of sites, so they are never bundled into core ndt.css or the sitewide JavaScript. Install them only on sites that actually use a chart — everywhere else stays lean. See <strong>Installing on a Site</strong> below.</p>
+</div>
+
+---
+
+## Installing on a Site
+
+Charts ship as a self-contained set of files, separate from ndt.css. A site only needs these once it uses its first chart:
+
+| Asset | Location in this kit | Purpose |
+|-------|----------------------|---------|
+| `chart.js` | npm package (or a CDN build) | The charting engine. |
+| `css/charts.css` | This repo | Chart-specific styles. Depends on ndt.css custom properties, so ndt.css must still be loaded on the page. |
+| `stories/utils/chartTheme.js` | This repo | Resolves NDT4 brand colors and light/dark mode for Chart.js. |
+| `stories/utils/chartBase.js` | This repo | Shared wrapper, accessible table, and lifecycle logic for Bar/Line/Pie. |
+| `stories/components/Charts/*.js` | This repo | The four chart components — copy only the ones a site actually uses. |
+
+`.stories.js` and `.mdx` files are Storybook-only and are not part of what ships to a site.
+
+If a site doesn't use a bundler, Chart.js is also available from a CDN (for example `cdn.jsdelivr.net/npm/chart.js`) — load it as a script tag before the chart component modules.
+
+---
+
+## How theming works
+
+Chart.js draws to canvas, so it cannot read CSS custom properties or `light-dark()` directly. Every chart resolves NDT4 brand colors and light/dark surface colors once at render (`chartTheme.js`), then re-renders automatically when the page's color scheme changes — including Storybook's dark mode toggle. You do not need to pass colors as props; the chart always matches the current brand palette and mode.
+
+---
+
+## Chart Types
+
+- **[Bar Chart](/?path=/docs/components-charts-bar-chart--docs)** — compare values across categories.
+- **[Line Chart](/?path=/docs/components-charts-line-chart--docs)** — show a trend over time.
+- **[Pie Chart](/?path=/docs/components-charts-pie-chart--docs)** — show a part-to-whole breakdown (donut variant available).
+- **[Stat Ring](/?path=/docs/components-charts-stat-ring--docs)** — show a single value as radial progress; pairs well with the [Stat](/?path=/docs/components-stat--docs) component.
+
+---
+
+## Accessibility
+
+Canvas charts are invisible to screen readers by default, so every chart ships an accessible fallback:
+
+- Bar, Line, and Pie charts render a real `<table>` of the underlying data, visually hidden with the existing `.visually-hidden` utility class — present in the DOM, read by assistive technology, not shown visually.
+- Stat Ring uses `role="meter"` with `aria-valuenow`/`aria-valuemin`/`aria-valuemax`/`aria-valuetext`, the correct native pattern for a single bounded value.
+- Every chart's `<canvas>` has `role="img"` and an `aria-label` matching its title.
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Only install the chart package on sites that use at least one chart — that's the whole point of keeping it separate from ndt.css.</li>
+      <li>Keep chart titles short and specific — the title doubles as the accessible name.</li>
+      <li>Use a Bar Chart to compare categories, a Line Chart for trends over time, and a Pie/Donut for part-to-whole breakdowns.</li>
+      <li>Provide real, current data — do not leave placeholder numbers in production.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not add chart.js or charts.css to a site's global bundle "just in case" — install it when a page actually needs a chart.</li>
+      <li>Do not use a pie chart with more than 5–6 slices; group small categories into "Other."</li>
+      <li>Do not rely on color alone to distinguish series — series are also labeled in the legend and the accessible table.</li>
+      <li>Avoid placing more than one or two charts in the same viewport; dense dashboards belong in an application, not a content page.</li>
+    </ul>
+  </li>
+</ul>
+
+## CSS References
+
+Defined in `css/charts.css` (see Installing on a Site above) — not in ndt.css.
+
+| CSS Class                | Description                                                                    |
+|---------------------------|--------------------------------------------------------------------------------|
+| `.chart`                  | Base figure wrapper for every chart type.                                     |
+| `.chart-canvas-wrap`      | Sized container the Chart.js canvas renders into.                             |
+| `.chart--bar`, `.chart--line`, `.chart--pie`, `.chart--donut`, `.chart--ring` | Type modifiers. |
+| `.chart-data`             | Accessible data table (paired with `.visually-hidden`).                       |
+| `.chart-title`, `.chart-description` | Figcaption text elements.                                           |
+| `.chart-ring-value`       | Centered value text for the Stat Ring.                                        |

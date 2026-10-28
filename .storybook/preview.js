@@ -2,6 +2,9 @@ import { themes } from 'storybook/theming';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import '../css/global.css';
 import '../css/prototypes.css';
+// Charts are an opt-in package on real sites (see Components/Charts/Docs),
+// but Storybook always loads every component, so it's imported here too.
+import '../css/charts.css';
 
 const withSvgSprite = (Story) => {
   // Only inject the icon sprite if it hasn't been injected already

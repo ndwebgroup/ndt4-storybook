@@ -12,6 +12,7 @@
     "storybook": "storybook dev -p 6006",
     "new:component": "node scripts/new-component.mjs",
     "css:diff": "node scripts/css-diff.mjs",
+    "build:templates": "node --no-warnings --experimental-loader ./scripts/build-templates/loader.mjs scripts/build-templates/render.mjs",
     "build-storybook": "storybook build",
     "build-static-webapp": "storybook build -o dist"
   },
@@ -32,6 +33,7 @@
     "storybook-addon-designs": "^6.3.1"
   },
   "dependencies": {
+    "chart.js": "^4.5.0",
     "remark-gfm": "^4.0.1"
   },
   "overrides": {

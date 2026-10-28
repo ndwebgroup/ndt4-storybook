@@ -1,0 +1,26 @@
+/**
+ * NDT4 Charts — optional, opt-in package.
+ *
+ * These styles are NOT part of ndt.css and are never merged into it.
+ * Charts are used on a minority of sites, so bundling their CSS (and the
+ * chart.js dependency) into every site's core assets would make every
+ * page heavier for a feature most pages don't use. Install this file only
+ * on sites that use a chart component — see Components/Charts/Docs for
+ * the full installation list.
+ *
+ * Depends on NDT4 custom properties (--brand-*, --gray-*, --border-radius,
+ * --anim-*) already defined in ndt.css, so ndt.css must still be loaded
+ * on the page. This file only adds what's specific to charts.
+ */
+.chart { margin: 0 0 1lh; }
+.chart-canvas-wrap { min-height: 260px; position: relative; width: 100%; }
+.chart--bar .chart-canvas-wrap, .chart--line .chart-canvas-wrap { aspect-ratio: 16 / 9; }
+.chart--pie .chart-canvas-wrap { aspect-ratio: 1 / 1; max-width: 40rem; margin-inline: auto; }
+.chart figcaption { border-top: 1px solid light-dark(var(--gray-extra-light), var(--brand-blue-light)); color: light-dark(var(--gray), var(--sky-blue-dark)); font-size: .9rem; margin-block-start: 1rem; padding-block-start: .75rem; }
+.chart-title { color: light-dark(var(--brand-blue), #fff); display: block; font-weight: 600; }
+.chart-description { display: block; margin-block-start: .25rem; }
+
+.chart--ring .chart-ring-wrap { aspect-ratio: 1 / 1; display: grid; margin-inline: auto; max-width: 12rem; }
+.chart--ring .chart-ring-wrap > * { grid-area: 1 / 1; }
+.chart-ring-value { align-self: center; color: light-dark(var(--brand-blue), #fff); font-size: 1.75rem; font-variant-numeric: tabular-nums; font-weight: 600; justify-self: center; }
+.chart--ring figcaption { border-top: none; padding-block-start: 0; text-align: center; }

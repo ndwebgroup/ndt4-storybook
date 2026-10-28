@@ -12,5 +12,13 @@ export async function resolve(specifier, context, nextResolve) {
     const filePath = REPO + specifier + (specifier.endsWith('.js') ? '' : '.js');
     return nextResolve(pathToFileURL(filePath).href, context);
   }
-  return nextResolve(specifier, context);
+  try {
+    return await nextResolve(specifier, context);
+  } catch (err) {
+    // Vite lets components import extensionless relative paths; Node doesn't.
+    if (err.code === 'ERR_MODULE_NOT_FOUND' && specifier.startsWith('.') && !/\.[a-z]+$/i.test(specifier)) {
+      return nextResolve(specifier + '.js', context);
+    }
+    throw err;
+  }
 }

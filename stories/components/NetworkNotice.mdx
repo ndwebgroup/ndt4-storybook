@@ -1,0 +1,69 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as NetworkNoticeStories from './NetworkNotice.stories';
+
+<Meta of={NetworkNoticeStories} />
+
+<Title />
+
+The Network Notice is a site-wide alert banner fixed to the bottom of the viewport. It communicates time-sensitive information — weather closures, emergency alerts, major service disruptions, or important university announcements — without disrupting page content.
+
+In production, the notice is injected by script when a notice is active rather than shipped in page markup, keeping pages lean when no notice is running. The `#network_notice` id is required by the CMS and must not be changed.
+
+<Primary />
+
+<Controls />
+
+---
+
+## Variants
+
+- **Standard** — brand blue with a gold accent. Used for announcements and non-emergency notices. Dismissible; uses `role="region"` so it does not interrupt screen reader flow.
+- **Urgent** — deep red with `role="alert"`, which causes screen readers to announce the notice immediately. Reserved for genuine emergencies (shelter in place, campus closure). Urgent notices should not be dismissible while the emergency is active.
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Keep the message to one or two sentences with a single link to full details.</li>
+      <li>Remove the notice promptly once it is no longer relevant — banners that linger train users to ignore them.</li>
+      <li>Reserve the urgent variant for true emergencies.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not run more than one Network Notice at a time.</li>
+      <li>Do not use it for marketing, events, or recruitment messaging.</li>
+      <li>Do not make urgent notices dismissible while the situation is ongoing.</li>
+      <li>Avoid multiple links or long paragraphs — the banner is a pointer, not the announcement itself.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- The standard notice uses `role="region"` with `aria-label="University notice"` so it is discoverable by assistive technology without interrupting the user.
+- The urgent variant uses `role="alert"`, which announces the content immediately when it appears.
+- The close button is a real `button` with `aria-label="Close notice"`; the icon is decorative.
+- The entrance animation is disabled for users with `prefers-reduced-motion`.
+- Link and text colors on both backgrounds meet WCAG AA contrast.
+
+---
+
+## CSS References
+
+| CSS Class                         | Description                                                                                   |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| `#network_notice`                 | Required id; fixed, full-width banner at the bottom of the viewport. Used by the CMS.         |
+| `.network-notice--urgent`         | Emergency variant: red background, `role="alert"`.                                            |
+| `.notice-mark`                    | ND mark, shown on desktop widths only.                                                        |
+| `.notice-text`                    | Flexible message area.                                                                        |
+| `.notice-site`                    | Message container.                                                                            |
+| `.notice-close`                   | Close button region; hides the banner via the `hidden` class.                                 |

@@ -7,10 +7,14 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const OUT_DIR = path.join(REPO, 'public/downloads/templates');
 mkdirSync(OUT_DIR, { recursive: true });
 
-const iconsSprite = readFileSync(path.join(REPO, 'public/icons-nd-base.svg'), 'utf8')
-  .replace('<svg ', '<svg id="nd-icons-sprite" ');
-const stickersSprite = readFileSync(path.join(REPO, 'public/stickers-nd-base.svg'), 'utf8')
-  .replace('<svg ', '<svg id="nd-stickers-sprite" ');
+// The icon sprite includes Storybook-only demo symbols (the Global Health logo).
+// Strip them so downloaded templates only carry the University icons and marks.
+const STORYBOOK_ONLY_SYMBOLS = ['logo-globalhealth'];
+const iconsSprite = STORYBOOK_ONLY_SYMBOLS.reduce(
+  (svg, id) => svg.replace(new RegExp(`<symbol[^>]*id="${id}"[\\s\\S]*?</symbol>\\s*`), ''),
+  readFileSync(path.join(REPO, 'public/icons-nd-base.svg'), 'utf8')
+).replace('<svg ', '<svg id="nd-icons-sprite" ');
+// Stickers are not used by any template, so the sticker sprite is not included.
 
 function wrapDocument({ title, bodyHTML }) {
   return `<!DOCTYPE html>
@@ -20,9 +24,11 @@ function wrapDocument({ title, bodyHTML }) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${title} — NDT4 Template</title>
 <link rel="stylesheet" href="https://ndt4.conductor.nd.edu/stylesheets/ndt.css">
+<link rel="icon" href="https://static.nd.edu/favicon.ico">
+<link rel="icon" href="https://static.nd.edu/images/monogram/monogram.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://static.nd.edu/images/webclips/default/webclip-180.png">
 </head>
 <body>
-${stickersSprite}
 ${iconsSprite}
 ${bodyHTML}
 <script src="/js/global.js"></script>

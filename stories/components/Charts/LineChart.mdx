@@ -1,0 +1,54 @@
+import { Title, Description, Primary, Canvas, Meta, Controls } from '@storybook/addon-docs/blocks';
+
+import * as LineChartStories from './LineChart.stories';
+
+<Meta of={LineChartStories} />
+
+<Title />
+
+<Description />
+
+<Primary />
+
+<Controls />
+
+<div className="notice notice-info">
+  <p className="mb-0">Charts are an opt-in package, not part of ndt.css. See <a href="/?path=/docs/components-charts-docs--docs">Installing on a Site</a> for what to add.</p>
+</div>
+
+---
+
+## Usage
+
+<ul className="list--todo">
+  <li>
+    ### Dos
+    <ul>
+      <li>Use for continuous data over time — years, terms, months.</li>
+      <li>Use Filled sparingly, and only for a single series; filled areas overlap and become unreadable with multiple series.</li>
+    </ul>
+  </li>
+  <li>
+    ### Donts
+    <ul>
+      <li>Do not use a line chart for unordered categories — use a Bar Chart instead.</li>
+      <li>Do not use more than 3–4 series in one chart.</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## Accessibility
+
+- The chart's `<canvas>` has `role="img"` and an `aria-label` matching the title.
+- A visually hidden `<table>` of the same labels and values is always rendered for screen reader users.
+- Legend, axis, and tooltip colors adapt to light and dark mode automatically.
+
+## CSS References
+
+Defined in `css/charts.css`, not ndt.css — see the [Charts overview](/?path=/docs/components-charts-docs--docs) for shared classes and installation. Line-specific:
+
+| CSS Class      | Description                                    |
+|----------------|-------------------------------------------------|
+| `.chart--line` | Modifier applied to the figure wrapper.        |
