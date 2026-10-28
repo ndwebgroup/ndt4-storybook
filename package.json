@@ -27,7 +27,7 @@
     "@storybook/mcp": "^10.6.5",
     "@storybook/web-components-vite": "^10.6.5",
     "@vueless/storybook-dark-mode": "^10.0.7",
-    "happy-dom": "^20.14.3",
+    "happy-dom": "^21.0.4",
     "storybook": "^10.6.5",
     "storybook-addon-designs": "^6.3.1"
   },
