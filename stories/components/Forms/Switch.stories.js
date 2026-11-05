@@ -7,13 +7,15 @@ export default {
   argTypes: {
     note: { name: 'Note'},
     label: { name: 'Label'},
-    icon: { name: 'Icon'}
+    icon: { name: 'Icon'},
+    ariaLabel: { name: 'ARIA Label', description: 'Accessible name when there is no visible label. Not used when there is a label.', control: 'text' }
   },
   args: {
     // Default args for stories
     note: '',
     icon:'',
-    label: ''
+    label: '',
+    ariaLabel: 'Toggle Me'
   }
 };
 
@@ -35,4 +37,5 @@ export const withLabel = Template.bind({});
 export const withIcon = Template.bind({});
   withIcon.args = {
     icon:'mode',
+    ariaLabel:'Light/Dark',
 };
