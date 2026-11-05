@@ -15,9 +15,9 @@ export default function Switch(props) {
   container.className = 'form-field';
 
   container.innerHTML = `
-    ${label ? `<span class="label" id="${id}-label">${label}</span>` : ''}
+    ${label ? `<label class="label" for="${id}">${label}</label>` : ''}
     <label class="switch field">
-      <input type="checkbox" id="${id}" ${label ? `aria-labelledby="${id}-label"` : ariaLabel ? `aria-label="${ariaLabel}"` : ''} ${modifier ? modifier : ''}>
+      <input type="checkbox" id="${id}" ${!label && ariaLabel ? `aria-label="${ariaLabel}"` : ''} ${modifier ? modifier : ''}>
       <span class="slider">${icon ? `<span class="icon" data-icon="${icon}"></span>` : ''}</span>
     </label>
     ${note ? `<p class="form-field-note">${note}</p>` : ''}
