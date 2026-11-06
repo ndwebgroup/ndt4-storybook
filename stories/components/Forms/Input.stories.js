@@ -14,7 +14,7 @@ export default {
   args: {
     // Default args for all stories
     type:'text',
-    label:'',
+    label:'Text Field',
     placeholder: '',
     note: '',
     disabled:false,
@@ -26,7 +26,6 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Input';
 Default.args = {
-  label:'Text Field',
 };
 
 export const Date = (args) => {

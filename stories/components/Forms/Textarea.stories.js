@@ -14,7 +14,7 @@ export default {
   args: {
     // Default args for all stories
     id: 'default-textarea',
-    label:'',
+    label:'Message',
     placeholder: '',
     note: '',
     rows:'3',
@@ -27,7 +27,6 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Textarea';
 Default.args = {
-  label:'Message',
   placeholder: 'Enter text here...'
 };
 
@@ -46,7 +45,6 @@ export const withNote = (args) => {
 };
 withNote.args = {
   id: 'help-text-textarea',
-  label:'Message',
   note: 'This is some help text.',
   placeholder: 'Enter text here...'
 };
