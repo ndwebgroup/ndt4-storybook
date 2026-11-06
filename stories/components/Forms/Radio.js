@@ -14,10 +14,12 @@ export default function Radio(props) {
   const fieldId = id || `radio-${Math.random().toString(36).substring(2, 10)}`;
   container.className = 'form-field';
   const labelId = `${fieldId}-label`;
+  const noteId = `${fieldId}-note`;
   // Not a fieldset/legend: the theme styles fieldset as a gray card
   if (label) {
     container.setAttribute('role', 'radiogroup');
     container.setAttribute('aria-labelledby', labelId);
+    if (note) container.setAttribute('aria-describedby', noteId);
   }
 
   container.innerHTML = `
@@ -25,10 +27,10 @@ export default function Radio(props) {
     <ul class="field no-bullets radio-list" id="${fieldId}">
     ${items.map((item, index) => {
       const itemId = `${fieldId}-${index}`;
-      return `  <li><input id="${itemId}" type="radio" ${item.modifier ? item.modifier : ''} name="${fieldId}"><label for="${itemId}">${item.text}</label></li>`;
+      return `<li><input id="${itemId}" type="radio" ${item.modifier ? item.modifier : ''} name="${fieldId}"><label for="${itemId}">${item.text}</label></li>`;
     }).join('\n      ')}
     </ul>
-    ${note ? `<p class="form-field-note">${note}</p>` : ''}
+    ${note ? `<p class="form-field-note" id="${noteId}">${note}</p>` : ''}
   `;
 
   return container;

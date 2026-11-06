@@ -15,12 +15,12 @@ export default function Select(props) {
 
   container.innerHTML = `
     ${label ? `<label for="${id}">${label}</label>` : ''}
-    <select class="field" name="${id}" id="${id}">
+    <select class="field" name="${id}" id="${id}"${note ? ` aria-describedby="${id}-note"` : ''}>
     ${items.map((item) => {
       return `<option ${item.modifier ? item.modifier : ''} value="${item.text.toLowerCase().replace(/\s/g, '')}">${item.text}</option>`;
     }).join('\n      ')}
     </select>
-    ${note ? `<p class="form-field-note">${note}</p>` : ''}
+    ${note ? `<p class="form-field-note" id="${id}-note">${note}</p>` : ''}
   `
 
   return container;
