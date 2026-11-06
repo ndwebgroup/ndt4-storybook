@@ -27,6 +27,7 @@ export const Default = (args) => {
 };
 Default.storyName = 'Default Textarea';
 Default.args = {
+  label:'Message',
   placeholder: 'Enter text here...'
 };
 
@@ -45,6 +46,7 @@ export const withNote = (args) => {
 };
 withNote.args = {
   id: 'help-text-textarea',
+  label:'Message',
   note: 'This is some help text.',
   placeholder: 'Enter text here...'
 };

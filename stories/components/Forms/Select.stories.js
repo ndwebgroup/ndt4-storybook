@@ -29,6 +29,7 @@ const Template = (args) => {
 // Default Select
 export const Default = Template.bind({});
 Default.args = {
+  label: 'Choose an option',
   items: [
     { text: 'Option 1', modifier:''},
     { text: 'Option 2 (Selected)', modifier:'selected'},
@@ -50,6 +51,7 @@ WithLabel.args = {
 // Select with Note
 export const WithNote = Template.bind({});
 WithNote.args = {
+  label: 'Choose an option',
   note: 'This is an additional note.',
   items: [
     { text: 'Option 1'},
