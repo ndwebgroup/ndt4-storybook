@@ -13,13 +13,15 @@ export default function Radio(props) {
   // Generate a random ID if one isn't provided
   const fieldId = id || `radio-${Math.random().toString(36).substring(2, 10)}`;
   container.className = 'form-field';
+  const labelId = `${fieldId}-label`;
+  // Not a fieldset/legend: the theme styles fieldset as a gray card
   if (label) {
     container.setAttribute('role', 'radiogroup');
-    container.setAttribute('aria-labelledby', `${fieldId}-label`);
+    container.setAttribute('aria-labelledby', labelId);
   }
 
   container.innerHTML = `
-    ${label ? `<span class="label" id="${fieldId}-label">${label}</span>` : ''}
+    ${label ? `<span class="label" id="${labelId}">${label}</span>` : ''}
     <ul class="field no-bullets radio-list" id="${fieldId}">
     ${items.map((item, index) => {
       const itemId = `${fieldId}-${index}`;
