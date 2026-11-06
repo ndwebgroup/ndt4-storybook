@@ -13,14 +13,16 @@ export default function Checkbox(props) {
   // Generate a random ID if one isn't provided
   const fieldId = id || `checkbox-${Math.random().toString(36).substring(2, 10)}`;
   container.className = 'form-field';
+  const labelId = `${fieldId}-label`;
+  // Not a fieldset/legend: the theme styles fieldset as a gray card
   if (label) {
     container.setAttribute('role', 'group');
-    container.setAttribute('aria-labelledby', `${fieldId}-label`);
+    container.setAttribute('aria-labelledby', labelId);
   }
 
   container.innerHTML = `
-    ${label ? `<span class="label" id="${fieldId}-label">${label}</span>` : ''}
-    <ul class="no-bullets field checkbox-list" id="${fieldId}">
+    ${label ? `<span class="label" id="${labelId}">${label}</span>` : ''}
+    <ul class="no-bullets field checkbox-list">
     ${items.map((item, index) => {
       const itemId = `${fieldId}-${index}`;
       return `<li><input id="${itemId}" type="checkbox" ${item.modifier ? item.modifier : ''} name="${fieldId}"><label for="${itemId}">${item.text}</label></li>`;
