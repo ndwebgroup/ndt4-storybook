@@ -15,7 +15,7 @@ export default {
   },
   args: {
     // Default args for stories
-    label:'',
+    label:'Choose an option',
     items: [],
     note: '',
   }

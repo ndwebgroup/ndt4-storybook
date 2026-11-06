@@ -14,7 +14,7 @@ export default {
   args: {
     // Default args for all stories
     type:'text',
-    label:'',
+    label:'Text Field',
     placeholder: '',
     note: '',
     disabled:false,

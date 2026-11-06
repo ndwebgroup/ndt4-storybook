@@ -13,8 +13,7 @@ export default {
   },
   args: {
     // Default args for all stories
-    id: 'default-textarea',
-    label:'',
+    label:'Message',
     placeholder: '',
     note: '',
     rows:'3',
@@ -35,7 +34,6 @@ export const Disabled = (args) => {
 };
 Disabled.storyName = 'Disabled Textarea';
 Disabled.args = {
-  id: 'disabled-textarea',
   label:'Disabled Textarea',
   disabled:true,
 };
@@ -44,7 +42,6 @@ export const withNote = (args) => {
   return Textarea(args);
 };
 withNote.args = {
-  id: 'help-text-textarea',
   note: 'This is some help text.',
   placeholder: 'Enter text here...'
 };
