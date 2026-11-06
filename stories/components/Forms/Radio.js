@@ -13,13 +13,17 @@ export default function Radio(props) {
   // Generate a random ID if one isn't provided
   const fieldId = id || `radio-${Math.random().toString(36).substring(2, 10)}`;
   container.className = 'form-field';
+  if (label) {
+    container.setAttribute('role', 'radiogroup');
+    container.setAttribute('aria-labelledby', `${fieldId}-label`);
+  }
 
   container.innerHTML = `
-    ${label ? `<label for="${fieldId}">${label}</label>` : ''}
+    ${label ? `<span class="label" id="${fieldId}-label">${label}</span>` : ''}
     <ul class="field no-bullets radio-list" id="${fieldId}">
     ${items.map((item, index) => {
-      const itemId = `radio-${index}`;
-      return `  <li><input id="${itemId}" type="radio" ${item.modifier ? item.modifier : ''} name="radio-group"><label for="${itemId}">${item.text}</label></li>`;
+      const itemId = `${fieldId}-${index}`;
+      return `  <li><input id="${itemId}" type="radio" ${item.modifier ? item.modifier : ''} name="${fieldId}"><label for="${itemId}">${item.text}</label></li>`;
     }).join('\n      ')}
     </ul>
     ${note ? `<p class="form-field-note">${note}</p>` : ''}
