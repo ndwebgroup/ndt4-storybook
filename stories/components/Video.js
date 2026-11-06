@@ -17,7 +17,7 @@ export default function Video(args) {
   switch(style) {
     case 'embed':
       container.innerHTML = `
-  <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+  <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
 `;
       break;
     case 'placeholder':
@@ -41,7 +41,7 @@ export default function Video(args) {
         <button type="submit" title="Close">×</button>
       </form>
       <div class="dialog-content">
-        <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${videoId}?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${videoId}?enablejsapi=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         <div><p>This is a caption for the video.</p></div>
       </div>
     </dialog>
@@ -50,7 +50,7 @@ export default function Video(args) {
       break;
     default:
       container.innerHTML = `
-  <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+  <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
  `;
   }
 
