@@ -1,3 +1,14 @@
+// Gallery CSS and JavaScript resources
+const galleryResources = `
+<link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/lb.css">
+<script src="https://conductor.nd.edu/javascripts/lb.js"></script>
+`;
+
+// Decorator to add gallery resources to stories
+export const withGalleryResources = (Story) => {
+  return galleryResources + Story();
+};
+
 /**
  * Gallery component
  * @param {Object} props - Component properties
@@ -29,7 +40,7 @@ export default function Gallery(props) {
       </ul>
     </div>
     <script>
-    document.addEventListener("DOMContentLoaded", function(){var lightbox = new Lightbox({showCaptions: true,elements: document.querySelector(".gallery-${id}").querySelectorAll("a")});});
+    document.addEventListener("DOMContentLoaded", function(){var lightbox = new Lightbox({showCaptions: true,elements: document.querySelector(".gallery-${id}").querySelectorAll("a")});},{once:true});
     </script>
   `;
 }

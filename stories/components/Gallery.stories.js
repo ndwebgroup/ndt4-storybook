@@ -1,4 +1,4 @@
-import Gallery from './Gallery.js';
+import Gallery, { withGalleryResources } from './Gallery.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -30,17 +30,6 @@ const addHeaderStyles = () => {
     `;
     document.head.appendChild(style);
   }
-};
-
-// Gallery CSS and JavaScript resources
-const galleryResources = `
-<link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/lb.css">
-<script src="https://conductor.nd.edu/javascripts/lb.js"></script>
-`;
-
-// Decorator to add gallery resources to stories
-const withGalleryResources = (Story) => {
-  return galleryResources + Story();
 };
 
 export default {
