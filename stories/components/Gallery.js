@@ -1,14 +1,3 @@
-// Gallery CSS and JavaScript resources
-const galleryResources = `
-<link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/lb.css">
-<script src="https://conductor.nd.edu/javascripts/lb.js"></script>
-`;
-
-// Decorator to add gallery resources to stories
-export const withGalleryResources = (Story) => {
-  return galleryResources + Story();
-};
-
 /**
  * Gallery component
  * @param {Object} props - Component properties
@@ -22,6 +11,8 @@ export default function Gallery(props) {
   const { id, classes, images, showNumber } = props;
 
   return `
+    <link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/lb.css">
+    <script src="https://conductor.nd.edu/javascripts/lb.js"></script>
     <div class="gallery-wrapper${classes ? ' ' + classes : ''}">
       <ul id="gallery-${id}" class="gallery-lb gallery-${id}" data-count="${images}">
         ${Array.from({ length: images }, (_, i) => `

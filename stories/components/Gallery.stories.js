@@ -1,4 +1,4 @@
-import Gallery, { withGalleryResources } from './Gallery.js';
+import Gallery from './Gallery.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -50,7 +50,6 @@ export default {
     layout: 'padded'
   },
   decorators: [
-    withGalleryResources,
     (Story) => {
       // Add styles to document head
       addHeaderStyles();
