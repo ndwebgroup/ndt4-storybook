@@ -14,10 +14,12 @@ export default function Checkbox(props) {
   const fieldId = id || `checkbox-${Math.random().toString(36).substring(2, 10)}`;
   container.className = 'form-field';
   const labelId = `${fieldId}-label`;
+  const noteId = `${fieldId}-note`;
   // Not a fieldset/legend: the theme styles fieldset as a gray card
   if (label) {
     container.setAttribute('role', 'group');
     container.setAttribute('aria-labelledby', labelId);
+    if (note) container.setAttribute('aria-describedby', noteId);
   }
 
   container.innerHTML = `
@@ -28,7 +30,7 @@ export default function Checkbox(props) {
       return `<li><input id="${itemId}" type="checkbox" ${item.modifier ? item.modifier : ''} name="${fieldId}"><label for="${itemId}">${item.text}</label></li>`;
     }).join('\n      ')}
     </ul>
-    ${note ? `<p class="form-field-note">${note}</p>` : ''}
+    ${note ? `<p class="form-field-note" id="${noteId}">${note}</p>` : ''}
   `;
 
   return container;

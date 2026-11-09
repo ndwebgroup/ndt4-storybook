@@ -17,10 +17,10 @@ export default function Switch(props) {
   container.innerHTML = `
     ${label ? `<label class="label" for="${id}">${label}</label>` : ''}
     <label class="switch field">
-      <input type="checkbox" id="${id}" ${!label && ariaLabel ? `aria-label="${ariaLabel}"` : ''} ${modifier ? modifier : ''}>
+      <input type="checkbox" id="${id}"${note ? ` aria-describedby="${id}-note"` : ''} ${!label && ariaLabel ? `aria-label="${ariaLabel}"` : ''} ${modifier ? modifier : ''}>
       <span class="slider">${icon ? `<span class="icon" data-icon="${icon}"></span>` : ''}</span>
     </label>
-    ${note ? `<p class="form-field-note">${note}</p>` : ''}
+    ${note ? `<p class="form-field-note" id="${id}-note">${note}</p>` : ''}
   `
   
   return container;
