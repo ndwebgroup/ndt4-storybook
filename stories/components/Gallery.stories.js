@@ -32,17 +32,6 @@ const addHeaderStyles = () => {
   }
 };
 
-// Gallery CSS and JavaScript resources
-const galleryResources = `
-<link rel="stylesheet" href="https://conductor.nd.edu/stylesheets/lb.css">
-<script src="https://conductor.nd.edu/javascripts/lb.js"></script>
-`;
-
-// Decorator to add gallery resources to stories
-const withGalleryResources = (Story) => {
-  return galleryResources + Story();
-};
-
 export default {
   title: 'Components/Gallery',
   tags: ['stable'],
@@ -61,7 +50,6 @@ export default {
     layout: 'padded'
   },
   decorators: [
-    withGalleryResources,
     (Story) => {
       // Add styles to document head
       addHeaderStyles();
