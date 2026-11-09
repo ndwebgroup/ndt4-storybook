@@ -1,4 +1,5 @@
 import BannerStickyHeader from './BannerStickyHeader';
+import { withGalleryResources } from '../../components/Gallery.js';
 
 // Add styles to document head
 const addHeaderStyles = () => {
@@ -43,7 +44,8 @@ export default {
       // This will only affect the preview
       const result = Story();
       return `<div class="wrapper"><div class="page-secondary full-width">${result}</div></div>`;
-    }
+    },
+    (Story, { args }) => (args.contentType === 'gallery' ? withGalleryResources(Story) : Story()),
   ],
   argTypes: {
     label: { name:'Label' },
