@@ -1,26 +1,27 @@
 @layer site {
-  #network_notice { --notice-accent: var(--brand-gold); align-items: center; background: var(--brand-blue); border-top: 2px solid var(--notice-accent); bottom: 0; box-sizing: border-box; color: #fff; display: flex; font-family: var(--font-heading); font-size: 1.125rem; left: 0; padding: 1.4rem; position: fixed; right: 0; z-index: 1000; }
+  #network_notice { align-items: center; background:color-mix(in srgb,var(--brand-blue),transparent 5%); border-top:var(--border-primary); bottom: 0; box-sizing: border-box; color: #fff; display: flex; font-family: var(--font-heading); font-size: 1.125rem; left: 0; padding: 1.4rem; position: fixed; right: 0; z-index: 1000; }
   #network_notice.hidden { display: none; }
   #network_notice.network-notice--urgent { --notice-accent: #f49f9f; background: #6e1f1f; }
   #network_notice h2 { color: #fff; font-size: 1.2rem; margin: 0 0 .4rem; }
   #network_notice p { font-family: inherit; font-size: inherit; line-height: inherit; color:inherit; }
-  #network_notice a { border-bottom: 2px solid var(--notice-accent); color: #fff; font-weight: 700; text-decoration: none; }
-  #network_notice .notice-mark { display: none; max-width: 200px; }
+  #network_notice a { border-bottom: 2px solid var(--brand-gold); color: #fff; font-weight: 700; text-decoration: none; }
+  #network_notice .notice-mark { --mark-text:#fff; --mark-shield:var(--brand-gold); display: none; width: 175px; max-width:20vw; height:auto; aspect-ratio:4; }
   .network-notice--local .notice-mark { display:none; }
+  #network_notice .notice-icon { fill:white; flex: 0 0 auto; height: 1em; margin-inline-end: 0.75rem; margin-block-end:3px; width: 1em; }
   #network_notice .notice-text { flex: 1 1 auto; }
   #network_notice .notice-site p:last-child { margin: 0; }
   #network_notice .notice-close { text-align: right; }
   #network_notice .notice-close-button { background: transparent; border: none; cursor: pointer; margin: 0; }
   #network_notice .notice-close-icon { fill: #fff; height: 24px; width: 24px; }
   @media only screen and (min-width: 64em) {
-    #network_notice { font-size: 1.25rem; padding: 1.4rem 2rem; }
-    #network_notice .notice-mark { display: block; width: 20vw; }
+    #network_notice { font-size: 1.25rem; padding: 2rem; }
+    #network_notice .notice-mark { display: block; }
     #network_notice .notice-close { width: 10vw; }
     #network_notice .notice-text { margin-inline-end: 4rem; }
     #network_notice .notice-mark + .notice-text { text-align: center; margin-inline-start: 4rem; }
   }
   @media (prefers-reduced-motion: no-preference) {
-    #network_notice { animation: network-notice-in 300ms var(--anim-ease); }
+    #network_notice { transform: translateY(100%); animation: network-notice-in var(--anim-duration) var(--anim-ease) 500ms forwards; }
   }
   @keyframes network-notice-in { from { transform: translateY(100%); } to { transform: translateY(0); } }
 
@@ -37,9 +38,3 @@
   .card--cta .card-cta-arrow { align-items: center; border: 1px solid var(--brand-gold); border-radius: 50%; color:var(--brand-gold); display: flex; height: 2.75rem; justify-content: center; transition: background-color var(--anim-duration-fast) var(--anim-ease), color var(--anim-duration-fast) var(--anim-ease); width: 2.75rem; }
   .card--cta:focus-within { outline: 2px solid #15a6b5; outline-offset: 2px; }
 }
-
-/* Chart styles moved to css/charts.css — charts are an opt-in package,
-   not part of ndt.css, so they're intentionally kept out of this file. */
-
-/* Image Compare styles moved to css/image-compare.css — also an opt-in
-   package, not part of ndt.css. */
