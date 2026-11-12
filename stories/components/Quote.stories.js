@@ -23,7 +23,7 @@ export default {
   },
   args: {
     text: '"As a premier Catholic research university, our research and learning drive insights, innovation, and impact for good around the world."',
-    cite:'- Rev. John I. Jenkins, C.S.C., President of the University of Notre Dame',
+    cite: '',
     size: 'md',
   }
 };
@@ -32,4 +32,10 @@ export const Primary = (args) => {
   return Quote(args);
 };
 Primary.args = {
+};
+export const WithCite = (args) => {
+  return Quote(args);
+};
+WithCite.args = {
+  cite: '- Rev. John I. Jenkins, C.S.C., President of the University of Notre Dame',
 };

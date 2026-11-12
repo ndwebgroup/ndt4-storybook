@@ -138,7 +138,7 @@
 .list--todo li:last-child { border-right:none; }
 
 @media (width >= 60em) {
-  .list--todo { display:grid; grid-template-columns:1fr 1fr; grid-gap:1.5rem; padding:2rem; column-rule:1px solid #ddd; }
+  .list--todo { display:grid; grid-template-columns:1fr 1fr; grid-gap:1.5rem; padding:2rem; column-rule:var(--border-primary); }
   .list--todo > li { margin-bottom:0; }
 }
 

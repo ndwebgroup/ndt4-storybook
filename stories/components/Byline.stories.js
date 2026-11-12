@@ -18,6 +18,7 @@ export default {
   },
   argTypes: {
     image: { name:'Image', control:'select', options:['image', 'placeholder', 'none']},
+    imgUrl: { name:'Image URL', control:'text', description:'URL of the person image. Leave empty to use the default portrait.', if: { arg:'image', eq:'image' } },
     name: { name:'Person Name',},
     title: { name:'Person Title',},
     link: { name:'Person Link'}
@@ -25,6 +26,7 @@ export default {
   args: {
     // Default args for all stories
     image: 'image',
+    imgUrl: '',
     name: 'Rev. Robert A. Dowd, C.S.C.',
     title: 'President of the University of Notre Dame',
     link:'#',
