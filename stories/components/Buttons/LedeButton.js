@@ -13,7 +13,6 @@ export default function Button(props) {
 
   const button = document.createElement('a');
   button.href = '#';
-  button.setAttribute('type', 'button');
 
   const classes = ['btn', ' btn--lede'];
   button.className = classes.join('');

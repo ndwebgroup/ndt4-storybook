@@ -19,7 +19,6 @@ export default function Button(props) {
 
   const button = document.createElement('a');
   button.href = `${href ? href : '#' }`;
-  button.setAttribute('type', 'button');
   
   const classes = ['btn',`${cta ? ' btn--cta' : ''}`,`${type == `primary` || type == `noborder` ? `` : ` btn--${type}`}`,`${type == `noborder` ? ` noborder` : ``}`];
   if (more) {
