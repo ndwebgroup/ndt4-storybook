@@ -4,32 +4,36 @@
  * PROTOTYPE styles live in css/prototypes.css until they ship in ndt.css.
  * @param {Object} props - Component properties
  * @param {string} [props.message=''] - Notice Message
- * @param {string} [props.noticeLocation] - Notice Location
- * @param {boolean} [props.showMark=true] - Whether to show the ND mark (desktop only)
+ * @param {string} [props.noticeLocation='global'] - 'global' shows the academic mark (desktop only); 'local' hides it and allows an icon
  * @param {boolean} [props.urgent=false] - Urgent styling + role="alert" for emergencies
  * @param {boolean} [props.dismissible=true] - Whether to show the close button
+ * @param {string} [props.icon=''] - Optional icon name (local notices only), e.g. 'info'
  * @returns {HTMLElement} - The network notice element
  */
 
 export default function NetworkNotice(props) {
   const {
     message = '',
-    showMark = true,
     urgent = false,
     dismissible = true,
     noticeLocation = 'global',
+    icon = '',
   } = props;
+
+  const isLocal = noticeLocation === 'local';
 
   const container = document.createElement('div');
   container.id = 'network_notice';
-  if (urgent) {
-    container.className = `network-notice--urgent ${noticeLocation ? `network-notice--${noticeLocation}` : ''}`;
-  }
+  container.className = [
+    urgent ? 'network-notice--urgent' : '',
+    noticeLocation ? `network-notice--${noticeLocation}` : '',
+  ].filter(Boolean).join(' ');
   container.setAttribute('role', urgent ? 'alert' : 'region');
   container.setAttribute('aria-label', 'University notice');
 
   container.innerHTML = `
-    ${showMark & noticeLocation == 'global' ? `<img class="notice-mark" src="https://static.nd.edu/images/marks/gold-white/ndmark.svg" alt="University of Notre Dame mark">` : ''}
+    ${!isLocal ? `<svg class="icon notice-mark" aria-hidden="true" focusable="false"><use href="#academic-mark"></use></svg>` : ''}
+    ${icon && isLocal ? `<svg class="icon notice-icon" data-icon="${icon}" aria-hidden="true" focusable="false"><use href="#icon-${icon}"></use></svg>` : ''}
     <div class="notice-text">
       <div class="notice-site"><p>${message}</p></div>
     </div>
