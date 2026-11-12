@@ -6,7 +6,10 @@ export default {
   argTypes: {
     text: { name:'Quote Text',},
     cite: { name:'Show Cite',},
-    image: { name:'Show Image',},
+    image: { name:'Image', control:'select', options:['image', 'placeholder', 'none'] },
+    imgUrl: { name:'Image URL', control:'text', description:'URL of the person image. Leave empty to use the default portrait.', if: { arg:'image', eq:'image' } },
+    name: { name:'Person Name', control:'text', if: { arg:'cite' } },
+    title: { name:'Person Title', control:'text', if: { arg:'cite' } },
     layout: { name:'Quote Layout', control: 'select', options: ['left', 'centered', 'reversed'] },
   },
   parameters: {
@@ -24,7 +27,10 @@ export default {
   },
   args: {
     cite:true,
-    image: true,
+    image: 'image',
+    imgUrl: '',
+    name: 'Rev. Robert A. Dowd, C.S.C.',
+    title: 'President of the University of Notre Dame',
     text: '"As a premier Catholic research university, our research and learning drive insights, innovation, and impact for good around the world."',
     layout: 'left'
   }

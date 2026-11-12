@@ -2,21 +2,30 @@
  * Quote component
  * @param {Object} props - Component properties
  * @param {boolean} props.cite - Whether to show the cite info
- * @param {boolean} props.image - Whether to show cite image
+ * @param {('image'|'placeholder'|'none')} [props.image='image'] - Person image. 'none' hides it
  * @param {string} props.text - The text of the blockquote
+ * @param {string} [props.imgUrl] - URL of the person image. Leave empty for the default portrait
+ * @param {string} [props.name] - Name shown in the byline
+ * @param {string} [props.title] - Title shown in the byline
  * @param {string} props.modifier - The modifier class to apply to the blockquote
- * @param {('left'|'centered')} [props.layout='centered'] - The layout of the blockquote
+ * @param {('left'|'centered'|'reversed')} [props.layout='left'] - The layout of the blockquote
  * @returns {HTMLElement} - The blockquote element
  */
 
 import Byline from './Byline';
 
+// Accepts the older boolean form too
+const personImage = (image) => (image === true ? 'image' : image === false || !image ? 'none' : image);
+
 export default function QuoteStacked(props) {
   const {
     cite = true,
     modifier = '',
-    image = true,
+    image = 'image',
     text,
+    imgUrl = '',
+    name = 'Rev. Robert A. Dowd, C.S.C.',
+    title = 'President of the University of Notre Dame',
     layout = 'left'
   } = props;
 
@@ -33,8 +42,8 @@ export default function QuoteStacked(props) {
       <p>${text}</p>
   `;
 
-  if (cite) {
-    container.appendChild(Byline({ name:`Rev. Robert A. Dowd, C.S.C.`, title:`President of the University of Notre Dame`, image:`${image ? 'image' : 'none'}` }));
+  if (cite && (name || title)) {
+    container.appendChild(Byline({ name, title, image: personImage(image), imgUrl: imgUrl || undefined }));
   }
 
   return container;
