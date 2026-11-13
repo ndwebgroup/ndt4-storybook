@@ -345,3 +345,112 @@ In the cases where you want a grid with no gap in between the cells, you can use
   <div>Item 4</div>
 </div>
 ```
+
+## Grid Rules <span className="c-tag c-tag--coming" style={{ marginInlineStart: '0.5rem', verticalAlign: 'middle' }}>Coming</span>
+
+Add a line between grid items with the grid rule classes. The rules are drawn in the gap between items, so they use the grid's existing gap and border color. Combine them with `.grid` and any column class.
+
+<div className="tablewrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>`.grid-rule`</td>
+        <td>Adds rules between both columns and rows.</td>
+      </tr>
+      <tr>
+        <td>`.grid-rule--column`</td>
+        <td>Adds rules between columns only.</td>
+      </tr>
+      <tr>
+        <td>`.grid-rule--row`</td>
+        <td>Adds rules between rows only.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Column and Row Rules
+
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-3 grid-rule">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="grid grid-md-3 grid-rule">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>
+</div>
+```
+
+### Column Rules
+
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-3 grid-rule--column">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="grid grid-md-3 grid-rule--column">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>
+</div>
+```
+
+### Row Rules
+
+<div className="code-example code-example--grid">
+  <div className="preview">
+    <div className="grid grid-md-3 grid-rule--row">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="grid grid-md-3 grid-rule--row">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>
+</div>
+```
+
+<div className="notice notice--primary"><div className="notice-content"><p className="mb-0">Grid rules rely on newer CSS gap decoration support. In browsers that do not support it, the grid displays normally without the rules. Rules are drawn in the gap, so they do not appear on a grid with `.no-gap`.</p></div></div>
