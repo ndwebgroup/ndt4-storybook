@@ -149,7 +149,7 @@ MarkOnRight.args = {
 
 export const WithLogo = Template.bind({});
 WithLogo.args = {
-  siteName: '<svg width="200" height="75" aria-hidden="true" alt="Eck Institute For Global Health"><use xlink:href="#logo-globalhealth"></use></svg>',
+  siteName: '<svg width="200" height="75" aria-hidden="true"><use xlink:href="#logo-globalhealth"></use></svg><span class="visually-hidden">Eck Institute For Global Health</span>',
   siteTagline: '',
   showNavigation: true,
   markRight: true,
