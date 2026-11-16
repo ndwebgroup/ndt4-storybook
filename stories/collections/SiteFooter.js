@@ -72,7 +72,7 @@ export default function SiteFooter(props) {
     }).join('');
 
     navFooterHTML = `
-    <nav class="nav-footer full sticky">
+    <nav class="nav-footer full sticky" aria-label="Footer">
       <ul>
         ${navLinks}
       </ul>
