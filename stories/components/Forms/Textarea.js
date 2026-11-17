@@ -18,7 +18,7 @@ export default function Textarea(props) {
 
   container.innerHTML = `
     ${label ? `<label for="${id}">${label}</label>` : ''}
-    <textarea id="${id}"${note ? ` aria-describedby="${id}-note"` : ''} rows="${rows}" placeholder='${placeholder}' ${disabled ? 'disabled' : ''} ></textarea>
+    <textarea id="${id}"${note ? ` aria-describedby="${id}-note"` : ''} rows="${rows}"${placeholder ? ` placeholder='${placeholder}'` : ''} ${disabled ? 'disabled' : ''} ></textarea>
     ${note ? `<p class="form-field-note" id="${id}-note">${note}</p>` : ''}  
   `
 
