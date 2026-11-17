@@ -18,7 +18,7 @@ export default function Input(props) {
   container.className = 'form-field';
   container.innerHTML = `
     ${label ? `<label for="${id}">${label}</label>` : ''}
-    <input class="field" id="${id}"${note ? ` aria-describedby="${id}-note"` : ''} type="${type}" placeholder='${placeholder}' ${disabled ? 'disabled' : ''} >
+    <input class="field" id="${id}"${note ? ` aria-describedby="${id}-note"` : ''} type="${type}"${placeholder ? ` placeholder='${placeholder}'` : ''} ${disabled ? 'disabled' : ''} >
     ${note ? `<p class="form-field-note" id="${id}-note">${note}</p>` : ''}
   `
 
