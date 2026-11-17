@@ -11,7 +11,7 @@
  */
 export default function Textarea(props) {
   const container = document.createElement('div');
-  const { note, label, disabled=false, placeholder="", rows="3" } = props;
+  const { note, label, disabled=false, placeholder, rows="3" } = props;
   // Generate a random ID if one isn't provided
   const id = props.id || `textarea-${Math.random().toString(36).substring(2, 10)}`;
   container.className = 'form-field';
