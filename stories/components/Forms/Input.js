@@ -11,7 +11,7 @@
  */
 export default function Input(props) {
   const container = document.createElement('div');
-  const { note, label, disabled=false, placeholder="", type="text" } = props;
+  const { note, label, disabled=false, placeholder, type="text" } = props;
   // Generate a random ID if one isn't provided
   const id = props.id || `input-${Math.random().toString(36).substring(2, 10)}`;
   
