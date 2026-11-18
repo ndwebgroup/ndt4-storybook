@@ -69,6 +69,9 @@
 
 .sbdocs-wrapper p > code, .sbdocs-wrapper li > code { vertical-align:text-bottom; }
 
+/* A URL used as link text in a paragraph can't wrap on its own and pushes the page wider than a phone */
+.sbdocs-content p > .sbdocs-a { overflow-wrap:anywhere; }
+
 /* Tables */
 .sbdocs-content table { font-size:1rem; }
 .sbdocs-content .docblock-argstable-head {
