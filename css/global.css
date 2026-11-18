@@ -101,29 +101,6 @@
 .swatch-list li dt { font-size:0.9rem; }
 .swatch { aspect-ratio:2/1; display:block; width:100%; margin-bottom:0.5rem; border-radius:var(--border-radius); border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); align-content:center; text-align:center; }
 .swatch--small { display:inline-block; height:1rem; width:1rem; vertical-align:middle; margin-bottom:5px; margin-right:0.25rem; border-radius:2px; border:1px solid light-dark(transparent,rgba(255,255,255,0.2)); }
-.swatch--white { background-color:#FFF; outline:1px solid #efefef; }
-.swatch--black { background-color:#000; }
-.swatch--brand-blue { background-color:var(--brand-blue); }
-.swatch--brand-blue-light { background-color:var(--brand-blue-light); }
-.swatch--brand-blue-bright { background-color:var(--brand-blue-bright); }
-.swatch--brand-blue-dark { background-color:var(--brand-blue-dark); }
-.swatch--brand-gold { background-color:var(--brand-gold); }
-.swatch--brand-gold-light { background-color:var(--brand-gold-light); }
-.swatch--brand-gold-bright { background-color:var(--brand-gold-bright); }
-.swatch--brand-gold-dark { background-color:var(--brand-gold-dark); }
-.swatch--sky-blue { background-color:var(--sky-blue); }
-.swatch--sky-blue-light { background-color:var(--sky-blue-light); }
-.swatch--sky-blue-dark { background-color:var(--sky-blue-dark); }
-.swatch--brand-green { background-color:var(--brand-green); }
-.swatch--brand-green-bright { background-color:var(--brand-green-bright); }
-.swatch--brand-green-dark { background-color:var(--brand-green-dark); }
-.swatch--warm-white { background-color:var(--warm-white); }
-.swatch--warm-white-dark { background-color:var(--warm-white-dark); }
-.swatch--gray { background-color:var(--gray); }
-.swatch--gray-dark { background-color:var(--gray-dark); }
-.swatch--gray-light { background-color:var(--gray-light); }
-.swatch--gray-extra-light { background-color:var(--gray-extra-light); }
-.swatch--gray-extra-extra-light { background-color:var(--gray-extra-extra-light); }
 
 .color-table .mode--light { color-scheme:light; }
 
@@ -141,13 +118,6 @@
   .list--todo { display:grid; grid-template-columns:1fr 1fr; grid-gap:1.5rem; padding:2rem; column-rule:var(--border-primary); }
   .list--todo > li { margin-bottom:0; }
 }
-
-/* Badge */
-.badge { display:inline-block; font-size:0.9rem; line-height:1; text-transform:uppercase; padding:0.5rem; margin-block-end:2rem; border-radius:4px; background-color:#eee; }
-.badge--ready { background-color:var(--brand-green); color:#fff; }
-.badge--in-progress { background-color:var(--brand-gold); color:#fff; }
-.badge--deprecated { background-color:var(--brand-blue-dark); color:#fff; }
-.badge--experimental { background-color:var(--brand-blue-light); color:#fff; }
 
 /* Thumbs */
 .thumb-list {
