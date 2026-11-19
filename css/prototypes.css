@@ -15,7 +15,7 @@
   #network_notice .notice-close-button { background: transparent; border: none; cursor: pointer; margin: 0; }
   #network_notice .notice-close-icon { fill: #fff; height: 24px; width: 24px; }
   @media only screen and (min-width: 64em) {
-    #network_notice { font-size: 1.25rem; padding: 2rem; }
+    #network_notice { font-size: 1.25rem; padding: 1.75rem; }
     #network_notice .notice-mark { display: block; }
     #network_notice .notice-close { width: 10vw; }
     #network_notice .notice-text { margin-inline-end: 4rem; }
