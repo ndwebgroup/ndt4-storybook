@@ -1,7 +1,7 @@
 import NetworkNotice from './NetworkNotice.js';
 
 export default {
-  title: 'Components/Network Notice',
+  title: 'Components/Notice (Sitewide)',
   component: NetworkNotice,
   tags: ['coming'],
   parameters: {
