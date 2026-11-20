@@ -10,7 +10,7 @@
   #network_notice.network-notice--urgent { border-color:#b05d5d; background: #6e1f1f; color:#fff; }
   #network_notice.network-notice--urgent .notice-mark { --mark-text:#fff; }
   #network_notice.network-notice--urgent .notice-close-icon, #network_notice.network-notice--urgent .notice-icon { fill: #fff; }
-  #network_notice .notice-icon { fill: light-dark(#fff, var(--brand-blue)); flex: 0 0 auto; height: 1em; margin-inline-end: 0.75rem; margin-block-start:5px; width: 1em; }
+  #network_notice .notice-icon { fill: light-dark(#fff, var(--brand-blue)); flex: 0 0 auto; height: 1.125rem; margin-inline-end: 0.75rem; margin-block-start:5px; width: 1.125rem; }
   #network_notice .notice-text { flex: 1 1 auto; }
   #network_notice .notice-text p:last-child { margin: 0; }
   #network_notice .notice-close { text-align: right; }
