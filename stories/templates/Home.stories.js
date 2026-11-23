@@ -6,11 +6,6 @@ export default {
   tags: ['!autodocs', 'stable'],
   parameters: {
     layout: 'fullscreen',
-    options: {
-      storySort: {
-        order: [],
-      },
-    },
   },
   argTypes: {
     navTop: {
